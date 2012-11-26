@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Shell | fanTasy | blog]]></title>
   <link href="http://SFantasy.github.com/blog/categories/shell/atom.xml" rel="self"/>
   <link href="http://SFantasy.github.com/"/>
-  <updated>2012-11-26T22:54:57+08:00</updated>
+  <updated>2012-11-26T23:03:48+08:00</updated>
   <id>http://SFantasy.github.com/</id>
   <author>
     <name><![CDATA[fanTasy shAo]]></name>
@@ -44,58 +44,41 @@
 <pre><code>exec ksh
 </code></pre>
 
-<p>接下来简单的介绍一下bash的功能:
-* 输入输出重定向
-  e.g.
-  echo "This is an example" > a.txt
-  #将输出文本重定向（在这里也就是保存）到一个文件中
-* 文件名缩写用的通配符（元字符）
-所谓通配符，举例来说：我们要删除所有文件格式为“.txt”的文件，使用“rm <em>.txt”就可以了，其中</em>就是所谓的“通配符”。
-* 定制环境的shell变量
-* 写shell程序用的内置命令集
-  e.g.
-  echo"hello bash"</p>
-
-<p>  #输出字符串</p>
-
-<p>  exit</p>
-
-<p>  #退出bash</p>
-
-<p>  wait</p>
-
-<p>  #等待活动作业的完成</p>
-
-<p>  type cmd</p>
-
-<p>  #查看一个命令是否是bash的内置命令</p>
+<p>接下来简单的介绍一下bash的功能:</p>
 
 <ul>
-<li><p>作业控制
-e.g.
-bg</p>
+<li><p>输入输出重定向
+  e.g.
+  echo "This is an example" > a.txt
+  #将输出文本重定向（在这里也就是保存）到一个文件中</p></li>
+<li><p>文件名缩写用的通配符（元字符）
+所谓通配符，举例来说：我们要删除所有文件格式为“.txt”的文件，使用“rm <em>.txt”就可以了，其中</em>就是所谓的“通配符”。</p></li>
+<li><p>定制环境的shell变量</p></li>
+<li><p>写shell程序用的内置命令集
+  e.g.
+  echo"hello bash"
+  #输出字符串
+  exit
+  #退出bash
+  wait
+  #等待活动作业的完成
+  type cmd
+  #查看一个命令是否是bash的内置命令</p></li>
+<li><p>作业控制</p>
 
-<h1>将作业置于后台运行</h1>
-
-fg
-
-<h1>将作业置于前台运行</h1>
-
-jobs
-
-<h1>查看当前活动作业</h1>
-
-kill
-
-<h1>终止某作业</h1>
-
-wait
-
-<h1>等待后台作业完成</h1>
-
-C-z
-
-<h1>挂起当前作业</h1></li>
+<p>  e.g.
+  bg
+  #将作业置于后台运行
+  fg
+  #将作业置于前台运行
+  jobs
+  #查看当前活动作业
+  kill
+  #终止某作业
+  wait
+  #等待后台作业完成
+  C-z
+  #挂起当前作业</p></li>
 <li><p>命令行编辑</p></li>
 <li><p>命令历史</p></li>
 </ul>
@@ -105,10 +88,9 @@ C-z
 
 <ul>
 <li>别名
-e.g.
-alias lm = ls -l | more
-
-<h1>今后在bash中输入"lm" 就相当于输入了 "ls -l | more"</h1></li>
+  e.g.
+  alias lm = ls -l | more
+  #今后在bash中输入"lm" 就相当于输入了 "ls -l | more"</li>
 </ul>
 
 
