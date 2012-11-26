@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>关于文件权限 - fanTasy | blog</title>
+  <meta name="author" content="fanTasy shAo">
+
+  
+  <meta name="description" content="记得原来的时候是看过相关的内容的，但是没有去记忆，所以看到的时候还是会说：“啊，原来是这样的啊！” -rw-r--r-- 1 root root 42304 Sep 4 18:26 install.log 其中第一个字符代表的是这个文件是“目录、文件或链接文件等”。如果是“d”即directory &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://SFantasy.github.com/blog/2012/08/01/guan-yu-wen-jian-quan-xian/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="fanTasy | blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">fanTasy | blog</a></h1>
+  
+    <h2>Front-end Dev, Linux user, Google&Python fan</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:SFantasy.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">关于文件权限</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-01T11:10:00+08:00" pubdate data-updated="true">Aug 1<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>记得原来的时候是看过相关的内容的，但是没有去记忆，所以看到的时候还是会说：“啊，原来是这样的啊！”</p>
+
+<pre><code>-rw-r--r-- 1 root root 42304 Sep 4 18:26 install.log
+</code></pre>
+
+<p>其中第一个字符代表的是这个文件是“目录、文件或链接文件等”。如果是“d”即directory，是“l”则是linkfile，是“-”则是普通文件（若是b则是设备文件里面的可供存储的接口设备，c则是设备文件里面的串行端口设备）。后九个字符分别代表的是文件所有者权限、文件所属用户组的权限、其他人对此文件的权限（r即可读，w即可写，x即可执行）。</p>
+
+<p>之后的数字代表的是文件的连接数；后两单词分别为文件所有者和文件所属用户组；43204即文件大小；之后便是文件最近修改日期和文件名。</p>
+
+<p>平时对某些文件没有修改权限的时候，就经常会用到以下shell命令</p>
+
+<pre><code>chmod 770 a.c
+</code></pre>
+
+<p>chmod是改变文件权限的命令，这个简单（而chgrp则是改变文件所属用户组，chown是改变文件所有者的命令），但是770的含义我本来是不知道的- -！</p>
+
+<p>原来，三个数字代表着三种身份：owner、group、others对于文件的权限。</p>
+
+<p>其中，r对应4，w对应2，x对应1；那么7也就是有读写和执行的权限，770也就是对于owner和group有着读写和执行的权限，但是对于others没有相关权限，当然，你也可以让others有相关的权限：</p>
+
+<pre><code>chmod 777 a.c
+</code></pre>
+
+<p>还有就是关于chmod（chgrp&amp;&amp;chown）的一个比较重要的参数：-r（recursion）</p>
+
+<p>比如对于一个目录而言，修改其所属用户组为users（存在这个用户组的前提下）</p>
+
+<pre><code>chgrp users test
+</code></pre>
+
+<p>那么在这个test目录下其他的文件或者子文件夹也要一律修改所属用户组的话添加-r参数就可以了，即</p>
+
+<pre><code>chgrp -r users test
+</code></pre>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">fanTasy shAo</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-01T11:10:00+08:00" pubdate data-updated="true">Aug 1<span>st</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/linux/'>Linux</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://SFantasy.github.com/blog/2012/08/01/guan-yu-wen-jian-quan-xian/" data-via="" data-counturl="http://SFantasy.github.com/blog/2012/08/01/guan-yu-wen-jian-quan-xian/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/07/01/wang-ji-rootmi-ma/" title="Previous Post: 忘记Root密码">&laquo; 忘记Root密码</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/11/26/a-byte-things-about-unix-shell/" title="Next Post: A byte things about UNIX Shell">A byte things about UNIX Shell &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/26/try-to-use-orange-classification/">Try to use ORANGE: Classification</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/26/seven-languages-in-seven-weeks-ruby/">Seven Languages in seven weeks:Ruby</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/26/revolution-os/">Revolution OS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/26/jin-qi-de-%5B%3F%5D-xie-yue-du/">近期的一些阅读</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/26/nexus-7-lian-jie-linux/">Nexus 7 连接 Linux</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - fanTasy shAo -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

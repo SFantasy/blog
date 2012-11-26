@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>fanTasy | blog</title>
+  <meta name="author" content="fanTasy shAo">
+
+  
+  <meta name="description" content="看到文章标题想必屏幕前的你已经懂了我要讲什么。 这篇文章主要介绍了一种用Chrome app+GAE的方法，此前在网上也看到过用GAE的教程，不过没有去尝试；日天同学率先发现此方法并造福全寝 : ) 以下方法在真实可行。 安装Proxy Switchysharp &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://SFantasy.github.com/blog/page/2/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="fanTasy | blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">fanTasy | blog</a></h1>
+  
+    <h2>Front-end Dev, Linux user, Google&Python fan</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:SFantasy.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/05/31/shi-yong-gaehe-chrometu-po-gfw/">使用GAE和Chrome突破GFW</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-31T11:06:00+08:00" pubdate data-updated="true">May 31<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>看到文章标题想必屏幕前的你已经懂了我要讲什么。</p>
+
+<p>这篇文章主要介绍了一种用Chrome app+GAE的方法，此前在网上也看到过用GAE的教程，不过没有去尝试；日天同学率先发现此方法并造福全寝 : )</p>
+
+<p>以下方法在真实可行。</p>
+
+<ol>
+<li>安装Proxy Switchysharp</li>
+</ol>
+
+
+<p>这个应用在Chrome应用商店里自己搜就能搜到了；</p>
+
+<p>添加到浏览器之后会有个选项卡跳出来，给自己的情景模式取个名字；</p>
+
+<p>在手动配置里的HTTP代理那一栏里填上127.0.0.1；端口号为8086；</p>
+
+<p>再把所有协议均使用相同的代理服务器那个选上。点击保存就行了。</p>
+
+<ol>
+<li>创建自己的Google App</li>
+</ol>
+
+
+<p>地址： <a href="https://appengine.google.com">https://appengine.google.com</a></p>
+
+<p>点击createApplication后，在×××.appspot.com那栏里填app的名字， xxx是你自己取的名字，Application Title也是；</p>
+
+<p>填好后直接Creaete Application 就好了；</p>
+
+<ol>
+<li>下载配置wallproxy</li>
+</ol>
+
+
+<p>地址：<a href="http://code.google.com/p/wallproxy-plugins/downloads/list">http://code.google.com/p/wallproxy-plugins/downloads/list</a>
+这个list里有好几个文件，这次用的是wallproxy-plus.7z；</p>
+
+<p>下载完成后直接解压就行，不用安装；</p>
+
+<p>1)打开wallproxy目录下的server文件夹爱，运行upload.bat文件，先选择设置自己的appid，然后上传就行了，期间会让你填自己的邮箱地址和密码；</p>
+
+<p> 可以上appengine看自己的app有没有上传成功，如果dashboard里有自己app运行的情况的话，就证明已经上传成功了。</p>
+
+<p>2)打开wallproxy的目录里的local文件夹，打开WallProxy.exe文件，运行双击那个图标后会有一个console出来，最小化不要关闭；</p>
+
+<p>右击图标设置，最主要要在里面改一个appid，也就是之前申请GoogleApp时候的app的名字；还有可以修改server type，可以在不同的类型之间试试，效果的确是有细微的差别的，这个在wallproxy的主页上说明了。</p>
+
+<p>这样就搞定wallproxy了。</p>
+
+<p>至此，在正确配置好app和wallproxy就已经可以跑到万里长城外面了。当然，你要在浏览的时候选择自己当初配置的情景模式。</p>
+
+<p>在上网的时候一开始可能比较慢，但是后来还是蛮给力的，youtube可以看视频，其他测试的网站还有FB,Twitter,Blogger；</p>
+
+<p>流量为一天1G，对于浏览一下网站已经很够用了。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/26/try-to-use-orange-classification/">Try to use ORANGE: Classification</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/26/seven-languages-in-seven-weeks-ruby/">Seven Languages in seven weeks:Ruby</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/26/revolution-os/">Revolution OS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/26/jin-qi-de-%5B%3F%5D-xie-yue-du/">近期的一些阅读</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/26/nexus-7-lian-jie-linux/">Nexus 7 连接 Linux</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - fanTasy shAo -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
