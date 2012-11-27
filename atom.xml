@@ -4,7 +4,7 @@
   <title><![CDATA[fanTasy | blog]]></title>
   <link href="http://SFantasy.github.com/atom.xml" rel="self"/>
   <link href="http://SFantasy.github.com/"/>
-  <updated>2012-11-26T23:03:48+08:00</updated>
+  <updated>2012-11-27T23:03:06+08:00</updated>
   <id>http://SFantasy.github.com/</id>
   <author>
     <name><![CDATA[fanTasy shAo]]></name>
@@ -14,78 +14,458 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Try to use ORANGE: Classification]]></title>
-    <link href="http://SFantasy.github.com/blog/2012/11/26/try-to-use-orange-classification/"/>
-    <updated>2012-11-26T11:18:00+08:00</updated>
-    <id>http://SFantasy.github.com/blog/2012/11/26/try-to-use-orange-classification</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Seven Languages in seven weeks:Ruby]]></title>
-    <link href="http://SFantasy.github.com/blog/2012/11/26/seven-languages-in-seven-weeks-ruby/"/>
-    <updated>2012-11-26T11:17:00+08:00</updated>
-    <id>http://SFantasy.github.com/blog/2012/11/26/seven-languages-in-seven-weeks-ruby</id>
-    <content type="html"><![CDATA[
+    <link href="http://SFantasy.github.com/blog/2012/11/21/seven-languages-in-seven-weeks-ruby/"/>
+    <updated>2012-11-21T11:17:00+08:00</updated>
+    <id>http://SFantasy.github.com/blog/2012/11/21/seven-languages-in-seven-weeks-ruby</id>
+    <content type="html"><![CDATA[<h3>第一天</h3>
+
+<ul>
+<li>找</li>
+</ul>
+
+
+<p>Ruby API 文档：<a href="http://ruby-doc.org/core-1.9.3/">http://ruby-doc.org/core-1.9.3/</a></p>
+
+<p>Programming Ruby: The Pragmatic Programmer&#8217;s Guide [TFH08]的免费在线版本：<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/">http://www.ruby-doc.org/docs/ProgrammingRuby/</a></p>
+
+<p>替换字符串某一部分的方法：</p>
+
+<p>替换一次:</p>
+
+<pre><code>"Hello World".sub('World','Ruby')
+=&gt; Hello Ruby
+</code></pre>
+
+<p>替换所有：</p>
+
+<pre><code>"This is not right".gsub('i',' ')
+=&gt; Th s  s not r ght
+</code></pre>
+
+<p>有关Ruby正则表达式的资料：<a href="http://ruby-doc.org/core-1.9.3/Regexp.html">http://ruby-doc.org/core-1.9.3/Regexp.html</a></p>
+
+<p>有关Ruby区间(range)的资料：<a href="http://ruby-doc.org/core-1.9.3/Range.html">http://ruby-doc.org/core-1.9.3/Range.html</a></p>
+
+<ul>
+<li>做</li>
+</ul>
+
+
+<p>打印字符串&#8221;Hello World.&#8221;:</p>
+
+<pre><code>irb&gt;puts "Hello World."
+Hello World.
+=&gt; nil
+</code></pre>
+
+<p>在字符串&#8221;Hello Ruby.&#8221;中，找出&#8221;Ruby.&#8221;所在下标。</p>
+
+<pre><code>irb&gt;"Hello Ruby.".scan(/[Ruby\.]/) { |x| puts "Hello Ruby.".index(x)}
+6
+7
+8
+9
+10
+=&gt; "Hello Ruby."
+</code></pre>
+
+<p>其中，scan为Ruby在字符串中扫描的函数，寻找到匹配&#8221;Ruby.&#8221;中任意字符的字符，然后再用index方法求下标。</p>
+
+<p>打印你的名字十遍</p>
+
+<pre><code>irb&gt;10.times do puts "fanTasy" end
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+=&gt; 10
+</code></pre>
+
+<p>从打印字符串&#8221;This is sentence number 1.&#8221;，其中的数字1会一直变化到10。</p>
+
+<pre><code>irb&gt;n = 0
+    while (n&lt;10)
+    puts "This is sentence number"+(n+1).to_s+"."
+    end
+This is sentence number 1.
+This is sentence number 2.
+This is sentence number 3.
+This is sentence number 4.
+This is sentence number 5.
+This is sentence number 6.
+This is sentence number 7.
+This is sentence number 8.
+This is sentence number 9.
+This is sentence number 10
+</code></pre>
+
+<p>从文件运行Ruby程序</p>
+
+<p>用自己喜爱的文本编辑器写好一个Ruby程序，保存之后在终端输入:</p>
+
+<pre><code>ruby fileName.rb
+</code></pre>
+
+<p>猜数字程序：</p>
+
+<pre><code>puts "Guess a number:"
+a = gets()
+b = rand(10)
+while true
+   if a.to_i &gt; b
+      puts "Too large\n"
+   elsif a.to_i &lt; b
+      puts "Too small\n"
+   else
+      puts "all right\n"
+      exit
+   end
+puts "Guess again:\n"
+a = gets()
+end
+</code></pre>
+
+<h3>第二天</h3>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Revolution OS]]></title>
-    <link href="http://SFantasy.github.com/blog/2012/11/26/revolution-os/"/>
-    <updated>2012-11-26T11:16:00+08:00</updated>
-    <id>http://SFantasy.github.com/blog/2012/11/26/revolution-os</id>
-    <content type="html"><![CDATA[
+    <title type="html"><![CDATA[Try to use ORANGE: Classification]]></title>
+    <link href="http://SFantasy.github.com/blog/2012/11/07/try-to-use-orange-classification/"/>
+    <updated>2012-11-07T11:18:00+08:00</updated>
+    <id>http://SFantasy.github.com/blog/2012/11/07/try-to-use-orange-classification</id>
+    <content type="html"><![CDATA[<h3>环境</h3>
+
+<hr />
+
+<p>Kubuntu 12.04/Python 2.7.3/Orange 2.0b</p>
+
+<h3>准备工作</h3>
+
+<hr />
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#1.下载Orange的源码和Numpy的源码</span>
+</span><span class='line'><span class="c">#2.编译Numpy</span>
+</span><span class='line'><span class="c">#3.安装Python开发包</span>
+</span><span class='line'>sudo apt-get install python-dev
+</span><span class='line'><span class="c">#4.安装Python networkx包</span>
+</span><span class='line'>sudo apt-get install python-networkx
+</span><span class='line'><span class="c">#5.编译Orange</span>
+</span><span class='line'>python install.py build
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<h3>测试</h3>
+
+<hr />
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">orange</span>
+</span><span class='line'><span class="c">#导入orange</span>
+</span><span class='line'><span class="n">orange</span><span class="o">.</span><span class="n">version</span>
+</span><span class='line'><span class="s">&#39;2.0b (21:58:41, Nov 3 2012)&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<h3>Classification</h3>
+
+<hr />
+
+<p>从<a href="http://archive.ics.uci.edu/ml/">UCI Machine Learning Repository</a>下载一个测试数据集；比如Voting.tab</p>
+
+<h4>Naive Bayes classifier</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">orange</span>
+</span><span class='line'><span class="n">data</span> <span class="o">=</span> <span class="n">orange</span><span class="o">.</span><span class="n">ExampleTable</span><span class="p">(</span><span class="s">&quot;voting&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="n">classifier</span> <span class="o">=</span> <span class="n">orange</span><span class="o">.</span><span class="n">BayesLearner</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span><span class='line'><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+</span><span class='line'>  <span class="n">c</span> <span class="o">=</span> <span class="n">classifier</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span><span class='line'>  <span class="k">print</span><span class="p">(</span><span class="s">&quot;original&quot;</span><span class="p">,</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">getclass</span><span class="p">(),</span><span class="s">&quot;classified as &quot;</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>输出结果</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>original republican classified as  republican
+</span><span class='line'>original republican classified as  republican
+</span><span class='line'>original democrat classified as  republican
+</span><span class='line'>original democrat classified as  democrat
+</span><span class='line'>original democrat classified as  democrat
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>可以看出，Naive Bayes在第三个实例处出现了错误，但是其他的都是正确的。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">orange</span>
+</span><span class='line'><span class="n">data</span> <span class="o">=</span> <span class="n">orange</span><span class="o">.</span><span class="n">ExampleTable</span><span class="p">(</span><span class="s">&quot;voting&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="n">classifier</span> <span class="o">=</span> <span class="n">orange</span><span class="o">.</span><span class="n">BayesLearner</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span><span class='line'><span class="n">corrcetNum</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class='line'><span class="c">#计数器</span>
+</span><span class='line'><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">a</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">getclass</span><span class="p">()</span>
+</span><span class='line'>    <span class="n">b</span> <span class="o">=</span> <span class="n">classifier</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">corrcetNum</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">print</span> <span class="s">&quot;CA:</span><span class="si">%.3f</span><span class="s">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">corrcetNum</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+</span><span class='line'><span class="c">#计算分类正确率</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>输出结果</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Possible classes: &lt;republican, democrat&gt;
+</span><span class='line'>CA:0.9034
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>可见，Naive Bayes在数据量比较大的时候分类的正确率还是比较高的。</p>
+
+<h4>参考资料</h4>
+
+<hr />
+
+<ul>
+<li>Orange reference : <a href="http://orange.biolab.si/doc/reference/">http://orange.biolab.si/doc/reference/</a></li>
+<li>Orange tutorial : <a href="http://orange.biolab.si/doc/tutorial/">http://orange.biolab.si/doc/tutorial/</a></li>
+</ul>
+
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[近期的一些阅读]]></title>
-    <link href="http://SFantasy.github.com/blog/2012/11/26/jin-qi-de-%5B%3F%5D-xie-yue-du/"/>
-    <updated>2012-11-26T11:16:00+08:00</updated>
-    <id>http://SFantasy.github.com/blog/2012/11/26/jin-qi-de-[?]-xie-yue-du</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Nexus 7 连接 Linux]]></title>
-    <link href="http://SFantasy.github.com/blog/2012/11/26/nexus-7-lian-jie-linux/"/>
-    <updated>2012-11-26T11:15:00+08:00</updated>
-    <id>http://SFantasy.github.com/blog/2012/11/26/nexus-7-lian-jie-linux</id>
-    <content type="html"><![CDATA[
+    <title type="html"><![CDATA[随笔一篇]]></title>
+    <link href="http://SFantasy.github.com/blog/2012/10/22/sui-bi-yi-pian/"/>
+    <updated>2012-10-22T22:25:00+08:00</updated>
+    <id>http://SFantasy.github.com/blog/2012/10/22/sui-bi-yi-pian</id>
+    <content type="html"><![CDATA[<p>不知道从什么时候开始，在身边很多人眼里，使用Linux 的人开始变成了装逼的代名词。</p>
+
+<p>这以至于每当我在捣鼓自己的Kubuntu的时候，总会有无聊的声音传到耳蜗里。其中大多数都是根本不了解Linux的，以至于他们越说话就让我越觉得他们很无知;但是其实最让人感到郁闷的是那些懂一点相关知识的，有些是在自己的电脑上用过Ubuntu虚拟机的，有些是自认为对电脑很了解的，而有些是用过一段时间Linux无疾而终的。</p>
+
+<p>为什么说这是最让人感到郁闷的呢？因为其实我一直都是觉得讨论操作系统优劣问题这个话题，以及编程语言优劣问题都是十分徒劳的：一个难当大任的操作系统或者编程语言在历史的进程中自然而然的会被淘汰，尤其是在现在这样一个科技日新月异的时代，所以就算各个“帮派”之间再怎么争破喉咙也是无济于事，不然Java作为一门饱受攻击的语言怎么还会有那么多程序员“不离不弃”呢？！</p>
+
+<p>以下列举几个自己遇到的比较典型的情景。</p>
+
+<ul>
+<li><p>情景1-“Kubuntu啊，一听名字就是山寨的。” 不好意思，不知道是从哪里听   出来一点点山寨的意思的。请问你知道Kubuntu为什么叫Kubuntu么？那么比如他的名字是Xubuntu呢，也山寨么？你知道Ubuntu默认的是GNOME？Unity？你知道Linux有哪些桌面么？KDE？XFCE？LXDE？那么关于其他诸如Mint/Suse/Fedora/Arc等Linux发行版也就不用说了。举这个例子只是想说明一个问题：不能因为只听说过RedHat/Debian/Ubuntu这些有名的发行版就把自己的认知限于这一小隅，这好比去过外滩看过东方明珠和在建的上海中心却不知道上海还有田子坊这样的地方。</p></li>
+<li><p>情景2-“为什么用Kubuntu啊，界面好看么？我觉得还没Win7好看呢。”的确，Win7的aero效果的确不错啊，就用户体验而言可以算是操作系统的一个典范;当然我不想纠结于操作系统的优劣之辩，不过前一句话后肯定跟着很多个“但是”。仅针对这个情景而言，我只能说我对于界面的要求没那么高，不然就去折腾KDE的3D界面效果了，听说很炫，怎么着也不会比Win7差吧，不过我还从未尝试过，觉得没有必要。</p></li>
+<li><p>情景3-“Linux有什么好的，虚拟机跑跑还不够啊”其实我一直都觉得在虚拟机里跑的系统都是那些用户自己不会想去安装继而长期使用的。其实这又何异于超市里的免费品尝呢？需要买的东西自然会去选择、购买、长期拥有，但是有些对有些东西的需要只停留在试尝的程度。对于一个满心希望在Linux环境下学习工作娱乐的人，为什么要忍受win下的虚拟机呢？！</p></li>
+<li><p>情景4-“你看，又装逼用Linux了，Linux有什么好用的啦。”首先，我觉得用Linux并没有什么可以用来装逼的资本，就如同围脖之于大众，豆瓣之于小众一样，Windows可以说是OS里的大众，那Linux也无非是一小众;我喜欢Linux胜过Windows，就像我喜欢豆瓣胜过微博一样。都是个人的选择，难道有人会在对方玩豆瓣的时候吐槽一句么？！</p></li>
+</ul>
+
+
+<p>从大一开始第一次接触到Linux到现在，以及受到包括ESR/RMS等的思想的熏陶，我才意识到自由软件运动与开放源代码的重要性和历史意义；虽然我还尚处于起步的阶段，而且也没有进入到狂热的状态，所以学习的进度可以说比较缓慢，直到这学期由于课程比较少才有了大把的时间来看书和实践，以及在LinuxToy/Study-Area/ChinaUnix等网站上久久流连和在王垠/ESR等人的文章上从钦佩到赞许。</p>
+
+<p>最后，推荐几个网址：<br/>
+* LinuxToy上的开源世界旅行手册：<a href="http://i.linuxtoy.org/docs/guide/">http://i.linuxtoy.org/docs/guide/</a><br/>
+* Study-Area上的GNU/Linux学习之旅：<a href="http://www.study-area.org/tips/linux_entry.htm">http://www.study-area.org/tips/linux_entry.htm</a><br/>
+* 王垠的wiki站和新浪博客：<a href="http://docs.huihoo.com/homepage/shredderyin/">http://docs.huihoo.com/homepage/shredderyin/</a></p>
+
+<pre><code>                      [                          http://blog.sina.com.cn/yinwang0]  (http://blog.sina.com.cn/yinwang0)  
+</code></pre>
+
+<ul>
+<li>joyfire的Linux笔记 <a href="http://man.lupaworld.com/content/develop/joyfire/">http://man.lupaworld.com/content/develop/joyfire/</a></li>
+</ul>
+
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Experience of Using Bootstrap]]></title>
-    <link href="http://SFantasy.github.com/blog/2012/11/26/experience-of-using-bootstrap/"/>
-    <updated>2012-11-26T11:15:00+08:00</updated>
-    <id>http://SFantasy.github.com/blog/2012/11/26/experience-of-using-bootstrap</id>
-    <content type="html"><![CDATA[
+    <link href="http://SFantasy.github.com/blog/2012/10/16/experience-of-using-bootstrap/"/>
+    <updated>2012-10-16T11:15:00+08:00</updated>
+    <id>http://SFantasy.github.com/blog/2012/10/16/experience-of-using-bootstrap</id>
+    <content type="html"><![CDATA[<p>最近在捣鼓一个网站，然后也是第一次用到前端框架——bootstrap（详细关于bootstrap的信息参阅<a href="http://twitter.github.com/bootstrap/%EF%BC%89">http://twitter.github.com/bootstrap/%EF%BC%89</a>）</p>
+
+<ul>
+<li>使用bootstrap的感受</li>
+</ul>
+
+
+<p>    个人用起来感觉还不错，提供了很多平时建站时需要的组件如：按钮、导航栏、标签等；JS插件如：对话框、弹出提示、下拉项、输入提示等。
+    在构建页面的时候只要稍稍修改一下CSS，并配合自己构建的HTML就可以作出比较好的效果。
+    特别喜欢twitter的界面风格的同学可以尝试着用来创建相似界面风格的网站前台页面。而且个人觉得也比较小清新 : )</p>
+
+<p>    记得是在知乎上看到对bootstrap的不满意，认为bootstrap制约了他的构建，并且推荐了另一个前端框架：foundation
+个人暂时还没有用过，但是打算在下一次的时候尝试一下这个被称之为“更好的”框架。</p>
+
+<ul>
+<li>关于Jetstrap</li>
+</ul>
+
+
+<p> 这个工具有个视频介绍之：<a href="http://v.youku.com/v_show/id_XNDU0ODM5OTQw.html">http://v.youku.com/v_show/id_XNDU0ODM5OTQw.html</a></p>
+
+<p>    我们也许可以称之为&#8221;网页版的构建纯bootstrap页面的Dreamweaver&#8221;。
+用户可以通过Google、Twitter或者Github账户登录到这个站点上，免费给用户使用（据说未来可能收费），这里的所有组件都是可以拖拽的，可以通过用户自定义CSS进行一些细微的改变，并可以将HTML和CSS打包成zip文件，方便开发站点的前台页面。</p>
+
+<p>    不过个人还是不喜欢这一类（可视化的）工具，当然也包括了Dreamweaver，反而喜欢用SublimeText2或者Emacs来写。当然，这纯属个人喜好，并不是说用可视化工具有什么不好。</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[ESR五步曲]]></title>
-    <link href="http://SFantasy.github.com/blog/2012/11/26/esr-wu-bu-qu/"/>
-    <updated>2012-11-26T11:11:00+08:00</updated>
-    <id>http://SFantasy.github.com/blog/2012/11/26/esr-wu-bu-qu</id>
-    <content type="html"><![CDATA[<p><a href="http://man.lupaworld.com/content/develop/joyfire/project/7.html">ESR五部曲</a>
-实训的时候看到的，Eric.S.Raymond写的五部曲。</p>
+    <title type="html"><![CDATA[Nexus 7 连接 Linux]]></title>
+    <link href="http://SFantasy.github.com/blog/2012/10/12/nexus-lian-jie-linux/"/>
+    <updated>2012-10-12T11:15:00+08:00</updated>
+    <id>http://SFantasy.github.com/blog/2012/10/12/nexus-lian-jie-linux</id>
+    <content type="html"><![CDATA[<p>地址：<a href="http://archboy.org/2012/09/17/linux-connect-google-nexus-7-file-system-adb-development/">http://archboy.org/2012/09/17/linux-connect-google-nexus-7-file-system-adb-development/</a></p>
 
-<p>只是现在其实很多内容都还受用不了，但是从部分思想来看，还是很受启发的，比如开源，比如软件开发的“市集”的概念之类的，当然还有关于Hacker文化的启迪，感觉ESR像是一个开源文化的传教士，让我深深的着迷于这种文化，而开始逐渐摒弃MS之类的文化。</p>
+<p>Problem occured:</p>
 
-<p>个人感觉开源将是软件发展的大势所趋，闭门造车的公司文化可能就会像大清闭关锁国一样遭受灭顶之灾。</p>
+<pre><code>$ sudo pacman -S libmtp mtpfs
+</code></pre>
+
+<p>在执行这条命令的时候出现了</p>
+
+<pre><code>No protocol specified
+
+No protocol specified
+
+no display possibled
+</code></pre>
+
+<p>不过不影响接下来的步骤。</p>
+
+<p>有趣的是，pacman就是“吃豆子”游戏……可以在终端中输入后玩 : )</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[近期的一些阅读]]></title>
+    <link href="http://SFantasy.github.com/blog/2012/10/11/jin-qi-de-yi-xie-yue-du/"/>
+    <updated>2012-10-11T11:16:00+08:00</updated>
+    <id>http://SFantasy.github.com/blog/2012/10/11/jin-qi-de-yi-xie-yue-du</id>
+    <content type="html"><![CDATA[<p>用这篇文章来记录一些读过的好书（烂书就直接丢了，HOHO~!）
+这其中大部分书都是在豆瓣上看到，然后去买了实体书或者下了PDF来看的。</p>
+
+<ul>
+<li>《黑客与画家》</li>
+</ul>
+
+
+<p>作者Paul Graham 就是传说中的硅谷创业之父，也可以说是互联网应用之父（源于其创办了第一个互联网应用程序“viaWeb”）。本书是他的文集，汇聚了有关“黑客精神“、”编程语言“、”创业历程“等话题，这次看的是中文版，得力于译者阮一峰的工作，读起这些文章来也甚是流畅带感。</p>
+
+<p>   关于“黑客”(Hacker)这一话题，当然，还有一些关于开放源代码和自由软件的思想，恐怕没有能比Eric S.Raymond的五部曲阐述的更为清晰的了吧。你在Google的搜索栏上随便一艘就能找到那五篇让人读起来热血沸腾的文章，这是我之前浏览它们的地址：http://man.lupaworld.com/content/develop/joyfire/project/7.html</p>
+
+<p>   如果你是一名Java程序员（这概率应该是很高的吧，身边学习Java语言的人太多了），那么可能在阅读这本书的时候会比较不开心了，也有可能越看越不开心了，作者是Lisp这门第二古老语言的推崇者，恐怕也是弱类型语言的支持者，而且在举到很多例子的时候感觉都用一种蔑视Java的态度。当然，关于编程语言之间的争斗恐怕也不止Paul一个人在吐槽别的语言吧。</p>
+
+<p>   文集中还讲到了很多有关于软件开发和创业的思想，令我感到比较震惊的是作者的确很有预见性。比如对于互联网软件的未来，作者从职业生涯一开始就投入在了互联网软件上，并且十分自信的确定互联网软件必将取代桌面软件的既定事实；我想正是这种带有预见性的思想，才让他成立的了风投公司“Y Combinator”，也成为了硅谷的创业之父吧！</p>
+
+<ul>
+<li>《Just for fun》</li>
+</ul>
+
+
+<p>   说起Linux可能无人不知，说起Linus可能也万人敬仰，而这本Linus Torvalds的自传可能就相对默默无闻多了，全书不过100多页，却展现了Linus从小时候在外公膝盖上开始敲击键盘打字、在自己的小房间里“偶尔朝里扔一些意大利面条”近乎疯狂的编程、暑假与《操作系统：设计和执行》在床上度过；开发自己的操作系统取代原先自己使用的MINIX，并将其个放在网络上供人们自由下载；来到硅谷加入Transmeta后的生活等等。</p>
+
+<p>   最让人印象深刻的是，Linus对名誉和利益的追求基本为0，凭借他的才智和能力，完全可以达到与Gates等人的地位，但是Linus所做的这一切都是为了一个简简单单的目的，即自己的兴趣，这也正是本书的主题：一切为了兴趣。(Just for fun！)</p>
+
+<p>   同时Linux也是通过网络开发开源软件的典范，为开源（Open Source）以及自由软件联盟(FSF)的发展做出了极大的贡献。当然，开源并不意味着可以滥用，这里有牵扯到了知识产权、专利以及开源的相关概念，我们可以通过Google了解他们的区别与联系。包括《黑客与画家》涉及到开源方面观点的书都会谈到一些这样的话题，比如开源与专利是不矛盾的等等。</p>
+
+<p>   这一类书（自传类的，还有《世界因你不同》之类的）读起来很快，而且很励志，看到伟人的生活与工作的历程总感觉有一股热量从身体中迸发出来。</p>
+
+<ul>
+<li>《浪潮之巅》</li>
+</ul>
+
+
+<p>   我们可以用一个短语来形容这本吴军博士的书：一座带你领略IT现代浪潮的灯塔。本书主要的内容是叙述各大IT公司的兴衰，包括了我曾听说过和未曾听说过的公司以及他们之间、内部的很多故事（当然也有MS如何从一个“模仿”别的公司软件开始发家的历程）。</p>
+
+<p>   吴军博士的文字很有亲和力，也很让人着迷。读这本书的时候就感觉是自己翱翔在IT史的天空上，看着IBM成长为巨人，看着硅谷最初Stanford划出那么一块地用来给校友开公司以来、到21世纪Google与Facebook等公司的崛起，看了之后无论是对于商业还是业界都有了一定的认识。虽然可能在一些细节上可能有所偏失和未能严格考证（这本书烂在哪里），但还是很佩服吴博士能写出这样年代跨度十分大的书，毕竟这也不是一般人能够随随便便写出来的。所以还是很推荐大家看一看这本书，会有收获的。</p>
+
+<ul>
+<li>《暗时间》</li>
+</ul>
+
+
+<p>   这是一本貌似是心理学类的书籍，可当然也不只是心理学，由于作者刘未鹏本身就是一名资深程序员，所以在书中很多地方都会带有程序员性质的思考。刘未鹏笔下的“暗时间”，指的是生活中难以察觉和掌控的时间（比如，无所事事的时间，乘车、吃饭、行走、睡觉等等零碎的时间）。</p>
+
+<p>   “在大三大四的时候，我就开始只用邮箱。”，这对于我们也许也是一个思考，现在的大学生（当然，我也是）总是把很多的精力消耗在了人人、facebook等SNS网站上，于是刘未鹏就滋生了这样一个简单的想法：有时间还不如看书。这也是我在大三的时候才意识到的一个问题（虽然觉得太晚，但也希望不是太晚），所以相比以前而言已经很少去关注人人上那些“无聊”的信息了。</p>
+
+<p>   回来讲这本书，书的后面一部分《跟波利亚学解题》讲到很多有趣的算法问题，也推荐了一些算法书，比如《算法引论》等，所以才说这不仅是一本心理学的书籍，但也许可以称其为一本“程序员”心理书会比较妥当。</p>
+
+<ul>
+<li>《数学之美》</li>
+</ul>
+
+
+<p>   谈到数学，其实我还是很心虚的，因为就算在上课期间对于一些问题理解的不错，但总是成绩不佳，所幸还徘徊在及格线上沿处未曾下落。</p>
+
+<p>   其实是直到读到这本书我才知道几何与代数原来还可以用来研发Google的Pagerank！所以至少我是很惊讶的，原来高数、几代、离散、概率书上的内容可以做那么酷的事情，如果让我在大学前就读了这本书的话，那么上课的时候肯定会认真百倍的，当然现实世界没有如果，而在大学之前也没有这本书 ：(。</p>
+
+<p>   本书当然还涉及了很多技术方面的基本数学原理，包括“自然语言处理”、“中文分词”、“搜索引擎”等等。可以这么说，原先感觉离自己还很远的顶尖的技术，在吴军博士的文字下显得格外接近我们的学习的东西。</p>
+
+<p>有好书，则待续。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Revolution OS]]></title>
+    <link href="http://SFantasy.github.com/blog/2012/10/02/revolution-os/"/>
+    <updated>2012-10-02T11:16:00+08:00</updated>
+    <id>http://SFantasy.github.com/blog/2012/10/02/revolution-os</id>
+    <content type="html"><![CDATA[<p>地址：<a href="http://www.ixck.com/dianying/2011/0326/273730.html">http://www.ixck.com/dianying/2011/0326/273730.html</a></p>
+
+<p>《操作系统革命》，一部关于Open Source&amp;&amp;Linux的记录型电影。</p>
+
+<p>Linus Torvalds/Richard Stallman/Eric Raymond/Brian Behlenodorf等大牛的采访记录。</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[A byte things about UNIX Shell]]></title>
-    <link href="http://SFantasy.github.com/blog/2012/11/26/a-byte-things-about-unix-shell/"/>
-    <updated>2012-11-26T11:11:00+08:00</updated>
-    <id>http://SFantasy.github.com/blog/2012/11/26/a-byte-things-about-unix-shell</id>
+    <link href="http://SFantasy.github.com/blog/2012/09/30/a-byte-things-about-unix-shell/"/>
+    <updated>2012-09-30T11:11:00+08:00</updated>
+    <id>http://SFantasy.github.com/blog/2012/09/30/a-byte-things-about-unix-shell</id>
     <content type="html"><![CDATA[<p>最近在图书馆翻到了一本《Unix 技术手册（第三版）》，这本书是SVR4（System V Release 4）和Solaris7的技术参考手册；其实旁边还有一本相对比较新的第四版，不过那本太厚，而且琢磨着应该差不了多少，于是就拿着它翻了起来。
 记得之前在看《鸟哥的Linux私房菜》的时候差不多翻到“学习shell与shell script”那一章，所以在阅读完介绍Unix的那一章以及跳过一大刀Unix命令的第二章后，看到了Unix shell的部分。</p>
 
@@ -163,6 +543,20 @@
 
 
 <p>当然将”alias“替换为”unalias“就可以将刚才设置好的别名去掉。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ESR五步曲]]></title>
+    <link href="http://SFantasy.github.com/blog/2012/08/31/esr-wu-bu-qu/"/>
+    <updated>2012-08-31T11:11:00+08:00</updated>
+    <id>http://SFantasy.github.com/blog/2012/08/31/esr-wu-bu-qu</id>
+    <content type="html"><![CDATA[<p><a href="http://man.lupaworld.com/content/develop/joyfire/project/7.html">ESR五部曲</a>
+实训的时候看到的，Eric.S.Raymond写的五部曲。</p>
+
+<p>只是现在其实很多内容都还受用不了，但是从部分思想来看，还是很受启发的，比如开源，比如软件开发的“市集”的概念之类的，当然还有关于Hacker文化的启迪，感觉ESR像是一个开源文化的传教士，让我深深的着迷于这种文化，而开始逐渐摒弃MS之类的文化。</p>
+
+<p>个人感觉开源将是软件发展的大势所趋，闭门造车的公司文化可能就会像大清闭关锁国一样遭受灭顶之灾。</p>
 ]]></content>
   </entry>
   

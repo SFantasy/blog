@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Movie | fanTasy | blog]]></title>
+  <link href="http://SFantasy.github.com/blog/categories/movie/atom.xml" rel="self"/>
+  <link href="http://SFantasy.github.com/"/>
+  <updated>2012-11-27T23:03:06+08:00</updated>
+  <id>http://SFantasy.github.com/</id>
+  <author>
+    <name><![CDATA[fanTasy shAo]]></name>
+    <email><![CDATA[forever.fantasy27@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Revolution OS]]></title>
+    <link href="http://SFantasy.github.com/blog/2012/10/02/revolution-os/"/>
+    <updated>2012-10-02T11:16:00+08:00</updated>
+    <id>http://SFantasy.github.com/blog/2012/10/02/revolution-os</id>
+    <content type="html"><![CDATA[<p>地址：<a href="http://www.ixck.com/dianying/2011/0326/273730.html">http://www.ixck.com/dianying/2011/0326/273730.html</a></p>
+
+<p>《操作系统革命》，一部关于Open Source&amp;&amp;Linux的记录型电影。</p>
+
+<p>Linus Torvalds/Richard Stallman/Eric Raymond/Brian Behlenodorf等大牛的采访记录。</p>
+]]></content>
+  </entry>
+  
+</feed>

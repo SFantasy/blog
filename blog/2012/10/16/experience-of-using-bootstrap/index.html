@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>忘记Root密码 - fanTasy | blog</title>
+  <title>Experience of Using Bootstrap - fanTasy | blog</title>
   <meta name="author" content="fanTasy shAo">
 
   
-  <meta name="description" content="最近终于开始有点想看书的心思了，于是捧起鸟哥的“大作”开始啃了起来（《鸟哥的Linux私房菜》），以下空间用来Mark一下本人曾经遇到过的问题或者不曾理解的内容，由于水平有限，各种槽点请轻吐……          记得第一次安装完Fedora之后就急匆匆地跑去上体育课了， &hellip;">
+  <meta name="description" content="最近在捣鼓一个网站，然后也是第一次用到前端框架——bootstrap（详细关于bootstrap的信息参阅http://twitter.github.com/bootstrap/%EF%BC%89） 使用bootstrap的感受     个人用起来感觉还不错，提供了很多平时建站时需要的组件如：按钮 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://SFantasy.github.com/blog/2012/07/01/wang-ji-rootmi-ma/">
+  <link rel="canonical" href="http://SFantasy.github.com/blog/2012/10/16/experience-of-using-bootstrap/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -67,7 +67,7 @@
   
   <header>
     
-      <h1 class="entry-title">忘记Root密码</h1>
+      <h1 class="entry-title">Experience of Using Bootstrap</h1>
     
     
       <p class="meta">
@@ -83,41 +83,38 @@
   
 
 
-<time datetime="2012-07-01T11:18:00+08:00" pubdate data-updated="true">Jul 1<span>st</span>, 2012</time>
+<time datetime="2012-10-16T11:15:00+08:00" pubdate data-updated="true">Oct 16<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>最近终于开始有点想看书的心思了，于是捧起鸟哥的“大作”开始啃了起来（《鸟哥的Linux私房菜》），以下空间用来Mark一下本人曾经遇到过的问题或者不曾理解的内容，由于水平有限，各种槽点请轻吐……</p>
+<div class="entry-content"><p>最近在捣鼓一个网站，然后也是第一次用到前端框架——bootstrap（详细关于bootstrap的信息参阅<a href="http://twitter.github.com/bootstrap/%EF%BC%89">http://twitter.github.com/bootstrap/%EF%BC%89</a>）</p>
 
-<p>    </p>
+<ul>
+<li>使用bootstrap的感受</li>
+</ul>
 
-<p>    记得第一次安装完Fedora之后就急匆匆地跑去上体育课了，然后回来居然怎么都无法正确的输入系统的密码，所以也就悲剧地无法进入系统的T<sup>T……记得Google了一些内容无果后，最终在室友的强烈建议下重装了系统。</sup></p>
 
-<p>    “你只要以单用户维护模式登录即可更改你的root帐号密码。由于lilo这个引导程序已经很少见了，这里使用grub引导装载程序作为范例来介绍。</p>
+<p>    个人用起来感觉还不错，提供了很多平时建站时需要的组件如：按钮、导航栏、标签等；JS插件如：对话框、弹出提示、下拉项、输入提示等。
+    在构建页面的时候只要稍稍修改一下CSS，并配合自己构建的HTML就可以作出比较好的效果。
+    特别喜欢twitter的界面风格的同学可以尝试着用来创建相似界面风格的网站前台页面。而且个人觉得也比较小清新 : )</p>
 
-<p>先将系统重启，在读秒的时候按下任意键就会出现如下内容：</p>
+<p>    记得是在知乎上看到对bootstrap的不满意，认为bootstrap制约了他的构建，并且推荐了另一个前端框架：foundation
+个人暂时还没有用过，但是打算在下一次的时候尝试一下这个被称之为“更好的”框架。</p>
 
-<pre><code>root (hd0,0)
+<ul>
+<li>关于Jetstrap</li>
+</ul>
 
-kernel /vmlinuz-2.6.18-128.e15 ro root=LABEL=/ rhgb quiet
 
-initrd /initrd-2.6.18-128.e15.img
-</code></pre>
+<p> 这个工具有个视频介绍之：<a href="http://v.youku.com/v_show/id_XNDU0ODM5OTQw.html">http://v.youku.com/v_show/id_XNDU0ODM5OTQw.html</a></p>
 
-<p>时，请将光标移动到kernel那一行，再按一次e进入kernel该行的编辑界面中，然后在出现的界面当中，最后方输入single:</p>
+<p>    我们也许可以称之为&#8221;网页版的构建纯bootstrap页面的Dreamweaver&#8221;。
+用户可以通过Google、Twitter或者Github账户登录到这个站点上，免费给用户使用（据说未来可能收费），这里的所有组件都是可以拖拽的，可以通过用户自定义CSS进行一些细微的改变，并可以将HTML和CSS打包成zip文件，方便开发站点的前台页面。</p>
 
-<pre><code>kernel /vmlinuz-2.6.18-128.e15 ro root=LABEL=/ rhgb quieet single
-</code></pre>
-
-<p>再按下Enter确定之后，按下b就可以开机进入单用户维护模式了。在这个模式之下，你会在tty1的地方不需要输入密码即可取得终端的控制权（而且是使用root的身份）。之后就能够修改root的密码了，请使用下面的命令来修改root的密码。</p>
-
-<pre><code>[root@www~]#passwd
-</code></pre>
-
-<p>接下来系统会要求你输入两次新的密码，然后再来reboot即可顺利修改root密码了。”（摘自《鸟哥的Linux私房菜（第三版）》）</p>
+<p>    不过个人还是不喜欢这一类（可视化的）工具，当然也包括了Dreamweaver，反而喜欢用SublimeText2或者Emacs来写。当然，这纯属个人喜好，并不是说用可视化工具有什么不好。</p>
 </div>
 
 
@@ -140,12 +137,12 @@ initrd /initrd-2.6.18-128.e15.img
   
 
 
-<time datetime="2012-07-01T11:18:00+08:00" pubdate data-updated="true">Jul 1<span>st</span>, 2012</time>
+<time datetime="2012-10-16T11:15:00+08:00" pubdate data-updated="true">Oct 16<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/linux/'>Linux</a>
+    <a class='category' href='/blog/categories/dev/'>Dev</a>, <a class='category' href='/blog/categories/front-end/'>Front-end</a>
   
 </span>
 
@@ -154,7 +151,7 @@ initrd /initrd-2.6.18-128.e15.img
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://SFantasy.github.com/blog/2012/07/01/wang-ji-rootmi-ma/" data-via="" data-counturl="http://SFantasy.github.com/blog/2012/07/01/wang-ji-rootmi-ma/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://SFantasy.github.com/blog/2012/10/16/experience-of-using-bootstrap/" data-via="" data-counturl="http://SFantasy.github.com/blog/2012/10/16/experience-of-using-bootstrap/" >Tweet</a>
   
   
   
@@ -163,10 +160,10 @@ initrd /initrd-2.6.18-128.e15.img
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/05/31/shi-yong-gaehe-chrometu-po-gfw/" title="Previous Post: 使用GAE和Chrome突破GFW">&laquo; 使用GAE和Chrome突破GFW</a>
+        <a class="basic-alignment left" href="/blog/2012/10/12/nexus-lian-jie-linux/" title="Previous Post: Nexus 7 连接 Linux">&laquo; Nexus 7 连接 Linux</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/08/01/guan-yu-wen-jian-quan-xian/" title="Next Post: 关于文件权限">关于文件权限 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/10/22/sui-bi-yi-pian/" title="Next Post: 随笔一篇">随笔一篇 &raquo;</a>
       
     </p>
   </footer>

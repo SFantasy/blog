@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Nexus | fanTasy | blog]]></title>
+  <link href="http://SFantasy.github.com/blog/categories/nexus/atom.xml" rel="self"/>
+  <link href="http://SFantasy.github.com/"/>
+  <updated>2012-11-27T23:03:06+08:00</updated>
+  <id>http://SFantasy.github.com/</id>
+  <author>
+    <name><![CDATA[fanTasy shAo]]></name>
+    <email><![CDATA[forever.fantasy27@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Nexus 7 连接 Linux]]></title>
+    <link href="http://SFantasy.github.com/blog/2012/10/12/nexus-lian-jie-linux/"/>
+    <updated>2012-10-12T11:15:00+08:00</updated>
+    <id>http://SFantasy.github.com/blog/2012/10/12/nexus-lian-jie-linux</id>
+    <content type="html"><![CDATA[<p>地址：<a href="http://archboy.org/2012/09/17/linux-connect-google-nexus-7-file-system-adb-development/">http://archboy.org/2012/09/17/linux-connect-google-nexus-7-file-system-adb-development/</a></p>
+
+<p>Problem occured:</p>
+
+<pre><code>$ sudo pacman -S libmtp mtpfs
+</code></pre>
+
+<p>在执行这条命令的时候出现了</p>
+
+<pre><code>No protocol specified
+
+No protocol specified
+
+no display possibled
+</code></pre>
+
+<p>不过不影响接下来的步骤。</p>
+
+<p>有趣的是，pacman就是“吃豆子”游戏……可以在终端中输入后玩 : )</p>
+]]></content>
+  </entry>
+  
+</feed>

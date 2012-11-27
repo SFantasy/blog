@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>忘记Root密码 - fanTasy | blog</title>
+  <title>Seven Languages in seven weeks:Ruby - fanTasy | blog</title>
   <meta name="author" content="fanTasy shAo">
 
   
-  <meta name="description" content="最近终于开始有点想看书的心思了，于是捧起鸟哥的“大作”开始啃了起来（《鸟哥的Linux私房菜》），以下空间用来Mark一下本人曾经遇到过的问题或者不曾理解的内容，由于水平有限，各种槽点请轻吐……          记得第一次安装完Fedora之后就急匆匆地跑去上体育课了， &hellip;">
+  <meta name="description" content="第一天 找 Ruby API 文档：http://ruby-doc.org/core-1.9.3/ Programming Ruby: The Pragmatic Programmer&#8217;s Guide [TFH08]的免费在线版本：http://www.ruby-doc.org/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://SFantasy.github.com/blog/2012/07/01/wang-ji-rootmi-ma/">
+  <link rel="canonical" href="http://SFantasy.github.com/blog/2012/11/21/seven-languages-in-seven-weeks-ruby/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -67,7 +67,7 @@
   
   <header>
     
-      <h1 class="entry-title">忘记Root密码</h1>
+      <h1 class="entry-title">Seven Languages in Seven weeks:Ruby</h1>
     
     
       <p class="meta">
@@ -83,41 +83,128 @@
   
 
 
-<time datetime="2012-07-01T11:18:00+08:00" pubdate data-updated="true">Jul 1<span>st</span>, 2012</time>
+<time datetime="2012-11-21T11:17:00+08:00" pubdate data-updated="true">Nov 21<span>st</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>最近终于开始有点想看书的心思了，于是捧起鸟哥的“大作”开始啃了起来（《鸟哥的Linux私房菜》），以下空间用来Mark一下本人曾经遇到过的问题或者不曾理解的内容，由于水平有限，各种槽点请轻吐……</p>
+<div class="entry-content"><h3>第一天</h3>
 
-<p>    </p>
+<ul>
+<li>找</li>
+</ul>
 
-<p>    记得第一次安装完Fedora之后就急匆匆地跑去上体育课了，然后回来居然怎么都无法正确的输入系统的密码，所以也就悲剧地无法进入系统的T<sup>T……记得Google了一些内容无果后，最终在室友的强烈建议下重装了系统。</sup></p>
 
-<p>    “你只要以单用户维护模式登录即可更改你的root帐号密码。由于lilo这个引导程序已经很少见了，这里使用grub引导装载程序作为范例来介绍。</p>
+<p>Ruby API 文档：<a href="http://ruby-doc.org/core-1.9.3/">http://ruby-doc.org/core-1.9.3/</a></p>
 
-<p>先将系统重启，在读秒的时候按下任意键就会出现如下内容：</p>
+<p>Programming Ruby: The Pragmatic Programmer&#8217;s Guide [TFH08]的免费在线版本：<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/">http://www.ruby-doc.org/docs/ProgrammingRuby/</a></p>
 
-<pre><code>root (hd0,0)
+<p>替换字符串某一部分的方法：</p>
 
-kernel /vmlinuz-2.6.18-128.e15 ro root=LABEL=/ rhgb quiet
+<p>替换一次:</p>
 
-initrd /initrd-2.6.18-128.e15.img
+<pre><code>"Hello World".sub('World','Ruby')
+=&gt; Hello Ruby
 </code></pre>
 
-<p>时，请将光标移动到kernel那一行，再按一次e进入kernel该行的编辑界面中，然后在出现的界面当中，最后方输入single:</p>
+<p>替换所有：</p>
 
-<pre><code>kernel /vmlinuz-2.6.18-128.e15 ro root=LABEL=/ rhgb quieet single
+<pre><code>"This is not right".gsub('i',' ')
+=&gt; Th s  s not r ght
 </code></pre>
 
-<p>再按下Enter确定之后，按下b就可以开机进入单用户维护模式了。在这个模式之下，你会在tty1的地方不需要输入密码即可取得终端的控制权（而且是使用root的身份）。之后就能够修改root的密码了，请使用下面的命令来修改root的密码。</p>
+<p>有关Ruby正则表达式的资料：<a href="http://ruby-doc.org/core-1.9.3/Regexp.html">http://ruby-doc.org/core-1.9.3/Regexp.html</a></p>
 
-<pre><code>[root@www~]#passwd
+<p>有关Ruby区间(range)的资料：<a href="http://ruby-doc.org/core-1.9.3/Range.html">http://ruby-doc.org/core-1.9.3/Range.html</a></p>
+
+<ul>
+<li>做</li>
+</ul>
+
+
+<p>打印字符串&#8221;Hello World.&#8221;:</p>
+
+<pre><code>irb&gt;puts "Hello World."
+Hello World.
+=&gt; nil
 </code></pre>
 
-<p>接下来系统会要求你输入两次新的密码，然后再来reboot即可顺利修改root密码了。”（摘自《鸟哥的Linux私房菜（第三版）》）</p>
+<p>在字符串&#8221;Hello Ruby.&#8221;中，找出&#8221;Ruby.&#8221;所在下标。</p>
+
+<pre><code>irb&gt;"Hello Ruby.".scan(/[Ruby\.]/) { |x| puts "Hello Ruby.".index(x)}
+6
+7
+8
+9
+10
+=&gt; "Hello Ruby."
+</code></pre>
+
+<p>其中，scan为Ruby在字符串中扫描的函数，寻找到匹配&#8221;Ruby.&#8221;中任意字符的字符，然后再用index方法求下标。</p>
+
+<p>打印你的名字十遍</p>
+
+<pre><code>irb&gt;10.times do puts "fanTasy" end
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+=&gt; 10
+</code></pre>
+
+<p>从打印字符串&#8221;This is sentence number 1.&#8221;，其中的数字1会一直变化到10。</p>
+
+<pre><code>irb&gt;n = 0
+    while (n&lt;10)
+    puts "This is sentence number"+(n+1).to_s+"."
+    end
+This is sentence number 1.
+This is sentence number 2.
+This is sentence number 3.
+This is sentence number 4.
+This is sentence number 5.
+This is sentence number 6.
+This is sentence number 7.
+This is sentence number 8.
+This is sentence number 9.
+This is sentence number 10
+</code></pre>
+
+<p>从文件运行Ruby程序</p>
+
+<p>用自己喜爱的文本编辑器写好一个Ruby程序，保存之后在终端输入:</p>
+
+<pre><code>ruby fileName.rb
+</code></pre>
+
+<p>猜数字程序：</p>
+
+<pre><code>puts "Guess a number:"
+a = gets()
+b = rand(10)
+while true
+   if a.to_i &gt; b
+      puts "Too large\n"
+   elsif a.to_i &lt; b
+      puts "Too small\n"
+   else
+      puts "all right\n"
+      exit
+   end
+puts "Guess again:\n"
+a = gets()
+end
+</code></pre>
+
+<h3>第二天</h3>
 </div>
 
 
@@ -140,12 +227,12 @@ initrd /initrd-2.6.18-128.e15.img
   
 
 
-<time datetime="2012-07-01T11:18:00+08:00" pubdate data-updated="true">Jul 1<span>st</span>, 2012</time>
+<time datetime="2012-11-21T11:17:00+08:00" pubdate data-updated="true">Nov 21<span>st</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/linux/'>Linux</a>
+    <a class='category' href='/blog/categories/reading/'>Reading</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>
   
 </span>
 
@@ -154,7 +241,7 @@ initrd /initrd-2.6.18-128.e15.img
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://SFantasy.github.com/blog/2012/07/01/wang-ji-rootmi-ma/" data-via="" data-counturl="http://SFantasy.github.com/blog/2012/07/01/wang-ji-rootmi-ma/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://SFantasy.github.com/blog/2012/11/21/seven-languages-in-seven-weeks-ruby/" data-via="" data-counturl="http://SFantasy.github.com/blog/2012/11/21/seven-languages-in-seven-weeks-ruby/" >Tweet</a>
   
   
   
@@ -163,10 +250,8 @@ initrd /initrd-2.6.18-128.e15.img
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/05/31/shi-yong-gaehe-chrometu-po-gfw/" title="Previous Post: 使用GAE和Chrome突破GFW">&laquo; 使用GAE和Chrome突破GFW</a>
+        <a class="basic-alignment left" href="/blog/2012/11/07/try-to-use-orange-classification/" title="Previous Post: Try to use ORANGE: Classification">&laquo; Try to use ORANGE: Classification</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/08/01/guan-yu-wen-jian-quan-xian/" title="Next Post: 关于文件权限">关于文件权限 &raquo;</a>
       
     </p>
   </footer>

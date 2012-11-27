@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Shell | fanTasy | blog]]></title>
   <link href="http://SFantasy.github.com/blog/categories/shell/atom.xml" rel="self"/>
   <link href="http://SFantasy.github.com/"/>
-  <updated>2012-11-26T23:03:48+08:00</updated>
+  <updated>2012-11-27T23:03:06+08:00</updated>
   <id>http://SFantasy.github.com/</id>
   <author>
     <name><![CDATA[fanTasy shAo]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[A byte things about UNIX Shell]]></title>
-    <link href="http://SFantasy.github.com/blog/2012/11/26/a-byte-things-about-unix-shell/"/>
-    <updated>2012-11-26T11:11:00+08:00</updated>
-    <id>http://SFantasy.github.com/blog/2012/11/26/a-byte-things-about-unix-shell</id>
+    <link href="http://SFantasy.github.com/blog/2012/09/30/a-byte-things-about-unix-shell/"/>
+    <updated>2012-09-30T11:11:00+08:00</updated>
+    <id>http://SFantasy.github.com/blog/2012/09/30/a-byte-things-about-unix-shell</id>
     <content type="html"><![CDATA[<p>最近在图书馆翻到了一本《Unix 技术手册（第三版）》，这本书是SVR4（System V Release 4）和Solaris7的技术参考手册；其实旁边还有一本相对比较新的第四版，不过那本太厚，而且琢磨着应该差不了多少，于是就拿着它翻了起来。
 记得之前在看《鸟哥的Linux私房菜》的时候差不多翻到“学习shell与shell script”那一章，所以在阅读完介绍Unix的那一章以及跳过一大刀Unix命令的第二章后，看到了Unix shell的部分。</p>
 

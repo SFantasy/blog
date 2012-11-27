@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Reading | fanTasy | blog]]></title>
+  <link href="http://SFantasy.github.com/blog/categories/reading/atom.xml" rel="self"/>
+  <link href="http://SFantasy.github.com/"/>
+  <updated>2012-11-27T23:03:06+08:00</updated>
+  <id>http://SFantasy.github.com/</id>
+  <author>
+    <name><![CDATA[fanTasy shAo]]></name>
+    <email><![CDATA[forever.fantasy27@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Seven Languages in seven weeks:Ruby]]></title>
+    <link href="http://SFantasy.github.com/blog/2012/11/21/seven-languages-in-seven-weeks-ruby/"/>
+    <updated>2012-11-21T11:17:00+08:00</updated>
+    <id>http://SFantasy.github.com/blog/2012/11/21/seven-languages-in-seven-weeks-ruby</id>
+    <content type="html"><![CDATA[<h3>第一天</h3>
+
+<ul>
+<li>找</li>
+</ul>
+
+
+<p>Ruby API 文档：<a href="http://ruby-doc.org/core-1.9.3/">http://ruby-doc.org/core-1.9.3/</a></p>
+
+<p>Programming Ruby: The Pragmatic Programmer's Guide [TFH08]的免费在线版本：<a href="http://www.ruby-doc.org/docs/ProgrammingRuby/">http://www.ruby-doc.org/docs/ProgrammingRuby/</a></p>
+
+<p>替换字符串某一部分的方法：</p>
+
+<p>替换一次:</p>
+
+<pre><code>"Hello World".sub('World','Ruby')
+=&gt; Hello Ruby
+</code></pre>
+
+<p>替换所有：</p>
+
+<pre><code>"This is not right".gsub('i',' ')
+=&gt; Th s  s not r ght
+</code></pre>
+
+<p>有关Ruby正则表达式的资料：<a href="http://ruby-doc.org/core-1.9.3/Regexp.html">http://ruby-doc.org/core-1.9.3/Regexp.html</a></p>
+
+<p>有关Ruby区间(range)的资料：<a href="http://ruby-doc.org/core-1.9.3/Range.html">http://ruby-doc.org/core-1.9.3/Range.html</a></p>
+
+<ul>
+<li>做</li>
+</ul>
+
+
+<p>打印字符串"Hello World.":</p>
+
+<pre><code>irb&gt;puts "Hello World."
+Hello World.
+=&gt; nil
+</code></pre>
+
+<p>在字符串"Hello Ruby."中，找出"Ruby."所在下标。</p>
+
+<pre><code>irb&gt;"Hello Ruby.".scan(/[Ruby\.]/) { |x| puts "Hello Ruby.".index(x)}
+6
+7
+8
+9
+10
+=&gt; "Hello Ruby."
+</code></pre>
+
+<p>其中，scan为Ruby在字符串中扫描的函数，寻找到匹配"Ruby."中任意字符的字符，然后再用index方法求下标。</p>
+
+<p>打印你的名字十遍</p>
+
+<pre><code>irb&gt;10.times do puts "fanTasy" end
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+fanTasy
+=&gt; 10
+</code></pre>
+
+<p>从打印字符串"This is sentence number 1."，其中的数字1会一直变化到10。</p>
+
+<pre><code>irb&gt;n = 0
+    while (n&lt;10)
+    puts "This is sentence number"+(n+1).to_s+"."
+    end
+This is sentence number 1.
+This is sentence number 2.
+This is sentence number 3.
+This is sentence number 4.
+This is sentence number 5.
+This is sentence number 6.
+This is sentence number 7.
+This is sentence number 8.
+This is sentence number 9.
+This is sentence number 10
+</code></pre>
+
+<p>从文件运行Ruby程序</p>
+
+<p>用自己喜爱的文本编辑器写好一个Ruby程序，保存之后在终端输入:</p>
+
+<pre><code>ruby fileName.rb
+</code></pre>
+
+<p>猜数字程序：</p>
+
+<pre><code>puts "Guess a number:"
+a = gets()
+b = rand(10)
+while true
+   if a.to_i &gt; b
+      puts "Too large\n"
+   elsif a.to_i &lt; b
+      puts "Too small\n"
+   else
+      puts "all right\n"
+      exit
+   end
+puts "Guess again:\n"
+a = gets()
+end
+</code></pre>
+
+<h3>第二天</h3>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[近期的一些阅读]]></title>
+    <link href="http://SFantasy.github.com/blog/2012/10/11/jin-qi-de-yi-xie-yue-du/"/>
+    <updated>2012-10-11T11:16:00+08:00</updated>
+    <id>http://SFantasy.github.com/blog/2012/10/11/jin-qi-de-yi-xie-yue-du</id>
+    <content type="html"><![CDATA[<p>用这篇文章来记录一些读过的好书（烂书就直接丢了，HOHO~!）
+这其中大部分书都是在豆瓣上看到，然后去买了实体书或者下了PDF来看的。</p>
+
+<ul>
+<li>《黑客与画家》</li>
+</ul>
+
+
+<p>作者Paul Graham 就是传说中的硅谷创业之父，也可以说是互联网应用之父（源于其创办了第一个互联网应用程序“viaWeb”）。本书是他的文集，汇聚了有关“黑客精神“、”编程语言“、”创业历程“等话题，这次看的是中文版，得力于译者阮一峰的工作，读起这些文章来也甚是流畅带感。</p>
+
+<p>   关于“黑客”(Hacker)这一话题，当然，还有一些关于开放源代码和自由软件的思想，恐怕没有能比Eric S.Raymond的五部曲阐述的更为清晰的了吧。你在Google的搜索栏上随便一艘就能找到那五篇让人读起来热血沸腾的文章，这是我之前浏览它们的地址：http://man.lupaworld.com/content/develop/joyfire/project/7.html</p>
+
+<p>   如果你是一名Java程序员（这概率应该是很高的吧，身边学习Java语言的人太多了），那么可能在阅读这本书的时候会比较不开心了，也有可能越看越不开心了，作者是Lisp这门第二古老语言的推崇者，恐怕也是弱类型语言的支持者，而且在举到很多例子的时候感觉都用一种蔑视Java的态度。当然，关于编程语言之间的争斗恐怕也不止Paul一个人在吐槽别的语言吧。</p>
+
+<p>   文集中还讲到了很多有关于软件开发和创业的思想，令我感到比较震惊的是作者的确很有预见性。比如对于互联网软件的未来，作者从职业生涯一开始就投入在了互联网软件上，并且十分自信的确定互联网软件必将取代桌面软件的既定事实；我想正是这种带有预见性的思想，才让他成立的了风投公司“Y Combinator”，也成为了硅谷的创业之父吧！</p>
+
+<ul>
+<li>《Just for fun》</li>
+</ul>
+
+
+<p>   说起Linux可能无人不知，说起Linus可能也万人敬仰，而这本Linus Torvalds的自传可能就相对默默无闻多了，全书不过100多页，却展现了Linus从小时候在外公膝盖上开始敲击键盘打字、在自己的小房间里“偶尔朝里扔一些意大利面条”近乎疯狂的编程、暑假与《操作系统：设计和执行》在床上度过；开发自己的操作系统取代原先自己使用的MINIX，并将其个放在网络上供人们自由下载；来到硅谷加入Transmeta后的生活等等。</p>
+
+<p>   最让人印象深刻的是，Linus对名誉和利益的追求基本为0，凭借他的才智和能力，完全可以达到与Gates等人的地位，但是Linus所做的这一切都是为了一个简简单单的目的，即自己的兴趣，这也正是本书的主题：一切为了兴趣。(Just for fun！)</p>
+
+<p>   同时Linux也是通过网络开发开源软件的典范，为开源（Open Source）以及自由软件联盟(FSF)的发展做出了极大的贡献。当然，开源并不意味着可以滥用，这里有牵扯到了知识产权、专利以及开源的相关概念，我们可以通过Google了解他们的区别与联系。包括《黑客与画家》涉及到开源方面观点的书都会谈到一些这样的话题，比如开源与专利是不矛盾的等等。</p>
+
+<p>   这一类书（自传类的，还有《世界因你不同》之类的）读起来很快，而且很励志，看到伟人的生活与工作的历程总感觉有一股热量从身体中迸发出来。</p>
+
+<ul>
+<li>《浪潮之巅》</li>
+</ul>
+
+
+<p>   我们可以用一个短语来形容这本吴军博士的书：一座带你领略IT现代浪潮的灯塔。本书主要的内容是叙述各大IT公司的兴衰，包括了我曾听说过和未曾听说过的公司以及他们之间、内部的很多故事（当然也有MS如何从一个“模仿”别的公司软件开始发家的历程）。</p>
+
+<p>   吴军博士的文字很有亲和力，也很让人着迷。读这本书的时候就感觉是自己翱翔在IT史的天空上，看着IBM成长为巨人，看着硅谷最初Stanford划出那么一块地用来给校友开公司以来、到21世纪Google与Facebook等公司的崛起，看了之后无论是对于商业还是业界都有了一定的认识。虽然可能在一些细节上可能有所偏失和未能严格考证（这本书烂在哪里），但还是很佩服吴博士能写出这样年代跨度十分大的书，毕竟这也不是一般人能够随随便便写出来的。所以还是很推荐大家看一看这本书，会有收获的。</p>
+
+<ul>
+<li>《暗时间》</li>
+</ul>
+
+
+<p>   这是一本貌似是心理学类的书籍，可当然也不只是心理学，由于作者刘未鹏本身就是一名资深程序员，所以在书中很多地方都会带有程序员性质的思考。刘未鹏笔下的“暗时间”，指的是生活中难以察觉和掌控的时间（比如，无所事事的时间，乘车、吃饭、行走、睡觉等等零碎的时间）。</p>
+
+<p>   “在大三大四的时候，我就开始只用邮箱。”，这对于我们也许也是一个思考，现在的大学生（当然，我也是）总是把很多的精力消耗在了人人、facebook等SNS网站上，于是刘未鹏就滋生了这样一个简单的想法：有时间还不如看书。这也是我在大三的时候才意识到的一个问题（虽然觉得太晚，但也希望不是太晚），所以相比以前而言已经很少去关注人人上那些“无聊”的信息了。</p>
+
+<p>   回来讲这本书，书的后面一部分《跟波利亚学解题》讲到很多有趣的算法问题，也推荐了一些算法书，比如《算法引论》等，所以才说这不仅是一本心理学的书籍，但也许可以称其为一本“程序员”心理书会比较妥当。</p>
+
+<ul>
+<li>《数学之美》</li>
+</ul>
+
+
+<p>   谈到数学，其实我还是很心虚的，因为就算在上课期间对于一些问题理解的不错，但总是成绩不佳，所幸还徘徊在及格线上沿处未曾下落。</p>
+
+<p>   其实是直到读到这本书我才知道几何与代数原来还可以用来研发Google的Pagerank！所以至少我是很惊讶的，原来高数、几代、离散、概率书上的内容可以做那么酷的事情，如果让我在大学前就读了这本书的话，那么上课的时候肯定会认真百倍的，当然现实世界没有如果，而在大学之前也没有这本书 ：(。</p>
+
+<p>   本书当然还涉及了很多技术方面的基本数学原理，包括“自然语言处理”、“中文分词”、“搜索引擎”等等。可以这么说，原先感觉离自己还很远的顶尖的技术，在吴军博士的文字下显得格外接近我们的学习的东西。</p>
+
+<p>有好书，则待续。</p>
+]]></content>
+  </entry>
+  
+</feed>
