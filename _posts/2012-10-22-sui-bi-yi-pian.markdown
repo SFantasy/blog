@@ -30,5 +30,5 @@ categories: 随笔
 * LinuxToy上的开源世界旅行手册：[http://i.linuxtoy.org/docs/guide/](http://i.linuxtoy.org/docs/guide/)  
 * Study-Area上的GNU/Linux学习之旅：[http://www.study-area.org/tips/linux_entry.htm](http://www.study-area.org/tips/linux_entry.htm)  
 * 王垠的wiki站和新浪博客：[http://docs.huihoo.com/homepage/shredderyin/](http://docs.huihoo.com/homepage/shredderyin/)  
-                          [http://blog.sina.com.cn/yinwang0]  (http://blog.sina.com.cn/yinwang0)  
+[http://blog.sina.com.cn/yinwang0]  (http://blog.sina.com.cn/yinwang0)  
 * joyfire的Linux笔记 [http://man.lupaworld.com/content/develop/joyfire/](http://man.lupaworld.com/content/develop/joyfire/)
