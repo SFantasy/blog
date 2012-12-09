@@ -8,7 +8,7 @@
   <div class="nav-bar bg-color-darken">
     <div class="nav-bar-inner">
       <ul class="menu">
-        <li><a href="/" title="首页">首页</a></li>
+        <li><a href="/" title="Home">Home</a></li>
         <li><a href="/archive.html">Archive</a></li>
         <li><a href="/categories.html">Categories</a></li>
         <li><a href="/about.html">About</a></li>    
