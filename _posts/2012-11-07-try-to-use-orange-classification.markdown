@@ -3,7 +3,7 @@ layout: post
 title: "Try to use ORANGE: Classification"
 date: 2012-11-07 11:18
 comments: true
-categories: Python Data_Mining]
+categories: Python Data_Mining
 ---
 
 ### 环境
