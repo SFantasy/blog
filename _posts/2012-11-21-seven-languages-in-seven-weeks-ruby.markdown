@@ -3,7 +3,7 @@ layout: post
 title: "Seven Languages in seven weeks:Ruby"
 date: 2012-11-21 11:17
 comments: true
-categories: [Ruby,Reading]
+categories: Ruby Reading
 ---
 
 ### 第一天
@@ -93,5 +93,3 @@ Programming Ruby: The Pragmatic Programmer's Guide [TFH08]的免费在线�
 	a = gets()
 	end
 
-
-###第二天
