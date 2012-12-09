@@ -3,7 +3,7 @@ layout: post
 title: "Nexus 7 连接 Linux"
 date: 2012-10-12 11:15
 comments: true
-categories: [Linux,Nexus]
+categories: Linux Nexus
 ---
 
 地址：[http://archboy.org/2012/09/17/linux-connect-google-nexus-7-file-system-adb-development/](http://archboy.org/2012/09/17/linux-connect-google-nexus-7-file-system-adb-development/)
