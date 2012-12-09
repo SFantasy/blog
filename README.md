@@ -1,11 +1,11 @@
 sfantasy.github.com
 ===================
 
-my own git page.
+My own git page.
 [http://sfantasy.github.com](http://sfantasy.github.com)
 
-Archive Blogs, Infomation about myself, etc.
+* Archive Blogs, Infomation about myself, etc.
 
-Using Jekyll and Metro UI CSS.
+* Using Jekyll and [Metro UI CSS](http://metroui.org.ua).
 
 
