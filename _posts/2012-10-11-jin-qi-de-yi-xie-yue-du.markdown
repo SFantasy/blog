@@ -1,15 +1,10 @@
 ---
 layout: post
-title: "近期的一些阅读"
+title: "黑客与画家"
 date: 2012-10-11 11:16
 comments: true
 categories: Reading
 ---
-
-
-用这篇文章来记录一些读过的好书（烂书就直接丢了，HOHO~!）
-这其中大部分书都是在豆瓣上看到，然后去买了实体书或者下了PDF来看的。
-
 
 * 《黑客与画家》
 
