@@ -3,7 +3,7 @@ layout: post
 title: "A byte things about UNIX Shell"
 date: 2012-09-30 11:11
 comments: true
-categories: [Shell,Linux]
+categories: Shell Linux
 ---
 
 最近在图书馆翻到了一本《Unix 技术手册（第三版）》，这本书是SVR4（System V Release 4）和Solaris7的技术参考手册；其实旁边还有一本相对比较新的第四版，不过那本太厚，而且琢磨着应该差不了多少，于是就拿着它翻了起来。
@@ -28,7 +28,6 @@ categories: [Shell,Linux]
 接下来简单的介绍一下bash的功能:
 
 * 输入输出重定向
-	e.g.
   	echo "This is an example" > a.txt
   	#将输出文本重定向（在这里也就是保存）到一个文件中
 
@@ -38,7 +37,8 @@ categories: [Shell,Linux]
 * 定制环境的shell变量
 
 * 写shell程序用的内置命令集
-	e.g.
+
+	
   	echo"hello bash"
   	#输出字符串
   	exit
