@@ -28,9 +28,9 @@ categories: Shell Linux
 接下来简单的介绍一下bash的功能:
 
 * 输入输出重定向
-	echo "This is an example" > a.txt
 	
-  	#将输出文本重定向（在这里也就是保存）到一个文件中
+		echo "This is an example" > a.txt
+  		#将输出文本重定向（在这里也就是保存）到一个文件中
 
 * 文件名缩写用的通配符（元字符）
 所谓通配符，举例来说：我们要删除所有文件格式为“.txt”的文件，使用“rm *.txt”就可以了，其中*就是所谓的“通配符”。
@@ -39,47 +39,29 @@ categories: Shell Linux
 
 * 写shell程序用的内置命令集
 	
-  	echo"hello bash"
-
-  	#输出字符串
-  	
-  	exit
-  	
-  	#退出bash
-  	
-  	wait
-  	
- 	#等待活动作业的完成
- 	
-	type cmd  
-	
-	#查看一个命令是否是bash的内置命令
+  		echo"hello bash"
+  		#输出字符串
+  		exit  	
+  		#退出bash
+  		wait
+ 		#等待活动作业的完成
+		type cmd  
+		#查看一个命令是否是bash的内置命令
 
 * 作业控制
 
- 	bg
- 	
-	#将作业置于后台运行
-	
-  	fg
-  	
-	#将作业置于前台运行
-	
-  	jobs
-  	
-  	#查看当前活动作业
-  	
-  	kill
-  	
-  	#终止某作业
-  	
-  	wait
-  	
-  	#等待后台作业完成
-  	
-  	C-z
-  	
-  	#挂起当前作业
+	 	bg
+		#将作业置于后台运行
+	  	fg
+		#将作业置于前台运行
+	  	jobs
+	  	#查看当前活动作业
+	  	kill
+	  	#终止某作业
+	  	wait
+	  	#等待后台作业完成
+	  	C-z
+	  	#挂起当前作业
 
 * 命令行编辑
 
@@ -89,8 +71,7 @@ categories: Shell Linux
 
 * 别名
 
-  	alias lm = ls -l | more
-  	
-  	#今后在bash中输入"lm" 就相当于输入了 "ls -l | more"
+  		alias lm = ls -l | more
+  		#今后在bash中输入"lm" 就相当于输入了 "ls -l | more"
 
 当然将”alias“替换为”unalias“就可以将刚才设置好的别名去掉。
