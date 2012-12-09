@@ -3,7 +3,7 @@ layout: post
 title: "Experience of Using Bootstrap"
 date: 2012-10-16 11:15
 comments: true
-categories: Front-end Dev
+categories: Front-end-Dev
 ---
 
 最近在捣鼓一个网站，然后也是第一次用到前端框架——bootstrap（详细关于bootstrap的信息参阅[http://twitter.github.com/bootstrap/%EF%BC%89](http://twitter.github.com/bootstrap/%EF%BC%89)）
