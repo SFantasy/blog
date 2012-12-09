@@ -1,0 +1,43 @@
+
+	/index.html
+
+	/atom.xml
+
+	/sitemap.txt
+
+	/about.html
+
+	/categories.html
+
+	/archive.html
+
+	/page2/index.html
+
+	/page3/index.html
+
+
+
+	/2012-11-seven-languages-in-seven-weeks-ruby/
+
+	/2012-11-try-to-use-orange-classification/
+
+	/2012-10-sui-bi-yi-pian/
+
+	/2012-10-experience-of-using-bootstrap/
+
+	/2012-10-nexus-lian-jie-linux/
+
+	/2012-10-jin-qi-de-yi-xie-yue-du/
+
+	/2012-10-revolution-os/
+
+	/2012-09-a-byte-things-about-unix-shell/
+
+	/2012-08-esr-wu-bu-qu/
+
+	/2012-08-guan-yu-wen-jian-quan-xian/
+
+	/2012-07-wang-ji-rootmi-ma/
+
+	/2012-05-shi-yong-gaehe-chrometu-po-gfw/
+

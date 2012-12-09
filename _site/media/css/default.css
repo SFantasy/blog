@@ -1,0 +1,14 @@
+body{
+	width: 70%;
+	margin-left: 15%;
+}
+article{
+	width: 70%;
+	float: right;
+}
+aside{
+	width: 30%;
+}
+footer{
+	text-align: center;
+}
