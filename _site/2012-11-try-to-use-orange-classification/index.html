@@ -25,7 +25,7 @@
   <div class="nav-bar bg-color-darken">
     <div class="nav-bar-inner">
       <ul class="menu">
-        <li><a href="/" title="首页">首页</a></li>
+        <li><a href="/" title="Home">Home</a></li>
         <li><a href="/archive.html">Archive</a></li>
         <li><a href="/categories.html">Categories</a></li>
         <li><a href="/about.html">About</a></li>    
@@ -51,7 +51,7 @@
          
          <a href="/categories.html#Python-ref" title="Python" rel="category tag">Python</a>
          
-         <a href="/categories.html#Data Mining-ref" title="Data Mining" rel="category tag">Data Mining</a>
+         <a href="/categories.html#Data_Mining-ref" title="Data_Mining" rel="category tag">Data_Mining</a>
         
       </small>
     </div>
@@ -66,37 +66,25 @@
 
 <hr />
 
-<p>```bash</p>
-
-<h1>1.下载Orange的源码和Numpy的源码</h1>
-
-<h1>2.编译Numpy</h1>
-
-<h1>3.安装Python开发包</h1>
-
-<p>sudo apt-get install python-dev</p>
-
-<h1>4.安装Python networkx包</h1>
-
-<p>sudo apt-get install python-networkx</p>
-
-<h1>5.编译Orange</h1>
-
-<p>python install.py build
-```</p>
+<pre><code>#1.下载Orange的源码和Numpy的源码
+#2.编译Numpy
+#3.安装Python开发包
+sudo apt-get install python-dev
+#4.安装Python networkx包
+sudo apt-get install python-networkx
+#5.编译Orange
+python install.py build
+</code></pre>
 
 <h3>测试</h3>
 
 <hr />
 
-<p>```python
-import orange</p>
-
-<h1>导入orange</h1>
-
-<p>orange.version
+<pre><code>import orange
+#导入orange
+orange.version
 '2.0b (21:58:41, Nov 3 2012)'
-```</p>
+</code></pre>
 
 <h3>Classification</h3>
 
@@ -106,56 +94,44 @@ import orange</p>
 
 <h4>Naive Bayes classifier</h4>
 
-<p>```python
-import orange
+<pre><code>import orange
 data = orange.ExampleTable("voting")
 classifier = orange.BayesLearner(data)
-for i in range(5):</p>
-
-<pre><code>c = classifier(data[i])
-print("original",data[i].getclass(),"classified as ",c)
+for i in range(5):
+    c = classifier(data[i])
+    print("original",data[i].getclass(),"classified as ",c)
 </code></pre>
 
-<p>```
-输出结果</p>
+<p>输出结果</p>
 
-<p><code>bash
-original republican classified as  republican
+<pre><code>original republican classified as  republican
 original republican classified as  republican
 original democrat classified as  republican
 original democrat classified as  democrat
 original democrat classified as  democrat
-</code>
-可以看出，Naive Bayes在第三个实例处出现了错误，但是其他的都是正确的。</p>
-
-<p>```python
-import orange
-data = orange.ExampleTable("voting")
-classifier = orange.BayesLearner(data)
-corrcetNum = 0</p>
-
-<h1>计数器</h1>
-
-<p>for i in data:</p>
-
-<pre><code>a = i.getclass()
-b = classifier(i)
-if a == b:
-    corrcetNum += 1
 </code></pre>
 
-<p>print "CA:%.3f" %(float(corrcetNum)/len(data))</p>
+<p>可以看出，Naive Bayes在第三个实例处出现了错误，但是其他的都是正确的。</p>
 
-<h1>计算分类正确率</h1>
+<pre><code>import orange
+data = orange.ExampleTable("voting")
+classifier = orange.BayesLearner(data)
+corrcetNum = 0
+#计数器
+for i in data:
+    a = i.getclass()
+    b = classifier(i)
+    if a == b:
+        corrcetNum += 1
 
-<p>```
-输出结果</p>
-
-<p><code>bash
+print "CA:%.3f" %(float(corrcetNum)/len(data))
+#计算分类正确率
+#输出结果
 Possible classes: &lt;republican, democrat&gt;
 CA:0.9034
-</code>
-可见，Naive Bayes在数据量比较大的时候分类的正确率还是比较高的。</p>
+</code></pre>
+
+<p>可见，Naive Bayes在数据量比较大的时候分类的正确率还是比较高的。</p>
 
 <h4>参考资料</h4>
 
@@ -172,15 +148,15 @@ CA:0.9034
       相关文章：
         
         <li>
-            <a href="/2012-11-seven-languages-in-seven-weeks-ruby/">Seven Languages in seven weeks:Ruby</a>
+            <a href="/2012-12-what-a-fucking-book/">这到底'他妈的'是一本什么书</a>
+        </li>
+    
+        <li>
+            <a href="/2012-12-it-just-for-fun/">It is just for fun</a>
         </li>
     
         <li>
             <a href="/2012-10-sui-bi-yi-pian/">随笔一篇</a>
-        </li>
-    
-        <li>
-            <a href="/2012-10-experience-of-using-bootstrap/">Experience of Using Bootstrap</a>
         </li>
     
     </div>
@@ -189,7 +165,7 @@ CA:0.9034
       <span>前一篇：<a href="/2012-10-sui-bi-yi-pian/" rel="prev" title="随笔一篇">随笔一篇</a></span>
       
       
-      <span>后一篇：<a href="/2012-11-seven-languages-in-seven-weeks-ruby/" rel="next" title="Seven Languages in seven weeks:Ruby">Seven Languages in seven weeks:Ruby</a></span>
+      <span>后一篇：<a href="/2012-12-it-just-for-fun/" rel="next" title="It is just for fun">It is just for fun</a></span>
       
     </nav>
   </section>
@@ -231,7 +207,7 @@ CA:0.9034
         }
         else if (e.which == 39 || e.which == 75) {  // Right arrow and K
             
-        url = '/2012-11-seven-languages-in-seven-weeks-ruby/';
+        url = '/2012-12-it-just-for-fun/';
         
         }
         if (url) {
@@ -246,7 +222,7 @@ CA:0.9034
 <div class="page-sidebar">
       <ul>
         <li>
-          <a>分类目录</a>
+          <a><i class="icon-bookmark-2"></i> Categories</a>
           <ul class="sub-menu light">
               
                 <li><a href="/categories.html#FQ-ref" title="FQ" rel="1">FQ <sup>(1)</sup></a></li>
@@ -255,35 +231,33 @@ CA:0.9034
               
                 <li><a href="/categories.html#Linux-ref" title="Linux" rel="4">Linux <sup>(4)</sup></a></li>
               
+                <li><a href="/categories.html#Reading-ref" title="Reading" rel="6">Reading <sup>(6)</sup></a></li>
+              
                 <li><a href="/categories.html#Hacker-ref" title="Hacker" rel="1">Hacker <sup>(1)</sup></a></li>
               
                 <li><a href="/categories.html#Shell-ref" title="Shell" rel="1">Shell <sup>(1)</sup></a></li>
               
                 <li><a href="/categories.html#Movie-ref" title="Movie" rel="1">Movie <sup>(1)</sup></a></li>
               
-                <li><a href="/categories.html#Reading-ref" title="Reading" rel="2">Reading <sup>(2)</sup></a></li>
-              
                 <li><a href="/categories.html#Nexus-ref" title="Nexus" rel="1">Nexus <sup>(1)</sup></a></li>
               
-                <li><a href="/categories.html#Front-end-ref" title="Front-end" rel="1">Front-end <sup>(1)</sup></a></li>
-              
-                <li><a href="/categories.html#Dev-ref" title="Dev" rel="1">Dev <sup>(1)</sup></a></li>
+                <li><a href="/categories.html#Front-end-Dev-ref" title="Front-end-Dev" rel="1">Front-end-Dev <sup>(1)</sup></a></li>
               
                 <li><a href="/categories.html#随笔-ref" title="随笔" rel="1">随笔 <sup>(1)</sup></a></li>
               
                 <li><a href="/categories.html#Python-ref" title="Python" rel="1">Python <sup>(1)</sup></a></li>
               
-                <li><a href="/categories.html#Data Mining-ref" title="Data Mining" rel="1">Data Mining <sup>(1)</sup></a></li>
-              
-                <li><a href="/categories.html#Ruby-ref" title="Ruby" rel="1">Ruby <sup>(1)</sup></a></li>
+                <li><a href="/categories.html#Data_Mining-ref" title="Data_Mining" rel="1">Data_Mining <sup>(1)</sup></a></li>
               
           </ul>
         </li>
         <li>
-          <a>近期文章</a>
+          <a><i class="icon-book"></i> Recent Posts</a>
           <ul class="sub-menu light">
             
-              <li><a href="/2012-11-seven-languages-in-seven-weeks-ruby/" title="Seven Languages in seven weeks:Ruby">Seven Languages in seven weeks:Ruby</a></li>
+              <li><a href="/2012-12-what-a-fucking-book/" title="这到底'他妈的'是一本什么书">这到底'他妈的'是一本什么书</a></li>
+            
+              <li><a href="/2012-12-it-just-for-fun/" title="It is just for fun">It is just for fun</a></li>
             
               <li><a href="/2012-11-try-to-use-orange-classification/" title="Try to use ORANGE: Classification">Try to use ORANGE: Classification</a></li>
             
@@ -291,21 +265,20 @@ CA:0.9034
             
               <li><a href="/2012-10-experience-of-using-bootstrap/" title="Experience of Using Bootstrap">Experience of Using Bootstrap</a></li>
             
-              <li><a href="/2012-10-nexus-lian-jie-linux/" title="Nexus 7 连接 Linux">Nexus 7 连接 Linux</a></li>
-            
           </ul>
         </li>
         <li>
-          <a>近期评论</a>
+          <a><i class="icon-comments-5"></i> Recent Comments</a>
           <ul class="sub-menu light">
             <script type="text/javascript" src="http://027.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=32&excerpt_length=50">
             </script>
           </ul>
         </li>
         <li>
-          <a>友情链接</a>
+          <a><i class="icon-link"></i> Links</a>
           <ul class="sub-menu light">
             <li><a href="http://www.google.com">Google</a></li>
+            <li><a href="http://fantasy00.diandian.com">My Diandian Blog</a></li>
           </ul>
         </li>
       </ul>

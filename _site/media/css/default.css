@@ -12,3 +12,12 @@ aside{
 footer{
 	text-align: center;
 }
+li{
+	overflow: hidden;
+}
+.passages{
+	max-height: 350px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
