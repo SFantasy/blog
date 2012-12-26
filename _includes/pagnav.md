@@ -1,29 +1,32 @@
 <nav>
+  <div class="pagination">
+  <ul>
   {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
-      <span><a href="/"><前页</a></span>
+      <li class="prev"><a href="/"></a></li>
     {% else %}
-      <span><a href="/page{{paginator.previous_page}}"><前页</a></span>
+      <li class="prev"><a href="/page{{paginator.previous_page}}"></a></li>
     {% endif %}
   {% else %}
-    <span><前页</span>
+    <li class="prev"><a></a></li>
   {% endif %}
   {% if paginator.page == 1 %}
-      <span>1</span>
+      <li><a>1</a></li>
   {% else %}
-      <a href="/">1</a>
+      <li><a href="/">1</a></li>
   {% endif %}
   {% for count in (2..paginator.total_pages) %}
       {% if count == paginator.page %}
-      <span>{{count}}</span>
+      <li>{{count}}</li>
   {% else %}
-      <a href="/page{{count}}">{{count}}</a>
+      <li><a href="/page{{count}}">{{count}}</a></li>
       {% endif %}
   {% endfor %}
   {% if paginator.next_page %}
-  <span><a href="/page{{paginator.next_page}}">后页></a></span>
+  <li class="next"><a href="/page{{paginator.next_page}}"></a></li>
   {% else %}
-    <span>后页></span>
+    <li class="next"></li>
   {% endif %}
-  (共{{ paginator.total_posts }}篇)
+  </ul>
+  </div>
 </nav>
