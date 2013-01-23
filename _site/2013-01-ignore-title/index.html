@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Try to use ORANGE: Classification - fanTasy | HomePage</title>
+  <title>Ignore the title - fanTasy | HomePage</title>
   <meta name="author" content="fanTasy shAo" />
   
   
@@ -32,105 +32,33 @@
     <article>
       <section>
     <div>
-      <h2>Try to use ORANGE: Classification</h2>
+      <h2>Ignore the title</h2>
       <small>
-        <date title="2012-11-07T11:18:00+08:00" datetime="2012-11-07T11:18:00+08:00" pubdate>
-          <span>November</span>
-          <span>07</span>
-          <span>2012</span>
+        <date title="2013-01-19T23:47:00+08:00" datetime="2013-01-19T23:47:00+08:00" pubdate>
+          <span>January</span>
+          <span>19</span>
+          <span>2013</span>
         </date>  ，类别：
          
-         <a href="/categories.html#Python-ref" title="Python" rel="category tag">Python</a>
-         
-         <a href="/categories.html#Data_Mining-ref" title="Data_Mining" rel="category tag">Data_Mining</a>
+         <a href="/categories.html#Reading-ref" title="Reading" rel="category tag">Reading</a>
         
       </small>
     </div>
     <div>
-      <h3>环境</h3>
+      <ul>
+<li><p>Delivering Happiness (三双鞋)</p>
 
-<hr />
-
-<p>Kubuntu 12.04/Python 2.7.3/Orange 2.0b</p>
-
-<h3>准备工作</h3>
-
-<hr />
-
-<pre><code>#1.下载Orange的源码和Numpy的源码
-#2.编译Numpy
-#3.安装Python开发包
-sudo apt-get install python-dev
-#4.安装Python networkx包
-sudo apt-get install python-networkx
-#5.编译Orange
-python install.py build
-</code></pre>
-
-<h3>测试</h3>
-
-<hr />
-
-<pre><code>import orange
-#导入orange
-orange.version
-'2.0b (21:58:41, Nov 3 2012)'
-</code></pre>
-
-<h3>Classification</h3>
-
-<hr />
-
-<p>从<a href="http://archive.ics.uci.edu/ml/">UCI Machine Learning Repository</a>下载一个测试数据集；比如Voting.tab</p>
-
-<h4>Naive Bayes classifier</h4>
-
-<pre><code>import orange
-data = orange.ExampleTable("voting")
-classifier = orange.BayesLearner(data)
-for i in range(5):
-    c = classifier(data[i])
-    print("original",data[i].getclass(),"classified as ",c)
-</code></pre>
-
-<p>输出结果</p>
-
-<pre><code>original republican classified as  republican
-original republican classified as  republican
-original democrat classified as  republican
-original democrat classified as  democrat
-original democrat classified as  democrat
-</code></pre>
-
-<p>可以看出，Naive Bayes在第三个实例处出现了错误，但是其他的都是正确的。</p>
-
-<pre><code>import orange
-data = orange.ExampleTable("voting")
-classifier = orange.BayesLearner(data)
-corrcetNum = 0
-#计数器
-for i in data:
-    a = i.getclass()
-    b = classifier(i)
-    if a == b:
-        corrcetNum += 1
-
-print "CA:%.3f" %(float(corrcetNum)/len(data))
-#计算分类正确率
-#输出结果
-Possible classes: &lt;republican, democrat&gt;
-CA:0.9034
-</code></pre>
-
-<p>可见，Naive Bayes在数据量比较大的时候分类的正确率还是比较高的。</p>
-
-<h4>参考资料</h4>
-
-<hr />
-
-<ul>
-<li>Orange reference : <a href="http://orange.biolab.si/doc/reference/">http://orange.biolab.si/doc/reference/</a></li>
-<li>Orange tutorial : <a href="http://orange.biolab.si/doc/tutorial/">http://orange.biolab.si/doc/tutorial/</a></li>
+<p> 回家的动车上看了大半本，后来两天陆陆续续的读完了整本书。
+　　
+　　起初还想吐槽下对于“三双鞋”这个书名的“看法”，后来看到书评里有本书的“小编”的解释，其实还是不太赞同，建议在后续再版的时候还是取一个“平实”的书名为好。
+　　
+　　看完留在脑海里的印象全是谢家华那出众的才华和胆识，当然，是在他长大、创业的旅途中显现出来的。
+　　一个学习丝毫不认真、少年时期就一心想着赚钱然后迸出各种点子的男生就”稀里糊涂“地进了哈佛，而在进哈佛之后第一件事情居然是窝在寝室里看电视（没有记错的话），不得不说他是一个奇才。由于名校毕业，又轻松的进了这年头高高在上的Oracle……
+　　然后，然后就是更为“辉煌”的创业生涯了－－网页设计、链接交换、美捷步。
+　　
+　　当然，文章中大篇幅的还是讲的谢家华在美捷步的经历。如何扩展销量、起死回生等等。其后还通过本书给我这种之前没有听说过美捷步文化的人一一细讲了文化内涵。
+　　
+　　能坚持、有胆识、敢拼老本、敢于创新，谢家华以后会不会给商业界带来惊喜？！</p></li>
 </ul>
 
 
@@ -139,10 +67,6 @@ CA:0.9034
       相关文章：
         
         <li>
-            <a href="/2013-01-ignore-title/">Ignore the title</a>
-        </li>
-    
-        <li>
             <a href="/2013-01-wen-fu-jie-mi/">文副'揭秘'</a>
         </li>
     
@@ -150,13 +74,15 @@ CA:0.9034
             <a href="/2012-12-a-boring-summary/">A Boring Summary of 2012</a>
         </li>
     
+        <li>
+            <a href="/2012-12-what-a-fucking-book/">这到底'他妈的'是一本什么书</a>
+        </li>
+    
     </div>
     <nav>
       
-      <span>前一篇：<a href="/2012-10-sui-bi-yi-pian/" rel="prev" title="随笔一篇">随笔一篇</a></span>
+      <span>前一篇：<a href="/2013-01-wen-fu-jie-mi/" rel="prev" title="文副'揭秘'">文副'揭秘'</a></span>
       
-      
-      <span>后一篇：<a href="/2012-12-it-just-for-fun/" rel="next" title="It is just for fun">It is just for fun</a></span>
       
     </nav>
   </section>
@@ -193,13 +119,11 @@ CA:0.9034
     var url = false;
         if (e.which == 37 || e.which == 74) {  // Left arrow and J
             
-        url = '/2012-10-sui-bi-yi-pian/';
+        url = '/2013-01-wen-fu-jie-mi/';
         
         }
         else if (e.which == 39 || e.which == 75) {  // Right arrow and K
             
-        url = '/2012-12-it-just-for-fun/';
-        
         }
         if (url) {
             window.location = url;

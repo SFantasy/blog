@@ -15,9 +15,11 @@
 
 	/page3/index.html
 
-	/page4/index.html
 
 
+	/2013-01-ignore-title/
+
+	/2013-01-wen-fu-jie-mi/
 
 	/2012-12-a-boring-summary/
 
