@@ -1,10 +1,16 @@
+@media screen {
+  .container {
+    width: auto; 
+    padding: 20px;
+  }
+}
 * {
   padding: 0;
   margin: 0;
   border: none;
   outline: none;
 }
-html, body, #container, nav a, footer {
+html, body, #container, h1, nav a, article, section, ul, footer, #paginator {
   display: block;
 }
 html {
@@ -13,7 +19,7 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
-  font-family: Galdeano,"Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
+  font-family: "Ubuntu",  "Microsoft YaHei",sans-serif;
   font-size: 14px;
   word-spacing: 1px;
   margin-left: auto; 
@@ -26,8 +32,19 @@ body {
   margin: 2em auto;
   padding: 0 2em;
 }
+header {
+  padding: .5em 0;
+  border-bottom: 1px solid #CCCCCC;
+}
 h1 {
-  font-size: 30px;
+  font-family: "Comic Sans MS", "Microsoft YaHei", sans-serif;
+  font-size: 1.6em;
+  font-weight: bold;
+  colod: #000;
+  -webkit-margin-before: 0.67em;
+   -webkit-margin-after: 0.67em;
+   -webkit-margin-start: 0px;
+     -webkit-margin-end: 0px;
 }
 nav {
   font-family: "Comic Sans MS", sans-serif;
@@ -46,14 +63,87 @@ nav a {
   color: #000000;
 }
 nav a:hover {
-  background-color: #2e92cf;
+  background-color: #000000;
   color: #f9f9f9;
   text-decoration: none;
-  -webkit-transition: color .1s linear;
+  -webkit-transition: color .2s linear;
 }
-
-
-
+article {
+  font-size: 16px;
+  line-height: 24px;
+}
+section {
+  padding: .5em 0em;
+}
+ul {
+  list-style-positon: inside;
+  list-style-type: disc;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+li {
+  display: list-item;
+  list-style-type: none;
+  padding: .2em 0;
+  text-align: -webkit-match-parent;
+}
+#recentPost {
+  font-weight: bold;
+}
+li a {
+  font-family: FreeSerif;
+  padding: .2em 1em;
+  color: #000000;
+}
+li a:hover {
+  color: #999999;
+}
+time {
+  color: #999999;
+}
+.paginator {
+  font-size: 14px;
+  color: #000000;
+  margin: 20px 0;
+  line-height: 150%;  
+}
+.paginator a, .paginator span {
+  padding: 0 6px;
+  margin: 0.5px;
+}
+.paginator a {
+  color: #000000;
+}
+.paginator a:hover {
+  background: #000000;
+  color: #f9f9f9;
+}
+.paginator span {
+  text-decoration: none;
+}
+.disabled {
+  color: #999999;
+}
+.currentPage {
+  color: #f9f9f9;
+  background: #000000;
+}
+#pageCount {
+  margin-left: 350px;
+  color: #999999;
+}
 footer {
+  font-size: 14px;
+  color: #999999;
+  font-family: "Souce Code Pro", "Ubuntu", "Microsoft YaHei", sans-serif;
   border-top: 1px dotted #CCC;
+}
+footer a{
+  color: #000000;
+}
+footer a:hover {
+  color: #f9f9f9;
+  background-color: #000000;
 }

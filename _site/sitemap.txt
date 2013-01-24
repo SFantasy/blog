@@ -13,8 +13,6 @@
 
 	/page2/index.html
 
-	/page3/index.html
-
 
 
 	/2013-01-ignore-title/

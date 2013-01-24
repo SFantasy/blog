@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>fanTasy | HomePage</title>
+  <title>Fantasy's Homepage</title>
   <meta name="author" content="fanTasy shAo" />
   
   
   <link rel="shortcut icon" href="/media/icon.ico" />
   <link rel="stylesheet" href="/media/css/default.css" />
-  <link href="/atom.xml" rel="alternate" title="fanTasy | HomePage" type="application/atom+xml" />
+  <link href="/atom.xml" rel="alternate" title="Fantasy's Homepage" type="application/atom+xml" />
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -17,86 +17,94 @@
   <div id="container">
     <header>
       <div>
-        <h1>fanTasy | HomePage</h1>
-	    <h3>Front-end Dev, Python/Google Fan, GUN/Linux user</h3>
+        <h1>Fantasy's Homepage</h1>
       </div> 
     </header>
     <nav>
       <span><a href="/">HOME</a></span>
-	  <span><a href="/">CATEGORIES</a></span>
+	  <span><a href="/categories.html">CATEGORIES</a></span>
 	  <span><a href="/archive.html">ARCHIVE</a></span>
 	  <span><a href="/links.html">LINKS</a></span>
       <span><br /></span>
 	  <span><a href="/about.html">ABOUT</a></span>
+      <span><a href="https://github.com/SFantasy/sfantasy.github.com">FORK ME</a></span>
     </nav>
     <article>
       <section>
-    <ul>
-    
-        <li>
-            <time>2013-01-19</time>
-            <a href=/2013-01-ignore-title/><h2>Ignore the title</h2></a>
-        </li>
-    
-        <li>
-            <time>2013-01-10</time>
-            <a href=/2013-01-wen-fu-jie-mi/><h2>文副'揭秘'</h2></a>
-        </li>
-    
-        <li>
-            <time>2012-12-31</time>
-            <a href=/2012-12-a-boring-summary/><h2>A Boring Summary of 2012</h2></a>
-        </li>
-    
-        <li>
-            <time>2012-12-04</time>
-            <a href=/2012-12-what-a-fucking-book/><h2>这到底'他妈的'是一本什么书</h2></a>
-        </li>
-    
-        <li>
-            <time>2012-12-02</time>
-            <a href=/2012-12-it-just-for-fun/><h2>It is just for fun</h2></a>
-        </li>
-    
-        <li>
-            <time>2012-11-07</time>
-            <a href=/2012-11-try-to-use-orange-classification/><h2>Try to use ORANGE: Classification</h2></a>
-        </li>
-    
-        <li>
-            <time>2012-10-22</time>
-            <a href=/2012-10-sui-bi-yi-pian/><h2>随笔一篇</h2></a>
-        </li>
-    
-        <li>
-            <time>2012-10-16</time>
-            <a href=/2012-10-experience-of-using-bootstrap/><h2>Experience of Using Bootstrap</h2></a>
-        </li>
-    
-    <ul>
-</section>
-<hr />
-<div>
   <ul>
+    <li id="recentPost">Recent Posts </li>
+    
+    <li>
+      <time>2013-01-19</time>
+        <span><a href=/2013-01-ignore-title/>Ignore the title</a></span>
+    </li>
+    
+    <li>
+      <time>2013-01-10</time>
+        <span><a href=/2013-01-wen-fu-jie-mi/>文副'揭秘'</a></span>
+    </li>
+    
+    <li>
+      <time>2012-12-31</time>
+        <span><a href=/2012-12-a-boring-summary/>A Boring Summary of 2012</a></span>
+    </li>
+    
+    <li>
+      <time>2012-12-04</time>
+        <span><a href=/2012-12-what-a-fucking-book/>这到底'他妈的'是一本什么书</a></span>
+    </li>
+    
+    <li>
+      <time>2012-12-02</time>
+        <span><a href=/2012-12-it-just-for-fun/>It is just for fun</a></span>
+    </li>
+    
+    <li>
+      <time>2012-11-07</time>
+        <span><a href=/2012-11-try-to-use-orange-classification/>Try to use ORANGE: Classification</a></span>
+    </li>
+    
+    <li>
+      <time>2012-10-22</time>
+        <span><a href=/2012-10-sui-bi-yi-pian/>随笔一篇</a></span>
+    </li>
+    
+    <li>
+      <time>2012-10-16</time>
+        <span><a href=/2012-10-experience-of-using-bootstrap/>Experience of Using Bootstrap</a></span>
+    </li>
+    
+    <li>
+      <time>2012-10-12</time>
+        <span><a href=/2012-10-nexus-lian-jie-linux/>Nexus 7 连接 Linux</a></span>
+    </li>
+    
+    <li>
+      <time>2012-10-02</time>
+        <span><a href=/2012-10-revolution-os/>Revolution OS</a></span>
+    </li>
+    
+  <ul>
+</section>
+<div class="paginator">
   
-    <li><a></a></li>
+    <span class="disabled">Prev</span>
   
+
   
-    <li><a>1</a></li>
+    <span class="currentPage">1</span>
   
+
   
     
-      <li><a href="/page2">2</a></li>
-      
-  
+      <a href="/page2">2</a>
     
-      <li><a href="/page3">3</a></li>
-      
   
+
   
-    <li><a href="/page2"></a></li>
+    <a href="/page2">Next</a>
   
-  </ul>
+  <span id="pageCount">total:19 posts</span>
 </div>
 
 
@@ -106,7 +114,7 @@
 
     </article>
     <footer>
-	  <span>Designe by fanTasy | Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a></span>
+	  <span>Designe by <a href="https://github.com/SFantasy">fanTasy</a> | Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a></span>
     </footer>
   </div>
   
