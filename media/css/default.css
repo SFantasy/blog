@@ -46,23 +46,25 @@ h1 {
    -webkit-margin-start: 0px;
      -webkit-margin-end: 0px;
 }
-nav {
+.mainNav, section nav {
   font-family: "Comic Sans MS", sans-serif;
+  float: left;
+  width: 9em;
+}
+.mainNav {
+  text-align: right;
+  margin-left: -12em;
   font-size: 1.1em;
   text-transform: uppercase;
-  float: left;
-  margin-left: -12em;
-  width: 9em;
-  text-align: right;
 }
 a {
  text-decoration: none;
 }
-nav a {
+.mainNav a {
   padding: .7em 1em;
   color: #000000;
 }
-nav a:hover {
+.mainNav a:hover, section nav a:hover {
   background-color: #000000;
   color: #f9f9f9;
   text-decoration: none;
@@ -146,4 +148,65 @@ footer a{
 footer a:hover {
   color: #f9f9f9;
   background-color: #000000;
+}
+/*
+* CSS of post.html
+*/
+
+section h2 {
+  font-family: "Ubuntu", "Microsoft YaHei", sans-serif;
+}
+small a {
+  color: #999999;
+}
+small a:hover {
+  color: #f9f9f9;
+  background-color: #000000;
+}
+.postContent {
+  font-size: 14px;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+.postContent pre, .postContent code {
+  font-family: "Source Code Pro", Consolas, sans-serif;
+  background-color: #e0eeee;
+}
+.postContent a, #related a{
+  color: #696969;
+}
+.postContent a:hover, #related a:hover {
+  color: #999999;
+}
+#related {
+  border-top: 1px solid #cccccc;
+}
+
+section nav {
+  font-size: 14px;
+  margin-top: -8em;
+  margin-left: 44em;
+  text-align: left;
+}
+section nav a {
+  color: #000000;
+}
+.category{
+  font-size: 18px;
+  font-weight: bold;
+}
+/*
+*  about page
+*/
+section p a {
+  color: #4a4a4a;
+}
+section p a:hover {
+  color: #363636;
+}
+#interest {
+  border-top: 1px solid #cccccc;
+}
+.prepre {
+  font-size: 14px;
+  background-color: #dcdcdc;
 }

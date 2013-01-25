@@ -6,6 +6,6 @@ My own git page.
 
 * Archive Blogs, Infomation about myself, etc.
 
-* Using Jekyll and [Metro UI CSS](http://metroui.org.ua).
+* Using Jekyll and imitated sext.
 
 

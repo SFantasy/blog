@@ -7,6 +7,8 @@
 
 	/about.html
 
+	/links.html
+
 	/categories.html
 
 	/archive.html
