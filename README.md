@@ -2,10 +2,10 @@ sfantasy.github.com
 ===================
 
 My own git page.
-[http://sfantasy.github.com](http://sfantasy.github.com)
+[http://shaofantasy.cn](http://shaofantasy.cn)
 
-* Archive Blogs, Infomation about myself, etc.
+* Blogs, Tutorials, Informations and other interesting things.
 
-* Using Jekyll and imitated sext.
+* Powered by Jekyll ,sext and GitHub.
 
 
