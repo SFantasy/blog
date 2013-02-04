@@ -179,6 +179,7 @@ small a:hover {
 }
 #related {
   border-top: 1px solid #cccccc;
+  margin-top: 50px;
 }
 
 section nav {
