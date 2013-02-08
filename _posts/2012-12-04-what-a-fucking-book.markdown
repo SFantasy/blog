@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "这到底'他妈的'是一本什么书"
+title: "这到底『他妈的』是一本什么书"
 date: 2012-12-04 12:00
 comments: true
 categories: Reading
 ---
+
+(评『麦田里的守望者』)
 
 这是一本从一开始就满是脏话的小说，充斥着“他妈的”之类的话语。 
 
