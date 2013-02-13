@@ -6,7 +6,7 @@ comments: true
 categories: Reading
 ---
 
-* 《Just for fun》
+#### 评《Just for fun》
 
    说起Linux可能无人不知，说起Linus可能也万人敬仰，而这本Linus Torvalds的自传可能就相对默默无闻多了，全书不过100多页，却展现了Linus从小时候在外公膝盖上开始敲击键盘打字、在自己的小房间里“偶尔朝里扔一些意大利面条”近乎疯狂的编程、暑假与《操作系统：设计和执行》在床上度过；开发自己的操作系统取代原先自己使用的MINIX，并将其个放在网络上供人们自由下载；来到硅谷加入Transmeta后的生活等等。
 
