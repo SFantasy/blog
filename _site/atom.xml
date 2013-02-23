@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy's Homepage]]></title>
   <link href="/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2013-02-13T22:05:22+08:00</updated>
+  <updated>2013-02-23T21:23:01+08:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[fanTasy shAo]]></name>
@@ -12,6 +12,100 @@
   </author>
   <generator uri="http://sfantasy.github.com/">fantasy | blog</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ubuntu Touch Preview 尝鲜]]></title>
+    <link href="/2013-02-ubuntu-touch-preview/"/>
+    <updated>2013-02-23T19:55:00+08:00</updated>
+    <id>/ubuntu-touch-preview</id>
+    <content type="html"><![CDATA[<p>前段时间Canonical发布了Ubuntu Touch Preview, 正好本人有Nexus 7可以一试(也不怕数据丢失).</p>
+
+<h2>安装</h2>
+
+<p>安装的过程很简单,<a href="https://wiki.ubuntu.com/Touch/Install?action=show&amp;redirect=TouchInstallProcess">wiki.ubuntu.com</a>.</p>
+
+<p>关于Android设备在Linux上的挂载问题, 可以参考<a href="http://archboy.org/2012/09/17/linux-connect-google-nexus-7-file-system-adb-development/">这里</a></p>
+
+<p>只是不知道是家里的网速慢还是其他的原因,下载这一过程花了很多时间.</p>
+
+<h2>体验</h2>
+
+<p>说实在的, 一段时间体验下来, 应该是因为是预览版(preview)所以很多功能都只是"摆设". 下面结合一下图片来讲解一下自己的体验.</p>
+
+<p>先来看这个系统的Home Screen:</p>
+
+<p><img src="../media/img/home.jpg" width="225" height="400"></img></p>
+
+<p>这个界面还是蛮漂亮的, 色彩也很有Ubuntu的特点, 不过那圈圈里的14 tweets received是硬编码进去的...略搓</p>
+
+<p>App界面:</p>
+
+<p><img src="../media/img/app.jpg" width="225" height="400"></img></p>
+
+<p>遗憾的是Available for download里的app还不能下载.</p>
+
+<p>侧边栏选择App：</p>
+
+<p><img src="../media/img/homee.jpg" width="225" height="400"></img></p>
+
+<p>这个功能很好，而且与GNOME的Desktop版很像.</p>
+
+<p>Game:</p>
+
+<p><img src="../media/img/game.jpg" width="400" height="225"></img></p>
+
+<p>系统原有的一个游戏, Ski Safari, 只是不能玩……这点有点坑爹> &lt;</p>
+
+<p>Gallery:</p>
+
+<p><img src="../media/img/gallery.jpg" width="225" height="400"></img></p>
+
+<p>浏览器:</p>
+
+<p><img src="../media/img/browser.jpg" width="225" height="400"></img></p>
+
+<p>Gmail：</p>
+
+<p><img src="../media/img/gmail.jpg" width="225" height="400"></img></p>
+
+<p>键盘：</p>
+
+<p><img src="../media/img/keyboard.jpg" width="400" height="225"></img></p>
+
+<p>不得不说这个键盘亦是一个败笔……太小而两边的空白太多(难道是因为是平板的原因?!)</p>
+
+<p>发现的一个Bug:</p>
+
+<p><img src="../media/img/bug.jpg" width="225" height="400"></img></p>
+
+<p>在切换的时候, 发现键盘不会自动移下去而要手动拨下去.</p>
+
+<h2>感受</h2>
+
+<ul>
+<li>使用下来感觉整个系统还是蛮流畅的, 当然还是有时候会有点顿卡的.</li>
+<li>应用不多, 不过对于预览版而言还是不算缺陷的, wp作为一个产品不还是应用匮乏咩 : )</li>
+<li>对于手势还是不了解,如果熟悉的话应该操作会更舒服点.</li>
+<li>确实有很多bug, 不过还是可以原谅的.</li>
+<li>体验还不错, 其实很期待作为一个真正的系统而非预览版的时候能达到什么样的程度.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[语言的魅力]]></title>
+    <link href="/2013-02-seven-languages/"/>
+    <updated>2013-02-23T16:07:00+08:00</updated>
+    <id>/seven-languages</id>
+    <content type="html"><![CDATA[<ul>
+<li>在七周七语言之后</li>
+</ul>
+
+
+<p>匆匆合上此书，不得不承认自己最学习一门新的语言有着很高的兴趣，这一点特别展现在结束一门语言的学习任务进入下一门的时候——兴奋与期待。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[可贵的经历]]></title>
@@ -40,24 +134,21 @@
     <link href="/2013-01-ignore-title/"/>
     <updated>2013-01-19T23:47:00+08:00</updated>
     <id>/ignore-title</id>
-    <content type="html"><![CDATA[<ul>
-<li><p>Delivering Happiness (三双鞋)</p>
+    <content type="html"><![CDATA[<h4>评  『Delivering Happiness (三双鞋)』</h4>
 
-<p> 回家的动车上看了大半本，后来两天陆陆续续的读完了整本书。</p>
+<p>   回家的动车上看了大半本，后来两天陆陆续续的读完了整本书。</p>
 
-<p> 起初还想吐槽下对于“三双鞋”这个书名的“看法”，后来看到书评里有本书的“小编”的解释，其实还是不太赞同，建议在后续再版的时候还是取一个“平实”的书名为好。</p>
+<p>   起初还想吐槽下对于“三双鞋”这个书名的“看法”，后来看到书评里有本书的“小编”的解释，其实还是不太赞同，建议在后续再版的时候还是取一个“平实”的书名为好。</p>
 
-<p> 看完留在脑海里的印象全是谢家华那出众的才华和胆识，当然，是在他长大、创业的旅途中显现出来的。</p>
+<p>   看完留在脑海里的印象全是谢家华那出众的才华和胆识，当然，是在他长大、创业的旅途中显现出来的。</p>
 
-<p> 一个学习丝毫不认真、少年时期就一心想着赚钱然后迸出各种点子的男生就”稀里糊涂“地进了哈佛，而在进哈佛之后第一件事情居然是窝在寝室里看电视（没有记错的话），不得不说他是一个奇才。由于名校毕业，又轻松的进了这年头高高在上的Oracle……</p>
+<p>   一个学习丝毫不认真、少年时期就一心想着赚钱然后迸出各种点子的男生就”稀里糊涂“地进了哈佛，而在进哈佛之后第一件事情居然是窝在寝室里看电视（没有记错的话），不得不说他是一个奇才。由于名校毕业，又轻松的进了这年头高高在上的Oracle……</p>
 
-<p> 然后，然后就是更为“辉煌”的创业生涯了－－网页设计、链接交换、美捷步。</p>
+<p>   然后，然后就是更为“辉煌”的创业生涯了－－网页设计、链接交换、美捷步。</p>
 
-<p> 当然，文章中大篇幅的还是讲的谢家华在美捷步的经历。如何扩展销量、起死回生等等。其后还通过本书给我这种之前没有听说过美捷步文化的人一一细讲了文化内涵。</p>
+<p>   当然，文章中大篇幅的还是讲的谢家华在美捷步的经历。如何扩展销量、起死回生等等。其后还通过本书给我这种之前没有听说过美捷步文化的人一一细讲了文化内涵。</p>
 
-<p> 能坚持、有胆识、敢拼老本、敢于创新，谢家华以后会不会给商业界带来惊喜？！</p></li>
-</ul>
-
+<p>   能坚持、有胆识、敢拼老本、敢于创新，谢家华以后会不会给商业界带来惊喜？！</p>
 ]]></content>
   </entry>
   
@@ -66,10 +157,7 @@
     <link href="/2013-01-wen-fu-jie-mi/"/>
     <updated>2013-01-10T22:16:00+08:00</updated>
     <id>/wen-fu-jie-mi</id>
-    <content type="html"><![CDATA[<ul>
-<li>HTML5 up and running (HTML5揭秘)</li>
-</ul>
-
+    <content type="html"><![CDATA[<h4>『HTML5 up and running (HTML5揭秘)』</h4>
 
 <p>　  这本书是2010年出版的，而我却在HTML definition completed之后才读这本书。
 　<br/>
@@ -217,11 +305,13 @@ The reason why I wrote this article in English is that may make less people inte
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[这到底'他妈的'是一本什么书]]></title>
+    <title type="html"><![CDATA[这到底『他妈的』是一本什么书]]></title>
     <link href="/2012-12-what-a-fucking-book/"/>
     <updated>2012-12-04T12:00:00+08:00</updated>
     <id>/what-a-fucking-book</id>
-    <content type="html"><![CDATA[<p>这是一本从一开始就满是脏话的小说，充斥着“他妈的”之类的话语。</p>
+    <content type="html"><![CDATA[<p>(评『麦田里的守望者』)</p>
+
+<p>这是一本从一开始就满是脏话的小说，充斥着“他妈的”之类的话语。</p>
 
 <p>其实这是很让人反感的一点，至少我是那么觉得的，所以在起初开始阅读这本书的时候的确有点怀疑——这到底“他妈的”是一本什么样的书？</p>
 
@@ -267,10 +357,7 @@ The reason why I wrote this article in English is that may make less people inte
     <link href="/2012-12-it-just-for-fun/"/>
     <updated>2012-12-02T11:16:00+08:00</updated>
     <id>/it-just-for-fun</id>
-    <content type="html"><![CDATA[<ul>
-<li>《Just for fun》</li>
-</ul>
-
+    <content type="html"><![CDATA[<h4>评《Just for fun》</h4>
 
 <p>   说起Linux可能无人不知，说起Linus可能也万人敬仰，而这本Linus Torvalds的自传可能就相对默默无闻多了，全书不过100多页，却展现了Linus从小时候在外公膝盖上开始敲击键盘打字、在自己的小房间里“偶尔朝里扔一些意大利面条”近乎疯狂的编程、暑假与《操作系统：设计和执行》在床上度过；开发自己的操作系统取代原先自己使用的MINIX，并将其个放在网络上供人们自由下载；来到硅谷加入Transmeta后的生活等等。</p>
 
@@ -694,105 +781,6 @@ no display possibled
 
 <pre><code>chgrp -r users test
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[忘记Root密码]]></title>
-    <link href="/2012-07-wang-ji-rootmi-ma/"/>
-    <updated>2012-07-01T11:18:00+08:00</updated>
-    <id>/wang-ji-rootmi-ma</id>
-    <content type="html"><![CDATA[<p>最近终于开始有点想看书的心思了，于是捧起鸟哥的“大作”开始啃了起来（《鸟哥的Linux私房菜》），以下空间用来Mark一下本人曾经遇到过的问题或者不曾理解的内容，由于水平有限，各种槽点请轻吐……</p>
-
-<p>    </p>
-
-<p>    记得第一次安装完Fedora之后就急匆匆地跑去上体育课了，然后回来居然怎么都无法正确的输入系统的密码，所以也就悲剧地无法进入系统的T<sup>T……记得Google了一些内容无果后，最终在室友的强烈建议下重装了系统。</sup></p>
-
-<p>    “你只要以单用户维护模式登录即可更改你的root帐号密码。由于lilo这个引导程序已经很少见了，这里使用grub引导装载程序作为范例来介绍。</p>
-
-<p>先将系统重启，在读秒的时候按下任意键就会出现如下内容：</p>
-
-<pre><code>root (hd0,0)
-
-kernel /vmlinuz-2.6.18-128.e15 ro root=LABEL=/ rhgb quiet
-
-initrd /initrd-2.6.18-128.e15.img
-</code></pre>
-
-<p>时，请将光标移动到kernel那一行，再按一次e进入kernel该行的编辑界面中，然后在出现的界面当中，最后方输入single:</p>
-
-<pre><code>kernel /vmlinuz-2.6.18-128.e15 ro root=LABEL=/ rhgb quieet single
-</code></pre>
-
-<p>再按下Enter确定之后，按下b就可以开机进入单用户维护模式了。在这个模式之下，你会在tty1的地方不需要输入密码即可取得终端的控制权（而且是使用root的身份）。之后就能够修改root的密码了，请使用下面的命令来修改root的密码。</p>
-
-<pre><code>[root@www~]#passwd
-</code></pre>
-
-<p>接下来系统会要求你输入两次新的密码，然后再来reboot即可顺利修改root密码了。”（摘自《鸟哥的Linux私房菜（第三版）》）</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[使用GAE和Chrome突破GFW]]></title>
-    <link href="/2012-05-shi-yong-gaehe-chrometu-po-gfw/"/>
-    <updated>2012-05-31T11:06:00+08:00</updated>
-    <id>/shi-yong-gaehe-chrometu-po-gfw</id>
-    <content type="html"><![CDATA[<p>看到文章标题想必屏幕前的你已经懂了我要讲什么。</p>
-
-<p>这篇文章主要介绍了一种用Chrome app+GAE的方法，此前在网上也看到过用GAE的教程，不过没有去尝试；日天同学率先发现此方法并造福全寝 : )</p>
-
-<p>以下方法在真实可行。</p>
-
-<ol>
-<li>安装Proxy Switchysharp</li>
-</ol>
-
-
-<p>这个应用在Chrome应用商店里自己搜就能搜到了；</p>
-
-<p>添加到浏览器之后会有个选项卡跳出来，给自己的情景模式取个名字；</p>
-
-<p>在手动配置里的HTTP代理那一栏里填上127.0.0.1；端口号为8086；</p>
-
-<p>再把所有协议均使用相同的代理服务器那个选上。点击保存就行了。</p>
-
-<ol>
-<li>创建自己的Google App</li>
-</ol>
-
-
-<p>地址： <a href="https://appengine.google.com">https://appengine.google.com</a></p>
-
-<p>点击createApplication后，在×××.appspot.com那栏里填app的名字， xxx是你自己取的名字，Application Title也是；</p>
-
-<p>填好后直接Creaete Application 就好了；</p>
-
-<ol>
-<li>下载配置wallproxy</li>
-</ol>
-
-
-<p>地址：<a href="http://code.google.com/p/wallproxy-plugins/downloads/list">http://code.google.com/p/wallproxy-plugins/downloads/list</a>
-这个list里有好几个文件，这次用的是wallproxy-plus.7z；</p>
-
-<p>下载完成后直接解压就行，不用安装；</p>
-
-<p>1)打开wallproxy目录下的server文件夹爱，运行upload.bat文件，先选择设置自己的appid，然后上传就行了，期间会让你填自己的邮箱地址和密码；</p>
-
-<p> 可以上appengine看自己的app有没有上传成功，如果dashboard里有自己app运行的情况的话，就证明已经上传成功了。</p>
-
-<p>2)打开wallproxy的目录里的local文件夹，打开WallProxy.exe文件，运行双击那个图标后会有一个console出来，最小化不要关闭；</p>
-
-<p>右击图标设置，最主要要在里面改一个appid，也就是之前申请GoogleApp时候的app的名字；还有可以修改server type，可以在不同的类型之间试试，效果的确是有细微的差别的，这个在wallproxy的主页上说明了。</p>
-
-<p>这样就搞定wallproxy了。</p>
-
-<p>至此，在正确配置好app和wallproxy就已经可以跑到万里长城外面了。当然，你要在浏览的时候选择自己当初配置的情景模式。</p>
-
-<p>在上网的时候一开始可能比较慢，但是后来还是蛮给力的，youtube可以看视频，其他测试的网站还有FB,Twitter,Blogger；</p>
-
-<p>流量为一天1G，对于浏览一下网站已经很够用了。</p>
 ]]></content>
   </entry>
   
