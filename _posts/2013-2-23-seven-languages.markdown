@@ -25,3 +25,5 @@ categories: Reading
 这本书的模式相信不仅仅是对于语言的不同范式而适用的, 也可以借鉴到其他的书籍写作中.
 
 书是读完了, 为我打开了一扇大门, 前方的旅途就要自己探索了.
+
+BTW, 关于此书的练习可以访问[repository](https://github.com/SFantasy/SLISW_practice), 或者[点点](http://fantasyshao.tk)
