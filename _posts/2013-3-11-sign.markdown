@@ -7,17 +7,24 @@ categories: Linux
 
 Having used [openSUSE](http://en.wikipedia.org/wiki/OpenSUSE) 12.2 for nearly 1 week and being suffered from crash, I downloaded [Linux Mint](http://en.wikipedia.org/wiki/Linux_mint) and then installed it immediately.  
 
+
 This reason is not convincing, however, I tried my best to rescue it and failed(nvidia driver may caused it).  
+
 
 Since I started to use GNU/Linux, a door of Open Source opened to me and the spirit of Freedom hit me. I am curious to try different Linux distributions and happy to find things interesting in them. YinWang did influenced me most(though he posted a [blog](http://blog.sina.com.cn/s/blog_5d90e82f0101ip7f.html) in a opposite method several day ago).
 
+
 I'm not an expert in Operating Systems, but I do have rich experience in using them(especially GNU/Linux and M$ Windows).  
+
 
 Here I don't want to talk anything about the advantages and disadvantages about them. GNU/Linux makes me comfortable except the X-windows( and it must be the main reason people hate it and not eager ot use it). Not long ago, I heared that Ubuntu is developing its own desk environment instead of X-windows( T/F? ). That is amazing if it is true.
 
+
 It is really a mess in my mind when I recall the memory of using different distributions. Let me stop it.
 
+
 After all, Linux Mint is pretty good for me to use, it is simple and user-friendly. The KDE of Mint is the best one I ever used. One more thing, it is compatible with Ubuntu applications. And I didn't find any problems using it until now.
+
 
 I will use Linux Mint for the rest time of my college life. 
 
