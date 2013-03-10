@@ -169,7 +169,7 @@ small a:hover {
 }
 .postContent pre, .postContent code {
   font-family: "Source Code Pro", Consolas, sans-serif;
-  background-color: #e0eeee;
+  background-color: rgb(238, 238, 238);
 }
 .postContent a, #related a{
   color: #696969;
