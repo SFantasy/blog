@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy's Homepage]]></title>
   <link href="/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2013-03-10T10:35:34+08:00</updated>
+  <updated>2013-03-14T21:44:49+08:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[fanTasy shAo]]></name>
@@ -14,12 +14,38 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Sign.]]></title>
+    <link href="/2013-03-sign/"/>
+    <updated>2013-03-11T00:00:00+08:00</updated>
+    <id>/sign</id>
+    <content type="html"><![CDATA[<p>Having used <a href="http://en.wikipedia.org/wiki/OpenSUSE">openSUSE</a> 12.2 for nearly 1 week and being suffered from crash, I downloaded <a href="http://en.wikipedia.org/wiki/Linux_mint">Linux Mint</a> and then installed it immediately.</p>
+
+<p>This reason is not convincing, however, I tried my best to rescue it and failed(nvidia driver may caused it).</p>
+
+<p>Since I started to use GNU/Linux, a door of Open Source opened to me and the spirit of Freedom hit me. I am curious to try different Linux distributions and happy to find things interesting in them. YinWang did influenced me most(though he posted a <a href="http://blog.sina.com.cn/s/blog_5d90e82f0101ip7f.html">blog</a> in a opposite method several day ago).</p>
+
+<p>I'm not an expert in Operating Systems, but I do have rich experience in using them(especially GNU/Linux and M$ Windows).</p>
+
+<p>Here I don't want to talk anything about the advantages and disadvantages about them. GNU/Linux makes me comfortable except the X-windows( and it must be the main reason people hate it and not eager ot use it). Not long ago, I heared that Ubuntu is developing its own desk environment instead of X-windows( T/F? ). That is amazing if it is true.</p>
+
+<p>It is really a mess in my mind when I recall the memory of using different distributions. Let me stop it.</p>
+
+<p>After all, Linux Mint is pretty good for me to use, it is simple and user-friendly. The KDE of Mint is the best one I ever used. One more thing, it is compatible with Ubuntu applications. And I didn't find any problems using it until now.</p>
+
+<p>I will use Linux Mint for the rest time of my college life.</p>
+
+<p><em>but you know, once Linuxer have money, they will buy a Mac Book : )</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[CSS布局原理入门]]></title>
     <link href="/2013-03-zz-css-fundemental/"/>
     <updated>2013-03-10T00:07:00+08:00</updated>
     <id>/zz-css-fundemental</id>
-    <content type="html"><![CDATA[<p>本文出自@寒冬winter的<a href="http://photo.weibo.com/1196343093/wbphotos/large/photo_id/3554004161919635?refer=weibofeedv5">微博</a>
-由于原照片过于……卖萌(亮瞎)，所以整理一个正常一点的文章来记录并分享一下。</p>
+    <content type="html"><![CDATA[<p>本文出自@寒冬winter的<a href="http://photo.weibo.com/1196343093/wbphotos/large/photo_id/3554004161919635?refer=weibofeedv5">微博</a></p>
+
+<p>由于原照片过于……卖萌(亮瞎)，所以整理一个正常一点的文章来记录并分享一下。</p>
 
 <p>首先，我们来了解一下神马叫做盒(box)</p>
 
@@ -860,22 +886,6 @@ no display possibled
 <p>只是现在其实很多内容都还受用不了，但是从部分思想来看，还是很受启发的，比如开源，比如软件开发的“市集”的概念之类的，当然还有关于Hacker文化的启迪，感觉ESR像是一个开源文化的传教士，让我深深的着迷于这种文化，而开始逐渐摒弃MS之类的文化。</p>
 
 <p>个人感觉开源将是软件发展的大势所趋，闭门造车的公司文化可能就会像大清闭关锁国一样遭受灭顶之灾。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[一座带我领略IT浪潮的灯塔]]></title>
-    <link href="/2012-08-lang-chao-zhi-dian/"/>
-    <updated>2012-08-02T11:16:00+08:00</updated>
-    <id>/lang-chao-zhi-dian</id>
-    <content type="html"><![CDATA[<ul>
-<li>《浪潮之巅》</li>
-</ul>
-
-
-<p>   我们可以用一个短语来形容这本吴军博士的书：一座带你领略IT现代浪潮的灯塔。本书主要的内容是叙述各大IT公司的兴衰，包括了我曾听说过和未曾听说过的公司以及他们之间、内部的很多故事（当然也有MS如何从一个“模仿”别的公司软件开始发家的历程）。</p>
-
-<p>   吴军博士的文字很有亲和力，也很让人着迷。读这本书的时候就感觉是自己翱翔在IT史的天空上，看着IBM成长为巨人，看着硅谷最初Stanford划出那么一块地用来给校友开公司以来、到21世纪Google与Facebook等公司的崛起，看了之后无论是对于商业还是业界都有了一定的认识。虽然可能在一些细节上可能有所偏失和未能严格考证（这本书烂在哪里），但还是很佩服吴博士能写出这样年代跨度十分大的书，毕竟这也不是一般人能够随随便便写出来的。所以还是很推荐大家看一看这本书，会有收获的。</p>
 ]]></content>
   </entry>
   

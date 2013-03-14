@@ -165,7 +165,7 @@ small a:hover {
 }
 .postContent {
   font-size: 14px;
-  font-family: "Microsoft YaHei", sans-serif;
+  font-family: Georgia, "Microsoft YaHei", sans-serif;
 }
 .postContent pre, .postContent code {
   font-family: "Source Code Pro", Consolas, sans-serif;
@@ -181,7 +181,10 @@ small a:hover {
   border-top: 1px solid #cccccc;
   margin-top: 50px;
 }
-
+section p {
+  line-height: 20px;
+  margin-bottom: 16px;
+}
 section nav {
   font-size: 14px;
   margin-top: -8em;
