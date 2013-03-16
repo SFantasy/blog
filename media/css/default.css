@@ -164,19 +164,32 @@ small a:hover {
   color: #f9f9f9;
   background-color: #000000;
 }
+
 .postContent {
-  font-size: 14px;
+  font-size: 13px;
   font-family: Georgia, "Microsoft YaHei", sans-serif;
+}
+.postContent blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
 }
 .postContent pre, .postContent code {
   font-family: "Source Code Pro", Consolas, sans-serif;
-  background-color: rgb(238, 238, 238);
+  background-color: #f8f8f8;
+  font-size: 13px;
+  overflow: auto;
+}
+.postContent pre {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 3px;
 }
 .postContent a, #related a{
-  color: #696969;
+  color: #4183c4;
 }
 .postContent a:hover, #related a:hover {
-  color: #999999;
+  color: rgb(44, 94, 143);
 }
 .postContent li {
   list-style-type: circle;
