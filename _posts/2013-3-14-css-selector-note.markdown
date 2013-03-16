@@ -129,7 +129,8 @@ categories: Front-end-Dev
       <p>Je suis français.</p>
     </body>
 
-    /*如果匹配条件为[lang|=fr]，那么只会匹配到body元素;而如果是:lang(fr)那么会匹配到body和p元素，因为它们都是用法语的内容.*/
+    /*如果匹配条件为[lang|=fr]，那么只会匹配到body元素;
+	而如果是:lang(fr)那么会匹配到body和p元素，因为它们都是用法语的内容.*/
 	
 * `E::before` `E::after` 伪元素
 
@@ -236,6 +237,6 @@ categories: Front-end-Dev
 
 
 
-**本文整理了很久，真的只有整理了，才知道自己的知识有多凌乱不堪。**
+>本文整理了很久，真的只有整理了，才知道自己的知识有多凌乱不堪。
 
 --EOF--
