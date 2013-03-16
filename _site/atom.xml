@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy's Homepage]]></title>
   <link href="/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2013-03-14T21:44:49+08:00</updated>
+  <updated>2013-03-16T20:01:24+08:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[fanTasy shAo]]></name>
@@ -12,6 +12,213 @@
   </author>
   <generator uri="http://sfantasy.github.com/">fantasy | blog</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learn CSS Selectors]]></title>
+    <link href="/2013-03-css-selector-note/"/>
+    <updated>2013-03-14T00:00:00+08:00</updated>
+    <id>/css-selector-note</id>
+    <content type="html"><![CDATA[<p>虽说自己蛮喜欢做前端开发的，但是说起来还是有很多知识都是“野生”的，这一说来感觉自己更像是一个“野生的程序员”……嘿，前方出现一个野生的程序员！</p>
+
+<p>玩笑开到这，还是进入正题，所谓“野生”的，也只是想调侃一下自己，毕竟都是自己看书浏览各种教程网站所得——也一直想系统的学习下这方面的知识，所以也就顺便撰文一篇markdown一下，从头开始！</p>
+
+<blockquote><p>In CSS, pattern matching rules determine which style rules apply to elements in the document tree. These patterns, called selectors, may range from simple element names to rich contextual patterns. If all conditions in the pattern are true for a certain element, the selector matches the element.</p></blockquote>
+
+<p>这是<a href="http://www.w3.org/TR/CSS2/selector.html">W3C</a>上的一段话，有点像定义. 简单的翻译一下就是：</p>
+
+<blockquote><p>在CSS中，模式匹配规则决定了文档树中元素应该匹配的样式规则.这些模式，叫做选择器，(选择器的)范围从简单的元素名到复杂的上下文关系模式.如果所有的模式都(匹配)为对应的元素，那么这个选择器就匹配了这个对应的元素.</p></blockquote>
+
+<p>当然，我们可以很容易的在W3C官网上找到<a href="http://www.w3.org/TR/selectors/#selectors">所有的CSS选择器</a>，从level1~3.</p>
+
+<p>从CSS标准进化的角度来看下所有的selector:
+(先截取一段本页面的html源代码，以之为示例)</p>
+
+<pre><code>&lt;header&gt;
+  &lt;h1&gt;Fantasy's Homepage&lt;/h1&gt;
+&lt;/header&gt;
+&lt;nav class="mainNav"&gt;
+  &lt;span id="homeSpan"&gt;&lt;a href="/"&gt;HOME&lt;/a&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;a href="/categories.html"&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;/nav&gt;
+&lt;article&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Learn CSS Selectors&lt;/h2&gt;
+    &lt;div class="postContent"&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/article&gt;  
+</code></pre>
+
+<h3>CSS level1：</h3>
+
+<ul>
+<li><p>标签选择器<code>E</code>（匹配所有使用该标签的元素）:</p>
+
+<p>  h2 { ... }</p></li>
+<li><p>class选择器<code>.class</code>（匹配所有类元素中包含该指定class的元素）：</p>
+
+<p>  .mainNav { ... }
+  nav.mainNav { .. }</p></li>
+<li><p>id选择器<code>#id</code>（匹配所有id属性为该指定id的元素）:</p>
+
+<p>  #homeSpan { ... }
+  span#homeSPan { ... }</p></li>
+<li><p>后代元素选择器<code>E F</code>(匹配所有E元素的后代元素F)：</p>
+
+<p>  span a { ... }</p></li>
+<li><p>链接伪类<code>E:link</code> <code>E:visited</code>（匹配所有(未)被点击的链接）：</p>
+
+<p>  a:link { ... }<br/>
+  a:visited { ... }</p></li>
+<li><p>用户操作伪类<code>E:active</code> <code>E:hover</code> <code>E:focus</code> （匹配一些用户操作的选择）：</p>
+
+<p>  <em>按下链接，但未释放</em><br/>
+  a:active { ... }<br/>
+  <em>鼠标移动到链接上</em><br/>
+  a:hover { ... }<br/>
+  <em>元素获得焦点</em><br/>
+  a:focus { ... }<br/>
+  <em>这里的问题是如何判断链接获得焦点呢？所以更多的，:focus伪类用于input标签等</em></p></li>
+<li><p>first伪元素<code>E::first-line</code> <code>E::first-letter</code> （匹配E元素下的第一行(字母)）</p>
+
+<p>  p::first-line {
+    text-transform: uppercase;
+  }<br/>
+  <em>p元素下首行文字被transform为大写</em><br/>
+  p::first-letter {
+    text-transform: uppercase;
+  }<br/>
+  <em>p元素下的第一个字母变为大写</em></p></li>
+</ul>
+
+
+<h3>CSS level 2</h3>
+
+<ul>
+<li><p>通用元素选择器<code>*</code> （匹配所有元素）<br/>
+<code>* { ... }</code></p></li>
+<li><p>属性选择器<code>E[foo]</code> <code>E[foo="bar"]</code> <code>E[foo~="bar"]</code> <code>E[foo|="en"]</code></p>
+
+<p>  a[href] { ... }<br/>
+  <em>匹配带有href属性的a标签</em><br/>
+  a[href="/home.html"] { ... }<br/>
+  <em>匹配href属性为"/home.html"的a标签</em><br/>
+  a[rel~="copyright"] { ... }<br/>
+  <em>若a元素下的rel属性为"copyright copyleft copymiddle"，这样就能匹配到该元素，而不用使用a[rel="copyright copyleft copymiddle"]</em><br/>
+  a[hreflang|="en"] { ... }<br/>
+  <em>匹配所有a标签下hreflang属性中带有连字符的并以"en"开始的元素</em></p></li>
+<li><p>结构化伪类<code>E:first-child</code> （匹配所有E元素，条件是E元素为其父元素的第一个子元素）</p>
+
+<p>  p:first-child { ... }</p></li>
+<li><p>语言伪类<code>E:lang(fr)</code> （匹配所有语言类型为'fr'的元素）</p>
+
+<p>  <body lang=fr>
+    <p>Je suis français.</p>
+  </body></p>
+
+<p>  <em>如果匹配条件为[lang|=fr]，那么只会匹配到body元素;而如果是:lang(fr)那么会匹配到body和p元素，因为它们都是用法语的内容.</em></p></li>
+<li><p><code>E::before</code> <code>E::after</code> 伪元素（在指定元素前生成指定内容）</p>
+
+<p>  <em>在E元素前生成内容</em>
+  p::before { content:"note:" }</p></li>
+<li><p>子元素选择器<code>E &gt; F</code> （匹配所有E元素下的F元素）</p>
+
+<p>  nav > span { ... }</p></li>
+<li><p>毗邻元素选择器<code>E + F</code> （匹配紧跟着E元素的同级F元素）</p>
+
+<p>  header + nav { ... }</p></li>
+</ul>
+
+
+<h3>CSS level 3</h3>
+
+<ul>
+<li><p>属性选择器<code>E[foo^="bar"]</code> <code>E[foo$="bar"]</code> <code>E[foo*="bar"]</code></p>
+
+<p>  E[foo^="bar"]<br/>
+  <em>E标签中foo属性的值以"bar"开始的元素</em> <br/>
+  E[foo$="bar"]<br/>
+  <em>与上面一个正好相反，E标签中foo属性的值以"bar"结尾的元素</em><br/>
+  E[foo<em>="bar"]<br/>
+  </em>E标签中foo属性的值含有"bar"的元素*</p></li>
+<li><p>结构化伪类<br/>
+<code>E:root</code> <code>E:nth-child(n)</code> <code>E:nth-last-child(n)</code> <code>E:nth-of-type(n)</code> <code>E:nth-last-of-type(n)</code></p>
+
+<p>  E:root<br/>
+  <em>文档的root元素，在HTML4中，永远是html标签(W3C这样说的，实际对于上HTML文件都是html)</em><br/>
+  E:nth-child(n)<br/>
+  <em>E的父亲元素的第n个子元素</em><br/>
+  E:nth-child(odd)<br/>
+  <em>就可以表示E的父亲元素下奇数号的元素</em><br/>
+  E:nth-last-child(n)<br/>
+  <em>与E:nth-child相反，从E的父亲元素下最后一个子元素向前计数</em><br/>
+  E:nth-of-type(n)<br/>
+  <em>与E:nth-child(n)相似，但是只能匹配与E为同类(siblings)的元素标签</em><br/>
+  E:nth-last-of-type(n)<br/>
+  <em>与E:nth-of-type相反</em></p></li>
+<li><p>结构化伪类<br/>
+<code>E:last-child</code> <code>E:first-of-type</code> <code>E:last-of-type</code> <code>E:only-child</code> <code>E:only-of-type</code> <code>E:empty</code></p>
+
+<p>  E:last-child<br/>
+  <em>等同于E:nth-last-child(1),匹配所有以E为最后元素的父元素下的子元素E</em><br/>
+  ol > li:last-child<br/>
+  <em>匹配ol中的最后一个li元素</em><br/>
+  E:first-of-type<br/>
+  <em>等同于E:nth-of-type(1)</em><br/>
+  E:last-of-type<br/>
+  <em>等同于E:nth-last-of-type(1)</em>
+  E:only-child<br/>
+  <em>匹配一个有父亲元素但是该父亲元素没有其他子元素的元素</em>
+  E:only-of-type<br/>
+  <em>匹配一个有父亲元素但是该父亲元素没有相同扩展元素名的子元素的元素</em>
+  E:empty<br/>
+  <em>匹配一个不包含任何子元素的节点（包含文本节点）</em></p></li>
+<li><p>目标伪类 <code>E:target</code></p></li>
+</ul>
+
+
+<p>有些URI指向的是同一份资源中的一部分，也就是常见的带有#标记的链接</p>
+
+<pre><code>html:target { ... }
+/*为html文档中所有target元素添加样式*/
+</code></pre>
+
+<ul>
+<li>UI元素状态伪类 <code>E:enabled</code> <code>E:disabled</code> <code>E:checked</code></li>
+</ul>
+
+
+<p>匹配所有状态为<code>enabled</code> <code>disabled</code>或者<code>checked</code>的元素，特地查看了下, enable/disable想必大家都了解，
+所谓checked就是指一些<code>radio-button</code>或<code>checkbox</code>中的状态</p>
+
+<ul>
+<li><p>否定伪类 <code>E:not(s)</code></p>
+
+<p>  button:not([DISABLED])<br/>
+  <em>匹配所有可以点击的按钮</em><br/>
+  html:not(nav) { ... }<br/>
+  <em>匹配所有除nav元素以外的元素</em></p></li>
+<li><p>同级元素选择器 <code>E ~ F</code> 匹配所有在E之后的并与E同级的元素F</p>
+
+<p>   h2 ~ p { ... }</p></li>
+</ul>
+
+
+<h3>参考资料</h3>
+
+<ul>
+<li><a href="http://www.w3.org">w3.org</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2009/03/css_selectors.html">阮一峰的网络日志</a>:这篇文章发布于2009年，
+但是内容已经很详尽，不过感觉缺少稍微详细点的描述以及更为生动的例子.</li>
+</ul>
+
+
+<p><strong>本文整理了很久，真的只有整理了，才知道自己的知识有多凌乱不堪。</strong></p>
+
+<p>--EOF--</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Sign.]]></title>
@@ -872,20 +1079,6 @@ no display possibled
 <p>   其实是直到读到这本书我才知道几何与代数原来还可以用来研发Google的Pagerank！所以至少我是很惊讶的，原来高数、几代、离散、概率书上的内容可以做那么酷的事情，如果让我在大学前就读了这本书的话，那么上课的时候肯定会认真百倍的，当然现实世界没有如果，而在大学之前也没有这本书 ：(。</p>
 
 <p>   本书当然还涉及了很多技术方面的基本数学原理，包括“自然语言处理”、“中文分词”、“搜索引擎”等等。可以这么说，原先感觉离自己还很远的顶尖的技术，在吴军博士的文字下显得格外接近我们的学习的东西。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ESR五步曲]]></title>
-    <link href="/2012-08-esr-wu-bu-qu/"/>
-    <updated>2012-08-31T11:11:00+08:00</updated>
-    <id>/esr-wu-bu-qu</id>
-    <content type="html"><![CDATA[<p><a href="http://man.lupaworld.com/content/develop/joyfire/project/7.html">ESR五部曲</a>
-实训的时候看到的，Eric.S.Raymond写的五部曲。</p>
-
-<p>只是现在其实很多内容都还受用不了，但是从部分思想来看，还是很受启发的，比如开源，比如软件开发的“市集”的概念之类的，当然还有关于Hacker文化的启迪，感觉ESR像是一个开源文化的传教士，让我深深的着迷于这种文化，而开始逐渐摒弃MS之类的文化。</p>
-
-<p>个人感觉开源将是软件发展的大势所趋，闭门造车的公司文化可能就会像大清闭关锁国一样遭受灭顶之灾。</p>
 ]]></content>
   </entry>
   

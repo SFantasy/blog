@@ -56,6 +56,7 @@ h1 {
   margin-left: -12em;
   font-size: 1.1em;
   text-transform: uppercase;
+  position: fixed;
 }
 a {
  text-decoration: none;
@@ -176,6 +177,9 @@ small a:hover {
 }
 .postContent a:hover, #related a:hover {
   color: #999999;
+}
+.postContent li {
+  list-style-type: circle;
 }
 #related {
   border-top: 1px solid #cccccc;

@@ -177,6 +177,9 @@ small a:hover {
 .postContent a:hover, #related a:hover {
   color: #999999;
 }
+.postContent li {
+  list-style-type: circle;
+}
 #related {
   border-top: 1px solid #cccccc;
   margin-top: 50px;
