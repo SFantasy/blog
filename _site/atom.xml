@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy's Homepage]]></title>
   <link href="/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2013-03-16T21:47:23+08:00</updated>
+  <updated>2013-03-19T17:02:13+08:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[fanTasy shAo]]></name>
@@ -180,7 +180,8 @@ a[hreflang|="en"] { ... }
   &lt;p&gt;Je suis français.&lt;/p&gt;
 &lt;/body&gt;
 
-/*如果匹配条件为[lang|=fr]，那么只会匹配到body元素;而如果是:lang(fr)那么会匹配到body和p元素，因为它们都是用法语的内容.*/
+/*如果匹配条件为[lang|=fr]，那么只会匹配到body元素;
+而如果是:lang(fr)那么会匹配到body和p元素，因为它们都是用法语的内容.*/
 </code></pre>
 
 <ul>
@@ -326,7 +327,7 @@ html:not(nav) { ... }
 </ul>
 
 
-<p><strong>本文整理了很久，真的只有整理了，才知道自己的知识有多凌乱不堪。</strong></p>
+<blockquote><p>本文整理了很久，真的只有整理了，才知道自己的知识有多凌乱不堪。</p></blockquote>
 
 <p>--EOF--</p>
 ]]></content>
