@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy's Homepage]]></title>
   <link href="/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2013-03-19T17:11:06+08:00</updated>
+  <updated>2013-03-21T23:50:47+08:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[fanTasy shAo]]></name>
@@ -12,6 +12,87 @@
   </author>
   <generator uri="http://sfantasy.github.com/">fantasy | blog</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[一瞥Python中的lambda]]></title>
+    <link href="/2013-03-python-lambda-fp/"/>
+    <updated>2013-03-20T00:00:00+08:00</updated>
+    <id>/python-lambda-fp</id>
+    <content type="html"><![CDATA[<h2>前言</h2>
+
+<p>去年夏天的时候，孤陋寡闻的我第一次见识了Lisp，我的一个同学捧着Galaxy Note在看Practical Common Lisp，于是我略感兴趣然后跟了他的风看了篇Lisp之根源，这是一篇译作，原文是Paul Graham写的。之后同学还饶有兴趣地在我的电脑上安装了Slime + Emacs.</p>
+
+<p>这段经历给我留下的唯一结果是Emacs几乎成为了我最常用的编辑器，而Lisp却没有走进我的生活.</p>
+
+<p>之后，我学了一段时间的Python(A byte of python)，并且在课程作业、日常工作上也经常用到(Machine Learning, File Processing, Lexical Analysis等)，但是遗憾的是我至今还没有尝试过Python的FP.</p>
+
+<p>再后来，就是读七周七语言并逐渐接触到Scala, Erlang, Haskell的日子了.</p>
+
+<p>其实当我看完‘七周七语言’, 对于函数式编程依旧不甚了解, 所知道的也无非是类似“变量不可变”，匿名函数，高阶函数等一些内容;再之后，我在OSChina上翻译了一篇介绍Ruby函数式编程的文章, 那是正好接触了一点函数式编程的思想, 但是翻译的时候还是很生涩的.</p>
+
+<h2>正题</h2>
+
+<p>前几天莫名奇妙的笔了一次Python，很多基础的知识都答不上来，可见自学的成果真是相当差.多的不谈，一言以蔽之--“还不会走路，就想着跑了”.</p>
+
+<p>其中有一题是考的用lambda写一个阶乘函数，果断的悲剧了:(</p>
+
+<pre><code>def factorial(k):
+    return reduce((lambda i,j: i*j), range(1, k+1))
+
+factorial(5)
+</code></pre>
+
+<p>上面的写法不知道是不是标准答案，但可以确定的是正确答案.</p>
+
+<p>其中reduce函数是用来进行迭代乘积的，而lambda表达式和range函数是作为reduce的参数的.</p>
+
+<pre><code>lambda arg1, arg2,...: expression using args
+</code></pre>
+
+<p>这是lambda函数的定义方式，所以说，其实所谓的lambda函数也无非是用来定义匿名函数(Anonymous function)的方式.这在更为'pure'的函数式编程语言如Clojure, Haskell中就如同def在Python中的地位吧？</p>
+
+<p>现在我们可以用Python中的几个函数式编程工具来体验一下这个酷而古老的编程范型：</p>
+
+<pre><code>In [1]: x = lambda n: n+1
+In [2]: x(10)
+Out[2]: 11
+#的确很简单吧
+In [3]: filter(lambda n: n%2 == 0, range(1, 10))
+Out[3]: [2, 4, 6, 8]
+#配合filter函数使用，filter出[1,10)中为偶数的部分
+In [4]: map(lambda n: n*3+5, range(1, 10))
+Out[4]: [8, 11, 14, 17, 20, 23, 26, 29, 32]
+#配合map函数使用，可以对数据进行简单的映射
+</code></pre>
+
+<p>用lambda函数在Python中做一些列表解析还是蛮不错的，如果要在lambda表达式中使用if-else语句呢？相必应该很容易想得到：</p>
+
+<pre><code>In [5]: x = lambda x: "Large" if x&gt;2 else "Small"
+In [6]: x(3)
+Out[6]: 'Large'
+#换一种实现方式
+In [7]: x = lambda n: x&gt;2 and "Large" or "Small"
+#(test and [x]) or [y], test 为真，执行x，否则执行y
+In [8]: x(3)
+Out[8]: 'Large'
+</code></pre>
+
+<p>当然，也可以更像Lisp一点：</p>
+
+<pre><code>In [9]: ((lambda x:(lambda y: x+y))(1))(2)
+Out[9]: 3
+#虽然只是1+2……
+</code></pre>
+
+<p>很多时候是用不到lambda函数的，当然也有很多人对lambda情有独钟，我也在豆瓣某小组中看到过对于这个话题的争论，各执一词，争执不下.</p>
+
+<p>我觉得lambda函数还是很可爱的，可能也与自己本身对于函数式编程也有相当的兴趣有关，当然，关于函数式编程的思想还是不甚了解.</p>
+
+<blockquote><p>说真的，我想学Lisp!</p></blockquote>
+
+<p>--EOF--</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learn CSS Selectors]]></title>
@@ -1174,24 +1255,6 @@ no display possibled
 <p>   “在大三大四的时候，我就开始只用邮箱。”，这对于我们也许也是一个思考，现在的大学生（当然，我也是）总是把很多的精力消耗在了人人、facebook等SNS网站上，于是刘未鹏就滋生了这样一个简单的想法：有时间还不如看书。这也是我在大三的时候才意识到的一个问题（虽然觉得太晚，但也希望不是太晚），所以相比以前而言已经很少去关注人人上那些“无聊”的信息了。</p>
 
 <p>   回来讲这本书，书的后面一部分《跟波利亚学解题》讲到很多有趣的算法问题，也推荐了一些算法书，比如《算法引论》等，所以才说这不仅是一本心理学的书籍，但也许可以称其为一本“程序员”心理书会比较妥当。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[数学之美]]></title>
-    <link href="/2012-09-shu-xue-zhi-mei/"/>
-    <updated>2012-09-18T11:16:00+08:00</updated>
-    <id>/shu-xue-zhi-mei</id>
-    <content type="html"><![CDATA[<ul>
-<li>《数学之美》</li>
-</ul>
-
-
-<p>   谈到数学，其实我还是很心虚的，因为就算在上课期间对于一些问题理解的不错，但总是成绩不佳，所幸还徘徊在及格线上沿处未曾下落。</p>
-
-<p>   其实是直到读到这本书我才知道几何与代数原来还可以用来研发Google的Pagerank！所以至少我是很惊讶的，原来高数、几代、离散、概率书上的内容可以做那么酷的事情，如果让我在大学前就读了这本书的话，那么上课的时候肯定会认真百倍的，当然现实世界没有如果，而在大学之前也没有这本书 ：(。</p>
-
-<p>   本书当然还涉及了很多技术方面的基本数学原理，包括“自然语言处理”、“中文分词”、“搜索引擎”等等。可以这么说，原先感觉离自己还很远的顶尖的技术，在吴军博士的文字下显得格外接近我们的学习的东西。</p>
 ]]></content>
   </entry>
   
