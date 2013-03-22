@@ -36,7 +36,7 @@ header {
   padding: .5em 0;
   border-bottom: 1px solid #CCCCCC;
 }
-h1 {
+header h1 {
   font-family: "Patrick Hand SC", "Microsoft YaHei", sans-serif;
   font-size: 2em;
   font-weight: bold;
@@ -45,6 +45,12 @@ h1 {
    -webkit-margin-after: 0.67em;
    -webkit-margin-start: 0px;
      -webkit-margin-end: 0px;
+}
+h1 small {
+  font-family: Georgia, "Microsoft YaHei", sans-serif;
+  color: #999999;
+  margin-left: 1em;
+  font-size: 0.5em;
 }
 .mainNav, section nav {
   font-family: "Patrick Hand SC", sans-serif;
