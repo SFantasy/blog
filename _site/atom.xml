@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy's Homepage]]></title>
   <link href="/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2013-03-22T09:13:03+08:00</updated>
+  <updated>2013-03-23T17:02:51+08:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[fanTasy shAo]]></name>
@@ -14,9 +14,177 @@
 
   
   <entry>
+    <title type="html"><![CDATA[初步理解 Scope & Closure in JavaScript]]></title>
+    <link href="/2013-03-javascript-closure/"/>
+    <updated>2013-03-24T01:10:00+08:00</updated>
+    <id>/javascript-closure</id>
+    <content type="html"><![CDATA[<p>最近一直在关注@lifesinger的博客，以issues的形式写的，还是比较有创意，直接watch就可以"订阅"，免掉了RSS(如果我的GR中的各位大牛都用这种方式写博客倒也不错，也就不必伤感GR的关闭了)。<br/>
+其中有一篇文章牵扯到了"原生"JavaScript和jQuery之间的话题，关于文章的内容，可以去拜读一下<a href="https://github.com/lifesinger/lifesinger.github.com/issues/126">原文</a>.</p>
+
+<p>让我这种菜鸟眼前一亮的是：</p>
+
+<blockquote><p>具体对 JavaScript 语言来说，会用就好。搞清楚数据类型、作用域、闭包、原型链等基本概念，足矣。再深入进去，对绝大部分人来说，除了能满足下心理上的优越感，对实际工作不会有任何实质性帮助。</p></blockquote>
+
+<p>"不明觉厉"！我之前有一篇博文说到过自己是一个"野生"程序员，所以也来"研究"一下这些基本概念.</p>
+
+<h2>作用域 Scope</h2>
+
+<p>作用域的概念很简单:</p>
+
+<blockquote><p><em>Scope</em> in a programming language controls the visibility and lifetimes of variables and parameters.</p></blockquote>
+
+<p>举一个<a href="http://book.douban.com/subject/2994925/">JavaScript: the good part</a>里的例子:</p>
+
+<pre><code>var foo = function () {
+  var a = 3, b = 5;
+  //      
+  var bar = function () {
+    var b = 7, c = 11;
+    //
+    a += b + c;
+    // a = 21, b = 7, c = 11
+  };
+  // a = 3, b = 5, c undefined
+  bar();
+  // a = 21, b = 5
+};
+</code></pre>
+
+<p>当然，这个例子还是有点简单了，理解起来应该没有任何问题.</p>
+
+<pre><code>var x = 10;
+function foo() {
+  alert(x);
+}
+(function () {
+  var x = 20;
+  foo();
+  // alert 10, not 20
+}) ();
+</code></pre>
+
+<p>JavaScript函数运行在被定义的作用域中，而不是执行它们的作用域中. 所以即使调用<code>foo()</code>函数前又声明了一个变量<code>x</code>，变量还是会从<code>foo()</code>函数创建时的作用域中去查找<code>x</code>的值.</p>
+
+<p>在StackOverFlow上看到一个关于作用域的<a href="http://stackoverflow.com/questions/500431/javascript-variable-scope">问题</a>，其中有个回答得到了572票:</p>
+
+<pre><code>// a globally-scoped variable
+var a=1;
+
+// global scope
+function one(){
+    alert(a); 
+}
+
+// local scope
+function two(a){
+    alert(a);
+}
+
+// local scope again
+function three(){
+    var a = 3;
+    alert(a);
+}
+
+// Intermediate: no such thing as block scope in javascript
+// JavaScript不支持块级(block scope)作用域
+// 如果支持，那么var a=4;的作用域将被局限在if这个语句块内
+function four(){
+    if(true){
+        var a=4;
+    }                               
+    alert(a); // alerts '4', not the global value of '1'
+}
+
+// Intermediate: object properties
+function Five(){
+    this.a = 5;
+}
+
+// Advanced: closure
+var six = function(){
+    var foo = 6;
+
+    return function(){
+        // javascript "closure" means I have access to foo in here, 
+        // because it is defined in the function in which I was defined.
+        alert(foo);
+    }
+}()                                                             
+
+// Advanced: prototype-based scope resolution
+function Seven(){
+    this.a = 7;
+}
+
+// [object].prototype.property 
+// loses to [object].property in the scope chain
+Seven.prototype.a = -1; 
+// won't get reached, because 'a' is set in the constructor above.
+Seven.prototype.b = 8; 
+// Will get reached, even though 'b' is NOT set in the constructor.
+
+// These will print 1-8
+one();
+two(2);
+three();
+four();
+alert(new Five().a);
+six();
+alert(new Seven().a);
+alert(new Seven().b);
+</code></pre>
+
+<p>尽管有关<strong>原型链</strong>的概念还不是很了解，但是从上面这个例子中，我们应该能很进一步的理解有关JavaScript作用域的知识.当然，从这些代码的角度来<em>研究</em>作用域还是比较<em>浅显</em>的，想进一步了解的同学可以参考一下<a href="http://www.denisdeng.com/?p=908#scope-features">ECMA深入理解</a>.</p>
+
+<h2>闭包 Closure</h2>
+
+<p>在上文中的最后一个例子中有一个是关于解释<strong>闭包</strong>的，我们可以单独拎出来看看：</p>
+
+<pre><code>// Advanced: closure
+var six = function(){
+    var foo = 6;
+
+    return function(){
+        // javascript "closure" means I have access to foo in here, 
+        // because it is defined in the function in which I was defined.
+        alert(foo);
+    }
+}()                                                             
+</code></pre>
+
+<p>这个例子中的注释已经解释了<em>closure</em>的概念，再来看看<em>JavaScript: the good parts</em>中的说法：</p>
+
+<pre><code>var quo = function (status) {
+  return {
+    get_status: function() {
+      return status;
+    }
+  };
+};
+
+var myQuo = quo("amazed");
+
+document.writeln(myQuo.get_status());
+</code></pre>
+
+<p>创建变量<code>myQuo</code>的时候，我们调用了<code>quo</code>，它返回包含<code>get_status</code>方法的一个新对象.该对象的引用包含在<code>myQuo</code>中。即使<code>quo</code>已经返回了，<code>get_status</code>方法仍然可以访问<code>quo</code>对象的<code>status</code>属性.</p>
+
+<blockquote><p>The function has access to the context in which it was created. This is called <em>closure</em>.</p></blockquote>
+
+<p>其实也可以这样理解：当内部函数在定义它的作用域的外部被引用时(比如<code>quo</code>被<code>myQuo</code>引用时),就创建了该内部函数的一个<strong>闭包</strong>(引用可访问该内部函数<code>quo</code>的属性和变量).<br/>
+这方面的知识这样梳理下来也是只知道了一个梗概(强烈欢迎指出错误，以及更为简便的理解方式),更多的还是要持续学习啊.</p>
+
+<blockquote><p>以前尝试过在Emacs中用Shell，最近在终端里用Emacs,两者一比,我反而更喜欢后者. 命令：<code>emacs -nw</code> nw应该是no window的意思吧. 不过有很dt的事情,就是快捷键会有冲突, 比如<code>C-y</code>不能粘贴,反而要用终端里的粘贴快捷键<code>C-S-v</code>,又不想改掉快捷键,所以……还是改邪归正吧！</p></blockquote>
+
+<p>--EOF--</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[一瞥Python中的lambda]]></title>
     <link href="/2013-03-python-lambda-fp/"/>
-    <updated>2013-03-20T00:00:00+08:00</updated>
+    <updated>2013-03-20T23:30:00+08:00</updated>
     <id>/python-lambda-fp</id>
     <content type="html"><![CDATA[<h2>前言</h2>
 
@@ -1237,24 +1405,6 @@ no display possibled
 <p>   如果你是一名Java程序员（这概率应该是很高的吧，身边学习Java语言的人太多了），那么可能在阅读这本书的时候会比较不开心了，也有可能越看越不开心了，作者是Lisp这门第二古老语言的推崇者，恐怕也是弱类型语言的支持者，而且在举到很多例子的时候感觉都用一种蔑视Java的态度。当然，关于编程语言之间的争斗恐怕也不止Paul一个人在吐槽别的语言吧。</p>
 
 <p>   文集中还讲到了很多有关于软件开发和创业的思想，令我感到比较震惊的是作者的确很有预见性。比如对于互联网软件的未来，作者从职业生涯一开始就投入在了互联网软件上，并且十分自信的确定互联网软件必将取代桌面软件的既定事实；我想正是这种带有预见性的思想，才让他成立的了风投公司“Y Combinator”，也成为了硅谷的创业之父吧！</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[暗时间]]></title>
-    <link href="/2012-09-an-shi-jian/"/>
-    <updated>2012-09-22T11:16:00+08:00</updated>
-    <id>/an-shi-jian</id>
-    <content type="html"><![CDATA[<ul>
-<li>《暗时间》</li>
-</ul>
-
-
-<p>   这是一本貌似是心理学类的书籍，可当然也不只是心理学，由于作者刘未鹏本身就是一名资深程序员，所以在书中很多地方都会带有程序员性质的思考。刘未鹏笔下的“暗时间”，指的是生活中难以察觉和掌控的时间（比如，无所事事的时间，乘车、吃饭、行走、睡觉等等零碎的时间）。</p>
-
-<p>   “在大三大四的时候，我就开始只用邮箱。”，这对于我们也许也是一个思考，现在的大学生（当然，我也是）总是把很多的精力消耗在了人人、facebook等SNS网站上，于是刘未鹏就滋生了这样一个简单的想法：有时间还不如看书。这也是我在大三的时候才意识到的一个问题（虽然觉得太晚，但也希望不是太晚），所以相比以前而言已经很少去关注人人上那些“无聊”的信息了。</p>
-
-<p>   回来讲这本书，书的后面一部分《跟波利亚学解题》讲到很多有趣的算法问题，也推荐了一些算法书，比如《算法引论》等，所以才说这不仅是一本心理学的书籍，但也许可以称其为一本“程序员”心理书会比较妥当。</p>
 ]]></content>
   </entry>
   

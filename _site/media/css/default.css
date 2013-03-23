@@ -161,7 +161,7 @@ footer a:hover {
 */
 
 section h2 {
-  font-family: Georgia, "Microsoft YaHei", sans-serif;
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
 }
 small a {
   color: #999999;
@@ -173,7 +173,9 @@ small a:hover {
 
 .postContent {
   font-size: 13px;
-  font-family: Georgia, "Microsoft YaHei", sans-serif;
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
 }
 .postContent blockquote {
   border-left: 4px solid #DDD;
@@ -190,6 +192,7 @@ small a:hover {
   border: 1px solid #ccc;
   padding: 6px 10px;
   border-radius: 3px;
+  line-height: 18px;
 }
 .postContent a, #related a{
   color: #4183c4;

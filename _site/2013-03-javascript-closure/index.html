@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>初步理解 Scope & Closure in JavaScript - Fantasy's Homepage</title>
+  <meta name="author" content="fanTasy shAo" />
+  
+  
+  <link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="/media/mylogo.ico" />
+  <link rel="stylesheet" href="/media/css/default.css" />
+  <link href="/atom.xml" rel="alternate" title="Fantasy's Homepage" type="application/atom+xml" />
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36896790-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <div>
+        <h1>Fantasy's Homepage<small>keep it simple and stupid</small></h1>
+      </div> 
+    </header>
+    <nav class="mainNav">
+      <span><a href="/">HOME</a></span>
+	  <span><a href="/categories.html">CATEGORIES</a></span>
+	  <span><a href="/archive.html">ARCHIVE</a></span>
+	  <span><a href="/links.html">LINKS</a></span>
+	  <span><a href="/editor.html">EDITOR OL</a></span>
+      <span><a href="https://github.com/SFantasy/sfantasy.github.com">FORK ME</a></span>
+      <span><br /></span>
+	  <span><a href="/about.html">ABOUT</a></span>
+      
+    </nav>
+    <article>
+      <section>
+    <h2>初步理解 Scope & Closure in JavaScript</h2>
+    <small>
+      <date title="2013-03-24T01:10:00+08:00" datetime="2013-03-24T01:10:00+08:00" pubdate>
+      <span>March</span>
+      <span>24</span>
+      <span>2013</span>
+      </date>  ，类别：
+       
+      <a href="/categories.html#Front-end-Dev-ref" title="Front-end-Dev" rel="category tag">Front-end-Dev</a>
+      
+    </small>
+    <br />
+    <div class="postContent">
+      <p>最近一直在关注@lifesinger的博客，以issues的形式写的，还是比较有创意，直接watch就可以"订阅"，免掉了RSS(如果我的GR中的各位大牛都用这种方式写博客倒也不错，也就不必伤感GR的关闭了)。<br/>
+其中有一篇文章牵扯到了"原生"JavaScript和jQuery之间的话题，关于文章的内容，可以去拜读一下<a href="https://github.com/lifesinger/lifesinger.github.com/issues/126">原文</a>.</p>
+
+<p>让我这种菜鸟眼前一亮的是：</p>
+
+<blockquote><p>具体对 JavaScript 语言来说，会用就好。搞清楚数据类型、作用域、闭包、原型链等基本概念，足矣。再深入进去，对绝大部分人来说，除了能满足下心理上的优越感，对实际工作不会有任何实质性帮助。</p></blockquote>
+
+<p>"不明觉厉"！我之前有一篇博文说到过自己是一个"野生"程序员，所以也来"研究"一下这些基本概念.</p>
+
+<h2>作用域 Scope</h2>
+
+<p>作用域的概念很简单:</p>
+
+<blockquote><p><em>Scope</em> in a programming language controls the visibility and lifetimes of variables and parameters.</p></blockquote>
+
+<p>举一个<a href="http://book.douban.com/subject/2994925/">JavaScript: the good part</a>里的例子:</p>
+
+<pre><code>var foo = function () {
+  var a = 3, b = 5;
+  //      
+  var bar = function () {
+    var b = 7, c = 11;
+    //
+    a += b + c;
+    // a = 21, b = 7, c = 11
+  };
+  // a = 3, b = 5, c undefined
+  bar();
+  // a = 21, b = 5
+};
+</code></pre>
+
+<p>当然，这个例子还是有点简单了，理解起来应该没有任何问题.</p>
+
+<pre><code>var x = 10;
+function foo() {
+  alert(x);
+}
+(function () {
+  var x = 20;
+  foo();
+  // alert 10, not 20
+}) ();
+</code></pre>
+
+<p>JavaScript函数运行在被定义的作用域中，而不是执行它们的作用域中. 所以即使调用<code>foo()</code>函数前又声明了一个变量<code>x</code>，变量还是会从<code>foo()</code>函数创建时的作用域中去查找<code>x</code>的值.</p>
+
+<p>在StackOverFlow上看到一个关于作用域的<a href="http://stackoverflow.com/questions/500431/javascript-variable-scope">问题</a>，其中有个回答得到了572票:</p>
+
+<pre><code>// a globally-scoped variable
+var a=1;
+
+// global scope
+function one(){
+    alert(a); 
+}
+
+// local scope
+function two(a){
+    alert(a);
+}
+
+// local scope again
+function three(){
+    var a = 3;
+    alert(a);
+}
+
+// Intermediate: no such thing as block scope in javascript
+// JavaScript不支持块级(block scope)作用域
+// 如果支持，那么var a=4;的作用域将被局限在if这个语句块内
+function four(){
+    if(true){
+        var a=4;
+    }                               
+    alert(a); // alerts '4', not the global value of '1'
+}
+
+// Intermediate: object properties
+function Five(){
+    this.a = 5;
+}
+
+// Advanced: closure
+var six = function(){
+    var foo = 6;
+
+    return function(){
+        // javascript "closure" means I have access to foo in here, 
+        // because it is defined in the function in which I was defined.
+        alert(foo);
+    }
+}()                                                             
+
+// Advanced: prototype-based scope resolution
+function Seven(){
+    this.a = 7;
+}
+
+// [object].prototype.property 
+// loses to [object].property in the scope chain
+Seven.prototype.a = -1; 
+// won't get reached, because 'a' is set in the constructor above.
+Seven.prototype.b = 8; 
+// Will get reached, even though 'b' is NOT set in the constructor.
+
+// These will print 1-8
+one();
+two(2);
+three();
+four();
+alert(new Five().a);
+six();
+alert(new Seven().a);
+alert(new Seven().b);
+</code></pre>
+
+<p>尽管有关<strong>原型链</strong>的概念还不是很了解，但是从上面这个例子中，我们应该能很进一步的理解有关JavaScript作用域的知识.当然，从这些代码的角度来<em>研究</em>作用域还是比较<em>浅显</em>的，想进一步了解的同学可以参考一下<a href="http://www.denisdeng.com/?p=908#scope-features">ECMA深入理解</a>.</p>
+
+<h2>闭包 Closure</h2>
+
+<p>在上文中的最后一个例子中有一个是关于解释<strong>闭包</strong>的，我们可以单独拎出来看看：</p>
+
+<pre><code>// Advanced: closure
+var six = function(){
+    var foo = 6;
+
+    return function(){
+        // javascript "closure" means I have access to foo in here, 
+        // because it is defined in the function in which I was defined.
+        alert(foo);
+    }
+}()                                                             
+</code></pre>
+
+<p>这个例子中的注释已经解释了<em>closure</em>的概念，再来看看<em>JavaScript: the good parts</em>中的说法：</p>
+
+<pre><code>var quo = function (status) {
+  return {
+    get_status: function() {
+      return status;
+    }
+  };
+};
+
+var myQuo = quo("amazed");
+
+document.writeln(myQuo.get_status());
+</code></pre>
+
+<p>创建变量<code>myQuo</code>的时候，我们调用了<code>quo</code>，它返回包含<code>get_status</code>方法的一个新对象.该对象的引用包含在<code>myQuo</code>中。即使<code>quo</code>已经返回了，<code>get_status</code>方法仍然可以访问<code>quo</code>对象的<code>status</code>属性.</p>
+
+<blockquote><p>The function has access to the context in which it was created. This is called <em>closure</em>.</p></blockquote>
+
+<p>其实也可以这样理解：当内部函数在定义它的作用域的外部被引用时(比如<code>quo</code>被<code>myQuo</code>引用时),就创建了该内部函数的一个<strong>闭包</strong>(引用可访问该内部函数<code>quo</code>的属性和变量).<br/>
+这方面的知识这样梳理下来也是只知道了一个梗概(强烈欢迎指出错误，以及更为简便的理解方式),更多的还是要持续学习啊.</p>
+
+<blockquote><p>以前尝试过在Emacs中用Shell，最近在终端里用Emacs,两者一比,我反而更喜欢后者. 命令：<code>emacs -nw</code> nw应该是no window的意思吧. 不过有很dt的事情,就是快捷键会有冲突, 比如<code>C-y</code>不能粘贴,反而要用终端里的粘贴快捷键<code>C-S-v</code>,又不想改掉快捷键,所以……还是改邪归正吧！</p></blockquote>
+
+<p>--EOF--</p>
+
+    </div>
+    <div id="related">
+      相关文章：
+        
+        <li>
+          <a href="/2013-03-python-lambda-fp/">一瞥Python中的lambda</a>
+        </li>
+        
+        <li>
+          <a href="/2013-03-css-selector-note/">Learn CSS Selectors</a>
+        </li>
+        
+        <li>
+          <a href="/2013-03-sign/">Sign.</a>
+        </li>
+        
+    </div>
+    <nav>
+      
+      <span>Prev：<a href="/2013-03-python-lambda-fp/" rel="prev" title="一瞥Python中的lambda">一瞥Python中的lambda</a></span>
+      
+      
+    </nav>
+  </section>
+  <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+        <a class="bds_qzone"></a>
+        <a class="bds_tsina"></a>
+        <a class="bds_tqq"></a>
+        <a class="bds_renren"></a>
+        <a class="bds_t163"></a>
+        <span class="bds_more">更多</span>
+        <a class="shareCount"></a>
+    </div>
+    <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=0" ></script>
+    <script type="text/javascript" id="bdshell_js"></script>
+    <script type="text/javascript">
+        document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+  <br />
+  <div id="disqus_thread"></div>
+	 <script type="text/javascript">
+            var disqus_shortname = '027'; 
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+	</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  <script type="text/javascript">
+  $(function(){
+    $(document).keydown(function(e) {
+    var url = false;
+        if (e.which == 37 || e.which == 74) {  // Left arrow and J
+            
+        url = '/2013-03-python-lambda-fp/';
+        
+        }
+        else if (e.which == 39 || e.which == 75) {  // Right arrow and K
+            
+        }
+        if (url) {
+            window.location = url;
+        }
+    });
+  })
+</script>
+
+    </article>
+    <footer>
+	  <span>Designed by <a href="https://github.com/SFantasy">fanTasy</a> | Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, sext & <a href="https://github.com">GitHub</a></span>
+<div class="g-plusone" data-size="medium"></div>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+    </footer>
+  </div>
+</body>
+</html>
