@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "初步理解 Scope & Closure in JavaScript"
+title: "Scope & Closure in JavaScript"
 date: 2013-3-24 1:10
 comments: true
 categories: Front-end-Dev
