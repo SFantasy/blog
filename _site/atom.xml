@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy's Homepage]]></title>
   <link href="/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2013-03-23T17:02:51+08:00</updated>
+  <updated>2013-03-24T19:36:04+08:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[fanTasy shAo]]></name>
@@ -14,7 +14,189 @@
 
   
   <entry>
-    <title type="html"><![CDATA[初步理解 Scope & Closure in JavaScript]]></title>
+    <title type="html"><![CDATA[Several topics in Python]]></title>
+    <link href="/2013-03-python-questions/"/>
+    <updated>2013-03-24T13:30:00+08:00</updated>
+    <id>/python-questions</id>
+    <content type="html"><![CDATA[<p>这篇文章其实是紧接着<code>lambda</code>那篇的, 谈的内容也比较的杂.</p>
+
+<h3>Everything is an Object</h3>
+
+<p>我们经常会听到一句话-- <em>Everything in Python is an object</em>. 然后呢？如何理解这句话呢？</p>
+
+<blockquote><p>Everything in Python is an object, and almost everything has attributes and methods.</p></blockquote>
+
+<p>尽管在Python中，有些对象既没有属性，又没有方法(Tuple?!);并且不是所有的对象都可以子类化。但是我们可以这样理解：</p>
+
+<blockquote><p>Everthing is an object in the sense that it can be assigned to a  variable or passed as an argument to a function.</p></blockquote>
+
+<h3>Decorator</h3>
+
+<p>我们先来看看decorator的形式</p>
+
+<h4>无参数形式的decorator</h4>
+
+<pre><code>@myDecorator
+def f():
+    ...
+
+#实际上执行：
+f = myDecorator(f)
+
+#多个decorator
+
+@A
+@B
+@C
+def f():
+    ...
+
+#实际上执行：
+f = A(B(C(f)))
+</code></pre>
+
+<h4>有参数形式的decorator</h4>
+
+<pre><code>@myDecorator(arg)
+def f():
+    ...
+
+#实际上执行：
+f = myDecorator(arg)(f)
+</code></pre>
+
+<p>也就是说，如果是有参数的decorator，会先将该参数传入decorator获得一个不带参数的decorator.</p>
+
+<h4>decorator函数的定义</h4>
+
+<p>事实上，每个decorator都对应的是一个函数，用来处理后面的函数.</p>
+
+<p>返回原函数对象:</p>
+
+<pre><code>def A(f):
+    #处理函数f
+    return f
+
+@A
+def f(args):pass
+</code></pre>
+
+<p>返回新的函数对象:</p>
+
+<pre><code>def A(f):
+    def new_f(args):
+        #
+        return f(args)
+    return new_f
+
+@A
+def f(args):pass
+</code></pre>
+
+<h4>decorator 的用途？</h4>
+
+<p>其实上文中讲到的不论是有参数还是无参数的decorator，其实都可以用函数的形式直接来使用，而将其他函数作为参数传入.那么为什么又要有decorator这个东西？</p>
+
+<blockquote><p>decorator允许在函数和类中嵌入或修改代码.</p></blockquote>
+
+<h3>staticmethod, classmethod &amp; normalmethod</h3>
+
+<p>分别对应的其实也就是<em>静态方法</em>,<em>类方法</em>和<em>普通对象方法</em><br/>
+还是举一个stackoverflow上的例子：</p>
+
+<pre><code>class A(object):
+    def foo(self, x):
+        print "executing foo(%s, %s)"%(self, x)
+
+    @classmethod
+    def class_foo(cls, x):
+        print "executing class_foo(%s, %s)"%(cls, x)
+
+    @staticmethod
+    def static_foo(x):
+        print "executing static_foo(%s)"%x
+
+a = A()
+</code></pre>
+
+<p>对象<code>a</code>是<code>A</code>的一个实例，我们平时最常用的方法类型就是<em>普通对象方法</em>，对象作为第一个参数被隐式调用.</p>
+
+<pre><code>a.foo(1)
+# executing foo(&lt;__main__.A object at 0x1d63890&gt;, 1)
+</code></pre>
+
+<p>对于<em>类方法</em>而言，实例<code>a</code>的类被作为第一个参数被隐式调用.</p>
+
+<pre><code>a.class_foo(1)
+# executing class_foo(&lt;class '__main__.A'&gt;,1)
+A.class_foo(1)
+# executing class_foo(&lt;class '__main__.A'&gt;,1)
+# 事实上，定义一个类方法，更多的用类而不是该类的实例去调用之
+</code></pre>
+
+<p>而对于<em>静态方法</em>来说，实例和类(对应<code>self</code>和<code>cls</code>)都不会被隐式传入.</p>
+
+<pre><code>a.static_foo(1)
+# executing static_foo(1)
+</code></pre>
+
+<p><code>a.foo</code>可以将<code>foo</code>函数绑定到<code>a</code>实例，因为其将<code>a</code>这个实例作为参数传入了<code>foo</code>,同样<code>a.class_foo</code>将<code>class_foo</code>绑定到了<code>A</code>这个类;但是<code>static_foo</code>却只是单纯的一个函数，因为它没有绑定任何实例或者类.关于这些，我们可以通过<code>print</code>来观察：</p>
+
+<pre><code>print(a.foo)
+&lt;bound method A.foo of &lt;__main__.A object at 0x1e0c450&gt;&gt;
+
+print(a.class_foo)
+&lt;bound method type.class_foo of &lt;class '__main__.A'&gt;&gt;
+
+print(a.static_foo)
+&lt;function static_foo at 0x1eccf50&gt;
+</code></pre>
+
+<h3>The Zen of Python</h3>
+
+<pre><code># Open your interpreter:
+&gt;&gt; import this
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+</code></pre>
+
+<p>中文翻译版可见<a href="http://wiki.woodpecker.org.cn/moin/PythonZen">此处</a>, 啄木鸟社区的几位大牛的不同风格的翻译.</p>
+
+<h2>Reference</h2>
+
+<ul>
+<li><a href="http://www.diveintopython.net">Dive into Python</a></li>
+<li><a href="http://blog.donews.com/limodou/">limodou的学习记录</a></li>
+</ul>
+
+
+<blockquote><p>文中关于decorator部分有点乱,不过……我先去赶软件测试女博士的作业了 :-(</p></blockquote>
+
+<p>--EOF--</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Scope & Closure in JavaScript]]></title>
     <link href="/2013-03-javascript-closure/"/>
     <updated>2013-03-24T01:10:00+08:00</updated>
     <id>/javascript-closure</id>
@@ -182,7 +364,7 @@ document.writeln(myQuo.get_status());
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[一瞥Python中的lambda]]></title>
+    <title type="html"><![CDATA[Python中的lambda]]></title>
     <link href="/2013-03-python-lambda-fp/"/>
     <updated>2013-03-20T23:30:00+08:00</updated>
     <id>/python-lambda-fp</id>
@@ -1385,26 +1567,6 @@ no display possibled
 
 
 <p>当然将”alias“替换为”unalias“就可以将刚才设置好的别名去掉。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[黑客与画家]]></title>
-    <link href="/2012-09-heike-yu-hua-jia/"/>
-    <updated>2012-09-26T11:16:00+08:00</updated>
-    <id>/heike-yu-hua-jia</id>
-    <content type="html"><![CDATA[<ul>
-<li>《黑客与画家》</li>
-</ul>
-
-
-<p>作者Paul Graham 就是传说中的硅谷创业之父，也可以说是互联网应用之父（源于其创办了第一个互联网应用程序“viaWeb”）。本书是他的文集，汇聚了有关“黑客精神“、”编程语言“、”创业历程“等话题，这次看的是中文版，得力于译者阮一峰的工作，读起这些文章来也甚是流畅带感。</p>
-
-<p>   关于“黑客”(Hacker)这一话题，当然，还有一些关于开放源代码和自由软件的思想，恐怕没有能比Eric S.Raymond的五部曲阐述的更为清晰的了吧。你在Google的搜索栏上随便一艘就能找到那五篇让人读起来热血沸腾的文章，这是我之前浏览它们的地址：http://man.lupaworld.com/content/develop/joyfire/project/7.html</p>
-
-<p>   如果你是一名Java程序员（这概率应该是很高的吧，身边学习Java语言的人太多了），那么可能在阅读这本书的时候会比较不开心了，也有可能越看越不开心了，作者是Lisp这门第二古老语言的推崇者，恐怕也是弱类型语言的支持者，而且在举到很多例子的时候感觉都用一种蔑视Java的态度。当然，关于编程语言之间的争斗恐怕也不止Paul一个人在吐槽别的语言吧。</p>
-
-<p>   文集中还讲到了很多有关于软件开发和创业的思想，令我感到比较震惊的是作者的确很有预见性。比如对于互联网软件的未来，作者从职业生涯一开始就投入在了互联网软件上，并且十分自信的确定互联网软件必将取代桌面软件的既定事实；我想正是这种带有预见性的思想，才让他成立的了风投公司“Y Combinator”，也成为了硅谷的创业之父吧！</p>
 ]]></content>
   </entry>
   

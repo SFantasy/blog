@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "一瞥Python中的lambda"
+title: "Python中的lambda"
 date: 2013-3-20 23:30
 comments: true
 categories: Python
