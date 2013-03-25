@@ -3,7 +3,7 @@ layout: post
 title: "A byte things about UNIX Shell"
 date: 2012-09-30 11:11
 comments: true
-categories: Shell Linux
+categories: Shell
 ---
 
 最近在图书馆翻到了一本《Unix 技术手册（第三版）》，这本书是SVR4（System V Release 4）和Solaris7的技术参考手册；其实旁边还有一本相对比较新的第四版，不过那本太厚，而且琢磨着应该差不了多少，于是就拿着它翻了起来。

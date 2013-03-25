@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Scope & Closure in JavaScript"
-date: 2013-3-24 1:10
+date: 2013-3-23 1:10
 comments: true
-categories: Front-end-Dev
+categories: JavaScript
 ---
 
 最近一直在关注@lifesinger的博客，以issues的形式写的，还是比较有创意，直接watch就可以"订阅"，免掉了RSS(如果我的GR中的各位大牛都用这种方式写博客倒也不错，也就不必伤感GR的关闭了)。  
