@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy's Homepage]]></title>
   <link href="/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2013-03-25T10:58:58+08:00</updated>
+  <updated>2013-03-25T13:36:22+08:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[fanTasy shAo]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://sfantasy.github.com/">fantasy | blog</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Prototype chain in JavaScript]]></title>
+    <link href="/2013-03-javascript-prototype/"/>
+    <updated>2013-03-25T14:00:00+08:00</updated>
+    <id>/javascript-prototype</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Several topics in Python]]></title>
@@ -71,33 +80,45 @@ f = myDecorator(arg)(f)
 
 <p>事实上，每个decorator都对应的是一个函数，用来处理后面的函数.</p>
 
-<p>返回原函数对象:</p>
+<pre><code>#返回原函数对象:
 
-<pre><code>def A(f):
+def A(f):
     #处理函数f
     return f
 
 @A
 def f(args):pass
-</code></pre>
 
-<p>返回新的函数对象:</p>
+#返回新的函数对象:
 
-<pre><code>def A(f):
+def A(f):
     def new_f(args):
-        #
+        # Add something
         return f(args)
+    return new_f
+
+@A
+def f(args):pass
+
+#更为通用的形式,使用动态参数，
+
+def A(f):
+    def new_f(*args, **argkw):
+      # Add something
+      return f(*args, **argkw)
     return new_f
 
 @A
 def f(args):pass
 </code></pre>
 
-<h4>decorator 的用途？</h4>
+<h4>decorator的作用?</h4>
 
-<p>其实上文中讲到的不论是有参数还是无参数的decorator，其实都可以用函数的形式直接来使用，而将其他函数作为参数传入.那么为什么又要有decorator这个东西？</p>
+<p>limodou提到了decorator与<a href="http://en.wikipedia.org/wiki/Aspect-oriented_programming">AOP</a>(Aspect-oritented Programming)有点类似,其实意思也就是：在不修改代函数源代码的情况下，通过装饰器来给程序动态添加一些功能的思想。</p>
 
-<blockquote><p>decorator允许在函数和类中嵌入或修改代码.</p></blockquote>
+<p>事实上，如果只是使用普通的函数也是能够提供这类功能的吧？！（如果你懂得我的意思的话）不过使用decodator又有一个好处，这样写的形式特简单、明了。就像<a href="http://blog.csdn.net/beckel/article/details/3585352">Bruce Eckel</a>的博文中讲的那样：</p>
+
+<blockquote><p>我认为，decorator之所以产生如此大影响，就是因为其带着一点点语法糖的味道改变了人们思考程序设计的方式。</p></blockquote>
 
 <h3>staticmethod, classmethod &amp; normalmethod</h3>
 
@@ -1479,94 +1500,6 @@ no display possibled
 <p>《操作系统革命》，一部关于Open Source&amp;&amp;Linux的记录型电影。</p>
 
 <p>Linus Torvalds/Richard Stallman/Eric Raymond/Brian Behlenodorf等大牛的采访记录。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A byte things about UNIX Shell]]></title>
-    <link href="/2012-09-a-byte-things-about-unix-shell/"/>
-    <updated>2012-09-30T11:11:00+08:00</updated>
-    <id>/a-byte-things-about-unix-shell</id>
-    <content type="html"><![CDATA[<p>最近在图书馆翻到了一本《Unix 技术手册（第三版）》，这本书是SVR4（System V Release 4）和Solaris7的技术参考手册；其实旁边还有一本相对比较新的第四版，不过那本太厚，而且琢磨着应该差不了多少，于是就拿着它翻了起来。
-记得之前在看《鸟哥的Linux私房菜》的时候差不多翻到“学习shell与shell script”那一章，所以在阅读完介绍Unix的那一章以及跳过一大刀Unix命令的第二章后，看到了Unix shell的部分。</p>
-
-<h2>Unix Shell</h2>
-
-<h4>用途：</h4>
-
-<p>1.交互式使用；2.定制Unix会话；3.编程。</p>
-
-<h4>种类：</h4>
-
-<p>1.Bourne shell；</p>
-
-<p>2.Korn shell；</p>
-
-<p>3.C shell。</p>
-
-<p>我们常用的默认shell一般都是bash，也就是被Linus吐槽为“丑陋名称的”“Bourne-again shell”，也有听说是“Born-again shell”的意思。但是不管如何，bash总归是sh的超集（superset）；Korn shell (ksh) 也是 Bourne shell(sh)的增强版，不过与bash不同的是，ksh是贝尔实验室的一个名叫 David Korn 写的，而bash属于鼎鼎大名的GNU项目，所以使得所有的GUN/Linux（当然，还有Mac OS X）的默认shell 是bash。</p>
-
-<p>当然，书中还提到了更加适合交互使用的C shell(csh)，一个从Berkeley孵化出来的shell版本，所以它也理所应当地在BSD(Berkeley Software Distribution)成为了默认shell。</p>
-
-<p>我们可以在Linux 中用以下形式的命令来切换当前使用的shell：</p>
-
-<pre><code>exec ksh
-</code></pre>
-
-<p>接下来简单的介绍一下bash的功能:</p>
-
-<ul>
-<li><p>输入输出重定向</p>
-
-<pre><code>  echo "This is an example" &gt; a.txt
-  #将输出文本重定向（在这里也就是保存）到一个文件中
-</code></pre></li>
-<li><p>文件名缩写用的通配符（元字符）
-所谓通配符，举例来说：我们要删除所有文件格式为“.txt”的文件，使用“rm <em>.txt”就可以了，其中</em>就是所谓的“通配符”。</p></li>
-<li><p>定制环境的shell变量</p></li>
-<li><p>写shell程序用的内置命令集</p>
-
-<pre><code>  echo"hello bash"
-  #输出字符串
-  exit    
-  #退出bash
-  wait
-  #等待活动作业的完成
-  type cmd  
-  #查看一个命令是否是bash的内置命令
-</code></pre></li>
-<li><p>作业控制</p>
-
-<pre><code>  bg
-  #将作业置于后台运行
-  fg
-  #将作业置于前台运行
-  jobs
-  #查看当前活动作业
-  kill
-  #终止某作业
-  wait
-  #等待后台作业完成
-  C-z
-  #挂起当前作业
-</code></pre></li>
-<li><p>命令行编辑</p></li>
-<li><p>命令历史</p></li>
-</ul>
-
-
-<p>可以输入“history”查看内存中所有的记忆下来的命令。当然也可以使用"history number“来查看最近number条的记录。</p>
-
-<ul>
-<li><p>别名</p>
-
-<pre><code>  alias lm = ls -l | more
-  #今后在bash中输入"lm" 就相当于输入了 "ls -l | more"
-</code></pre></li>
-</ul>
-
-
-<p>当然将”alias“替换为”unalias“就可以将刚才设置好的别名去掉。</p>
 ]]></content>
   </entry>
   

@@ -57,7 +57,7 @@ date: 2013-3-24 13:30
 
 事实上，每个decorator都对应的是一个函数，用来处理后面的函数.
 
-返回原函数对象:
+    #返回原函数对象:
 
     def A(f):
 	    #处理函数f
@@ -66,23 +66,38 @@ date: 2013-3-24 13:30
 	@A
 	def f(args):pass
 	
-返回新的函数对象:
+    #返回新的函数对象:
 
     def A(f):
 	    def new_f(args):
-		    #
+		    # Add something
 			return f(args)
 		return new_f
 		
 	@A
 	def f(args):pass
 
-#### decorator 的用途？
-
-其实上文中讲到的不论是有参数还是无参数的decorator，其实都可以用函数的形式直接来使用，而将其他函数作为参数传入.那么为什么又要有decorator这个东西？  
-> decorator允许在函数和类中嵌入或修改代码.  
-
+    #更为通用的形式,使用动态参数，
 	
+	def A(f):
+	    def new_f(*args, **argkw):
+		  # Add something
+		  return f(*args, **argkw)
+		return new_f
+		
+	@A
+	def f(args):pass
+	
+#### decorator的作用?
+
+limodou提到了decorator与[AOP](http://en.wikipedia.org/wiki/Aspect-oriented_programming)(Aspect-oritented Programming)有点类似,其实意思也就是：在不修改代函数源代码的情况下，通过装饰器来给程序动态添加一些功能的思想。
+
+事实上，如果只是使用普通的函数也是能够提供这类功能的吧？！（如果你懂得我的意思的话）不过使用decodator又有一个好处，这样写的形式特简单、明了。就像[Bruce Eckel](http://blog.csdn.net/beckel/article/details/3585352)的博文中讲的那样：
+
+> 我认为，decorator之所以产生如此大影响，就是因为其带着一点点语法糖的味道改变了人们思考程序设计的方式。
+
+
+
 ### staticmethod, classmethod & normalmethod
 
 分别对应的其实也就是*静态方法*,*类方法*和*普通对象方法*  
