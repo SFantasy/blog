@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Prototype chain in JavaScript - Fantasy's Homepage</title>
+  <meta name="author" content="fanTasy shAo" />
+  
+  
+  <link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="/media/mylogo.ico" />
+  <link rel="stylesheet" href="/media/css/default.css" />
+  <link href="/atom.xml" rel="alternate" title="Fantasy's Homepage" type="application/atom+xml" />
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36896790-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <div>
+        <h1>Fantasy's Homepage<small>keep it simple and stupid</small></h1>
+      </div> 
+    </header>
+    <nav class="mainNav">
+      <span><a href="/">HOME</a></span>
+	  <span><a href="/categories.html">CATEGORIES</a></span>
+	  <span><a href="/archive.html">ARCHIVE</a></span>
+	  <span><a href="/links.html">LINKS</a></span>
+	  <span><a href="/editor.html">EDITOR OL</a></span>
+      <span><a href="https://github.com/SFantasy/sfantasy.github.com">FORK ME</a></span>
+      <span><br /></span>
+	  <span><a href="/about.html">ABOUT</a></span>
+      
+    </nav>
+    <article>
+      <section>
+    <h2>Prototype chain in JavaScript</h2>
+    <small>
+      <date title="2013-03-28T20:00:00+08:00" datetime="2013-03-28T20:00:00+08:00" pubdate>
+      <span>March</span>
+      <span>28</span>
+      <span>2013</span>
+      </date>  ，类别：
+       
+      <a href="/categories.html#JavaScript-ref" title="JavaScript" rel="category tag">JavaScript</a>
+      
+    </small>
+    <br />
+    <div class="postContent">
+      <p>Prototype chain, 也就是原型链.</p>
+
+<blockquote><p>In a purely prototypal pattern, we dispense with classes. We focus on the objects.</p></blockquote>
+
+<p>这句话是蝴蝶书中的，意在JavaScript中没有传统的类继承(诸如C++, Java等)，而是使用的原型模型. 所以说JavaScript是一门基于原型的语言.</p>
+
+<p>原型继承比类继承模型要简单：一个新对象可以继承一个旧对象的属性.</p>
+
+<p>还是用<em>代码</em>来说话吧(import from <a href="http://stackoverflow.com/questions/572897/how-does-javascript-prototype-work">stackoveflow</a>)：</p>
+
+<pre><code>// 先来定义一个对象
+var Person = function (name) {
+    this.name = name;
+};
+//
+Person.prototype.getName = function () {
+    return this.name;
+};
+// 创建一个新的Person类型的对象
+var john = new Person("John");
+
+console.log(john.getName());
+# John
+
+// 更改Person的原型
+Person.prototype.sayMyName = function () {
+    console.log('Hello, my name is ' + this.getName());
+};
+// 同时也更改了john这个对象中的方法
+john.sayMyName();
+# John
+</code></pre>
+
+<p>接下来，创建一个新的对象</p>
+
+<pre><code>var Customer = function (name) {
+  this.name = name;
+};
+// 将Customer的原型指向一个Person对象的实例
+Customer.prototype = new Person();
+
+var myCustomer = new Customer('Dream Inc.');
+myCustomer.sayMyName();
+
+// 为Customer对象添加新的方法
+Customer.prototype.setAmountDue = function (amountDue) {
+    this.amountDue = amountDue;
+};
+
+Customer.prototype.getAmountDue = function () {
+    return this.amountDue;
+};
+
+// 测试一下
+myCustomer.setAmountDue(2000);
+console.log(myCustomer.getAmountDue());
+
+// Error
+john.setAmountDue(1000);
+</code></pre>
+
+    </div>
+    <div id="related">
+      相关文章：
+        
+        <li>
+          <a href="/2013-03-python-questions/">Several topics in Python</a>
+        </li>
+        
+        <li>
+          <a href="/2013-03-javascript-closure/">Scope & Closure in JavaScript</a>
+        </li>
+        
+        <li>
+          <a href="/2013-03-python-lambda-fp/">Python中的lambda</a>
+        </li>
+        
+    </div>
+    <nav>
+      
+      <span>Prev：<a href="/2013-03-python-questions/" rel="prev" title="Several topics in Python">Several topics in Python</a></span>
+      
+      
+    </nav>
+  </section>
+  <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+        <a class="bds_qzone"></a>
+        <a class="bds_tsina"></a>
+        <a class="bds_tqq"></a>
+        <a class="bds_renren"></a>
+        <a class="bds_t163"></a>
+        <span class="bds_more">更多</span>
+        <a class="shareCount"></a>
+    </div>
+    <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=0" ></script>
+    <script type="text/javascript" id="bdshell_js"></script>
+    <script type="text/javascript">
+        document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+  <br />
+  <div id="disqus_thread"></div>
+	 <script type="text/javascript">
+            var disqus_shortname = '027'; 
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+	</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  <script type="text/javascript">
+  $(function(){
+    $(document).keydown(function(e) {
+    var url = false;
+        if (e.which == 37 || e.which == 74) {  // Left arrow and J
+            
+        url = '/2013-03-python-questions/';
+        
+        }
+        else if (e.which == 39 || e.which == 75) {  // Right arrow and K
+            
+        }
+        if (url) {
+            window.location = url;
+        }
+    });
+  })
+</script>
+
+    </article>
+    <footer>
+	  <span>Designed by <a href="https://github.com/SFantasy">fanTasy</a> | Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, sext & <a href="https://github.com">GitHub</a></span>
+<div class="g-plusone" data-size="medium"></div>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+    </footer>
+  </div>
+</body>
+</html>
