@@ -63,5 +63,19 @@ Prototype chain, 也就是原型链.
 	
 	// Error
 	john.setAmountDue(1000);
+
+
+其实以上例子就已经构建了一个*原型链*：
+   
+    myCustomer [Customer的实例]
+	{ name: 'Dream Inc.' , amountDue: 2000 }
 	
-    
+	    Customer.prototype [Person的实例]
+		{ name: undefined,
+		  setAmountDue: [Function],
+		  getAmountDue: [Function] }
+		  
+	        Person.prototype 
+			{ getName: [Function], sayMyName: [Function] }
+			
+
