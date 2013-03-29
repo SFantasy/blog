@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy's Homepage]]></title>
   <link href="/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2013-03-29T13:58:51+08:00</updated>
+  <updated>2013-03-29T15:01:37+08:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[fanTasy shAo]]></name>
@@ -77,6 +77,20 @@ console.log(myCustomer.getAmountDue());
 
 // Error
 john.setAmountDue(1000);
+</code></pre>
+
+<p>其实以上例子就已经构建了一个原型链：</p>
+
+<pre><code>myCustomer [Customer的实例]
+{ name: 'Dream Inc.' , amountDue: 2000 }
+
+    Customer.prototype [Person的实例]
+    { name: undefined,
+      setAmountDue: [Function],
+      getAmountDue: [Function] }
+
+        Person.prototype 
+        { getName: [Function], sayMyName: [Function] }
 </code></pre>
 ]]></content>
   </entry>

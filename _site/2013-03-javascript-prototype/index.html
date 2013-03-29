@@ -119,6 +119,20 @@ console.log(myCustomer.getAmountDue());
 john.setAmountDue(1000);
 </code></pre>
 
+<p>其实以上例子就已经构建了一个原型链：</p>
+
+<pre><code>myCustomer [Customer的实例]
+{ name: 'Dream Inc.' , amountDue: 2000 }
+
+    Customer.prototype [Person的实例]
+    { name: undefined,
+      setAmountDue: [Function],
+      getAmountDue: [Function] }
+
+        Person.prototype 
+        { getName: [Function], sayMyName: [Function] }
+</code></pre>
+
     </div>
     <div id="related">
       相关文章：
