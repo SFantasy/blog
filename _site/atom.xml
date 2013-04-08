@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy's Homepage]]></title>
   <link href="/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2013-03-29T15:01:37+08:00</updated>
+  <updated>2013-04-08T21:34:05+08:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[fanTasy shAo]]></name>
@@ -14,13 +14,36 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Prototype chain in JavaScript]]></title>
+    <title type="html"><![CDATA[合并分支上的特定文件]]></title>
+    <link href="/2013-04-git-merge-specified-file/"/>
+    <updated>2013-04-08T21:08:00+08:00</updated>
+    <id>/git-merge-specified-file</id>
+    <content type="html"><![CDATA[<p><strong>问题</strong></p>
+
+<p>虽然说<code>merge</code>在Git的使用中还是很常见的一个操作，但是以前只用过<code>git merge branchname</code>这样的命令，今天遇到了一个情况，是这样的：</p>
+
+<p>在一个repository中，我需要在<code>master</code>分支里<code>merge</code>一个<code>gh-pages</code>分支中的文件，也就是说，使用合并另一个分支上的特定文件。</p>
+
+<p><strong>解决办法</strong></p>
+
+<p><a href="http://stackoverflow.com/questions/449541/how-do-you-merge-selective-files-with-git-merge">Stackoverflow</a>上提到了很多解决的办法，其中被采纳的答案中提到了两种，具体可以看前文给出的链接。不过我都没有尝试，因为accepted的answer并不是最好的，至少在这里是这样的。</p>
+
+<pre><code>git checkout branchename path/to/file1 path/to/file2
+git commit -m "'Merge' code from 'branchname' branch"
+</code></pre>
+
+<p>简单、实用，这就是我要找的答案。</p>
+
+<blockquote><p>如果这是一趟旅行，誓要发现途中最美的景色。</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Prototype in JavaScript]]></title>
     <link href="/2013-03-javascript-prototype/"/>
     <updated>2013-03-28T20:00:00+08:00</updated>
     <id>/javascript-prototype</id>
-    <content type="html"><![CDATA[<p>Prototype chain, 也就是原型链.</p>
-
-<blockquote><p>In a purely prototypal pattern, we dispense with classes. We focus on the objects.</p></blockquote>
+    <content type="html"><![CDATA[<blockquote><p>In a purely prototypal pattern, we dispense with classes. We focus on the objects.</p></blockquote>
 
 <p>这句话是蝴蝶书中的，意在JavaScript中没有传统的类继承(诸如C++, Java等)，而是使用的原型模型. 所以说JavaScript是一门基于原型的语言.</p>
 
@@ -79,7 +102,7 @@ console.log(myCustomer.getAmountDue());
 john.setAmountDue(1000);
 </code></pre>
 
-<p>其实以上例子就已经构建了一个原型链：</p>
+<p>其实以上例子就已经构建了一个<em>原型链</em>：</p>
 
 <pre><code>myCustomer [Customer的实例]
 { name: 'Dream Inc.' , amountDue: 2000 }
@@ -92,6 +115,20 @@ john.setAmountDue(1000);
         Person.prototype 
         { getName: [Function], sayMyName: [Function] }
 </code></pre>
+
+<p>这种继承的方式就是JavaScript中<em>原型链</em>的继承方式.</p>
+
+<h3>属性查找</h3>
+
+<p>在这种通过原型链继承的方式中，属性是只在读取的时候发生<em>属性继承</em>的，而在写入属性值的时候是不会发生的.<br/>
+也就是说，如果一个对象O从某个对象Q的原型继承而来，那么对象O中的属性P也是从Q中继承而来的，也就是所谓的属性继承，在O中设置了P的值，相当于在O中直接新建了一个P属性。<br/>
+而在后续程序中用到这个P属性的时候，发现P在O中已经定义，就不会通过原型链向上追溯了.</p>
+
+<h2>性能</h2>
+
+<p>要尽量避免原型链过长带来的性能问题，因为如果一个属性在原型链的上端就需要通过原型链不断向上查找，特别的，如果一个属性不存在，那么查找这个属性就会悲剧的遍历整个原型链.</p>
+
+<p>  --EOF--</p>
 ]]></content>
   </entry>
   
@@ -1560,19 +1597,6 @@ no display possibled
 <p>不过不影响接下来的步骤。</p>
 
 <p>有趣的是，pacman就是“吃豆子”游戏……可以在终端中输入后玩 : )</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Revolution OS]]></title>
-    <link href="/2012-10-revolution-os/"/>
-    <updated>2012-10-02T11:16:00+08:00</updated>
-    <id>/revolution-os</id>
-    <content type="html"><![CDATA[<p>地址：<a href="http://www.ixck.com/dianying/2011/0326/273730.html">http://www.ixck.com/dianying/2011/0326/273730.html</a></p>
-
-<p>《操作系统革命》，一部关于Open Source&amp;&amp;Linux的记录型电影。</p>
-
-<p>Linus Torvalds/Richard Stallman/Eric Raymond/Brian Behlenodorf等大牛的采访记录。</p>
 ]]></content>
   </entry>
   
