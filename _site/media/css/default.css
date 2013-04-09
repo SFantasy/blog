@@ -25,7 +25,6 @@ body {
   margin-left: auto; 
   margin-right: auto;
   color: #000000;
-  backgroud-color: #FFFFFF;
 }
 #container {
   width: 600px;
@@ -60,7 +59,7 @@ h1 small {
 .mainNav {
   text-align: right;
   margin-left: -12em;
-  font-size: 1.2em;
+  font-size: 18px;
   text-transform: uppercase;
   position: fixed;
 }
@@ -72,8 +71,8 @@ a {
   color: #000000;
 }
 .mainNav a:hover, section nav a:hover {
-  background-color: #000000;
-  color: #f9f9f9;
+  color: #fff;
+  background-color: #000;
   text-decoration: none;
   -webkit-transition: color .2s linear;
           transition: color .2s linear;
@@ -81,6 +80,8 @@ a {
 article {
   font-size: 16px;
   line-height: 24px;
+  margin-top: 10px;
+  padding: 5px;
 }
 section {
   padding: .5em 0em;
@@ -101,14 +102,15 @@ li {
 }
 #recentPost {
   font-weight: bold;
+  color: #777;
 }
 li a {
   font-family: FreeSerif;
   padding: .2em 1em;
-  color: #000000;
+  color: #000;
 }
 li a:hover {
-  color: #999999;
+  color: #ccc;
 }
 time {
   color: #999999;
@@ -125,11 +127,11 @@ time {
   margin: 0.5px;
 }
 .paginator a {
-  color: #000000;
+  color: #000;
 }
 .paginator a:hover {
-  background: #000000;
-  color: #f9f9f9;
+  background: #000;
+  color: #fff;
 }
 .paginator span {
   text-decoration: none;
@@ -150,13 +152,15 @@ footer {
   color: #999999;
   font-family: "Souce Code Pro", "Ubuntu", "Microsoft YaHei", sans-serif;
   border-top: 1px dotted #CCC;
+  margin-top: 10px;
 }
-footer a{
-  color: #000000;
+footer a {
+  color: #000;
+  padding: 5px;
 }
 footer a:hover {
-  color: #f9f9f9;
-  background-color: #000000;
+  color: #fff;
+  background-color: #000;
 }
 /*
 * CSS of post.html
