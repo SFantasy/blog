@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy's Homepage]]></title>
   <link href="/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2013-04-09T20:02:53+08:00</updated>
+  <updated>2013-04-11T22:38:33+08:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[fanTasy shAo]]></name>
@@ -35,6 +35,8 @@ git commit -m "'Merge' code from 'branchname' branch"
 <p>简单、实用，这就是我要找的答案。</p>
 
 <blockquote><p>如果这是一趟旅行，誓要发现途中最美的景色。</p></blockquote>
+
+<p>--EOF--</p>
 ]]></content>
   </entry>
   
