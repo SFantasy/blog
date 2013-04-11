@@ -2,8 +2,8 @@
 	body {
 		padding: 0;
 	}
-	#container {
-		width: 480px;
+	.container {
+		width: auto;
 		padding: 0;
 	}
 	header {

@@ -4,7 +4,7 @@
   border: none;
   outline: none;
 }
-html, body, #container, h1, nav a, article, section, ul, footer, #paginator {
+html, body, .container, h1, nav a, article, section, ul, footer, #paginator {
   display: block;
 }
 html {
@@ -20,11 +20,14 @@ body {
   margin-right: auto;
   color: #000000;
 }
-#container {
-  width: 600px;
-  margin: 0 auto;
-  padding: 0 2em;
+@media screen and max-width(1280px) {
+  .container {
+    width: 600px;
+    margin: 0 auto;
+    padding: 0 2em;
+  }
 }
+
 header {
   padding: .5em 0;
   border-bottom: 1px solid #CCCCCC;
