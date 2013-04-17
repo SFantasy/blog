@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>My fog in CSS - Fantasy's Homepage</title>
+  <meta name="author" content="fanTasy shAo" />
+  
+  
+  <link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="/media/mylogo.ico" />
+  <link rel="stylesheet" href="media/css/default-responsive.css">
+  <link rel="stylesheet" href="/media/css/default.css" />
+  <link href="/atom.xml" rel="alternate" title="Fantasy's Homepage" type="application/atom+xml" />
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36896790-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+</head>
+<body>
+  <div id="sContainer" class="container">
+    <header>
+        <h1>Fantasy's Homepage<small>keep it simple and stupid</small></h1>
+    </header>
+    <nav class="mainNav">
+      <span><a href="/">HOME</a></span>
+	    <span><a href="/categories.html">CATEGORIES</a></span>
+	    <span><a href="/archive.html">ARCHIVE</a></span>
+	    <span><a href="/links.html">LINKS</a></span>
+	    <span><a href="/editor.html">EDITOR OL</a></span>
+      <span><a href="https://github.com/SFantasy/sfantasy.github.com">FORK ME</a></span>
+      <span><br /></span>
+	    <span><a href="/about.html">ABOUT</a></span>
+    </nav>
+    <article>
+      <section>
+    <h2>My fog in CSS</h2>
+    <small>
+      <date title="2013-04-17T09:49:00+08:00" datetime="2013-04-17T09:49:00+08:00" pubdate>
+      <span>April</span>
+      <span>17</span>
+      <span>2013</span>
+      </date>  ，类别：
+       
+      <a href="/categories.html#Front-end-Dev-ref" title="Front-end-Dev" rel="category tag">Front-end-Dev</a>
+      
+    </small>
+    <br />
+    <div class="postContent">
+      <p>今天整理一下一些CSS中不是那么容易理解的概念。</p>
+
+<h2>display</h2>
+
+<p><code>display</code>属性有很多的值，但是经常使用的一般以<code>inline</code>，<code>block</code>最为常见.</p>
+
+<p>我们知道，元素本身被分为<code>块级元素</code>和<code>行级元素</code>，常见的<code>块级元素</code>有<code>p</code>, <code>h1</code>, <code>div</code>等，而<code>行级元素</code>有<code>span</code>, <code>a</code>等.</p>
+
+<p>而通过修改元素的<code>display</code>属性可以用之实现想要实现的效果.</p>
+
+<p>当然，我们还会用到`inline-block``这样的值.</p>
+
+<ul>
+<li>inline-block</li>
+</ul>
+
+
+<p><a href="http://www.w3school.com.cn/css/pr_class_display.asp">w3school</a>上是这样描述的：</p>
+
+<blockquote><p>An inline-block element is placed as an inline element(on the same line as adjacent content), but it behaves as a block element.</p></blockquote>
+
+<p>我现在的理解是这样的，属性值为<code>inline</code>的元素的高度、宽度是不能修改的，但是<code>block</code>值的元素可以修改其模型的高度以及宽度，将属性值设置为<code>inline-block</code>在显示上是呈现出<code>inline</code>的样式，但是同时具备了<code>block</code>的特性.</p>
+
+<p>举个例子：</p>
+
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;One&lt;/li&gt;
+  &lt;li&gt;Two&lt;/li&gt;
+  &lt;li&gt;Three&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p><code>li</code>元素默认的是<code>block</code>的，如果我们用它来做导航菜单就需要它以<code>inline</code>的样式来显示，但是<code>inline</code>却不能修改其宽度、高度等属性，这时我们就需要将其<code>display</code>属性设置为<code>inline-block</code>.</p>
+
+<p>但事实上，我还是对此有点疑问的，如果只是将<code>li</code>元素设置为<code>inline</code>其样式仍可以通过<code>margin</code>, <code>padding</code>等属性来修改，所以<code>inline-block</code>仍不是唯一的选择?! 不知道这个想法是对是错？</p>
+
+<h2>position</h2>
+
+<p><code>position</code>属性的值相对于<code>display</code>要少的多: <code>static</code>, <code>absolute</code>, <code>fixed</code>, <code>relative</code>和<code>inherit</code>.</p>
+
+<p>其中<code>static</code>是默认的值，而<code>inherit</code>即表示<code>position</code>继承自其父元素.</p>
+
+<p>主要还是来看看<code>absolute</code>, <code>fixed</code>和<code>relative</code>.</p>
+
+<ul>
+<li>absolute</li>
+</ul>
+
+
+<blockquote><p>The element is positioned relative to its first positioned (not static) ancestor element</p></blockquote>
+
+<ul>
+<li>fixed</li>
+</ul>
+
+
+<blockquote><p>The element is positioned relative to the browser window</p></blockquote>
+
+<ul>
+<li>relative</li>
+</ul>
+
+
+<blockquote><p>The element is positioned relative to its normal position, so "left:20" adds 20 pixels to the element's LEFT position</p></blockquote>
+
+<p>以上是w3schools对于这些值的定义，下面用一个比较简单的例子感受一下(在Chrome26下测试，有些样式是user agent stylesheet，但不影响理解)</p>
+
+<p>有以下HTML：</p>
+
+<pre><code>&lt;div id="ancestor"&gt;
+    &lt;div id="father"&gt;
+        &lt;div id="son"&gt;&lt;/son&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>以及以下CSS:</p>
+
+<pre><code>#ancestor { 
+  width: 600px; 
+  height: 600px;
+  background-color: blue; 
+}
+#father { 
+  width: 400px; 
+  height: 400px; 
+  background-color: green; 
+}
+#son { 
+  width: 100px; 
+  height: 100px; 
+  background-color: red;
+}
+</code></pre>
+
+<p>现在为<code>#son</code>添加以下属性值：</p>
+
+<pre><code>top: 100px;
+left: 50px;
+</code></pre>
+
+<p>刷新之后可以发现没有变化，这是因为默认的<code>position</code>是<code>static</code>的，而<code>top</code>,<code>right</code>,<code>bottom</code>,<code>left</code>等是不适用于<code>static</code>的. 继续向<code>#son</code>添加:</p>
+
+<pre><code>position: relative;
+</code></pre>
+
+<p>可以看到<code>#son</code>的位置发现了变化，所谓的<code>relative</code>也就是指相对于其原来的位置(<code>static</code>的时候)，根据<code>top</code>等属性值移动而到的新位置. 如果将其改为：</p>
+
+<pre><code>position: absolute;
+</code></pre>
+
+<p>那么整个<code>#son</code>就会发生新的偏移. 而事实上现在的位置是相对于整个窗口而进行<code>top: 100px;</code>, <code>left: 50px;</code>的调整的. 我们可以向<code>#father</code>添加如下属性（not static）：</p>
+
+<pre><code>position: relative;
+</code></pre>
+
+<p>然后会发现<code>#son</code>又变回了原样，这正是因为<code>#son</code>在寻找其祖先节点中第一个不是<code>static</code>的节点时，发现了<code>#father</code>的<code>display</code>是<code>relative</code>，所以这个绝对定位就是根据<code>#father</code>而来的.</p>
+
+<p>有没有觉得好理解了很多呢……Have a try!</p>
+
+<p>--EOF--</p>
+
+    </div>
+    <div id="related">
+      相关文章：
+        
+        <li>
+          <a href="/2013-04-git-merge-specified-file/">合并分支上的特定文件</a>
+        </li>
+        
+        <li>
+          <a href="/2013-03-javascript-prototype/">Prototype in JavaScript</a>
+        </li>
+        
+        <li>
+          <a href="/2013-03-python-questions/">Several topics in Python</a>
+        </li>
+        
+    </div>
+    <nav>
+      
+      <span>Prev：<a href="/2013-04-git-merge-specified-file/" rel="prev" title="合并分支上的特定文件">合并分支上的特定文件</a></span>
+      
+      
+    </nav>
+  </section>
+  <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+        <a class="bds_qzone"></a>
+        <a class="bds_tsina"></a>
+        <a class="bds_tqq"></a>
+        <a class="bds_renren"></a>
+        <a class="bds_t163"></a>
+        <span class="bds_more">更多</span>
+        <a class="shareCount"></a>
+    </div>
+    <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=0" ></script>
+    <script type="text/javascript" id="bdshell_js"></script>
+    <script type="text/javascript">
+        document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+  <br />
+  <div id="disqus_thread"></div>
+	 <script type="text/javascript">
+            var disqus_shortname = '027'; 
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+	</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  <script type="text/javascript">
+  $(function(){
+    $(document).keydown(function(e) {
+    var url = false;
+        if (e.which == 37 || e.which == 74) {  // Left arrow and J
+            
+        url = '/2013-04-git-merge-specified-file/';
+        
+        }
+        else if (e.which == 39 || e.which == 75) {  // Right arrow and K
+            
+        }
+        if (url) {
+            window.location = url;
+        }
+    });
+  })
+</script>
+
+    </article>
+    <footer>
+	  <span>Designed by <a href="https://github.com/SFantasy">fanTasy</a> | Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, sext & <a href="https://github.com">GitHub</a></span>
+    <div class="g-plusone" data-size="medium" style="margin-left: 10px;"></div>
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+    </footer>
+  </div>
+</body>
+</html>

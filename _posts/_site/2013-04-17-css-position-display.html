@@ -1,0 +1,45 @@
+<p>今天整理一下一些CSS中不是那么容易理解的概念。</p>
+
+<h2 id='display'>display</h2>
+
+<p><code>display</code>属性有很多的值，但是经常使用的一般以<code>inline</code>，<code>block</code>最为常见.</p>
+
+<p>我们知道，元素本身被分为<code>块级元素</code>和<code>行级元素</code>，常见的<code>块级元素</code>有<code>p</code>, <code>h1</code>, <code>div</code>等，而<code>行级元素</code>有<code>span</code>, <code>a</code>等.</p>
+
+<p>而通过修改元素的<code>display</code>属性可以用之实现想要实现的效果.</p>
+
+<p>当然，我们还会用到<code>inline-block</code>, <code>inline-table</code>这样的值.</p>
+
+<ul>
+<li>inline-block</li>
+</ul>
+
+<p><a href='http://www.w3school.com.cn/css/pr_class_display.asp'>w3school</a>上是这样描述的：</p>
+
+<blockquote>
+<p>An inline-block element is placed as an inline element(on the same line as adjacent content), but it behaves as a block element.</p>
+</blockquote>
+
+<p>我现在的理解是这样的，属性值为<code>inline</code>的元素的高度、宽度是不能修改的，但是<code>block</code>值的元素可以修改其模型的高度以及宽度，将属性值设置为<code>inline-block</code>在显示上是呈现出<code>inline</code>的样式，但是同时具备了<code>block</code>的特性.</p>
+
+<p>举个例子：</p>
+
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;One&lt;/li&gt;
+  &lt;li&gt;Two&lt;/li&gt;
+  &lt;li&gt;Three&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+<p><code>li</code>元素默认的是<code>block</code>的，如果我们用它来做导航菜单就需要它以<code>inline</code>的样式来显示，但是<code>inline</code>却不能修改其宽度、高度等属性，这时我们就需要将其<code>display</code>属性设置为<code>inline-block</code>. 但事实上，我还是对此有点疑问的，如果只是将<code>li</code>元素设置为<code>inline</code>其样式仍可以通过<code>margin</code>, <code>padding</code>等属性来修改，所以<code>inline-block</code>仍不是唯一的选择?! 不知道这个想法是对是错？</p>
+
+<ul>
+<li>inline-table</li>
+</ul>
+
+<h2 id='position'>position</h2>
+
+<blockquote>
+<p>扯一段无关主题的话：由于上周末篮球比赛的时候伤着了膝盖，骨头没事，不过到现在膝盖还没消肿，甚至于膝盖一下的小腿和脚都有点肿。这着实让我感觉有点奇怪，今天下午得去医院看看:(</p>
+</blockquote>
+
+<p>&#8211;EOF&#8211;</p>
