@@ -16,7 +16,7 @@ categories: Front-end-Dev
 
 而通过修改元素的`display`属性可以用之实现想要实现的效果.
 
-当然，我们还会用到`inline-block``这样的值.
+当然，我们还会用到`inline-block`这样的值.
 
 * inline-block
 
@@ -37,6 +37,12 @@ categories: Front-end-Dev
 `li`元素默认的是`block`的，如果我们用它来做导航菜单就需要它以`inline`的样式来显示，但是`inline`却不能修改其宽度、高度等属性，这时我们就需要将其`display`属性设置为`inline-block`. 
 
 但事实上，我还是对此有点*疑问*的，如果只是将`li`元素设置为`inline`其样式仍可以通过`margin`, `padding`等属性来修改，所以`inline-block`仍不是唯一的选择?! 不知道这个想法是对是错？
+
+* inline-table 
+
+> The element is displayed as an inline-level table.
+
+同理，`inilne-table`属性的元素具有`table`的属性，但是在显示上是`inline`样式的.
 
 
 ## position
