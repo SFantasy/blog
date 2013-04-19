@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy's Homepage]]></title>
   <link href="/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2013-04-17T18:55:56+08:00</updated>
+  <updated>2013-04-19T19:32:29+08:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[fanTasy shAo]]></name>
@@ -28,7 +28,7 @@
 
 <p>而通过修改元素的<code>display</code>属性可以用之实现想要实现的效果.</p>
 
-<p>当然，我们还会用到`inline-block``这样的值.</p>
+<p>当然，我们还会用到<code>inline-block</code>这样的值.</p>
 
 <ul>
 <li>inline-block</li>
@@ -53,6 +53,15 @@
 <p><code>li</code>元素默认的是<code>block</code>的，如果我们用它来做导航菜单就需要它以<code>inline</code>的样式来显示，但是<code>inline</code>却不能修改其宽度、高度等属性，这时我们就需要将其<code>display</code>属性设置为<code>inline-block</code>.</p>
 
 <p>但事实上，我还是对此有点<em>疑问</em>的，如果只是将<code>li</code>元素设置为<code>inline</code>其样式仍可以通过<code>margin</code>, <code>padding</code>等属性来修改，所以<code>inline-block</code>仍不是唯一的选择?! 不知道这个想法是对是错？</p>
+
+<ul>
+<li>inline-table</li>
+</ul>
+
+
+<blockquote><p>The element is displayed as an inline-level table.</p></blockquote>
+
+<p>同理，<code>inilne-table</code>属性的元素具有<code>table</code>的属性，但是在显示上是<code>inline</code>样式的.</p>
 
 <h2>position</h2>
 
