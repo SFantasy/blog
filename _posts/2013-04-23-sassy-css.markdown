@@ -1,0 +1,231 @@
+---
+layout: post
+title: "「时髦」的CSS
+date: 2013-04-23 09:55
+comments: true
+categories: Front-end-Dev
+---
+
+关于CSS预处理工具，我还只是在「听闻」的阶段，如LESS, Sass, Stylus……好吧，我只知道这三个。不过如果用Google搜索一下「CSS preprocessor」，其中第一条是介绍LESS和Sass，第二条题为「8 CSS preprocessors to speed up development time」（[地址](http://www.catswhocode.com/blog/8-css-preprocessors-to-speed-up-development-time)），所以我又「听闻」了几种CSS预处理工具的名字 :-)
+
+在此时，我需要的是做出一个选择来决定开始学习哪个预处理工具。掷色子？不，色子只有6面……
+
+最后决定来学习Sass，原因是她是比较「时髦」。
+
+## 关于这个「时髦」的CSS
+
+* 官网： [sass-lang.com](http://www.sass-lang.com)
+
+### 安装
+
+如果在你的电脑上已经有了`ruby`和`gem`，那么就可以直接使用`gem`安装:
+
+        gem install sass
+        
+如果没有，那么就先去找如何安装`gem`吧。
+
+### scss 还是 sass
+
+在官网上我们可以看到Sass有两种后缀格式的文件：`.scss`与`.sass`。这两者的设计其实是一样的，不同点就在于`.sass`格式的语法中没有原来CSS的大括号和分号，使用缩进来分别代码块。
+
+还是先来学习`scss`吧。下文主要介绍了`scss`的基本用法。
+
+### 使用
+
+#### 变量
+
+在同一网站的页面中，经常会使用同一种色调、或者同一种颜色，而我们的设计师又经常回调出像`#3bbfce`这样的颜色，说实在的，真的很难记忆，而且如果对这种形式的颜色表达形式不熟悉又很难分辨它究竟是红是绿。
+
+为CSS添加变量的概念，让她开始像一门「编程语言」：
+
+        $blue: #3bbfce;
+        
+        header {
+            color: $blue;
+        }
+        
+顺便提一句，如果使用`sass`:
+
+        $blue: #3bbfce
+        
+        header
+            color: $blue
+       
+下文都使用`scss`来举例，不再使用`sass`。
+
+#### 嵌套
+
+嵌套的概念其实就是CSS中的「后代选择器」，如果有以下CSS:
+
+        header h1 {
+            color: $blue;
+        }
+        header h2 {
+            color: $green;
+            font-size: 12px;
+        }
+        
+那么我们就可以使用`scss`进行更为明了的嵌套：
+
+        header {
+            h1 {
+                color: $blue;
+            }
+            h2 {
+                color: $green;
+                font-size: 12px;
+            }
+        }
+        
+还可以进行属性值的嵌套：
+
+        /* CSS */
+        h1 {
+            font-family: sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        /* scss */
+        h1 {
+            font: {
+                family: sans-serif;
+                size: 20px;
+                weight: bold;
+            }
+        }
+        
+要注意的是，再使用属性值嵌套的时候必须使用「：」，这样Sass才能解释。
+
+还有一种是对于伪类进行嵌套：
+
+        /* CSS */
+        a {
+            color: $white;
+        }
+        a:hover {
+            color: $blue;
+        }
+        
+        /* scss */
+        a {
+            color: $white;
+            &:hover {
+                color: $blue;
+            }
+        }
+
+感觉这里的`&`很像其他语言中的`this`，再类中直接引用父类。
+
+#### Mixin
+
+不愧是Ruby写的（不过我已经基本忘记Ruby中的Mixin了）。
+
+Mixin可以使得对CSS代码进行重用：
+
+        /* 未使用Mixin */
+        a {
+            color: $white;
+            &:hover {
+                color: $blue;
+                transition: color .1s linear;
+                -webkit-transition: color .1s linear;
+            }
+        }
+        
+        /* 使用Mixin */
+        @mixin transition {
+            transition: color .1s linear;
+            -webkit-transition: color .1s linear;
+        }
+        a {
+            color: $white;
+            &:hover {
+                color: $blue;
+                @include transition;
+            }   
+        }
+
+如果有其他用到相同代码块的地方，也都可以直接`@include`进去。这样可以减少很多的代码量。
+
+Mixin还有一个特点就是，可以指定参数和缺省值：
+
+        /* 无缺省值 */
+        @mixin left($length) {
+            float: left;
+            margin-left: $length;
+        }
+        
+        /* 使用 */
+        #id {
+            @include left(10px);
+        }
+        
+        /* 有缺省值 */
+        @mixin left($length: 20px) {
+            float: left;
+            margin-left: $length;
+        }
+        
+        /* 使用 */
+        #id {
+            @include left(10px);
+        }
+        
+### 继承
+
+这让CSS听起来更像一门语言了，还是面向对象的。
+
+再CSS中有如下选择器:
+    
+        .classFather {
+            color: $blue;
+        }
+    
+如果要定义一个具有该选择器的新的选择器：
+
+        .classSon {
+            /* 继承父选择器 */
+            @extend .classFather;
+            background-color: $white;
+        }
+        
+当然还有一种比较常用的情况就是：
+
+        .classFather {
+            color: $blue;
+        }
+        .classFather.follower, .classSon.follower {
+            border: 1px solid #ccc;
+        }
+        .classSon {
+            background-color: $white;
+        }
+        
+        /* 以上就可以写成： */
+        .classFather {
+            color: $blue;
+        }
+        .classFather.follower {
+            border: 1px solid #ccc;
+        }
+        .classSon {
+            @extend .classFather;
+            background-color: $white;
+        }
+      
+即所有对`.classFather`定义的样式都会被`.classSon`继承。
+
+#### 其他内容
+
+* Sass支持控制语句，诸如：`if-else`, `for`, `each`, `while`等。
+* 可以使用`@import`导入外部其他的CSS或者Sass的文件: 
+
+        @import "path/to/file.css"
+        
+* 当然，更多的内容可以参考Sass的[Doc](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html)
+
+
+
+--EOF--
+            
