@@ -2,16 +2,14 @@
 layout: default
 ---
 
-<section>
+<section class="post">
   <h2>{{ page.title }}</h2>
   <div>
     {{ content }}
   </div>
-</section>
-{% if page.comments %}
+  {% if page.comments %}
   <div>
     {% include comments.md %}
   </div>
-{% endif %}
-
-
+  {% endif %}
+</section>

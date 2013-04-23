@@ -1,0 +1,286 @@
+/*!
+	Scss file for my homepage
+
+	Author: SFantasy (github.com/SFantasy)
+*/
+
+/* Variables */
+$black: #000000;
+$darkgrey: #545652;
+$lightgrey: #cccccc;
+$fontgrey: #333333;
+$bordergrey: #cacaca;
+$white: #d5d5d5;
+$purewhite: #ffffff;
+$red: #f00;
+$orange: #e30;
+$yellow: #eb0;
+$green: #0a3;
+$bluegreen: #0aa;
+$blue: #03a;
+$purple: #a0a;
+$link: #4183c4;
+/* Global settings */
+body {
+	margin: 0;
+	family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-image: url('/media/img/background.jpg');
+}
+.inner {
+	margin: 0 auto;
+}
+@mixin transform($d) {
+	transform: rotate($d);
+	-webkit-transform: rotate($d);
+	-moz-transform: rotate($d);
+	-o-transform: rotate($d);
+}
+@mixin transition($t: .3s) {
+	transition: all $t linear;
+	-webkit-transition: all $t linear;
+}
+@mixin duration($t: 0.8s) {
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	-o-transition-property: -o-transform;
+	transition-property: transform;
+	-webkit-transition-duration: $t;
+	-moz-transition-duration: $t;
+	-o-transition-duration: $t;
+	transition-duration: $t;
+}
+@mixin scale($d: 2.0) {
+	transform: scale($d);
+	-webkit-transform: scale($d);
+	-moz-transform: scale($d);
+	-o-transform: scale($d);
+}
+/* Navbar */
+.navinner {
+	@extend .inner;
+	width: 600px;
+}
+nav {
+	height: 20px;
+	padding: 5px;
+	font: {
+		weight: bold;
+		size: 16px;
+	}
+	span {
+		margin-left: 20px;
+		padding: 5px;
+	}
+	a {
+		color: $white;
+		text-decoration: none;
+		&:hover {
+			color: $purewhite;
+			@include transition;
+		};
+	}
+}
+header {
+	cursor: default;
+	h1 {
+		padding: 3px;
+		display: inline-block;
+		@include transform(-5deg);
+		font: {
+			family: "Comic Sans", Helvetica, Arial, sans-serif;
+			size: 30px;
+		};
+		span {
+			padding: 2px;
+			color: $purewhite;
+			display: inline-block;
+		}
+		#f {
+			@include transform(7deg);
+			background-color: $red;
+		}
+		#a {
+			@include transform(-7deg);
+			background-color: $orange;
+		}
+		#n {
+			@include transform(6deg);
+			background-color: $yellow;
+		}
+		#t {
+			@include transform(-6deg);
+			background-color: $green;
+		}
+		#a2 {
+			@include transform(5deg);
+			background-color: $bluegreen;
+		}
+		#s {
+			@include transform(-5deg);
+			background-color: $blue;
+		}
+		#y {
+			@include transform(4deg);
+			background-color: $purple;
+		}
+	}
+	small {
+		display: inline-block;
+		margin-left: 10px;
+		@include transform(3deg);
+		font-size: 16px;
+		color: $white;
+	}
+}
+article {
+	padding: 5px 10px;
+	.index {
+		@extend .inner;
+		width: 900px;
+		#showposts {
+			li {
+				display: inline-block;
+				list-style-type: none;
+				border-radius: 4px;
+				border: 1px solid $darkgrey;
+				padding: 5px;
+				font-size: 16px;
+				margin: 8px;
+				time {
+					color: $white;
+				}
+				a {
+					@extend time;
+					text-decoration: none;
+				}
+			}
+			li:nth-child(even) {
+				&:hover {
+					@include scale(1.1);
+					@include duration(.3s);
+				}
+			}
+			li:nth-child(odd) {
+				&:hover {
+					@include scale(1.1);
+					@include duration(.3s);
+				}
+			}
+
+		}
+		#recentPost {
+			color: $lightgrey;
+			font: {
+				weight: bold;
+				size: 16px;
+			};
+		}
+		#pageCount {
+			@extend #recentPost;
+			margin-left: 20px;
+		}
+	}
+	.paginator {
+		@extend .inner;
+		width: 680px;
+		font-size: 14px;
+		line-height: 150%;
+		span {
+			padding: 3px 6px;
+		}
+		a {
+			@extend span;
+			text-decoration: none;
+			color: $purewhite;
+			border-radius: 4px;
+			border: 1px solid rgba(0, 0, 0, 0);
+			&:hover {
+				background-color: $purewhite;
+				color: $black;
+				border: 1px solid $purewhite;
+				@include duration(.5s);
+			}
+		}
+		.disabled {
+			color: $lightgrey;
+		}
+	}
+	.post {
+		@extend .inner;
+		width: 680px;
+		color: $fontgrey;
+		font-size: 13px;
+		line-height: 1.6;
+		border:1px solid $bordergrey;
+		border-radius: 4px;
+		background-color: $purewhite;
+		min-height: 60px;
+		padding: 10px;
+		overflow: hidden;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		small a {
+			color: $darkgrey;
+			&:hover {
+				color: $purewhite;
+				background-color: $black;
+			}
+		}
+		blockquote {
+			border-left: 4px solid $darkgrey;
+			padding: 0 15px;
+			color: $darkgrey;
+		}
+		pre, code {
+			font-family: "Source Code Pro", Consolas, sans-serif;
+		}
+		pre {
+			border: 1px solid $bordergrey;
+			padding: 6px 10px;
+			border-radius: 3px;
+			line-height: 18px;
+			margin-bottom: 16px;
+		}
+		a {
+			text-decoration: none;
+			color: $link;
+			&:hover {
+				color: $blue;
+			}
+		}
+		#related {
+			@extend a;
+			border-top: 1px solid $bordergrey;
+			margin-top: 50px;
+		}
+		nav {
+			margin: 5px 0 10px 0;			
+			background-color: $white;
+			border: 1px solid $bordergrey;
+			border-radius: 3px;
+			a { 
+				font-size: 16px;
+			}
+		}
+	}
+}
+footer {
+	padding: 5px 0 0 0;
+	width: 100%;
+	@extend .inner;
+	font: {
+		size: 14px;
+	};
+	color: $white;
+	p {
+		margin: 0;
+		text-align: center;
+		a {
+			color: $bluegreen;
+			text-decoration: none;
+			&:hover {
+				color: $blue;
+			};
+		}
+	}
+}

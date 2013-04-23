@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section>
+<section class="post">
     <h2>{{ page.title }}</h2>
     <small>
       <date title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}" pubdate>
@@ -28,33 +28,35 @@ layout: default
     </div>
     <nav>
       {% if page.previous %}
-      <span>Prev：<a href="{{ page.previous.url }}" rel="prev" title="{{ page.previous.title }}">{{ page.previous.title }}</a></span>
+      <span>Prev: <a href="{{ page.previous.url }}" rel="prev" title="{{ page.previous.title }}">{{ page.previous.title }}</a></span>
       {% endif %}
       {% if page.next %}
       <span>Next：<a href="{{ page.next.url }}" rel="next" title="{{ page.next.title }}">{{ page.next.title }}</a></span>
       {% endif %}
-    </nav>
-  </section>
-  {% include share.md %}
-  <br />
-  {% include comments.md %}
-  <script type="text/javascript">
-  $(function(){
-    $(document).keydown(function(e) {
-    var url = false;
-        if (e.which == 37 || e.which == 74) {  // Left arrow and J
-            {% if page.previous %}
-        url = '{{ site.url }}{{ page.previous.url }}';
-        {% endif %}
-        }
-        else if (e.which == 39 || e.which == 75) {  // Right arrow and K
-            {% if page.next %}
-        url = '{{ site.url }}{{ page.next.url }}';
-        {% endif %}
-        }
-        if (url) {
-            window.location = url;
-        }
-    });
-  })
+    </nav>  
+    <div>    
+      {% include share.md %}
+      <br />
+      {% include comments.md %}
+    </div>
+</section>
+<script type="text/javascript">
+$(function(){
+  $(document).keydown(function(e) {
+  var url = false;
+      if (e.which == 37 || e.which == 74) {  // Left arrow and J
+          {% if page.previous %}
+      url = '{{ site.url }}{{ page.previous.url }}';
+      {% endif %}
+      }
+      else if (e.which == 39 || e.which == 75) {  // Right arrow and K
+          {% if page.next %}
+      url = '{{ site.url }}{{ page.next.url }}';
+      {% endif %}
+      }
+      if (url) {
+          window.location = url;
+      }
+  });
+})
 </script>
