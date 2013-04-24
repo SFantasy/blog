@@ -6,6 +6,8 @@ My own git page.
 
 * Blogs, Tutorials, Informations and other interesting things.
 
-* Powered by Jekyll ,sext and GitHub.
+* New theme designed 2013-04-23 by myself.
+
+* Powered by Jekyll and GitHub pages.
 
 
