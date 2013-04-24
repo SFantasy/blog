@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy's Homepage]]></title>
   <link href="/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2013-04-24T13:38:50+08:00</updated>
+  <updated>2013-04-24T15:00:23+08:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[fanTasy shAo]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://sfantasy.github.com/">fantasy | blog</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[王垠与「markdown的一些问题」]]></title>
+    <link href="/2013-04-talk-markdown/"/>
+    <updated>2013-04-24T14:07:00+08:00</updated>
+    <id>/talk-markdown</id>
+    <content type="html"><![CDATA[<p>王垠一直是我很敬佩、甚至于崇拜的人，不过其实也觉得他是一个很「奇怪」的人--相信很多像我这样关注过王垠的人都会有这样的想法，当然，也曾在知乎上看到过一些人对与王垠的评价，地址在<a href="http://www.zhihu.com/question/20102511">这儿</a>。</p>
+
+<p>前几个月的时候经常会去王垠的<a href="http://blog.sina.com.cn/yinwang0">新浪博客</a>上去看看他最近写的一些文章，不过最近突然发现他又把博客迁移到新的地址了：<a href="http://www.yinwang.org">www.yinwang.org</a>。有兴趣的同学可以去看看他的博文以及一些思维导图，必然受益匪浅。</p>
+
+<p>「markdown的一些问题」是一篇王垠博客中的文章，之前在他的新浪博客中没有看到过。毕竟平时也都是用markdown来写作的，所以结合以下他的这篇文章来谈一谈。</p>
+
+<h3>关于「markdown的layout语法」</h3>
+
+<p>所谓「layout语法」其实也就是使用缩进来区分代码块，这也是Python使用的方法。虽然这种语法会带来一些不必要的麻烦，比如因为少打空格而造成的格式混乱等;但是事实上在基本熟练使用这种语法之后就根本不会有这种困扰。所以对于markdown中这种语法而言，HTML这种标记语言必然是要败在下风的。</p>
+
+<h3>特殊字符的问题</h3>
+
+<p>markdown中的粗体是使用<code>**word**</code>，而斜体是使用<code>*word*</code>。其实王垠博客中提出的这个问题是很低级的：原文档中出现<code>x*y</code>这样的表达式。可以想像，如果只是按照单纯的文本将<code>x*y</code>写在文档中，那就很容易发生这样的事：原来想要写的是<code>x*y*z</code>但是却写成了x<em>y</em>z。「在程序员的世界里，“乘法”显然比“强调”更加频繁。」，没错，但是事实上markdown的语法给了我们用来表示代码的标记方法，如果要书写乘法，完全可以用之，而完全避免与其他诸如“强调”的语法的冲突。</p>
+
+<h3>表达能力</h3>
+
+<p>这的确是markdown的一个问题：比如图片的大小的控制，markdown无法做到，所以仍旧需要求助HTML的帮助; 再比如其实我很想在段首加两个空格的……</p>
+
+<p>其实还有一个关于「表达能力」的问题，不同的markdown解释器对于一些标记的表达的支持不同。就举一个例子吧，比如代码块的实现上:</p>
+
+<pre><code>```
+code
+```
+</code></pre>
+
+<p>基本上都是支持这种形式的，但是有些markdown更为高级，支持高亮:</p>
+
+<pre><code>```java
+System.out.println("hello");
+```
+</code></pre>
+
+<p>如果习惯了后者的语法，再去使用前者，会突然发现代码之前多了一个<code>java</code>字样……着实难受。</p>
+
+<p>不过在我看来，使用markdown来编辑文章、评论等都是非常cool的，至少比满眼的<code>&lt;&gt;</code>要舒服的多。至于关于王垠最后的那句话：「也许过段时间自己设计一个格式」，我只能说拭目以待啦。</p>
+
+<p>--EOF--</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[「时髦」的CSS]]></title>
@@ -1893,38 +1938,6 @@ CA:0.9034
 <li>Orange tutorial : <a href="http://orange.biolab.si/doc/tutorial/">http://orange.biolab.si/doc/tutorial/</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[随笔一篇]]></title>
-    <link href="/2012-10-sui-bi-yi-pian/"/>
-    <updated>2012-10-22T22:25:00+08:00</updated>
-    <id>/sui-bi-yi-pian</id>
-    <content type="html"><![CDATA[<p>不知道从什么时候开始，在身边很多人眼里，使用Linux 的人开始变成了装逼的代名词。</p>
-
-<p>这以至于每当我在捣鼓自己的Kubuntu的时候，总会有无聊的声音传到耳蜗里。其中大多数都是根本不了解Linux的，以至于他们越说话就让我越觉得他们很无知;但是其实最让人感到郁闷的是那些懂一点相关知识的，有些是在自己的电脑上用过Ubuntu虚拟机的，有些是自认为对电脑很了解的，而有些是用过一段时间Linux无疾而终的。</p>
-
-<p>为什么说这是最让人感到郁闷的呢？因为其实我一直都是觉得讨论操作系统优劣问题这个话题，以及编程语言优劣问题都是十分徒劳的：一个难当大任的操作系统或者编程语言在历史的进程中自然而然的会被淘汰，尤其是在现在这样一个科技日新月异的时代，所以就算各个“帮派”之间再怎么争破喉咙也是无济于事，不然Java作为一门饱受攻击的语言怎么还会有那么多程序员“不离不弃”呢？！</p>
-
-<p>以下列举几个自己遇到的比较典型的情景。</p>
-
-<ul>
-<li><p>情景1-“Kubuntu啊，一听名字就是山寨的。” 不好意思，不知道是从哪里听   出来一点点山寨的意思的。请问你知道Kubuntu为什么叫Kubuntu么？那么比如他的名字是Xubuntu呢，也山寨么？你知道Ubuntu默认的是GNOME？Unity？你知道Linux有哪些桌面么？KDE？XFCE？LXDE？那么关于其他诸如Mint/Suse/Fedora/Arc等Linux发行版也就不用说了。举这个例子只是想说明一个问题：不能因为只听说过RedHat/Debian/Ubuntu这些有名的发行版就把自己的认知限于这一小隅，这好比去过外滩看过东方明珠和在建的上海中心却不知道上海还有田子坊这样的地方。</p></li>
-<li><p>情景2-“为什么用Kubuntu啊，界面好看么？我觉得还没Win7好看呢。”的确，Win7的aero效果的确不错啊，就用户体验而言可以算是操作系统的一个典范;当然我不想纠结于操作系统的优劣之辩，不过前一句话后肯定跟着很多个“但是”。仅针对这个情景而言，我只能说我对于界面的要求没那么高，不然就去折腾KDE的3D界面效果了，听说很炫，怎么着也不会比Win7差吧，不过我还从未尝试过，觉得没有必要。</p></li>
-<li><p>情景3-“Linux有什么好的，虚拟机跑跑还不够啊”其实我一直都觉得在虚拟机里跑的系统都是那些用户自己不会想去安装继而长期使用的。其实这又何异于超市里的免费品尝呢？需要买的东西自然会去选择、购买、长期拥有，但是有些对有些东西的需要只停留在试尝的程度。对于一个满心希望在Linux环境下学习工作娱乐的人，为什么要忍受win下的虚拟机呢？！</p></li>
-<li><p>情景4-“你看，又装逼用Linux了，Linux有什么好用的啦。”首先，我觉得用Linux并没有什么可以用来装逼的资本，就如同围脖之于大众，豆瓣之于小众一样，Windows可以说是OS里的大众，那Linux也无非是一小众;我喜欢Linux胜过Windows，就像我喜欢豆瓣胜过微博一样。都是个人的选择，难道有人会在对方玩豆瓣的时候吐槽一句么？！</p></li>
-</ul>
-
-
-<p>从大一开始第一次接触到Linux到现在，以及受到包括ESR/RMS等的思想的熏陶，我才意识到自由软件运动与开放源代码的重要性和历史意义；虽然我还尚处于起步的阶段，而且也没有进入到狂热的状态，所以学习的进度可以说比较缓慢，直到这学期由于课程比较少才有了大把的时间来看书和实践，以及在LinuxToy/Study-Area/ChinaUnix等网站上久久流连和在王垠/ESR等人的文章上从钦佩到赞许。</p>
-
-<p>最后，推荐几个网址：<br/>
-* LinuxToy上的开源世界旅行手册：<a href="http://i.linuxtoy.org/docs/guide/">http://i.linuxtoy.org/docs/guide/</a><br/>
-* Study-Area上的GNU/Linux学习之旅：<a href="http://www.study-area.org/tips/linux_entry.htm">http://www.study-area.org/tips/linux_entry.htm</a><br/>
-* 王垠的wiki站和新浪博客：<a href="http://docs.huihoo.com/homepage/shredderyin/">http://docs.huihoo.com/homepage/shredderyin/</a><br/>
-<a href="http://blog.sina.com.cn/yinwang0">http://blog.sina.com.cn/yinwang0</a><br/>
-* joyfire的Linux笔记 <a href="http://man.lupaworld.com/content/develop/joyfire/">http://man.lupaworld.com/content/develop/joyfire/</a></p>
 ]]></content>
   </entry>
   
