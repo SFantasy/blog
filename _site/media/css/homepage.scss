@@ -176,7 +176,8 @@ article {
 			};
 		}
 		#pageCount {
-			@extend #recentPost;
+			color: $lightgrey;
+			font-size: 14px;
 			margin-left: 20px;
 		}
 	}
@@ -201,8 +202,11 @@ article {
 				@include duration(.5s);
 			}
 		}
-		.disabled {
+		.currentPage {
 			color: $lightgrey;
+		}
+		.disabled {
+			@extend .currentPage;
 		}
 	}
 	.post {
