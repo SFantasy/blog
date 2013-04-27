@@ -23,7 +23,7 @@ $link: #4183c4;
 /* Global settings */
 body {
 	margin: 0;
-	family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: Georgia, Helvetica, Arial, sans-serif;
 	background-image: url('/media/img/background.jpg');
 }
 .inner {
@@ -87,7 +87,7 @@ header {
 		display: inline-block;
 		@include transform(-5deg);
 		font: {
-			family: "Comic Sans", Helvetica, Arial, sans-serif;
+			family: "Comic Sans MS", Helvetica, Arial, sans-serif;
 			size: 30px;
 		};
 		span {
