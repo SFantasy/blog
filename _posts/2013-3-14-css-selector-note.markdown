@@ -155,7 +155,7 @@ categories: Front-end-Dev
 
 ### CSS level 3
 
-* 属性选择器`E[foo^="bar"]` `E[foo$="bar"]` `E[foo*="bar"]` 
+* 属性选择器`E[foo^="bar"]`, `E[foo$="bar"]`, `E[foo*="bar"]` 
 
 根据不同条件进行匹配
 
@@ -166,7 +166,7 @@ categories: Front-end-Dev
     E[foo*="bar"]  
     /*E标签中foo属性的值含有"bar"的元素*/  
 	
-* 结构化伪类`E:root` `E:nth-child(n)` `E:nth-last-child(n)` `E:nth-of-type(n)` `E:nth-last-of-type(n)`
+* 结构化伪类`E:root`, `E:nth-child(n)`, `E:nth-last-child(n)`, `E:nth-of-type(n)`, `E:nth-last-of-type(n)`
 
 具体解释如下
 
@@ -183,7 +183,7 @@ categories: Front-end-Dev
     E:nth-last-of-type(n)  
     /*与E:nth-of-type相反*/
 	
-* 结构化伪类`E:last-child` `E:first-of-type` `E:last-of-type` `E:only-child` `E:only-of-type` `E:empty`
+* 结构化伪类`E:last-child`, `E:first-of-type`, `E:last-of-type`, `E:only-child`, `E:only-of-type`, `E:empty`
 
 具体解释如下
 
