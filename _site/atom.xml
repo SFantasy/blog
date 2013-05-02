@@ -4,7 +4,7 @@
   <title><![CDATA[Fantasy's Homepage]]></title>
   <link href="/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2013-04-28T00:34:38+08:00</updated>
+  <updated>2013-05-02T23:24:01+08:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[fanTasy shAo]]></name>
@@ -1213,7 +1213,7 @@ p::before { content:"note:" }
 <h3>CSS level 3</h3>
 
 <ul>
-<li>属性选择器<code>E[foo^="bar"]</code> <code>E[foo$="bar"]</code> <code>E[foo*="bar"]</code></li>
+<li>属性选择器<code>E[foo^="bar"]</code>, <code>E[foo$="bar"]</code>, <code>E[foo*="bar"]</code></li>
 </ul>
 
 
@@ -1228,7 +1228,7 @@ E[foo*="bar"]
 </code></pre>
 
 <ul>
-<li>结构化伪类<code>E:root</code> <code>E:nth-child(n)</code> <code>E:nth-last-child(n)</code> <code>E:nth-of-type(n)</code> <code>E:nth-last-of-type(n)</code></li>
+<li>结构化伪类<code>E:root</code>, <code>E:nth-child(n)</code>, <code>E:nth-last-child(n)</code>, <code>E:nth-of-type(n)</code>, <code>E:nth-last-of-type(n)</code></li>
 </ul>
 
 
@@ -1249,7 +1249,7 @@ E:nth-last-of-type(n)
 </code></pre>
 
 <ul>
-<li>结构化伪类<code>E:last-child</code> <code>E:first-of-type</code> <code>E:last-of-type</code> <code>E:only-child</code> <code>E:only-of-type</code> <code>E:empty</code></li>
+<li>结构化伪类<code>E:last-child</code>, <code>E:first-of-type</code>, <code>E:last-of-type</code>, <code>E:only-child</code>, <code>E:only-of-type</code>, <code>E:empty</code></li>
 </ul>
 
 
