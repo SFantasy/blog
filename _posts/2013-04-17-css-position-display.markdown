@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My fog in CSS"
+title: "CSS中跌过的坑"
 comments: true
 date: 2013-04-17 09:49
 categories: Front-end-Dev
