@@ -53,42 +53,77 @@ header {
       -moz-transform: rotate(7deg);
       -o-transform: rotate(7deg);
       background-color: red; }
+      header h1 #f:hover {
+        transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
+        -moz-transform: rotate(15deg);
+        -o-transform: rotate(15deg); }
     header h1 #a {
       transform: rotate(-7deg);
       -webkit-transform: rotate(-7deg);
       -moz-transform: rotate(-7deg);
       -o-transform: rotate(-7deg);
       background-color: #ee3300; }
+      header h1 #a:hover {
+        transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+        -o-transform: rotate(-10deg); }
     header h1 #n {
       transform: rotate(6deg);
       -webkit-transform: rotate(6deg);
       -moz-transform: rotate(6deg);
       -o-transform: rotate(6deg);
       background-color: #eebb00; }
+      header h1 #n:hover {
+        transform: rotate(20deg);
+        -webkit-transform: rotate(20deg);
+        -moz-transform: rotate(20deg);
+        -o-transform: rotate(20deg); }
     header h1 #t {
       transform: rotate(-6deg);
       -webkit-transform: rotate(-6deg);
       -moz-transform: rotate(-6deg);
       -o-transform: rotate(-6deg);
       background-color: #00aa33; }
+      header h1 #t:hover {
+        transform: rotate(-15deg);
+        -webkit-transform: rotate(-15deg);
+        -moz-transform: rotate(-15deg);
+        -o-transform: rotate(-15deg); }
     header h1 #a2 {
       transform: rotate(5deg);
       -webkit-transform: rotate(5deg);
       -moz-transform: rotate(5deg);
       -o-transform: rotate(5deg);
       background-color: #00aaaa; }
+      header h1 #a2:hover {
+        transform: rotate(10deg);
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg); }
     header h1 #s {
       transform: rotate(-5deg);
       -webkit-transform: rotate(-5deg);
       -moz-transform: rotate(-5deg);
       -o-transform: rotate(-5deg);
       background-color: #0033aa; }
+      header h1 #s:hover {
+        transform: rotate(-9deg);
+        -webkit-transform: rotate(-9deg);
+        -moz-transform: rotate(-9deg);
+        -o-transform: rotate(-9deg); }
     header h1 #y {
       transform: rotate(4deg);
       -webkit-transform: rotate(4deg);
       -moz-transform: rotate(4deg);
       -o-transform: rotate(4deg);
       background-color: #aa00aa; }
+      header h1 #y:hover {
+        transform: rotate(13deg);
+        -webkit-transform: rotate(13deg);
+        -moz-transform: rotate(13deg);
+        -o-transform: rotate(13deg); }
   header small {
     display: inline-block;
     margin-left: 10px;

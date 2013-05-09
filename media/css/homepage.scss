@@ -97,30 +97,51 @@ header {
 		#f {
 			@include transform(7deg);
 			background-color: $red;
+			&:hover {
+				@include transform(15deg);
+			}
 		}
 		#a {
 			@include transform(-7deg);
 			background-color: $orange;
+			&:hover {
+				@include transform(-10deg);
+			}
 		}
 		#n {
 			@include transform(6deg);
 			background-color: $yellow;
+			&:hover {
+				@include transform(20deg);
+			}
 		}
 		#t {
 			@include transform(-6deg);
 			background-color: $green;
+			&:hover {
+				@include transform(-15deg);
+			}			
 		}
 		#a2 {
 			@include transform(5deg);
 			background-color: $bluegreen;
+			&:hover {
+				@include transform(10deg);
+			}
 		}
 		#s {
 			@include transform(-5deg);
 			background-color: $blue;
+			&:hover {
+				@include transform(-9deg);
+			}
 		}
 		#y {
 			@include transform(4deg);
 			background-color: $purple;
+			&:hover {
+				@include transform(13deg);
+			}
 		}
 	}
 	small {
