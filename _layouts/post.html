@@ -28,10 +28,10 @@ layout: default
     </div>
     <nav>
       {% if page.previous %}
-      <span>Prev: <a href="{{ page.previous.url }}" rel="prev" title="{{ page.previous.title }}">{{ page.previous.title }}</a></span>
+      <span>&lt&lt <a href="{{ page.previous.url }}" rel="prev" title="{{ page.previous.title }}">{{ page.previous.title }}</a></span>
       {% endif %}
       {% if page.next %}
-      <span>Next：<a href="{{ page.next.url }}" rel="next" title="{{ page.next.title }}">{{ page.next.title }}</a></span>
+      <span>&gt&gt <a href="{{ page.next.url }}" rel="next" title="{{ page.next.title }}">{{ page.next.title }}</a></span>
       {% endif %}
     </nav>  
     <div>    

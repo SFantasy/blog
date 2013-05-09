@@ -61,7 +61,6 @@ body {
 	text-align: center;
 }
 nav {
-	height: 20px;
 	padding: 5px;
 	font: {
 		weight: bold;
@@ -258,12 +257,15 @@ article {
 			margin-top: 50px;
 		}
 		nav {
-			margin: 5px 0 10px 0;			
-			background-color: $white;
-			border: 1px solid $bordergrey;
+			margin: 5px 0 10px 0;
+			padding: 10px 0 10px 0;
+			background-color: $purewhite;
 			border-radius: 3px;
 			a { 
 				font-size: 16px;
+			}
+			span {
+				display: block;
 			}
 		}
 	}
