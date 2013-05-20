@@ -289,6 +289,21 @@ article {
 				display: block;
 			}
 		}
+		table {
+			border-spacing: 0;
+			th, td {
+				padding: 0 10px;
+				border: 1px solid $white;
+				border-right: none;
+				text-align: center;
+			}
+			td {
+				border-top: none;
+			}
+			th:last-child, td:last-child {
+				border-right: 1px solid $white;
+			}
+		}
 	}
 }
 footer {
