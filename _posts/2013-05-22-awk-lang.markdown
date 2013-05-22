@@ -1,0 +1,146 @@
+---
+layout: post
+comments: true
+categories: Shell
+title: "AWK 初学初用"
+date: 2013-05-22 13:54
+---
+
+昨天学习了sed，有很多命令还是需要在实践的过程中学习、深入的.遇到一些需要的时候，大可以参考其man page.
+
+回到今天要学习的内容--AWK. (sed上学期的时候还用过，AWK就完全是初学了.)
+
+> AWK utility is an interpreted programming language typically used as a data extraction and reporting tool.
+
+不同与sed的第一点，`AWK`是三位创始人姓氏首字母的合体：Aho, Weinberger, Kernighan. 所以`AWK`本身没有`sed`那样的字面意思.
+
+### AWK基础
+
+#### AWK的「Hello, World!」
+
+AWK是一门「语言」,可以对文本、数据进行处理. 既然AWK是一门语言，那么肯定有属于其自身的语法, 所以我们可以从经典的「Hello, World!」开始进入又一个令人兴奋的世界.
+
+    # 在shell中
+	awk 'BEGIN { print "Hello, World!" }'
+	Hello, World!
+
+如果将语句写在文件中，我们则可以这样来运行:
+
+    # 脚本内容(test.awk)
+	#!/usr/bin/awk
+	BEGIN { print "Hello, World!" }
+	
+	# 运行
+	$ awk -f test.awk
+
+其中，`-f`参数是AWK用来读取`.awk`文件的. 当然，更多的参数完全可以参考其手册.
+
+#### BEGIN与END
+
+`BEGIN`模块在AWK获得输入前执行，所以可以用来对一些变量进行赋值. 而我们也经常用其来做一些测试输出, 比如我们的「Hello, World!」程序.
+
+`END`模块其实就是一个结束模块，在AWK对文件的处理结束后执行. 经常用于对处理的结果进行统计等工作.
+
+#### 变量与函数
+
+AWK中的变量是不需要定义的，所以可以像这样直接使用:
+
+    $ awk 'BEGIN { sum = 1 + 2; print sum }'
+	3
+
+还有一种是AWK中的「内建变量」:
+
+* NR: 已输入记录的条数.
+* NF: 当前记录中域的个数.记录中最后一个域可以以$NF的方式引用.
+* FILENAME: 当前输入文件的文件名.
+* FS: “域分隔符”，用于将输入记录分割成域.其默认值为“空白字符”，即空格和制表符. FS可以替换为其它字符，从而改变域分隔符.
+* RS: 当前的“记录分隔符”.默认状态下，输入的每行都被作为一个记录，因此默认记录分隔符是换行符.
+* OFS: “输出域分隔符”，即分隔print命令的参数的符号.其默认值为空格.
+* ORS: “输出记录分隔符”，即每个print命令之间的符号.其默认值为换行符.
+* OFMT: “输出数字格式”(Format for numeric output)，其默认值为"%.6g".
+
+内建变量的值也是可以改变的(在`BEGIN`模块中).
+
+而AWK的函数定义和JavaScript很像:
+
+    function function_name(arguments) {
+	    // function body
+	}
+
+调用也是相同的:
+
+    function_name(arg)
+	
+要知道的一点是，AWK中同样提供了`if-else`, `while`, `for`, `break`, `continue`等条件控制语句. 比较特别的是AWK中有一个`next`语句，用以读取输入文件中的下一行文本.
+
+### print命令
+
+与其他任何语言一样，`print`命令必然是用来输出文本的.
+
+有以下文本:
+    
+	$ cat test.txt
+	1       2       3       4
+    Test    Cat     Dog     Pig
+    Cat     Dog     Pig     Test
+    Dog     Pig     Test    Cat
+    Pig     Test    Cat     Dog
+	# 提取输出该文本中的1、2两列
+	$ awk '{print $1, $2}' test.txt
+	1 2
+    Test Cat
+    Cat Dog
+    Dog Pig
+    Pig Test
+	
+这个输出的格式与期望的还是有点偏差的，所以我们可以对其「格式化」输出处理(与C语言一致):
+
+    $ awk '{printf "%-4s %-8s\n", $1, $2}' test.txt
+	1    2   
+	Test Cat 
+	Cat  Dog 
+	Dog  Pig 
+	Pig  Test
+	
+AWK中的`$n`被称之为*域*，域由「域分割符」(FS, 上文提到的内建变量之一)分割而成，而FS默认是空格和制表符. 所以我们才能够通过`$n`这样的域变量来获取文件中的列.
+
+再回到`print`命令来，与其他常见的语言一样，`print`后也可以紧跟表达式、函数等:
+
+    $ awk 'BEGIN { print 1+1 }'
+	2
+
+### 正则匹配
+
+在sed中已经感受过一点正则表达式的能力了，同样的，在AWK中正则表达式也有着很大的作用.
+
+这里要提到的是，AWK程序其实都是由一些列「模式--动作」对组成的：
+
+    pattern { action }
+	
+对于没有模式或者没有动作的AWK程序，就会对于所有文件中的内容执行action或者输出所有恰好匹配的记录.
+
+    # 输出第一列为Pig的行
+    $ awk '/^Pig/' test.txt
+	Pig     Test    Cat    Dog
+	
+这一个例子就是典型的只有pattern没有action的AWK语句.
+
+    # 筛选出第一列为Pig的行，并打印在终端
+    $ awk '/^Pig/ {$1 = "Hehe"; print $0}' test.txt
+	# 也可以将匹配到的行输出到文件中(与shell中的重定向相同)
+	$ awk '/^Pig/ {$1 = "Hehe"; print $0 > "file_new" } test.txt
+	
+值得一提的是AWK中的`~`操作符,可以用其对各域进行模式匹配：
+
+    $ awk '$1 ~ /^Pig/' test.txt
+	Pig     Test    Cat     Dog
+	
+看起来和`awk '/^Pig/' test.txt`一样？ 要知道`/^pattern/`只能匹配一行的开始，而不能匹配指定域的内容.
+
+
+*又到了令人愉悦的资源推荐时刻*
+
+* AWK学习笔记：[http://man.lupaworld.com/content/manage/ringkee/awk.htm#id2861922](http://man.lupaworld.com/content/manage/ringkee/awk.htm#id2861922)
+* CoolShell.cn: [http://coolshell.cn/articles/9070.html](http://coolshell.cn/articles/9070.html)
+
+--EOF--
