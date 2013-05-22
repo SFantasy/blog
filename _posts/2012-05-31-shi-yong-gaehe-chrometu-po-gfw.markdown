@@ -3,7 +3,7 @@ layout: post
 title: "使用GAE和Chrome突破GFW"
 date: 2012-5-31 11:06
 comments: true
-categories: [FQ, Google App Engine] 
+categories: Google-App-Engine
 ---
 
 看到文章标题想必屏幕前的你已经懂了我要讲什么。

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Sign."
+title: "Sigh."
 comments: true
 categories: Linux
 ---
