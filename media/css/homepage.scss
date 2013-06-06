@@ -10,30 +10,32 @@ $darkgrey: #545652;
 $lightgrey: #cccccc;
 $fontgrey: #333333;
 $bordergrey: #cacaca;
+$lightwhite: #f5f5f5;
 $white: #d5d5d5;
 $purewhite: #ffffff;
+$backwhite: #f1f1f1;
 $red: #f00;
 $orange: #e30;
 $yellow: #eb0;
 $green: #0a3;
 $bluegreen: #0aa;
 $blue: #03a;
+$backblue: #3b8bba;
 $purple: #a0a;
 $link: #4183c4;
 /* Global settings */
 body {
 	margin: 0;
 	font-family: Georgia, Helvetica, Arial, sans-serif;
-	background-image: url('/media/img/bg.jpg');
 }
 .inner {
 	margin: 0 auto;
 }
 @mixin transform($d) {
-	transform: rotate($d);
+	        transform: rotate($d);
 	-webkit-transform: rotate($d);
-	-moz-transform: rotate($d);
-	-o-transform: rotate($d);
+	   -moz-transform: rotate($d);
+	     -o-transform: rotate($d);
 }
 @mixin transition($t: .3s) {
 	transition: all $t linear;
@@ -41,19 +43,19 @@ body {
 }
 @mixin duration($t: 0.8s) {
 	-webkit-transition-property: -webkit-transform;
-	-moz-transition-property: -moz-transform;
-	-o-transition-property: -o-transform;
+	   -moz-transition-property: -moz-transform;
+	     -o-transition-property: -o-transform;
 	transition-property: transform;
 	-webkit-transition-duration: $t;
-	-moz-transition-duration: $t;
-	-o-transition-duration: $t;
-	transition-duration: $t;
+	   -moz-transition-duration: $t;
+	     -o-transition-duration: $t;
+	        transition-duration: $t;
 }
 @mixin scale($d: 2.0) {
-	transform: scale($d);
+	        transform: scale($d);
 	-webkit-transform: scale($d);
-	-moz-transform: scale($d);
-	-o-transform: scale($d);
+	   -moz-transform: scale($d);
+	     -o-transform: scale($d);
 }
 /* Navbar */
 .navinner {
@@ -62,25 +64,29 @@ body {
 }
 nav {
 	padding: 5px;
+	background-color: $backblue;
 	font: {
-		weight: bold;
 		size: 16px;
 	}
 	span {
 		margin-left: 20px;
-		padding: 5px;
 	}
 	a {
-		color: $white;
+		padding: 5px 10px;
+		color: $purewhite;
+		border: 1px solid $backblue;
 		text-decoration: none;
 		&:hover {
-			color: $purewhite;
+			color: $link;
+			border: 1px solid $purewhite;
+			background-color: $purewhite;
 			@include transition;
 		};
 	}
 }
 header {
 	cursor: default;
+	background-color: $backblue;
 	h1 {
 		padding: 3px;
 		display: inline-block;
@@ -149,49 +155,56 @@ header {
 		margin-left: 10px;
 		@include transform(3deg);
 		font-size: 16px;
-		color: $white;
+		color: $purewhite;
 	}
 }
 article {
 	padding: 5px 10px;
+	background-color: $backwhite;
 	.index {
 		@extend .inner;
 		width: 900px;
+		background-color: $purewhite;
+		padding: 10px 0;
+		margin: 15px auto;
 		#showposts {
 			li {
 				display: inline-block;
 				list-style-type: none;
-				border-radius: 4px;
-				border: 1px solid $darkgrey;
+				border: 1px solid $lightgrey;
+				border-left: 4px solid $lightgrey;
 				padding: 5px;
 				font-size: 16px;
 				margin: 8px;
 				time {
-					color: $white;
+					color: $lightgrey;
 				}
 				a {
-					@extend time;
+					color: $fontgrey;
 					text-decoration: none;
 				}
 			}
 			li:nth-child(even) {
 				&:hover {
-					@include scale(1.1);
-					@include duration(.3s);
+					border-left: 4px solid $backblue;
+					a {
+						color: $backblue;
+					}
 				}
 			}
 			li:nth-child(odd) {
 				&:hover {
-					@include scale(1.1);
-					@include duration(.3s);
+					border-left: 4px solid $bluegreen;
+					a {
+						color: $bluegreen;
+					}
 				}
 			}
 
 		}
 		#recentPost {
-			color: $lightgrey;
+			color: $darkgrey;
 			font: {
-				weight: bold;
 				size: 16px;
 			};
 		}
@@ -212,12 +225,11 @@ article {
 		a {
 			@extend span;
 			text-decoration: none;
-			color: $purewhite;
-			border-radius: 4px;
+			color: $darkgrey;
 			border: 1px solid rgba(0, 0, 0, 0);
 			&:hover {
-				background-color: $purewhite;
-				color: $black;
+				background-color: $backblue;
+				color: $purewhite;
 				border: 1px solid $purewhite;
 				@include duration(.5s);
 			}
@@ -235,11 +247,10 @@ article {
 		color: $fontgrey;
 		font-size: 13px;
 		line-height: 1.6;
-		border:1px solid $bordergrey;
-		border-radius: 4px;
 		background-color: $purewhite;
 		min-height: 60px;
 		padding: 10px;
+		margin: 15px auto;
 		overflow: hidden;
 		box-sizing: border-box;
 		-moz-box-sizing: border-box;
@@ -312,7 +323,7 @@ footer {
 	font: {
 		size: 14px;
 	};
-	color: $white;
+	color: $darkgrey;
 	p {
 		margin: 0;
 		text-align: center;
