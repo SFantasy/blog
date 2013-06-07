@@ -1,10 +1,10 @@
 /*!
 	Scss file for my homepage
 
-	Author: SFantasy (github.com/SFantasy)
+	Author: SFantasy (https://github.com/SFantasy)
 */
 
-/* Variables */
+/* Color Variables */
 $black: #000000;
 $darkgrey: #545652;
 $lightgrey: #cccccc;
@@ -75,10 +75,12 @@ nav {
 		padding: 5px 10px;
 		color: $purewhite;
 		border: 1px solid $backblue;
+		border-bottom: none;
 		text-decoration: none;
 		&:hover {
 			color: $link;
 			border: 1px solid $purewhite;
+			border-bottom: none;
 			background-color: $purewhite;
 			@include transition;
 		};
@@ -164,6 +166,7 @@ article {
 	.index {
 		@extend .inner;
 		width: 900px;
+		min-width: 400px;
 		background-color: $purewhite;
 		padding: 10px 0;
 		margin: 15px auto;
