@@ -10,6 +10,8 @@ categories: python
 
 最近又拾起了自己喜愛的Python（雖然一直很渣，沒有好好學習，近來想做一點東西……：）），今天來扯扯「re模塊」的蛋（說實話，我是來虛心學習的！）。
 
+### 函數
+
 我們可以先來看看`re`模塊中的常用函數有哪些：
 
 - `compile(pattern, flags=0)`
@@ -93,6 +95,45 @@ categories: python
 	# result
 	'my name is xxx'
 
+### 匹配對象
+
+事實上我們還會經常用到`re`模塊中的`group`函數，先來看一下它的用法：
+
+    m = re.match(r'www\.(.+)\.com', 'www.google.com')
+	m.group(0)
+	# result
+	'www.google.com'
+	
+	m.group(1)
+	# result
+	'google'
+	
+通過`group`我們可以選擇匹配到的字符串中「需要」的部分。
+
+    m.group(0)
+
+即整個匹配到的字符串。而
+
+    m.group(1)
+	
+則是在`()`中的子字符串。相同的，如果有多個子字符串的匹配模式亦可用`group(n)`來取出。
+
+與`group`函數相配套的還有`start`和`end`:
+
+    m.start(0)
+	# return
+	0
+	m.end(0)
+	# return 
+	14
+	
+前者返回的是`m.group(0)`的組的首個位置，而後者則是返回`m.group(0)`的組的末尾的index+1.
+
+    m.span(0)
+	# return
+	(0, 14)
+	
+`span`函數則是`start`和`end`函數的結合體，返回的整個index的範圍。
 
 
 *當然，以上介紹的只是`re`模塊中的一小部分，更多的內容可以在使用的時候查閱`re`模塊的[doc](http://docs.python.org/2/library/re.html)*
