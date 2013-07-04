@@ -85,13 +85,13 @@ body {
 				display: block;
 				padding: 8px 14px;
 				color: $black;
-				border: 1px solid $purewhite;
 				margin-bottom: -1px;
 				text-decoration: none;
 				&:hover {
 					color: $purewhite;
 					background-color: $backblue;
 					@include transition;
+					border-left: 6px solid $bluegreen;
 				};
 			}
 		}
@@ -174,10 +174,10 @@ header {
 }
 article {
 	padding: 5px 10px;
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
 	.index {
 		@extend .inner;
 		width: 800px;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
 		min-width: 400px;
 		background-color: $purewhite;
 		padding: 10px 0;
@@ -263,6 +263,7 @@ article {
 		font-size: 13px;
 		line-height: 1.6;
 		background-color: $purewhite;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
 		min-height: 60px;
 		padding: 10px;
 		margin: 15px auto;
