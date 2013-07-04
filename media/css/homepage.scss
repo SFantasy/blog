@@ -2,6 +2,8 @@
 	Scss file for my homepage
 
 	Author: SFantasy (https://github.com/SFantasy)
+	License: MIT
+
 */
 
 /* Color Variables */
@@ -27,6 +29,8 @@ $link: #4183c4;
 body {
 	margin: 0;
 	font-family: Georgia, Helvetica, Arial, sans-serif;
+	background-color: $backwhite;
+	position: relative;
 }
 .inner {
 	margin: 0 auto;
@@ -45,7 +49,7 @@ body {
 	-webkit-transition-property: -webkit-transform;
 	   -moz-transition-property: -moz-transform;
 	     -o-transition-property: -o-transform;
-	transition-property: transform;
+			transition-property: transform;
 	-webkit-transition-duration: $t;
 	   -moz-transition-duration: $t;
 	     -o-transition-duration: $t;
@@ -57,38 +61,45 @@ body {
 	   -moz-transform: scale($d);
 	     -o-transform: scale($d);
 }
-/* Navbar */
 .navinner {
-	@extend .inner;
-	text-align: center;
+	margin: 0 auto;
+	width: 600px;
 }
-nav {
-	padding: 5px;
-	background-color: $backblue;
+/* Navbar */
+.menu {
+	position: fixed;
+	top: 100px;
+	left: 150px;
+	width: 100px;
+	background-color: $purewhite;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
 	font: {
-		size: 16px;
+		size: 14px;
 	}
-	span {
-		margin-left: 20px;
-	}
-	a {
-		padding: 5px 10px;
-		color: $purewhite;
-		border: 1px solid $backblue;
-		border-bottom: none;
-		text-decoration: none;
-		&:hover {
-			color: $link;
-			border: 1px solid $purewhite;
-			border-bottom: none;
-			background-color: $purewhite;
-			@include transition;
-		};
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			list-style: none;
+			a {
+				display: block;
+				padding: 8px 14px;
+				color: $black;
+				border: 1px solid $purewhite;
+				margin-bottom: -1px;
+				text-decoration: none;
+				&:hover {
+					color: $purewhite;
+					background-color: $backblue;
+					@include transition;
+				};
+			}
+		}
 	}
 }
 header {
 	cursor: default;
-	background-color: $backblue;
+	margin-bottom: -50px;
 	h1 {
 		padding: 3px;
 		display: inline-block;
@@ -158,14 +169,15 @@ header {
 		@include transform(3deg);
 		font-size: 16px;
 		color: $purewhite;
+		background-color: $backblue;
 	}
 }
 article {
 	padding: 5px 10px;
-	background-color: $backwhite;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
 	.index {
 		@extend .inner;
-		width: 900px;
+		width: 800px;
 		min-width: 400px;
 		background-color: $purewhite;
 		padding: 10px 0;
@@ -246,7 +258,7 @@ article {
 	}
 	.post {
 		@extend .inner;
-		width: 680px;
+		width: 800px;
 		color: $fontgrey;
 		font-size: 13px;
 		line-height: 1.6;
