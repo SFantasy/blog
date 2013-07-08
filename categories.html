@@ -6,7 +6,7 @@ comments: false
 <section>
 <ul>
     {% for cat in site.categories %}
-    <li><a href="/categories.html#{{ cat[0] }}-ref" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} <sup>({{ cat[1].size }})</sup></a></li>
+    <li class="list-items"><a href="/categories.html#{{ cat[0] }}-ref" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} <sup>({{ cat[1].size }})</sup></a></li>
     {% endfor %}
 </ul>
 </section>
@@ -14,7 +14,7 @@ comments: false
   <span class="category" id="{{ cat[0] }}-ref">{{ cat[0] }}</span>
   <ul>
     {% for post in cat[1] %}
-		<li><a href='{{ post.url }}'>{{post.title}}</a></li>
+		<li class="post-items"><a href='{{ post.url }}'>{{post.title}}</a></li>
 	{% endfor %}
   </ul>
 {% endfor %}
