@@ -270,10 +270,11 @@ article {
 		box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		small a {
+			padding: 1px 3px;
 			color: $darkgrey;
 			&:hover {
 				color: $purewhite;
-				background-color: $black;
+				background-color: $link;
 			}
 		}
 		blockquote {
@@ -327,6 +328,24 @@ article {
 			}
 			th:last-child, td:last-child {
 				border-right: 1px solid $white;
+			}
+		}
+	}
+	.list-items {
+		a {
+			padding: 3px 3px;
+			&:hover {
+				background-color: $link;
+				color: $purewhite;
+			}
+		}
+	}
+	.post-items {
+		a {
+			padding: 1px 3px;
+			&:hover {
+				background-color: $bluegreen;
+				color: $purewhite;
 			}
 		}
 	}
