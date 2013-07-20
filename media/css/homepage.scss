@@ -68,12 +68,13 @@ body {
 /* Navbar */
 .menu {
 	display: inline-block;
+	width: 100%;
 	font: {
 		size: 14px;
 	}
 	ul {
 		padding: 0;
-		margin: 0 0 0 530px;
+		margin: 0 0 0 40%;
 		li {
 			display: inline-block;
 			list-style: none;
@@ -100,7 +101,7 @@ header {
 		margin: 0;
 		position: absolute;
 		top: 0;
-		left: 280px;
+		left: 20%;
 		display: inline-block;
 		font: {
 			family: "Comic Sans MS", Helvetica, Arial, sans-serif;
