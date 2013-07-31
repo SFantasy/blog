@@ -61,113 +61,113 @@ body {
 	   -moz-transform: scale($d);
 	     -o-transform: scale($d);
 }
-.navinner {
-	margin: 0 auto;
-	width: 600px;
-}
-/* Navbar */
-.menu {
-	display: inline-block;
-	font: {
-		size: 14px;
-	}
-	ul {
-		padding: 0;
-		margin: 0 0 0 530px;
-		li {
-			display: inline-block;
-			list-style: none;
-			a {
-				display: block;
-				padding: 8px 14px;
-				color: $white;
-				text-decoration: none;
-				&:hover {
-					color: $link;
-					background-color: $purewhite;
-					@include transition;
-				};
-			}
-		}
-	}
-}
 header {
 	cursor: default;
 	background-color: $backblue;
 	box-shadow: 0 0 2px $backblue;
 	position: relative;
-	h1 {
-		margin: 0;
-		position: absolute;
-		top: 0;
-		left: 280px;
+	/* Navbar */
+	.menu {
 		display: inline-block;
+		width: 100%;
 		font: {
-			family: "Comic Sans MS", Helvetica, Arial, sans-serif;
-			size: 30px;
-		};
-		span {
-			padding: 2px;
-			color: $purewhite;
+			size: 14px;
+		}
+		.navinner {
+			margin: 0 auto;
+			width: 800px;
+		}
+		h1 {
+			margin: 0;
 			display: inline-block;
-		}
-		#f {
-			@include transform(6deg);
-			background-color: $red;
-			&:hover {
-				@include transform(15deg);
+			font: {
+				family: "Comic Sans MS", Helvetica, Arial, sans-serif;
+				size: 30px;
+			};
+			span {
+				padding: 2px;
+				color: $purewhite;
+				display: inline-block;
 			}
-		}
-		#a {
-			@include transform(9deg);
-			background-color: $orange;
-			&:hover {
+			#f {
+				@include transform(6deg);
+				background-color: $red;
+				&:hover {
+					@include transform(15deg);
+				}
+			}
+			#a {
+				@include transform(9deg);
+				background-color: $orange;
+				&:hover {
+					@include transform(-10deg);
+				}
+			}
+			#n {
+				@include transform(-5deg);
+				background-color: $yellow;
+				&:hover {
+					@include transform(20deg);
+				}
+			}
+			#t {
+				@include transform(-8deg);
+				background-color: $green;
+				&:hover {
+					@include transform(-15deg);
+				}			
+			}
+			#a2 {
+				@include transform(4deg);
+				background-color: $bluegreen;
+				&:hover {
+					@include transform(10deg);
+				}
+			}
+			#s {
+				@include transform(9deg);
+				background-color: $blue;
+				&:hover {
+					@include transform(-9deg);
+				}
+			}
+			#y {
 				@include transform(-10deg);
+				background-color: $purple;
+				&:hover {
+					@include transform(13deg);
+				}
 			}
 		}
-		#n {
-			@include transform(-5deg);
-			background-color: $yellow;
-			&:hover {
-				@include transform(20deg);
+		small {
+			display: inline-block;
+			margin-left: 10px;
+			@include transform(3deg);
+			font-size: 16px;
+			color: $purewhite;
+			background-color: $backblue;
+		}
+		ul {
+			padding: 0;
+			margin: 0 10px;
+			display: inline-block;
+			li {
+				display: inline-block;
+				list-style: none;
+				a {
+					font-size: 14px;
+					display: block;
+					padding: 8px 14px;
+					color: $white;
+					text-decoration: none;
+					&:hover {
+						color: $link;
+						background-color: $purewhite;
+						@include transition;
+					};
+				}
 			}
 		}
-		#t {
-			@include transform(-8deg);
-			background-color: $green;
-			&:hover {
-				@include transform(-15deg);
-			}			
-		}
-		#a2 {
-			@include transform(4deg);
-			background-color: $bluegreen;
-			&:hover {
-				@include transform(10deg);
-			}
-		}
-		#s {
-			@include transform(9deg);
-			background-color: $blue;
-			&:hover {
-				@include transform(-9deg);
-			}
-		}
-		#y {
-			@include transform(-10deg);
-			background-color: $purple;
-			&:hover {
-				@include transform(13deg);
-			}
-		}
-	}
-	small {
-		display: inline-block;
-		margin-left: 10px;
-		@include transform(3deg);
-		font-size: 16px;
-		color: $purewhite;
-		background-color: $backblue;
 	}
 }
 article {
@@ -176,6 +176,7 @@ article {
 	.index {
 		@extend .inner;
 		width: 800px;
+		min-height: 600px;
 		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
 		min-width: 400px;
 		background-color: $purewhite;
