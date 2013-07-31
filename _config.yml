@@ -3,7 +3,7 @@ root: /
 permalink: /:year-:month-:title/
 markdown: rdiscount
 pygments: true 
-paginate: 20
+paginate: 30
 
 title: Fantasy's Blog
 author: fanTasy shAo
@@ -16,4 +16,3 @@ url: http://www.shaofantasy.cn
 
 #Generate css
 #compass compile
-
