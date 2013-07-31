@@ -61,55 +61,13 @@ body {
 	   -moz-transform: scale($d);
 	     -o-transform: scale($d);
 }
-<<<<<<< HEAD
-=======
-.navinner {
-	margin: 0 auto;
-	width: 600px;
-}
-/* Navbar */
-.menu {
-	display: inline-block;
-	width: 100%;
-	font: {
-		size: 14px;
-	}
-	ul {
-		padding: 0;
-		margin: 0 0 0 40%;
-		li {
-			display: inline-block;
-			list-style: none;
-			a {
-				display: block;
-				padding: 8px 14px;
-				color: $white;
-				text-decoration: none;
-				&:hover {
-					color: $link;
-					background-color: $purewhite;
-					@include transition;
-				};
-			}
-		}
-	}
-}
->>>>>>> 362446afe776921cedb7b1607ef838d486d13259
 header {
 	cursor: default;
 	background-color: $backblue;
 	box-shadow: 0 0 2px $backblue;
 	position: relative;
-<<<<<<< HEAD
 	/* Navbar */
 	.menu {
-=======
-	h1 {
-		margin: 0;
-		position: absolute;
-		top: 0;
-		left: 20%;
->>>>>>> 362446afe776921cedb7b1607ef838d486d13259
 		display: inline-block;
 		width: 100%;
 		font: {
