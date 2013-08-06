@@ -1,8 +1,8 @@
-sfantasy.github.com
+Blog
 ===================
 
-My own git page.
-[http://shaofantasy.cn](http://shaofantasy.cn)
+My Blog site.
+[http://shaofantasy.cn](http://blog.shaofantasy.cn)
 
 * Blogs, Tutorials, Informations and other interesting things.
 
