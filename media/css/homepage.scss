@@ -63,12 +63,15 @@ body {
 }
 header {
 	cursor: default;
-	background-color: $backblue;
-	box-shadow: 0 0 2px $backblue;
+	//background-color: $backblue;
+	//box-shadow: 0 0 2px $backblue;
 	position: relative;
+	margin-bottom: -20px;
 	/* Navbar */
 	.menu {
 		display: inline-block;
+		margin-top: 50px;
+		margin-bottom: -50px;
 		width: 100%;
 		font: {
 			size: 14px;
@@ -158,7 +161,7 @@ header {
 					font-size: 14px;
 					display: block;
 					padding: 8px 14px;
-					color: $white;
+					color: $fontgrey;
 					text-decoration: none;
 					&:hover {
 						color: $link;
@@ -171,7 +174,7 @@ header {
 	}
 }
 article {
-	margin: 20px auto;
+	margin: 0px auto;
 	padding: 5px 10px;
 	.index {
 		@extend .inner;
