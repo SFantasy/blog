@@ -7,6 +7,7 @@
 		<meta name="keywords" content="前端开发，HTML, CSS, JavaScript, Linux, Python" />
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="/media/css/homepage.css" />
+		<link rel="stylesheet" href="https://rawgithub.com/SFantasy/laboratory/master/Github-plugin/github-plugin.css">
 		<link rel="shortcut icon" href="/media/mylogo.ico" />
 		<link href="/atom.xml" rel="alternate" title="{{site.title}}" type="application/atom+xml" />
 		<!--[if lt IE 9]>
@@ -41,6 +42,29 @@
 		<article>
 			{{ content }}
 		</article>
+		<div class="plugin">
+			<ul class="plugin-switch" id="pluginSwitch">
+				<li class="current-tab">Github</li>
+				<li>repos</li>
+				<li>follower</li>
+				<li>following</li>
+			</ul>
+			<div class="switch-items" id="switchItems">
+				<div class="user">
+					<a href="">
+						<h2 class="user-name" id="userName"></h2>
+						<div class="user-avatar" id="userAvatar"></div>
+					</a>
+					<div class="user-info">
+						<b>Profile:</b>
+						<div id="userInfo"></div>
+					</div>
+				</div>
+				<ul class="repos" id="repos"></ul>
+				<ul class="followers" id="followers"></ul>
+				<ul class="followings" id="followings"></ul>				
+			</div>
+		</div>
 		<footer>
 		    <p>
 			  Fork this Blog on <a href="http://github.com/SFantasy/sfantasy.github.com">GitHub</a>
@@ -62,4 +86,6 @@
 		})();
 	</script>
 	<script src="/media/javascript/jquery-1.9.1.min.js"></script>
+	<script src="https://rawgithub.com/SFantasy/laboratory/master/Ajax/ajax.js"></script>
+	<script src="https://rawgithub.com/SFantasy/laboratory/master/Github-plugin/github-plugin.js"></script>
 </html>
