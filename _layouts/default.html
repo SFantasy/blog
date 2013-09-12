@@ -4,13 +4,14 @@
 		<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 		<meta charset="utf-8" />
 		<meta name="author" content="{{ site.author }}" />
+		<meta property="wb:webmaster" content="75ad0e35756e28d2" />
 		<meta name="description" content="FantasyShao's Blog" />
 		<meta name="keywords" content="F2E, 前端开发，HTML, CSS, JavaScript, Linux, Python, FantasyShao" />
 		<meta name="viewport" content="width=device-width, initial-scale=0.5">
 		<link rel="author" href="https://plus.google.com/114374929085618541866/posts">
 		<link rel="stylesheet" href="/media/css/homepage.css" />
 		<link rel="stylesheet" href="https://rawgithub.com/SFantasy/laboratory/master/Github-plugin/github-plugin.css">
-		<link rel="shortcut icon" href="/media/mylogo.ico" />
+		<link rel="shortcut icon" href="/media/logo.ico" />
 		<link href="/atom.xml" rel="alternate" title="{{site.title}}" type="application/atom+xml" />
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -80,15 +81,18 @@
 	<!-- add TA-->
 	<script type="text/javascript" src="http://tajs.qq.com/stats?sId=27100698" charset="UTF-8"></script>
 	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-36896790-3']);
-		_gaq.push(['_trackPageview']);
 
-		(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-36896790-3']);
+	  _gaq.push(['_setDomainName', 'shaofantasy.cn']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
 	</script>
 	<script src="https://rawgithub.com/SFantasy/laboratory/master/Ajax/ajax.js"></script>
 	<script src="https://rawgithub.com/SFantasy/laboratory/master/Github-plugin/github-plugin.js"></script>
