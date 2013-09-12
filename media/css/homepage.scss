@@ -78,7 +78,7 @@ header {
 		}
 		.navinner {
 			margin: 0 auto;
-			width: 800px;
+			width: 850px;
 		}
 		h1 {
 			margin: 0;
@@ -178,7 +178,7 @@ article {
 	padding: 5px 10px;
 	.index {
 		@extend .inner;
-		width: 800px;
+		width: 850px;
 		min-height: 600px;
 		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
 		min-width: 400px;
@@ -261,7 +261,7 @@ article {
 	}
 	.post {
 		@extend .inner;
-		width: 800px;
+		width: 850px;
 		color: $fontgrey;
 		font-size: 13px;
 		line-height: 1.6;
