@@ -11,7 +11,7 @@ $black: #000000;
 $darkgrey: #545652;
 $lightgrey: #cccccc;
 $fontgrey: #333333;
-$bordergrey: #cacaca;
+$bordergrey: #ddd;
 $codegrey: #f1f1f1;
 $lightwhite: #f5f5f5;
 $white: #d5d5d5;
@@ -301,7 +301,6 @@ article {
 		code {
 			border: 1px solid $bordergrey;
 			background-color: $codegrey;
-			border-radius: 3px;
 		}
 		pre code {
 			border: none;
