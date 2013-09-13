@@ -12,6 +12,7 @@ $darkgrey: #545652;
 $lightgrey: #cccccc;
 $fontgrey: #333333;
 $bordergrey: #cacaca;
+$codegrey: #f1f1f1;
 $lightwhite: #f5f5f5;
 $white: #d5d5d5;
 $purewhite: #ffffff;
@@ -268,7 +269,7 @@ article {
 		background-color: $purewhite;
 		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
 		min-height: 60px;
-		padding: 10px;
+		padding: 10px 20px;
 		margin: 15px auto;
 		overflow: hidden;
 		box-sizing: border-box;
@@ -287,7 +288,7 @@ article {
 			color: $darkgrey;
 		}
 		pre, code {
-			font-family: "Source Code Pro", Consolas, sans-serif;
+			font-family: Consolas, sans-serif;
 		}
 		pre {
 			border: 1px solid $bordergrey;
@@ -295,6 +296,15 @@ article {
 			border-radius: 3px;
 			line-height: 18px;
 			margin-bottom: 16px;
+			background-color: $codegrey;
+		}
+		code {
+			border: 1px solid $bordergrey;
+			background-color: $codegrey;
+			border-radius: 3px;
+		}
+		pre code {
+			border: none;
 		}
 		a {
 			text-decoration: none;
