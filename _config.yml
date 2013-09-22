@@ -3,7 +3,7 @@ root: /
 permalink: /:year-:month-:title/
 markdown: rdiscount
 pygments: true 
-paginate: 30
+paginate: 12
 
 #title: Blog - fantasyshao
 author: fanTasy shAo
