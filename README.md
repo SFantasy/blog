@@ -2,7 +2,7 @@ Blog
 ===================
 
 My Blog site.
-[http://blog.shaofantasy.cn](http://blog.shaofantasy.cn)
+[http://blog.fantasyshao.com](http://blog.fantasyshao.com)
 
 * Blogs and any other interesting things.
 
