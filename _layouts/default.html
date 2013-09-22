@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>{Blog - fantasy}</title>
+		<title>{ Blog - fantasy }</title>
 		<meta charset="utf-8" />
 		<meta name="author" content="{{ site.author }}" />
 		<meta name="description" content="FantasyShao's Blog" />
 		<meta name="keywords" content="F2E, 前端开发，HTML, CSS, JavaScript, Linux, Python, FantasyShao" />
 		<link rel="author" href="https://plus.google.com/114374929085618541866/posts">
-		<link rel="stylesheet" href="/media/css/homepage.css" />
-		<link rel="stylesheet" href="https://rawgithub.com/SFantasy/laboratory/master/Github-plugin/github-plugin.css">
+		<link rel="stylesheet" href="/media/css/blog.css" />
+		<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 		<link rel="shortcut icon" href="/media/logo.ico" />
 		<link href="/atom.xml" rel="alternate" title="{{site.title}}" type="application/atom+xml" />
 		<!--[if lt IE 9]>
@@ -17,81 +17,44 @@
 	</head>
 	<body>
 		<header>
-<!-- 			<small>Keep it simple and stupid</small> -->
-			<nav class="menu">
-				<div class="navinner">
-					<h1>
-						<span id="f">F</span>
-						<span id="a">A</span>
-						<span id="n">N</span>
-						<span id="t">T</span>
-						<span id="a2">A</span>
-						<span id="s">S</span>
-						<span id="y">Y</span>
-					</h1>
-					<ul>
-						<li><a href="/">Home</a></li>
-						<li><a href="/categories.html">Categories</a></li>
-						<li><a href="/archive.html">Archive</a></li>
-						<li><a href="/links.html">Links</a></li>
-						<li><a href="/about.html">About</a></li>
-						<li><a href="http://resume.github.io/?SFantasy">Résumé</a></li>
-						<li><a href="http://feedburner.google.com/fb/a/mailverify?uri=BlogFantasy&amp;loc=en_US">Subscribe</a></li>
-					</ul>
-				</div>
+			<nav class="nav-revert top-fixed">
+				<ul class="nav-inner" id="nav">
+					<li class="nav-brand">Fantasy</li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/categories.html">Categories</a></li>
+					<li><a href="/archive.html">Archive</a></li>
+					<li><a href="/links.html">Links</a></li>
+					<li><a href="/about.html">About</a></li>
+					<li><a href="http://resume.github.io/?SFantasy">Résumé</a></li>
+					<li><a href="http://feedburner.google.com/fb/a/mailverify?uri=BlogFantasy&amp;loc=en_US">Subscribe</a></li>
+				</ul>
 			</nav>
 		</header>
 		<article>
 			{{ content }}
 		</article>
-		<div class="plugin">
-			<ul class="plugin-switch" id="pluginSwitch">
-				<li class="current-tab">Github</li>
-				<li>repos</li>
-				<li>follower</li>
-				<li>following</li>
-			</ul>
-			<div class="switch-items" id="switchItems">
-				<div class="user">
-					<a href="">
-						<h2 class="user-name" id="userName"></h2>
-						<div class="user-avatar" id="userAvatar"></div>
-					</a>
-					<div class="user-info">
-						<b>Profile:</b>
-						<div id="userInfo"></div>
-					</div>
-				</div>
-				<ul class="repos" id="repos"></ul>
-				<ul class="followers" id="followers"></ul>
-				<ul class="followings" id="followings"></ul>				
-			</div>
-		</div>
 		<footer>
 		    <p>
-			  Fork this Blog on <a href="http://github.com/SFantasy/sfantasy.github.com">GitHub</a>
+			  Powered by <a href="http://github.com/SFantasy/sfantasy.github.com">GitHub</a>
 			</p>
 			<p>
 				Design by <a href="https://github.com/SFantasy">SFantasy</a> | Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> and Git page
 			</p>			
 		</footer>
+		<script src="/media/javascript/blog.js"></script>
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-36896790-3']);
+		  _gaq.push(['_setDomainName', 'shaofantasy.cn']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
 	</body>
-	<!-- add TA-->
-	<script type="text/javascript" src="http://tajs.qq.com/stats?sId=27100698" charset="UTF-8"></script>
-	<script type="text/javascript">
-
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-36896790-3']);
-	  _gaq.push(['_setDomainName', 'shaofantasy.cn']);
-	  _gaq.push(['_trackPageview']);
-
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-
-	</script>
-	<script src="https://rawgithub.com/SFantasy/laboratory/master/Ajax/ajax.js"></script>
-	<script src="https://rawgithub.com/SFantasy/laboratory/master/Github-plugin/github-plugin.js"></script>
 </html>
