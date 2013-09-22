@@ -1,0 +1,224 @@
+/*
+ *    ____  _     ___   ____                     
+ *   | __ )| |   / _ \ / ___|  ___  __ _ ___ ___ 
+ *   |  _ \| |  | | | | |  _  / __|/ _` / __/ __|
+ *   | |_) | |__| |_| | |_| |_\__ \ (_| \__ \__ \
+ *   |____/|_____\___/ \____(_)___/\__,_|___/___/
+ * 
+ *   Author: forever.fantasy27@gmail.com
+ *   License: MIT
+ *   Created: 2013-09-22 20:00
+ *   Udpate: 2013-09-22 20:18               
+ */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, code, form, fieldset, legend, input, button, textarea, p,
+blockquote, th, td, nav, article, footer, header, canvas
+    margin: 0
+    padding: 0
+
+// Color basics
+// Black
+$black-1: #000
+$black-2: #333
+$black-3: #545652
+// Gray
+$gray-1: #777
+$gray-2: #999
+$gray-3: #d5d5d5
+// White
+$white-3: #fff
+$white-2: #f7f7f7
+$white-1: #f0f0f0
+// Blue
+$blue-1: #339
+$blue-2: #06c
+$blue-3: #09c
+$blue-4: #6cc
+// Green
+$green-1: #7c3
+$green-2: #690
+$green-3: #360
+$green-4: #990
+// Red
+$red-1: #600
+$red-2: #900
+$red-3: #c00
+$red-4: #c30
+
+// Addition colors
+$pink: #ea4c88
+$purple: #939
+
+// Global
+body
+    font-family: Georgia, Garamond, Times, "Times New Roman", serif
+ol, li
+    list-style: none
+a
+    text-decoration: none
+// Site style
+body
+    background-color: $white-2
+.wrapper,
+.paginator,
+footer
+    width: 680px
+    margin: 20px auto
+    padding: 20px
+    background-color: $white-3
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067)
+
+footer p
+    text-align: center
+    font-size: 14px
+    a
+        color: $black-2
+        &:hover
+            color: $white-2
+            background-color: $black-2
+
+// Navs
+.nav,
+.nav-revert
+    ul
+        overflow: auto
+        li
+            float: left
+            a
+                font-size: 14px
+            a, &.nav-brand
+                display: block
+                padding: 5px 15px
+                line-height: 28px
+                height: 28px
+            a:hover
+                color: $white-2
+                background-color: $blue-3
+        .nav-selected
+            a
+                color: $white-2
+                background-color: $blue-3
+    .nav-brand
+        font-family: 'Cookie', cursive
+        font-size: 26px
+        font-weight: bold
+        color: $white-2
+
+
+.nav-revert
+    background-color: $black-3
+    ul
+        li
+            a
+                color: $gray-3
+
+.nav
+    background-color: $white-2
+    ul
+        li
+            a
+                color: $gray-1
+
+.nav-inner
+    width: 800px
+    margin: 0 auto
+
+.recent-post
+    margin-bottom: 10px
+
+.post-number
+    padding: 0 5px
+    color: $white-1
+    background-color: $blue-3
+
+.blog-item
+    padding: 10px 5px
+    border: 1px solid $gray-3
+    border-top: none
+    &:first-child,
+    &:last-child
+        border-top: 1px solid $gray-3
+    &:hover
+        border-left: 6px solid $blue-4
+        background-color: $white-2
+
+.item-category a
+    padding: 0 5px
+    color: $gray-2
+    &:hover
+        background-color: $blue-3
+        color: $white-1
+
+.item-title a
+    color: $black-2
+    &:hover
+        color: $gray-1
+
+time
+    float: right
+    color: $gray-3
+
+.paginator
+    a
+        padding: 0 5px
+        color: $blue-3
+        &:hover
+            color: $white-1
+            background-color: $blue-3
+    .currentPage
+        padding: 0 5px
+        color: $white-1
+        background-color: $blue-3
+    .disabled
+        color: $gray-2
+
+// categories and archive
+.category
+    color: $black-2
+    padding: 3px 5px
+    font-size: 18px
+
+.list-items span,
+.post-items span
+    color: $black-3
+
+.list-items a,
+.post-items a
+    padding: 3px 5px
+    color: $blue-3
+    font-size: 14px
+    &:hover
+        color: $white-1
+        background-color: $blue-3
+        -webkit-transition: all .3s linear
+        transition: all .3s linear
+
+a
+    color: $blue-3
+    &:hover
+        color: $blue-2
+
+.post-content
+    font-size: 14px
+    line-height: 1.6
+    h1, h2, h3, h4, h5, h6
+        margin: 20px 0 10px
+        padding: 0
+        font-weight: bold
+        -webkit-font-smoothing: antialiased
+        cursor: text
+        position: relative
+    pre, pre code, code
+        background-color: $white-2
+        font-size: 13px
+        font-family: Consolas, "Liberation Mono", Courier, monospace
+    pre code
+        border: none
+    pre, code
+        border: 1px solid $gray-3
+    pre
+        padding: 3px 5px
+    code
+        padding: 0px 5px
+
+    
