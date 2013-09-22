@@ -8,6 +8,10 @@ My Blog site.
 
 * New theme designed 2013-04-23 by myself.
 
-  - A more simple theme designed in 2013-07-04.
+  - A more simple theme designed in 2013-07-04. ( [homepage.scss](https://github.com/SFantasy/blog/blob/gh-pages/media/css/homepage.scss) )
+
+* Theme updated 2013-09-22
+
+  - [blog.sass](https://github.com/SFantasy/blog/blob/gh-pages/media/css/blog.sass)
 
 * Powered by Jekyll and GitHub pages.
