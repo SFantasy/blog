@@ -5,7 +5,7 @@ markdown: rdiscount
 pygments: true 
 paginate: 30
 
-title: {Blog | fantasy}
+#title: Blog - fantasyshao
 author: fanTasy shAo
 subscribe_rss: /atom.xml
 license: true
