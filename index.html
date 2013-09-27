@@ -9,7 +9,7 @@ layout: default
   <ul>
     {% for post in paginator.posts%}
     <li class="blog-item">
-      <span class="item-category">[<a href={{ post.categories }}>{{ post.categories }}</a>]</span>
+      <span class="item-category">[<a href="/categories.html#{{ post.categories }}-ref">{{ post.categories }}</a>]</span>
       <span class="item-title"><a href={{ post.url }}>{{ post.title }}</a></span>
       <time>{{ post.date | date: "%Y-%m-%d" }}</time>
     </li>
