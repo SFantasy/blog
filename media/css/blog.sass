@@ -199,7 +199,7 @@ a
         color: $blue-2
 
 .post-content
-    font-size: 14px
+    font-size: 16px
     line-height: 1.6
     h1, h2, h3, h4, h5, h6
         margin: 20px 0 10px
@@ -208,6 +208,35 @@ a
         -webkit-font-smoothing: antialiased
         cursor: text
         position: relative
+    body > h2:first-child
+        margin-top: 0
+        padding-top: 0
+    body > h1:first-child
+        margin-top: 0
+        padding-top: 0
+    body > h1:first-child + h2
+        margin-top: 0
+        padding-top: 0
+    body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child
+        margin-top: 0
+        padding-top: 0
+
+    a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6
+        margin-top: 0
+        padding-top: 0
+
+    h1 p, h2 p, h3 p, h4 p, h5 p, h6 p
+        margin-top: 0
+
+    ul, ol
+        padding-left: 30px
+
+    ul :first-child, ol :first-child
+        margin-top: 0
+
+    ul :last-child, ol :last-child
+        margin-bottom: 0
+        
     pre, pre code, code
         background-color: $white-2
         font-size: 13px
@@ -220,5 +249,13 @@ a
         padding: 3px 5px
     code
         padding: 0px 5px
+    blockquote
+        border-left: 4px solid $gray-3
+        padding: 0 15px
+        color: $gray-1
+        blockquote > :first-child
+            margin-top: 0
+        blockquote > :last-child
+            margin-bottom: 0
 
     
