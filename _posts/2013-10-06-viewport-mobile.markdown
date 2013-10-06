@@ -18,12 +18,12 @@ categories: front-end-dev
 
 由于我们的网站一开始是按照640px宽度来设计的，所以最初我们的viewport是这样的：
 
-```
-<meta content="target-densitydpi=device-dpi, 
-	width=device-width, 
-	initial-scale=0.5,
-	user-scalable=no" name="viewport">
-```
+
+    <meta content="target-densitydpi=device-dpi, 
+    	width=device-width, 
+    	initial-scale=0.5,
+    	user-scalable=no" name="viewport">
+
 
 对页面进行缩放，为原来的0.5倍.
 
@@ -43,16 +43,13 @@ categories: front-end-dev
 
 **HTML**
 
-```
-<meta id="viewport" content="
-    user-scalable=no, 
-    width=device-width, 
-    initial-scale=0.5" name="viewport" />
-```
+    <meta id="viewport" content="
+        user-scalable=no, 
+        width=device-width, 
+        initial-scale=0.5" name="viewport" />
 
 **JavaScript**
 
-```
 var viewPortScale;
     var dpr = window.devicePixelRatio;
     
@@ -67,7 +64,6 @@ document.getElementById('viewport').setAttribute(
         'user-scalable=no, 
          width=device-width, 
         initial-scale=' + viewPortScale);
-```
 
 没错，在这里我完全扔掉了`target-densitydpi`，因为前文提到它被弃用了。
 
@@ -99,35 +95,33 @@ document.getElementById('viewport').setAttribute(
 
 最后…终于给出了一个更为兼容的方案，实践证明已经在大多数主流浏览器和分辨率（480~1080P）设备上缩放正常了！
 
-```
-var viewPortScale = 0.5;
-var dpr = window.devicePixelRatio;
+    var viewPortScale = 0.5;
+    var dpr = window.devicePixelRatio;
 
-var detectBrowser = function(name) {
-    if(navigator.userAgent.toLowerCase().indexOf(name) > -1) {
-        return true;
-    } else {
-        return false;
-    }
-};
+    var detectBrowser = function(name) {
+        if(navigator.userAgent.toLowerCase().indexOf(name) > -1) {
+            return true;
+        } else {
+            return false;
+        }
+    };
 
-if(detectBrowser('ucbrowser') || 
-	dpr == 3  || 
-   	detectBrowser('mqqbrowser')) {
-       document.getElementById('viewport').setAttribute(
-           'content', 
-           'width=device-width, 
-       	   minimum-scale=0.5, 
-           initial-scale=' + viewPortScale);
-       } else {
-       		document.getElementById('viewport').setAttribute(
-        	'content', 
-        	'target-densitydpi=device-dpi, 
-        	width=device-width, 
-	        minimum-scale=0.5, 
-    	    initial-scale=' + viewPortScale);
-       }
-```
+    if(detectBrowser('ucbrowser') || 
+    	dpr == 3  || 
+       	detectBrowser('mqqbrowser')) {
+           document.getElementById('viewport').setAttribute(
+               'content', 
+               'width=device-width, 
+           	   minimum-scale=0.5, 
+               initial-scale=' + viewPortScale);
+           } else {
+           		document.getElementById('viewport').setAttribute(
+            	'content', 
+            	'target-densitydpi=device-dpi, 
+            	width=device-width, 
+    	        minimum-scale=0.5, 
+        	    initial-scale=' + viewPortScale);
+           }
 
 这里漏掉的一点是，对于1080P设备（dpr为3）使用`target-densitydpi`会让页面缩放的很小……具体原因不得而知，如果有了解原理的同学请你一定要联系我！
 
