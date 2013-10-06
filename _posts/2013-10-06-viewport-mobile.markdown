@@ -50,20 +50,20 @@ categories: front-end-dev
 
 **JavaScript**
 
-var viewPortScale;
-    var dpr = window.devicePixelRatio;
-    
-if(dpr <= 2) {
-    viewPortScale = 1 / window.devicePixelRatio;
-} else {
-    viewPortScale = 0.5
-}
+    var viewPortScale;
+        var dpr = window.devicePixelRatio;
+        
+    if(dpr <= 2) {
+        viewPortScale = 1 / window.devicePixelRatio;
+    } else {
+        viewPortScale = 0.5
+    }
 
-document.getElementById('viewport').setAttribute(
-        'content', 
-        'user-scalable=no, 
-         width=device-width, 
-        initial-scale=' + viewPortScale);
+    document.getElementById('viewport').setAttribute(
+            'content', 
+            'user-scalable=no, 
+             width=device-width, 
+            initial-scale=' + viewPortScale);
 
 没错，在这里我完全扔掉了`target-densitydpi`，因为前文提到它被弃用了。
 
