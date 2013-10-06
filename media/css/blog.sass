@@ -228,6 +228,9 @@ a
     h1 p, h2 p, h3 p, h4 p, h5 p, h6 p
         margin-top: 0
 
+    p, blockquote, ul, ol, dl, li, table, pre
+        margin: 15px 0
+
     ul, ol
         padding-left: 30px
 
@@ -236,7 +239,9 @@ a
 
     ul :last-child, ol :last-child
         margin-bottom: 0
-        
+    ul > li
+        list-style: disc
+
     pre, pre code, code
         background-color: $white-2
         font-size: 13px
