@@ -115,8 +115,43 @@ af logs APP_NAME [--all]
 
 不出意外的话，在微信公众平台上填写好Appfog的应用地址和TOKEN，提交之后就可以我们就能成为微信公众平台的开发者了。
 
-这篇文章就介绍到这。
+### 10月17日更新
 
+今天完成了一个简单的[Demo](https://github.com/SFantasy/wechat)，同时制作了一个slide。
+
+#### 使用NPM中的wechat模块
+
+**事件处理**
+
+    app.use('/', wechat(TOKEN, function(message, req, res) {
+         // ...
+     }).event(function(message, req, res) {
+         // 关注事件
+         if(message.Event == 'subscribe') {
+             res.reply('亲，感谢关注！么么哒~');
+         }
+     }));
+
+**回复消息**
+
+    app.use('/', wechat(TOKEN, wechat.text(function(message, req, res) {
+         // 
+         var input = (message.Content || '').trim();
+         
+         if(input === '你好') {
+             res.reply('你也好！');
+         } else {
+             res.reply('听不懂！');
+         }
+     }));
+
+* 还可以创建自定义菜单、定义更为「智能」的规则（实现一个小黄鸡？）
+
+#### Slide show
+
+[View it in Slid.es](http://slid.es/fantasyshao/wechat-dev-test/)
+
+<iframe src="http://slid.es/fantasyshao/wechat-dev-test/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 --EOF--
 
