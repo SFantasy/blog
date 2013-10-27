@@ -1,0 +1,67 @@
+---
+layout: post
+title: 更舒适的使用OS X工作
+date: 2013-10-25 23:00
+categories: Mac
+comments: true
+---
+
+前两天折腾了一把自己的工作空间，原因是用笔记本工作确实有点累：屏幕小、需要略微低头等。所以就准备把原来台式机的显示器用起来，屏幕大对于编程而言还是很有好处的。
+
+于是乎，先买了一个thunderbolt转VGA的接口，让Mac可以连接到显示器上。这个过程一点问题都没有，只是想吐槽一下所谓的「次日必达」：在淘宝上买的，也不知道孰好孰坏，就挑了个「次日必达」的买了，40+RMB。
+
+当然，如果用作扩展屏的话，就到此结束了。不过笔记本+扩展屏还是挺累的，加上键盘鼠标，就完全可以把Mac当做主机用了。不过悲剧的是我的键盘是Nooppoo Choc Mid，USB连上去之后就打字就成了问题（具体原因不明，据说是因为「全键无冲」？）
+
+之后Google了好久，不过方法几乎都是一致的：[http://www.douban.com/review/5981251/ ](http://www.douban.com/review/5981251/)。具体细节就不展开了……总之就是那软解的方法折腾了好久，无果。
+
+最后，你懂的，用了硬解的办法 -- USB转ps/2,再ps/2转成USB（哪位大神知道原理的求指导！）
+
+图：[乱七八糟的线团](https://www.dropbox.com/s/thfdss9fw9zin6s/2013-10-25%2018.31.00.jpg)
+
+╮(╯▽╰)╭ 终于可以用大屏幕工作了。
+
+## OS X, Linux
+
+又谈起了这个俗套的话题，不过去掉了另一个经常被对比的对象 -- Windows。但是现在的我确实更深有体会。
+
+之前写过一篇[为何离开Linux桌面](http://blog.fantasyshao.com/2013-06-leave-linux/)的文章。其实之后的日子里，我依旧使用着Linux Mint 15这个我觉得最好的Linux桌面发行版，而事实也证明了这一点，不崩溃、易用、美观，这就足够了。
+
+从用户角度来讲，就桌面操作系统而言，我觉得OS X和Linux的并没有多大差距，但是不同的是Apple的OS X与Linux种类繁多的桌面系统相比太专一了。GNOME, KDE, Unity, LXDE...看看Linux的[系谱图](http://futurist.se/gldt/)。
+
+在PC中，恐怕没有一个的触摸板可以和Mac媲美的。而MacBook和OS X就简直是绝配，我想如果使用PC with Linux而想一直使用触摸板工作简直是人生一大难事。不过，如果让Linux在MacBook中工作会不会是不错的体验？（Linus拿着他的MBA11笑了……）
+
+而就编程而言，感觉Linux和OS X是一样方便的。只不过Linux自带的包管理器可能会比OS X方便一点（说实话，homebrew我还是折腾了一会的），但是之后使用brew配置各种编程环境的体验还是非常不错的。
+
+## 推荐的APP
+
+* Mou
+
+Markdown编辑器，换来换去，还是这个最好。
+
+* Versions
+
+最好的SVN客户端？
+
+* Kaleidoscopr
+
+最好的文件比较工具？
+
+* Dash
+
+一站式……文档查看APP
+
+* iWorks
+
+免费了，之前做Slide用[Slid.es](http://slid.es)，Doc用Open Office :)
+
+* 其他？
+
+图：[俺的Dock截图](https://www.dropbox.com/s/8fdyzto2e3lno2f/QQ20131026-1.png)
+
+
+--EOF--
+
+
+
+
+
