@@ -15,11 +15,11 @@ date: 2013-11-07 20:15
 
 * 一個開著編譯Sass：
 
-    sass --style compressed --watch foo.sass:foo.css
+    `sass --style compressed --watch foo.sass:foo.css`
 
 * 一個開著編譯Coffee
 
-    coffee --compile --watch bar.coffee
+    `coffee --compile --watch bar.coffee`
 
 當然可以用`＆`讓他們滾到後臺去編譯，不過這樣不帶感。
 
