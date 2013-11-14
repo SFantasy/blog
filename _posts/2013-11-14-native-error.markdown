@@ -8,7 +8,7 @@ categories: Translate
 
 原文: [NCZOnline](http://www.nczonline.net/blog/2013/11/12/in-the-ecmascript-6-shadows-native-errors), 译者：[Fantasy Shao](http://fantasyshao.com)
 
-随着各种JavaScript引擎对ECMAScript 6的一些特性开始实现，相信ECMAScript也理我们不远了。这份规范中的一些部分引起了广泛的关注：WeakMap, classes, generators, modules等等。这些都是有代表性的、在ECMAScript 5基础上的重大改变和增强。可是，在规范中仍然有一小部分的内容不那么引人注目，但是对于JavaScript的未来而言却同样重要。它们如此之小，以至于很少有人谈论到它们，除非你花一点时间阅读实际的规范，不然你可能根本不知道它们的存在。其中一个特性就是native errors。
+随着各种JavaScript引擎对ECMAScript 6的一些特性开始实现，相信ECMAScript也离我们不远了。这份规范中的一些部分引起了广泛的关注：WeakMap, classes, generators, modules等等。这些都是有代表性的、在ECMAScript 5基础上的重大改变和增强。可是，在规范中仍然有一小部分的内容不那么引人注目，但是对于JavaScript的未来而言却同样重要。它们如此之小，以至于很少有人谈论到它们，除非你花一点时间阅读实际的规范，不然你可能根本不知道它们的存在。其中一个特性就是native errors。
 
 ## Errors today
 
