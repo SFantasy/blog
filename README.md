@@ -15,3 +15,8 @@ My Blog site.
   - [blog.sass](https://github.com/SFantasy/blog/blob/gh-pages/media/css/blog.sass)
 
 * Powered by Jekyll and GitHub pages.
+
+## License
+
+* Repository licensed under the MIT license(see the LICENSE file).
+* Blog contents licensed under [CC BY-3.0](http://creativecommons.org/licenses/by/3.0/)
