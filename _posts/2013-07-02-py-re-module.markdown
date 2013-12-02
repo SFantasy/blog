@@ -3,7 +3,7 @@ layout: post
 date: 2013-07-02 22:22
 title: Python的re模塊
 comments: true
-categories: python
+categories: Python
 ---
 
 在我之前的一篇文章 -- [sed與正則表達式](http://www.shaofantasy.cn/2013-05-learn-sed/)中介紹過「正則表達式」的相關內容，以及簡單的使用`sed`來處理文本的方法。

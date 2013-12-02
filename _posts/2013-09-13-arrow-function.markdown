@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: 「译」理解ECMAScript 6中的arrow函数
 date: 2013-09-13 23:00
-categories: Translate
+categories: Translate JavaScript
 ---
 
 > [原文地址](http://www.nczonline.net/blog/2013/09/10/understanding-ecmascript-6-arrow-functions/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+nczonline+%28NCZOnline+-+The+Official+Web+Site+of+Nicholas+C.+Zakas%29), 作者: [NCZ](http://www.nczonline.net), 翻译：[Fantasyshao](http://www.shaofantasy.cn).

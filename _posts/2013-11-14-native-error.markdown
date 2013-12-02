@@ -3,7 +3,7 @@ layout: post
 title: "「译」在ECMAScript 6的背影之后: Native errors"
 comments: true
 date: 2013-11-14 01:00
-categories: Translate
+categories: Translate JavaScript
 ---
 
 原文: [NCZOnline](http://www.nczonline.net/blog/2013/11/12/in-the-ecmascript-6-shadows-native-errors), 译者：[Fantasy Shao](http://fantasyshao.com)

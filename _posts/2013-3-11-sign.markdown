@@ -2,7 +2,7 @@
 layout: post
 title: "Sigh."
 comments: true
-categories: Linux
+categories: Linux Essay
 ---
 
 Having used [openSUSE](http://en.wikipedia.org/wiki/OpenSUSE) 12.2 for nearly 1 week and being suffered from crash, I downloaded [Linux Mint](http://en.wikipedia.org/wiki/Linux_mint) and then installed it immediately.  

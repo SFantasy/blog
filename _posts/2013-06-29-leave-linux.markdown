@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: 爲何離開Linux桌面
-categories: 随笔
+categories: Essay
 date: 2013-06-29 22:22
 ---
 

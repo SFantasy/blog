@@ -3,7 +3,7 @@ layout: post
 title: "随笔一篇"
 date: 2012-10-22 22:25
 comments: true
-categories: 随笔 
+categories: Essay 
 ---
 
 

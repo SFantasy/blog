@@ -3,7 +3,7 @@ layout: post
 title: 对viewport在实战中的一些研究
 date: 2013-10-06 16:00
 comments: true
-categories: front-end-dev
+categories: Front-end-dev
 ---
 
 之前的一篇[Blog](http://blog.fantasyshao.com/2013-09-coding-life/)中也提到过最近的工作是在做手机上的网站，那篇文章中也提到过一些工作中遇到的问题，不过其实最大的问题是这篇文章中要提到的 -- viewport.  
