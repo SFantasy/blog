@@ -5,8 +5,9 @@ markdown: rdiscount
 pygments: true 
 paginate: 12
 
-#title: Blog - fantasyshao
+title: Blog - fantasyshao
 author: fanTasy shAo
+email: fantasyshao@icloud.com
 subscribe_rss: /atom.xml
 license: true
 category_list: true
