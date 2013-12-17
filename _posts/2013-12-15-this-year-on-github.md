@@ -64,7 +64,7 @@ categories: Essay
 
 俺的Curent Streak -- 47days:
 
-![current streak](https://photos-2.dropbox.com/t/0/AADTHQ8k1ziGKCZZa2jqQeqgZwvKGTFfdRvFIRp7vpKfwA/12/119878391/png/1024x768/3/1387090800/0/2/QQ20131215-1.png/5ZvWqVUAGjucL0Y_7ghXYY-WhiKmfVV8Qovm3KzuAyg)
+![current streak](https://photos-4.dropbox.com/t/0/AAALfKNSa1y3Tm6d5wQR0L6rz2GQtDiiJH2l1ch192e9QA/12/119878391/png/1024x768/3/1387249200/0/2/QQ20131215-1.png/5ZvWqVUAGjucL0Y_7ghXYY-WhiKmfVV8Qovm3KzuAyg)
 
 而对于整个开源社区而言，更多的社区中的人是希望有更多的人进来参与的。就好比我这样的初级开发者，在我收到陌生人的Pull Request或者有项目被Fork的时候，心情是格外激动的！
 
