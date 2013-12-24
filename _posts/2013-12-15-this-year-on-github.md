@@ -64,7 +64,7 @@ categories: Essay
 
 俺的Curent Streak -- 47days:
 
-![current streak](http://img5.douban.com/view/photo/photo/public/p2159694689.jpg)
+![current streak](http://img5.douban.com/view/photo/photo/public/p2163860098.jpg)
 
 而对于整个开源社区而言，更多的社区中的人是希望有更多的人进来参与的。就好比我这样的初级开发者，在我收到陌生人的Pull Request或者有项目被Fork的时候，心情是格外激动的！
 
