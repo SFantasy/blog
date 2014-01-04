@@ -72,7 +72,7 @@ figlet -f isomatric1 happy
 
 与FIGlet的功能相近，我们可以看看他的效果：
 
-![screenshot](http://img5.douban.com/view/photo/photo/public/p2163860349.jpg)
+![screenshot](http://fantasyshao-blog.qiniudn.com/toilet.png)
 
 
 ## sl
@@ -83,7 +83,7 @@ figlet -f isomatric1 happy
 sudo sl
 ```
 
-![screenshot](http://img5.douban.com/view/photo/photo/public/p2163860357.jpg)
+![screenshot](http://fantasyshao-blog.qiniudn.com/sl.png)
 
 你会看到一辆货车飞驰而过……
 
@@ -103,7 +103,7 @@ sl其实是Steam Locomotive（蒸汽火车头）的缩写，正如作者在项�
 
 作者是一个热爱「The Matrix」也就是黑客帝国的一名程序员，而且强烈建议电脑爱好者和科幻迷去观看之。
 
-![screenshot](http://img3.douban.com/view/photo/photo/public/p2163860354.jpg)
+![screenshot](http://fantasyshao-blog.qiniudn.com/matrix.png)
 
 看截图不带感，如果你使用的是Debian或RedHat分支的Linux，亦或是OS X都应该用包管理器去安装一下，酷炫。
 
