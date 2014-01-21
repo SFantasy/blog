@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2014-01-19 14:00
-title: Musiculator
+title: 开发Musiculator
 category: Objective-C
 comments: true
 ---
@@ -57,10 +57,81 @@ _zeroBtn.layer.borderWidth  = 1.0;
 
 ## 计算功能
 
+要添加计算功能并不难。
 
+在上文中，已经为每个按钮创建了各自的`Action`型的`Connection`，所以在这里就只要在其内部为按钮添加事件即可。
+
+这里我的思路是，点击数字和符号（加减）之后向上方的input框增加字符，然后在点击等号时计算表达式。
+
+```
+// 为每个数字和操作符添加事件
+_calculateField.text = [_calculateField.text stringByAppendingString:@"0"];
+// ...
+```
+
+这样就已经可以在输入框内输入表达式了，之后我们要做的就是在点击等号时计算表达式：
+
+```
+// 简单处理表达式的代码（有待完善）
+int result = 0;
+NSString* formula = _calculateField.text;
+int length = formula.length;
+//
+int startPos = 0;
+int num1;
+int num2;
+    
+// 循环整个字符串
+for (int i = 0; i < length; i++) {
+    char temp = [formula characterAtIndex:i];
+        
+    if (temp == '+' || temp == '-') {
+        // 获取字符串中的第一个数字
+        num1 = [[formula substringWithRange:NSMakeRange(startPos, i - startPos)] integerValue];
+        num2 = [[formula substringWithRange:NSMakeRange(i + 1, length - i - 1)] integerValue];
+        if(temp == '+') {
+            result = num1 + num2;
+        } else {
+            result = num1 - num2;
+        }
+        break;
+    }
+}
+    
+_calculateField.text = [@(result) description];
+```
+
+所以我们的计算功能已经完成了。
 
 ## 添加音乐
 
+因为是Musiculator嘛，所以仅仅有计算功能只是这个应用的一半。
 
+添加音乐其实也无非是在按键上绑定事件，然后点击、播放相应的音效即可。
+
+为此我写了一个方法函数：
+
+```
+- (void)playSound : (NSString*) id
+{
+    // 增加按键声音
+    SystemSoundID soundID;
+    
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:id ofType:@"mp3"];
+    CFURLRef soundUrl = (__bridge CFURLRef)[NSURL fileURLWithPath:soundPath];
+    AudioServicesCreateSystemSoundID(soundUrl, &soundID);
+    AudioServicesPlaySystemSound(soundID);
+}
+```
+
+在每个按钮的绑定事件中调用此方法，传入相应ID即可播放对应的音效。
+
+当然，上述代码是在各种Google, SO后实践可用的代码……感觉还是挺麻烦的。
+
+有所不足的是，现在的do ri me fa...音效比较渣……主要是音色不佳，所以有待搜罗一下比较好的音。
+
+-----
+
+这个小小的项目，我已经push到了GitHub上。地址：[https://github.com/SFantasy/Musiculator](https://github.com/SFantasy/Musiculator)。后续会为之完善计算功能、改善音效、添加图标。
 
 --EOF--
