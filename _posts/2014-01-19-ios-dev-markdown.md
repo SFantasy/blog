@@ -3,10 +3,12 @@ layout: post
 date: 2014-01-19 14:00
 title: 开发Musiculator
 category: Objective-C
+keywords: Objective-C Musiculator Xcode GitHub
+description: Objective-C应用开发
 comments: true
 ---
 
-上周初步研究了一下如何开发iOS应用。然后想到了当时@zc在学校里做的一个HTML 5的小应用 -- Musiculator -- Music + Calculator. 
+上周初步研究了一下如何开发iOS应用。然后想到了当时@zc在学校里做的一个HTML 5的小应用 -- Musiculator -- Music + Calculator.
 
 本文简单的介绍一下上周做应用的几个步骤以及一些想法，当然也为那些像我一样想尝尝鲜的小菜鸟在不知从而下手的时候来上那么一缕春风~
 
@@ -80,11 +82,11 @@ int length = formula.length;
 int startPos = 0;
 int num1;
 int num2;
-    
+
 // 循环整个字符串
 for (int i = 0; i < length; i++) {
     char temp = [formula characterAtIndex:i];
-        
+
     if (temp == '+' || temp == '-') {
         // 获取字符串中的第一个数字
         num1 = [[formula substringWithRange:NSMakeRange(startPos, i - startPos)] integerValue];
@@ -97,7 +99,7 @@ for (int i = 0; i < length; i++) {
         break;
     }
 }
-    
+
 _calculateField.text = [@(result) description];
 ```
 
@@ -116,7 +118,7 @@ _calculateField.text = [@(result) description];
 {
     // 增加按键声音
     SystemSoundID soundID;
-    
+
     NSString *soundPath = [[NSBundle mainBundle] pathForResource:id ofType:@"mp3"];
     CFURLRef soundUrl = (__bridge CFURLRef)[NSURL fileURLWithPath:soundPath];
     AudioServicesCreateSystemSoundID(soundUrl, &soundID);
