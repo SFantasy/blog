@@ -4,6 +4,8 @@ comments: true
 categories: Shell
 title: "AWK 初学初用"
 date: 2013-05-22 13:54
+keywords: shell,awk,教程,zsh
+description: 使用AWK的一些总结
 ---
 
 昨天学习了sed，有很多命令还是需要在实践的过程中学习、深入的.遇到一些需要的时候，大可以参考其man page.
@@ -29,7 +31,7 @@ AWK是一门「语言」,可以对文本、数据进行处理. 既然AWK是一�
     # 脚本内容(test.awk)
 	#!/usr/bin/awk
 	BEGIN { print "Hello, World!" }
-	
+
 	# 运行
 	$ awk -f test.awk
 
@@ -70,7 +72,7 @@ AWK中的变量是不需要定义的，所以可以像这样直接使用:
 调用也是相同的:
 
     function_name(arg)
-	
+
 要知道的一点是，AWK中同样提供了`if-else`, `while`, `for`, `break`, `continue`等条件控制语句. 比较特别的是AWK中有一个`next`语句，用以读取输入文件中的下一行文本.
 
 ### print命令
@@ -78,7 +80,7 @@ AWK中的变量是不需要定义的，所以可以像这样直接使用:
 与其他任何语言一样，`print`命令必然是用来输出文本的.
 
 有以下文本:
-    
+
 	$ cat test.txt
 	1       2       3       4
     Test    Cat     Dog     Pig
@@ -92,16 +94,16 @@ AWK中的变量是不需要定义的，所以可以像这样直接使用:
     Cat Dog
     Dog Pig
     Pig Test
-	
+
 这个输出的格式与期望的还是有点偏差的，所以我们可以对其「格式化」输出处理(与C语言一致):
 
     $ awk '{printf "%-4s %-8s\n", $1, $2}' test.txt
-	1    2   
-	Test Cat 
-	Cat  Dog 
-	Dog  Pig 
+	1    2
+	Test Cat
+	Cat  Dog
+	Dog  Pig
 	Pig  Test
-	
+
 AWK中的`$n`被称之为*域*，域由「域分割符」(FS, 上文提到的内建变量之一)分割而成，而FS默认是空格和制表符. 所以我们才能够通过`$n`这样的域变量来获取文件中的列.
 
 再回到`print`命令来，与其他常见的语言一样，`print`后也可以紧跟表达式、函数等:
@@ -116,25 +118,25 @@ AWK中的`$n`被称之为*域*，域由「域分割符」(FS, 上文提到的内
 这里要提到的是，AWK程序其实都是由一些列「模式--动作」对组成的：
 
     pattern { action }
-	
+
 对于没有模式或者没有动作的AWK程序，就会对于所有文件中的内容执行action或者输出所有恰好匹配的记录.
 
     # 输出第一列为Pig的行
     $ awk '/^Pig/' test.txt
 	Pig     Test    Cat    Dog
-	
+
 这一个例子就是典型的只有pattern没有action的AWK语句.
 
     # 筛选出第一列为Pig的行，并打印在终端
     $ awk '/^Pig/ {$1 = "Hehe"; print $0}' test.txt
 	# 也可以将匹配到的行输出到文件中(与shell中的重定向相同)
 	$ awk '/^Pig/ {$1 = "Hehe"; print $0 > "file_new" } test.txt
-	
+
 值得一提的是AWK中的`~`操作符,可以用其对各域进行模式匹配：
 
     $ awk '$1 ~ /^Pig/' test.txt
 	Pig     Test    Cat     Dog
-	
+
 看起来和`awk '/^Pig/' test.txt`一样？ 要知道`/^pattern/`只能匹配一行的开始，而不能匹配指定域的内容.
 
 

@@ -3,7 +3,9 @@ layout: post
 date: 2014-01-03 22:22:22
 title: 用黑客的方式制作幻灯片
 categories: Racket
-comments: true 
+comments: true
+keywords: racket,slides,幻灯片,黑客
+description: 以黑客的方式用racket制作幻灯片
 ---
 
 忘掉类似微软PowerPoint和Apple Keynote这样时髦的软件，忘掉类似impress.js及reveal.js这样酷炫的前端技术，在此，我将会给大家介绍一种特别的方式来制作幻灯片。

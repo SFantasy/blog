@@ -4,6 +4,8 @@ date: 2013-12-15 23:40
 title: 俺泡GitHub这一年
 comments: true
 categories: Essay
+keywords: github,fantasyshao,学习
+description: 使用GitHub，研究GitHub
 ---
 
 去年四月份的时候机缘巧合之下注册了GitHub的账号，至今也将近两年了。不过也是到了2013这一年，我才开始逐渐熟悉、了解了GitHub这个平台。你可以点此访问我的GitHub主页：[SFantasy](https://github.com/SFantasy)。

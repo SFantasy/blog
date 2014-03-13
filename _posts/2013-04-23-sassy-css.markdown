@@ -4,6 +4,8 @@ title: "「时髦」的CSS"
 date: 2013-04-23 09:55
 comments: true
 categories: Front-end-Dev
+keywords: CSS,SASS,SCSS,前端开发
+description: 了解SASS，学习SASS
 ---
 
 关于CSS预处理工具，我还只是在「听闻」的阶段，如LESS, Sass, Stylus……好吧，我只知道这三个。不过如果用Google搜索一下「CSS preprocessor」，其中第一条是介绍LESS和Sass，第二条题为「8 CSS preprocessors to speed up development time」（[地址](http://www.catswhocode.com/blog/8-css-preprocessors-to-speed-up-development-time)），所以我又「听闻」了几种CSS预处理工具的名字 :-)
@@ -21,7 +23,7 @@ categories: Front-end-Dev
 如果在你的电脑上已经有了`ruby`和`gem`，那么就可以直接使用`gem`安装:
 
         gem install sass
-        
+
 如果没有，那么就先去找如何安装`gem`吧。
 
 ### scss 还是 sass
@@ -39,18 +41,18 @@ categories: Front-end-Dev
 为CSS添加变量的概念，让她开始像一门「编程语言」：
 
         $blue: #3bbfce;
-        
+
         header {
             color: $blue;
         }
-        
+
 顺便提一句，如果使用`sass`:
 
         $blue: #3bbfce
-        
+
         header
             color: $blue
-       
+
 下文都使用`scss`来举例，不再使用`sass`。
 
 #### 嵌套
@@ -64,7 +66,7 @@ categories: Front-end-Dev
             color: $green;
             font-size: 12px;
         }
-        
+
 那么我们就可以使用`scss`进行更为明了的嵌套：
 
         header {
@@ -76,7 +78,7 @@ categories: Front-end-Dev
                 font-size: 12px;
             }
         }
-        
+
 还可以进行属性值的嵌套：
 
         /* CSS */
@@ -85,7 +87,7 @@ categories: Front-end-Dev
             font-size: 20px;
             font-weight: bold;
         }
-        
+
         /* scss */
         h1 {
             font: {
@@ -94,7 +96,7 @@ categories: Front-end-Dev
                 weight: bold;
             }
         }
-        
+
 要注意的是，再使用属性值嵌套的时候必须使用「：」，这样Sass才能解释。
 
 还有一种是对于伪类进行嵌套：
@@ -106,7 +108,7 @@ categories: Front-end-Dev
         a:hover {
             color: $blue;
         }
-        
+
         /* scss */
         a {
             color: $white;
@@ -132,7 +134,7 @@ Mixin可以使得对CSS代码进行重用：
                 -webkit-transition: color .1s linear;
             }
         }
-        
+
         /* 使用Mixin */
         @mixin transition {
             transition: color .1s linear;
@@ -143,7 +145,7 @@ Mixin可以使得对CSS代码进行重用：
             &:hover {
                 color: $blue;
                 @include transition;
-            }   
+            }
         }
 
 如果有其他用到相同代码块的地方，也都可以直接`@include`进去。这样可以减少很多的代码量。
@@ -155,33 +157,33 @@ Mixin还有一个特点就是，可以指定参数和缺省值：
             float: left;
             margin-left: $length;
         }
-        
+
         /* 使用 */
         #id {
             @include left(10px);
         }
-        
+
         /* 有缺省值 */
         @mixin left($length: 20px) {
             float: left;
             margin-left: $length;
         }
-        
+
         /* 使用 */
         #id {
             @include left(10px);
         }
-        
+
 ### 继承
 
 这让CSS听起来更像一门语言了，还是面向对象的。
 
 再CSS中有如下选择器:
-    
+
         .classFather {
             color: $blue;
         }
-    
+
 如果要定义一个具有该选择器的新的选择器：
 
         .classSon {
@@ -189,7 +191,7 @@ Mixin还有一个特点就是，可以指定参数和缺省值：
             @extend .classFather;
             background-color: $white;
         }
-        
+
 当然还有一种比较常用的情况就是：
 
         .classFather {
@@ -201,7 +203,7 @@ Mixin还有一个特点就是，可以指定参数和缺省值：
         .classSon {
             background-color: $white;
         }
-        
+
         /* 以上就可以写成： */
         .classFather {
             color: $blue;
@@ -213,19 +215,18 @@ Mixin还有一个特点就是，可以指定参数和缺省值：
             @extend .classFather;
             background-color: $white;
         }
-      
+
 即所有对`.classFather`定义的样式都会被`.classSon`继承。
 
 #### 其他内容
 
 * Sass支持控制语句，诸如：`if-else`, `for`, `each`, `while`等。
-* 可以使用`@import`导入外部其他的CSS或者Sass的文件: 
+* 可以使用`@import`导入外部其他的CSS或者Sass的文件:
 
         @import "path/to/file.css"
-        
+
 * 当然，更多的内容可以参考Sass的[Doc](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html)
 
 
 
 --EOF--
-            

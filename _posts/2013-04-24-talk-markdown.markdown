@@ -4,6 +4,8 @@ title: "王垠与「markdown的一些问题」"
 comments: true
 date: 2013-04-24 14:07
 categories: Essay
+keywords: markdown,王垠,GFM
+description: 关于王垠“markdown的一些问题”的讨论
 ---
 
 王垠一直是我很敬佩、甚至于崇拜的人，不过其实也觉得他是一个很「奇怪」的人--相信很多像我这样关注过王垠的人都会有这样的想法，当然，也曾在知乎上看到过一些人对与王垠的评价，地址在[这儿](http://www.zhihu.com/question/20102511)。
@@ -29,13 +31,13 @@ markdown中的粗体是使用`**word**`，而斜体是使用`*word*`。其实王
     ```
 	code
 	```
-	
+
 基本上都是支持这种形式的，但是有些markdown更为高级，支持高亮:
 
     ```java
 	System.out.println("hello");
 	```
-	
+
 如果习惯了后者的语法，再去使用前者，会突然发现代码之前多了一个`java`字样……着实难受。
 
 

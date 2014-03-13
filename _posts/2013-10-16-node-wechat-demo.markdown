@@ -4,6 +4,8 @@ title: 微信公众平台 in Node.js
 date: 2013-10-16 22:00
 comments: true
 categories: Node.js
+keywords: NodeJS,Wechat,微信公众平台
+description: 使用NodeJS进行微信公众平台的开发
 ---
 
 最近需要做一个微信公众平台上的服务号，但是在准备的过程中遇到了不少坎坷。
@@ -106,7 +108,7 @@ af logs APP_NAME [--all]
             // 返回echostr
             res.end(query.echostr);
         } else {
-            // 
+            //
             res.end('Hello world\n');
         }
 
@@ -135,9 +137,9 @@ af logs APP_NAME [--all]
 **回复消息**
 
     app.use('/', wechat(TOKEN, wechat.text(function(message, req, res) {
-         // 
+         //
          var input = (message.Content || '').trim();
-         
+
          if(input === '你好') {
              res.reply('你也好！');
          } else {
@@ -154,4 +156,3 @@ af logs APP_NAME [--all]
 <iframe src="http://slid.es/fantasyshao/wechat-dev-test/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 --EOF--
-

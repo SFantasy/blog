@@ -4,6 +4,8 @@ title: GruntJS初体验
 categories: JavaScript
 comments: true
 date: 2013-11-07 20:15
+keywords: GruntJS,JavaScript,NodeJS,前端,自动化
+description: 使用GruntJS进行前端自动化
 ---
 
 最近开始做一个小项目，不过需要实现一些目标，能够使用自动化以下步骤：
@@ -33,7 +35,7 @@ Grunt的配置，其实就是在项目下建一个`Grutnfile.js`文件。
 
     module.exports = function(grunt) {
         grunt.initConfig({
-            // 
+            //
         });
     };
 

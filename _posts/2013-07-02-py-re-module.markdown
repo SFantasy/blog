@@ -4,6 +4,8 @@ date: 2013-07-02 22:22
 title: Python的re模塊
 comments: true
 categories: Python
+keywords: Python,re,正则表达式,模块
+description: 学习Python中的正则表达式
 ---
 
 在我之前的一篇文章 -- [sed與正則表達式](http://www.shaofantasy.cn/2013-05-learn-sed/)中介紹過「正則表達式」的相關內容，以及簡單的使用`sed`來處理文本的方法。
@@ -24,7 +26,7 @@ categories: Python
     result = pat.match(string)
 	# 等同與
 	result = re.match(pattern, string)
-	
+
 若不用`re.compile`，每次需要用到這個正則表達式的時候都需要重新寫一遍正則。
 
 - `escape(pattern)`
@@ -48,7 +50,7 @@ categories: Python
 	['Hello', 'hm', 'this', 'is', 'Tom', 'speaking', 'who', 'are', 'you']
 
 這樣就可以找出`text`中所有匹配`pat`的項（例子中爲單詞）。
-	
+
 
 - `match(pattern, string, flags=0)`
 
@@ -57,7 +59,7 @@ categories: Python
     re.match('h', 'hello')
 	# result
 	<_sre.SRE_Match at 0x22af370>
-	
+
 `match`函數從字符串的開始進行匹配，匹配成功則返回一個`MatchObject`，否則返回`None`。
 
 - `search(pattern, string, flags=0)`
@@ -67,7 +69,7 @@ categories: Python
     re.match('e', 'hello')
 	# result
 	<_sre.SRE_Match at 0x2482440>
-	
+
 [python.org](www.python.org)上亦有這兩個函數的對比:[match vs search](http://docs.python.org/2/library/re.html#search-vs-match)，不妨一看。
 
 - `split(pattern, string, maxsplit=0, flags=0)`
@@ -82,7 +84,7 @@ categories: Python
 	re.split('[,. ]+', text, maxsplit=1)
 	# result
 	['one', 'two...ten']
-	
+
 `maxsplit`參數表示的是字符串最多可以分割的次數。
 
 - `sub(pattern, repl, string, count=0, flags=0)`
@@ -103,11 +105,11 @@ categories: Python
 	m.group(0)
 	# result
 	'www.google.com'
-	
+
 	m.group(1)
 	# result
 	'google'
-	
+
 通過`group`我們可以選擇匹配到的字符串中「需要」的部分。
 
     m.group(0)
@@ -115,7 +117,7 @@ categories: Python
 即整個匹配到的字符串。而
 
     m.group(1)
-	
+
 則是在`()`中的子字符串。相同的，如果有多個子字符串的匹配模式亦可用`group(n)`來取出。
 
 與`group`函數相配套的還有`start`和`end`:
@@ -124,15 +126,15 @@ categories: Python
 	# return
 	0
 	m.end(0)
-	# return 
+	# return
 	14
-	
+
 前者返回的是`m.group(0)`的組的首個位置，而後者則是返回`m.group(0)`的組的末尾的index+1.
 
     m.span(0)
 	# return
 	(0, 14)
-	
+
 `span`函數則是`start`和`end`函數的結合體，返回的整個index的範圍。
 
 

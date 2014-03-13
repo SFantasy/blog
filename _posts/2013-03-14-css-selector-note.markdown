@@ -3,6 +3,8 @@ layout: post
 title: "Learn CSS Selectors"
 comments: true
 categories: Front-end-Dev
+keywords: CSS,选择器,selectors,前端开发
+description: 学习CSS选择器
 ---
 
 虽说自己蛮喜欢做前端开发的，但是说起来还是有很多知识都是“野生”的，这一说来感觉自己更像是一个“野生的程序员”……嘿，前方出现一个野生的程序员！  
@@ -35,7 +37,7 @@ categories: Front-end-Dev
 	    </div>
       </section>
     </article>  
-	
+
 ### CSS level1：
 
 * 标签选择器`E`  
@@ -43,13 +45,13 @@ categories: Front-end-Dev
 匹配所有使用该标签的元素:  
 
     h2 { ... }
-	
+
 * class选择器`.class`
 
 匹配所有类元素中包含该指定class的元素：
 
     .mainNav { ... }
-    nav.mainNav { .. }	
+    nav.mainNav { .. }
 
 * id选择器`#id`
 
@@ -70,8 +72,8 @@ categories: Front-end-Dev
 
     a:link { ... }  
     a:visited { ... }
-	
-* 用户操作伪类`E:active` `E:hover` `E:focus` 
+
+* 用户操作伪类`E:active` `E:hover` `E:focus`
 
 匹配一些用户操作的选择：
 
@@ -79,11 +81,11 @@ categories: Front-end-Dev
     a:active { ... }  
     /*鼠标移动到链接上*/  
     a:hover { ... }  
-    /*元素获得焦点*/ 
+    /*元素获得焦点*/
     a:focus { ... }  
     /*这里的问题是如何判断链接获得焦点呢？所以更多的，:focus伪类用于input标签等*/
-	
-* first伪元素`E::first-line` `E::first-letter` 
+
+* first伪元素`E::first-line` `E::first-letter`
 
 匹配E元素下的第一行(字母)
 
@@ -95,13 +97,13 @@ categories: Front-end-Dev
     text-transform: uppercase;
     }  
     /*p元素下的第一个字母变为大写*/
-	
-	
+
+
 ### CSS level 2
 
 * 通用元素选择器`*` （匹配所有元素）  
 `* { ... }`
-	
+
 * 属性选择器`E[foo]` `E[foo="bar"]` `E[foo~="bar"]` `E[foo|="en"]`
 
 根据不同选择条件进行匹配：
@@ -109,13 +111,13 @@ categories: Front-end-Dev
     a[href] { ... }  
     /*匹配带有href属性的a标签*/  
     a[href="/home.html"] { ... }  
-    /*匹配href属性为"/home.html"的a标签*/ 
+    /*匹配href属性为"/home.html"的a标签*/
     a[rel~="copyright"] { ... }  
     /*若a元素下的rel属性为"copyright copyleft copymiddle"，这样就能匹配到该元素，而不用使用a[rel="copyright copyleft copymiddle"]*/
     a[hreflang|="en"] { ... }  
     /*匹配所有a标签下hreflang属性中带有连字符的并以"en"开始的元素*/  
-	
-* 结构化伪类`E:first-child` 
+
+* 结构化伪类`E:first-child`
 
 匹配所有E元素，条件是E元素为其父元素的第一个子元素
 
@@ -131,41 +133,41 @@ categories: Front-end-Dev
 
     /*如果匹配条件为[lang|=fr]，那么只会匹配到body元素;
 	而如果是:lang(fr)那么会匹配到body和p元素，因为它们都是用法语的内容.*/
-	
+
 * `E::before` `E::after` 伪元素
 
 在指定元素前生成指定内容
 
     /*在E元素前生成内容*/
 	p::before { content:"note:" }
-	
+
 
 * 子元素选择器`E > F`
 
 匹配所有E元素下的F元素
 
     nav > span { ... }
-	
-* 毗邻元素选择器`E + F` 
+
+* 毗邻元素选择器`E + F`
 
 匹配紧跟着E元素的同级F元素
 
     header + nav { ... }
-    
+
 
 ### CSS level 3
 
-* 属性选择器`E[foo^="bar"]`, `E[foo$="bar"]`, `E[foo*="bar"]` 
+* 属性选择器`E[foo^="bar"]`, `E[foo$="bar"]`, `E[foo*="bar"]`
 
 根据不同条件进行匹配
 
     E[foo^="bar"]  
-    /*E标签中foo属性的值以"bar"开始的元素*/   
+    /*E标签中foo属性的值以"bar"开始的元素*/
     E[foo$="bar"]  
     /*与上面一个正好相反，E标签中foo属性的值以"bar"结尾的元素*/  
     E[foo*="bar"]  
     /*E标签中foo属性的值含有"bar"的元素*/  
-	
+
 * 结构化伪类`E:root`, `E:nth-child(n)`, `E:nth-last-child(n)`, `E:nth-of-type(n)`, `E:nth-last-of-type(n)`
 
 具体解释如下
@@ -182,7 +184,7 @@ categories: Front-end-Dev
     /*与E:nth-child(n)相似，但是只能匹配与E为同类(siblings)的元素标签*/
     E:nth-last-of-type(n)  
     /*与E:nth-of-type相反*/
-	
+
 * 结构化伪类`E:last-child`, `E:first-of-type`, `E:last-of-type`, `E:only-child`, `E:only-of-type`, `E:empty`
 
 具体解释如下
@@ -201,29 +203,29 @@ categories: Front-end-Dev
 	/*匹配一个有父亲元素但是该父亲元素没有相同扩展元素名的子元素的元素*/
 	E:empty  
 	/*匹配一个不包含任何子元素的节点（包含文本节点）*/
-	
-* 目标伪类 `E:target` 
- 
+
+* 目标伪类 `E:target`
+
 有些URI指向的是同一份资源中的一部分，也就是常见的带有#标记的链接
 
     html:target { ... }
 	/*为html文档中所有target元素添加样式*/
-   
-* UI元素状态伪类 `E:enabled` `E:disabled` `E:checked` 
+
+* UI元素状态伪类 `E:enabled` `E:disabled` `E:checked`
 
 匹配所有状态为`enabled` `disabled`或者`checked`的元素，特地查看了下, enable/disable想必大家都了解，
 所谓checked就是指一些`radio-button`或`checkbox`中的状态
-	
+
 * 否定伪类 `E:not(s)`
 
 匹配所有符合否定条件的元素
-  
+
     button:not([DISABLED])  
 	/*匹配所有可以点击的按钮*/
 	html:not(nav) { ... }  
 	/*匹配所有除nav元素以外的元素*/
-	
-* 同级元素选择器 `E ~ F` 
+
+* 同级元素选择器 `E ~ F`
 
 匹配所有在E之后的并与E同级的元素F
 

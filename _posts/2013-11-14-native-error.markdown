@@ -4,6 +4,8 @@ title: "「译」在ECMAScript 6的背影之后: Native errors"
 comments: true
 date: 2013-11-14 01:00
 categories: JavaScript
+keywords: ECMAScript,Error,JavaScript,错误处理
+description: ECMAScript6的原生Error对象
 ---
 
 原文: [NCZOnline](http://www.nczonline.net/blog/2013/11/12/in-the-ecmascript-6-shadows-native-errors), 译者：[Fantasy Shao](http://fantasyshao.com)
@@ -39,22 +41,22 @@ categories: JavaScript
     function ThatNameIsStupidError(message) {
         this.message = message;
     }
-    
+
     ThatNameIsStupidError.prototype = Object.create(MyError.prototype, {
         name: { value: "ThatNameIsStupidError" }
     });
-    
-    
+
+
     function YouDidSomethingDumbError(message) {
         this.message = message;
     }
-    
+
     YouDidSomethingDumbError.prototype = Object.create(MyError.prototype, {
         name: { value: "YouDidSomethingDumbError" }
     });
-    
+
 这样可以被自定义用来使用的错误有**ThatNameIsStupidError**和**YouDidSomethingDumbError**。两者都是继承自MyError，意图在于让任何开发者定义的错误都将继承自通用的基本类型，并允许这样做：
-    
+
     try {
         doSomethingThatMightThrowAnError();
     } catch (error) {

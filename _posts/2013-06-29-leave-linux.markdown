@@ -4,6 +4,8 @@ comments: true
 title: 爲何離開Linux桌面
 categories: Essay
 date: 2013-06-29 22:22
+keywords: Linux,操作系统,Linux发行版
+description: 为什么离开Linux桌面发行版
 ---
 
 > Why are you leaving Linux desktops?

@@ -4,6 +4,8 @@ title: "Python中的lambda"
 date: 2013-3-20 23:30
 comments: true
 categories: Python
+keywords: Python,lambda,Lisp,函数式编程
+description: 了解Python中的Lambda
 ---
 
 ## 前言
@@ -26,15 +28,15 @@ categories: Python
 
     def factorial(k):
 	    return reduce((lambda i,j: i*j), range(1, k+1))
-	 
+
     factorial(5)
-	
+
 上面的写法不知道是不是标准答案，但可以确定的是正确答案.
 
 其中reduce函数是用来进行迭代乘积的，而lambda表达式和range函数是作为reduce的参数的.
 
     lambda arg1, arg2,...: expression using args
-	
+
 这是lambda函数的定义方式，所以说，其实所谓的lambda函数也无非是用来定义匿名函数(Anonymous function)的方式.这在更为'pure'的函数式编程语言如Clojure, Haskell中就如同def在Python中的地位吧？
 
 现在我们可以用Python中的几个函数式编程工具来体验一下这个酷而古老的编程范型：
@@ -49,9 +51,9 @@ categories: Python
 	In [4]: map(lambda n: n*3+5, range(1, 10))
 	Out[4]: [8, 11, 14, 17, 20, 23, 26, 29, 32]
     #配合map函数使用，可以对数据进行简单的映射
-	
+
 用lambda函数在Python中做一些列表解析还是蛮不错的，如果要在lambda表达式中使用if-else语句呢？相必应该很容易想得到：
-  
+
     In [5]: x = lambda x: "Large" if x>2 else "Small"
     In [6]: x(3)
     Out[6]: 'Large'
@@ -66,10 +68,10 @@ categories: Python
     In [9]: ((lambda x:(lambda y: x+y))(1))(2)
     Out[9]: 3
     #虽然只是1+2……
-	
-很多时候是用不到lambda函数的，当然也有很多人对lambda情有独钟，我也在豆瓣某小组中看到过对于这个话题的争论，各执一词，争执不下. 
 
-我觉得lambda函数还是很可爱的，可能也与自己本身对于函数式编程也有相当的兴趣有关，当然，关于函数式编程的思想还是不甚了解. 
+很多时候是用不到lambda函数的，当然也有很多人对lambda情有独钟，我也在豆瓣某小组中看到过对于这个话题的争论，各执一词，争执不下.
+
+我觉得lambda函数还是很可爱的，可能也与自己本身对于函数式编程也有相当的兴趣有关，当然，关于函数式编程的思想还是不甚了解.
 
 > 说真的，我想学Lisp!
 

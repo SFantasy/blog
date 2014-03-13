@@ -4,6 +4,8 @@ title: 对viewport在实战中的一些研究
 date: 2013-10-06 16:00
 comments: true
 categories: Front-end-dev
+keywords: viewport,前端,实战,研究
+description: 对viewport在实战中的一些研究
 ---
 
 之前的一篇[Blog](http://blog.fantasyshao.com/2013-09-coding-life/)中也提到过最近的工作是在做手机上的网站，那篇文章中也提到过一些工作中遇到的问题，不过其实最大的问题是这篇文章中要提到的 -- viewport.  
@@ -19,8 +21,8 @@ categories: Front-end-dev
 由于我们的网站一开始是按照640px宽度来设计的，所以最初我们的viewport是这样的：
 
 
-    <meta content="target-densitydpi=device-dpi, 
-    	width=device-width, 
+    <meta content="target-densitydpi=device-dpi,
+    	width=device-width,
     	initial-scale=0.5,
     	user-scalable=no" name="viewport">
 
@@ -44,15 +46,15 @@ categories: Front-end-dev
 **HTML**
 
     <meta id="viewport" content="
-        user-scalable=no, 
-        width=device-width, 
+        user-scalable=no,
+        width=device-width,
         initial-scale=0.5" name="viewport" />
 
 **JavaScript**
 
     var viewPortScale;
         var dpr = window.devicePixelRatio;
-        
+
     if(dpr <= 2) {
         viewPortScale = 1 / window.devicePixelRatio;
     } else {
@@ -60,9 +62,9 @@ categories: Front-end-dev
     }
 
     document.getElementById('viewport').setAttribute(
-            'content', 
-            'user-scalable=no, 
-             width=device-width, 
+            'content',
+            'user-scalable=no,
+             width=device-width,
             initial-scale=' + viewPortScale);
 
 没错，在这里我完全扔掉了`target-densitydpi`，因为前文提到它被弃用了。
@@ -75,9 +77,9 @@ categories: Front-end-dev
 
 后来我原来在的前端组老大派了一个经验丰富的女汉子来帮助我了……终于看到了点希望.
 
-那几天算是比较系统的研究了一些viewport属性，也对于480P~1080P的手机以及现在市场占有率最高的几个浏览器进行了更为全面的测试，并且给出了一份比较「全面」的报告. 
+那几天算是比较系统的研究了一些viewport属性，也对于480P~1080P的手机以及现在市场占有率最高的几个浏览器进行了更为全面的测试，并且给出了一份比较「全面」的报告.
 
-最后我们的讨论的结果是对于480P和320P的设备调整CSS -- 也就是开始了用响应式的旅程. 
+最后我们的讨论的结果是对于480P和320P的设备调整CSS -- 也就是开始了用响应式的旅程.
 
 其实还是觉得挺不情愿的，因为毕竟感觉如果能在所有设备和所有浏览器上能够正常缩放的话，根本不需要做响应式. 当然做响应式也是挺不错的……毕竟之前没有怎么实践过（(^_^)）
 
@@ -87,7 +89,7 @@ categories: Front-end-dev
 
 其实使用响应式并不是这件事的终点. 在调试响应式的过程中，我依旧坚持着通过viewport来控制页面缩放的方法的研究.
 
-事实证明，仍旧有些浏览器（如QQ、UC浏览器）是受`target-densitydpi`影响的. 
+事实证明，仍旧有些浏览器（如QQ、UC浏览器）是受`target-densitydpi`影响的.
 
 比如在UC中使用该属性，则其`DevicePixelRatio`就会改变(如原来是2，现显示为1)，而其他浏览器则不会.而关于UC还有一个比较奇怪的事情是，UC有很多自己定义的`meta`属性，对于viewport，UC更是有一个`uc-fitscreen`属性……过程就不赘述了，反正最后还是没有用到这个属性，因为用了之后反而更是一团糟.所以对于UC，就不能使用`target-densitydpi`.
 
@@ -106,20 +108,20 @@ categories: Front-end-dev
         }
     };
 
-    if(detectBrowser('ucbrowser') || 
-    	dpr == 3  || 
+    if(detectBrowser('ucbrowser') ||
+    	dpr == 3  ||
        	detectBrowser('mqqbrowser')) {
            document.getElementById('viewport').setAttribute(
-               'content', 
-               'width=device-width, 
-           	   minimum-scale=0.5, 
+               'content',
+               'width=device-width,
+           	   minimum-scale=0.5,
                initial-scale=' + viewPortScale);
            } else {
            		document.getElementById('viewport').setAttribute(
-            	'content', 
-            	'target-densitydpi=device-dpi, 
-            	width=device-width, 
-    	        minimum-scale=0.5, 
+            	'content',
+            	'target-densitydpi=device-dpi,
+            	width=device-width,
+    	        minimum-scale=0.5,
         	    initial-scale=' + viewPortScale);
            }
 
@@ -128,10 +130,3 @@ categories: Front-end-dev
 
 
 --EOF--
-
-
-
-
-
-
-

@@ -4,6 +4,8 @@ title: 用Safari和iOS Simulator调试
 date: 2014-01-11 20:00
 comments: true
 categories: Front-end-dev
+keywords: iOS,safari,debug,调试,Mobile,移动开发,前端
+description: 用Safari和iOS Simulator调试网页
 ---
 
 同事在自己的电脑上装了一个Android模拟器，用来在电脑上查看现在做的M站的效果。（这让我想到了当年在学校里还折腾过ADT(Android Develop Tool)，只依稀记得电脑各种卡翻着实痛苦难堪。）不过相隔多时，感觉模拟器比之前的看起来好多了。

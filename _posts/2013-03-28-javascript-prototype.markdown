@@ -4,8 +4,10 @@ date: 2013-3-28 20:00
 title: Prototype in JavaScript
 comments: true
 categories: JavaScript
+keywords: JavaScript,prototype,原型继承,前端开发
+description: 学习JavaScript中的原型继承
 ---
-  
+
 > In a purely prototypal pattern, we dispense with classes. We focus on the objects.
 
 这句话是蝴蝶书中的，意在JavaScript中没有传统的类继承(诸如C++, Java等)，而是使用的原型模型. 所以说JavaScript是一门基于原型的语言.
@@ -24,10 +26,10 @@ categories: JavaScript
 	};
 	// 创建一个新的Person类型的对象
 	var john = new Person("John");
-	
+
 	console.log(john.getName());
 	# John
-	
+
 	// 更改Person的原型
 	Person.prototype.sayMyName = function () {
 	    console.log('Hello, my name is ' + this.getName());
@@ -35,48 +37,48 @@ categories: JavaScript
 	// 同时也更改了john这个对象中的方法
 	john.sayMyName();
     # John
- 
+
 接下来，创建一个新的对象
-    
+
     var Customer = function (name) {
 	  this.name = name;
 	};
 	// 将Customer的原型指向一个Person对象的实例
 	Customer.prototype = new Person();
-	
+
 	var myCustomer = new Customer('Dream Inc.');
 	myCustomer.sayMyName();
-	
+
 	// 为Customer对象添加新的方法
 	Customer.prototype.setAmountDue = function (amountDue) {
 	    this.amountDue = amountDue;
 	};
-	
+
 	Customer.prototype.getAmountDue = function () {
 	    return this.amountDue;
 	};
-	
+
 	// 测试一下
 	myCustomer.setAmountDue(2000);
 	console.log(myCustomer.getAmountDue());
-	
+
 	// Error
 	john.setAmountDue(1000);
 
 
 其实以上例子就已经构建了一个*原型链*：
-   
+
     myCustomer [Customer的实例]
 	{ name: 'Dream Inc.' , amountDue: 2000 }
-	
+
 	    Customer.prototype [Person的实例]
 		{ name: undefined,
 		  setAmountDue: [Function],
 		  getAmountDue: [Function] }
-		  
-	        Person.prototype 
+
+	        Person.prototype
 			{ getName: [Function], sayMyName: [Function] }
-			
+
 这种继承的方式就是JavaScript中*原型链*的继承方式.
 
 ### 属性查找

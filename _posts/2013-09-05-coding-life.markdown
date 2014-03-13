@@ -4,6 +4,8 @@ comments: true
 title: 近期的生活片段
 date: 2013-09-05 23:00
 categories: Essay
+keywords: life,生活,总结,前端
+description: 工作生活的总结
 ---
 
 在公司实习了一个月多了，说长不长，说短也不短了。至少从我个人角度来讲，经历的也不少 -- 光挪地方就挪了三次了。而工作的内容相对而言也发生了比较大的转变 -- 现在的工作更像一个「前端」。
@@ -24,7 +26,7 @@ categories: Essay
 
 1. 使用Ajax改变页面中的内容，但是原页面载入的时候是通过URL`www.xxx.com/#xx`获取一些信息的，在页面中调用了Ajax之后却无法改变URL地址。救世主出现了 -- HTML5中的`history.pushState`和相应的`window.onpopstate`. 其实之前在做另一个项目的时候了解过一点点相关的内容，记得是提到SEO的时候搜索引擎不会将URL中带sharp的链接收录，而且浏览器也无法通过回退按钮来返回上一个状态。GitHub上有这样一个项目：[jquery-pjax](https://github.com/defunkt/jquery-pjax). 所谓的pjax也就是`pushState` + `Ajax`.
 
-2. 对浏览器Cookie的操作。虽然`document.cookie`就可以设置cookie，但是还是遇到了一些问题。由于需求是需要将用户浏览记录以一定的格式保存到cookie中，并使得服务器端语言能够通过此cookie来生成某些页面 -- 所以我需要的是能够像`locastorage.getItem()`那样的获取cookie中特定字段的方法。好在MDN(Mozilla Developer Network)提供了一种简单高效的[方法](https://developer.mozilla.org/en-US/docs/Web/API/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support)，不然我可能就要和正则表达式奋斗不少时间了。 
+2. 对浏览器Cookie的操作。虽然`document.cookie`就可以设置cookie，但是还是遇到了一些问题。由于需求是需要将用户浏览记录以一定的格式保存到cookie中，并使得服务器端语言能够通过此cookie来生成某些页面 -- 所以我需要的是能够像`locastorage.getItem()`那样的获取cookie中特定字段的方法。好在MDN(Mozilla Developer Network)提供了一种简单高效的[方法](https://developer.mozilla.org/en-US/docs/Web/API/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support)，不然我可能就要和正则表达式奋斗不少时间了。
 
 工作中其实会遇到很多上述的情况，但是最后总是能够比较「完美」的解决问题，我只能说Google太强大了。（我是Google脑残粉（逃……））
 
@@ -35,4 +37,3 @@ categories: Essay
 还有就是最近好久没有学习自己想学习的东西了（比如Python，Common Lisp等），甚至连Emacs也用的不多了，都怪我平时都用的是Sublime（拿Sublime用Emacs的键位心里又觉得难受……！）
 
 --EOF--
-

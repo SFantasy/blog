@@ -4,6 +4,8 @@ title: Several topics in Python
 comments: true
 categories: Python
 date: 2013-3-24 13:30
+keywords: Python,Decorator,装饰器
+description: 一些Python中遇到的问题
 ---
 
 这篇文章其实是紧接着`lambda`那篇的, 谈的内容也比较的杂.
@@ -27,30 +29,30 @@ date: 2013-3-24 13:30
     @myDecorator
 	def f():
 	    ...
-    
+
 	#实际上执行：
     f = myDecorator(f)
-	
+
 	#多个decorator
-	
+
 	@A
 	@B
 	@C
 	def f():
 	    ...
-	
+
 	#实际上执行：
 	f = A(B(C(f)))
-	
+
 #### 有参数形式的decorator
 
     @myDecorator(arg)
 	def f():
 	    ...
-		
+
 	#实际上执行：
 	f = myDecorator(arg)(f)
-	
+
 也就是说，如果是有参数的decorator，会先将该参数传入decorator获得一个不带参数的decorator.  
 
 #### decorator函数的定义
@@ -62,10 +64,10 @@ date: 2013-3-24 13:30
     def A(f):
 	    #处理函数f
 		return f
-	
+
 	@A
 	def f(args):pass
-	
+
     #返回新的函数对象:
 
     def A(f):
@@ -73,21 +75,21 @@ date: 2013-3-24 13:30
 		    # Add something
 			return f(args)
 		return new_f
-		
+
 	@A
 	def f(args):pass
 
     #更为通用的形式,使用动态参数，
-	
+
 	def A(f):
 	    def new_f(*args, **argkw):
 		  # Add something
 		  return f(*args, **argkw)
 		return new_f
-		
+
 	@A
 	def f(args):pass
-	
+
 #### decorator的作用?
 
 limodou提到了decorator与[AOP](http://en.wikipedia.org/wiki/Aspect-oriented_programming)(Aspect-oritented Programming)有点类似,其实意思也就是：在不修改代函数源代码的情况下，通过装饰器来给程序动态添加一些功能的思想。
@@ -106,19 +108,19 @@ limodou提到了decorator与[AOP](http://en.wikipedia.org/wiki/Aspect-oriented_p
     class A(object):
 	    def foo(self, x):
 		    print "executing foo(%s, %s)"%(self, x)
-		
+
 		@classmethod
 		def class_foo(cls, x):
 		    print "executing class_foo(%s, %s)"%(cls, x)
-		
+
 		@staticmethod
 		def static_foo(x):
 		    print "executing static_foo(%s)"%x
-	
+
 	a = A()
-    
+
 对象`a`是`A`的一个实例，我们平时最常用的方法类型就是*普通对象方法*，对象作为第一个参数被隐式调用.
-    
+
 	a.foo(1)
 	# executing foo(<__main__.A object at 0x1d63890>, 1)
 
@@ -129,7 +131,7 @@ limodou提到了decorator与[AOP](http://en.wikipedia.org/wiki/Aspect-oriented_p
 	A.class_foo(1)
 	# executing class_foo(<class '__main__.A'>,1)
     # 事实上，定义一个类方法，更多的用类而不是该类的实例去调用之
-	
+
 而对于*静态方法*来说，实例和类(对应`self`和`cls`)都不会被隐式传入.
 
     a.static_foo(1)
@@ -152,7 +154,7 @@ limodou提到了decorator与[AOP](http://en.wikipedia.org/wiki/Aspect-oriented_p
     # Open your interpreter:
     >> import this
 	The Zen of Python, by Tim Peters
-	
+
 	Beautiful is better than ugly.
 	Explicit is better than implicit.
 	Simple is better than complex.
@@ -172,7 +174,7 @@ limodou提到了decorator与[AOP](http://en.wikipedia.org/wiki/Aspect-oriented_p
 	If the implementation is hard to explain, it's a bad idea.
 	If the implementation is easy to explain, it may be a good idea.
 	Namespaces are one honking great idea -- let's do more of those!
-	
+
 中文翻译版可见[此处](http://wiki.woodpecker.org.cn/moin/PythonZen), 啄木鸟社区的几位大牛的不同风格的翻译.
 
 ## Reference
