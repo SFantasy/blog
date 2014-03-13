@@ -1,12 +1,12 @@
-# coding: utf-8 
+# coding: utf-8
 root: /
 permalink: /:year-:month-:title/
 markdown: rdiscount
-pygments: true 
+pygments: true
 paginate: 12
 
 title: Blog - fantasyshao
-author: fanTasy shAo
+author: FantasyShao
 email: fantasyshao@icloud.com
 subscribe_rss: /atom.xml
 license: true
