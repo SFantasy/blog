@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: template
 ---
 
 <section class="wrapper post-content">
@@ -9,7 +9,7 @@ layout: default
     <span>{{ page.date | date: '%d' }}</span>
     <span>{{ page.date | date: '%Y' }}</span>
     </date>  ，类别：
-    {% for cat in page.categories %} 
+    {% for cat in page.categories %}
     <a href="/categories.html#{{ cat }}-ref" title="{{ cat }}" rel="category tag">{{ cat }}</a>
     {% endfor %}
     <br />
@@ -31,8 +31,8 @@ layout: default
       {% if page.next %}
       <span>下一篇：<a href="{{ page.next.url }}" rel="next" title="{{ page.next.title }}">{{ page.next.title }}</a>&gt&gt</span>
       {% endif %}
-    </nav>  
-    <div>    
+    </nav>
+    <div>
       {% include share.md %}
       <br />
       {% include comments.md %}
