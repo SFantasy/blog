@@ -60,7 +60,7 @@ a
 body
     background-color: $white-2
 header
-    margin-top: 40px
+    overflow: auto
 
 .wrapper,
 .nav-inner,
@@ -69,6 +69,12 @@ footer
     max-width: 680px
     margin: 20px auto
     padding: 20px
+
+.wrapper
+    padding-top: 60px
+
+footer
+    margin-bottom: 0
 
 .wrapper,
 .paginator,
@@ -125,11 +131,16 @@ footer p
                 color: $gray-3
 
 .nav
-    background-color: $white-2
+    z-index: 10
+    width: 100%
+    background-color: rgba(255,255,255, .675)
+    border-bottom: 1px solid $white-2
     ul
         li
             a
                 color: $gray-1
+    &.top-fixed
+        position: fixed
 
 .nav-inner
     max-width: 680px
