@@ -5,10 +5,10 @@ layout: template
 <section class="wrapper post-content">
     <h1>{{ page.title }}</h1>
     <date title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}" pubdate>
-    <span>{{ page.date | date: '%B' }}</span>
-    <span>{{ page.date | date: '%d' }}</span>
-    <span>{{ page.date | date: '%Y' }}</span>
-    </date>  ，类别：
+        <span>{{ page.date | date: '%B' }}</span>
+        <span>{{ page.date | date: '%d' }}</span>
+        <span>{{ page.date | date: '%Y' }}</span>
+    </date>, Category:
     {% for cat in page.categories %}
     <a href="/categories.html#{{ cat }}-ref" title="{{ cat }}" rel="category tag">{{ cat }}</a>
     {% endfor %}
@@ -17,7 +17,7 @@ layout: template
       {{ content }}
     </div>
     <div id="related">
-      相关文章：
+      Related posts:
         {% for post in site.related_posts limit:3 %}
         <li>
           <a href="{{ post.url }}">{{ post.title }}</a>
@@ -26,10 +26,10 @@ layout: template
     </div>
     <nav>
       {% if page.previous %}
-      <span>&lt&lt上一篇：<a href="{{ page.previous.url }}" rel="prev" title="{{ page.previous.title }}">{{ page.previous.title }}</a></span>
+      <span>&lt&lt Prev：<a href="{{ page.previous.url }}" rel="prev" title="{{ page.previous.title }}">{{ page.previous.title }}</a></span>
       {% endif %}
       {% if page.next %}
-      <span>下一篇：<a href="{{ page.next.url }}" rel="next" title="{{ page.next.title }}">{{ page.next.title }}</a>&gt&gt</span>
+      <span>Next：<a href="{{ page.next.url }}" rel="next" title="{{ page.next.title }}">{{ page.next.title }}</a>&gt&gt</span>
       {% endif %}
     </nav>
     <div>
