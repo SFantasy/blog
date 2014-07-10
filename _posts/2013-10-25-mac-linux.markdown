@@ -26,7 +26,7 @@ description: 更舒适的使用OS X工作
 
 又谈起了这个俗套的话题，不过去掉了另一个经常被对比的对象 -- Windows。但是现在的我确实更深有体会。
 
-之前写过一篇[为何离开Linux桌面](http://blog.fantasyshao.com/2013-06-leave-linux/)的文章。其实之后的日子里，我依旧使用着Linux Mint 15这个我觉得最好的Linux桌面发行版，而事实也证明了这一点，不崩溃、易用、美观，这就足够了。
+之前写过一篇[为何离开Linux桌面](http://blog.fantasy.codes/2013-06-leave-linux/)的文章。其实之后的日子里，我依旧使用着Linux Mint 15这个我觉得最好的Linux桌面发行版，而事实也证明了这一点，不崩溃、易用、美观，这就足够了。
 
 从用户角度来讲，就桌面操作系统而言，我觉得OS X和Linux的并没有多大差距，但是不同的是Apple的OS X与Linux种类繁多的桌面系统相比太专一了。GNOME, KDE, Unity, LXDE...看看Linux的[系谱图](http://futurist.se/gldt/)。
 

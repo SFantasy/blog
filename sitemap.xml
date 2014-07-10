@@ -7,291 +7,288 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>http://blog.fantasyshao.com/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/categories.html</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/categories.html</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/archive.html</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/archive.html</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/links.html</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/about.html</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/about.html</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2014-01-ios-dev-markdown/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-10-viewport-mobile/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2014-01-debug-ios-with-safari/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-09-arrow-function/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2014-01-hacker-way-slides/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-09-coding-life/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-12-this-year-on-github/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-07-py-re-module/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-12-interesting-command/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-06-leave-linux/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-11-native-error/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-05-awk-lang/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-11-gruntjs-start-up/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-05-learn-sed/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-10-mac-linux/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-04-talk-markdown/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-10-node-wechat-demo/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-04-sassy-css/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-10-viewport-mobile/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-04-css-position-display/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-09-arrow-function/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-04-git-merge-specified-file/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-09-coding-life/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-03-javascript-prototype/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/page2/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/page2/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/page3/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/page3/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/page4/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/page4/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/page5/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2012-05-shi-yong-gaehe-chrometu-po-gfw/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2012-05-shi-yong-gaehe-chrometu-po-gfw/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-03-sign/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2012-10-nexus-lian-jie-linux/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2012-10-nexus-lian-jie-linux/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2012-08-guan-yu-wen-jian-quan-xian/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2012-08-guan-yu-wen-jian-quan-xian/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2012-07-wang-ji-rootmi-ma/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2012-07-wang-ji-rootmi-ma/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-02-seven-languages/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-02-seven-languages/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-01-excellent-experience/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-01-excellent-experience/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-01-ignore-title/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-01-ignore-title/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-01-wen-fu-jie-mi/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-01-wen-fu-jie-mi/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2012-12-what-a-fucking-book/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2012-12-what-a-fucking-book/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2012-12-it-just-for-fun/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2012-12-it-just-for-fun/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2012-09-heike-yu-hua-jia/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2012-09-heike-yu-hua-jia/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2012-09-an-shi-jian/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2012-09-an-shi-jian/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2012-09-shu-xue-zhi-mei/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2012-09-shu-xue-zhi-mei/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2012-08-lang-chao-zhi-dian/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2012-08-lang-chao-zhi-dian/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2012-08-esr-wu-bu-qu/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2012-08-esr-wu-bu-qu/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-05-awk-lang/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2012-09-a-byte-things-about-unix-shell/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-05-learn-sed/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2012-10-revolution-os/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2012-09-a-byte-things-about-unix-shell/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-03-css-selector-note/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2012-10-revolution-os/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-03-zz-css-fundemental/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-04-sassy-css/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2012-10-experience-of-using-bootstrap/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-04-css-position-display/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2012-12-a-boring-summary/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-03-css-selector-note/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2012-10-sui-bi-yi-pian/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-03-zz-css-fundemental/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2012-11-try-to-use-orange-classification/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2012-10-experience-of-using-bootstrap/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-02-ubuntu-touch-preview/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-06-leave-linux/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-03-python-questions/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-04-talk-markdown/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-03-python-lambda-fp/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2013-03-sign/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://blog.fantasyshao.com/2013-03-javascript-closure/</loc>
-  <lastmod>2013-10-06T14:16:27+00:00</lastmod>
+  <loc>http://blog.fantasy.codes/2012-12-a-boring-summary/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://blog.fantasy.codes/2012-10-sui-bi-yi-pian/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://blog.fantasy.codes/2012-11-try-to-use-orange-classification/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://blog.fantasy.codes/2013-02-ubuntu-touch-preview/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://blog.fantasy.codes/2013-07-py-re-module/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://blog.fantasy.codes/2013-03-python-questions/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://blog.fantasy.codes/2013-03-python-lambda-fp/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://blog.fantasy.codes/2013-03-javascript-prototype/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://blog.fantasy.codes/2013-03-javascript-closure/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://blog.fantasy.codes/2013-04-git-merge-specified-file/</loc>
+  <lastmod>2014-07-10T14:36:46+00:00</lastmod>
+  <changefreq>weekly</changefreq>
 </url>
 </urlset>

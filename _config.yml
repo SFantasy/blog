@@ -5,14 +5,14 @@ markdown: rdiscount
 pygments: true
 paginate: 12
 
-title: Blog - fantasyshao
+title: Blog - FantasyCodes
 author: FantasyShao
 email: fantasyshao@icloud.com
 subscribe_rss: /atom.xml
 license: true
 category_list: true
 links: true
-url: http://blog.fantasyshao.com
+url: http://blog.fantasy.codes
 #google_analytics_tracking_id: UA-36896790-1
 
 #Generate css

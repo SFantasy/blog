@@ -8,7 +8,7 @@ keywords: viewport,前端,实战,研究
 description: 对viewport在实战中的一些研究
 ---
 
-之前的一篇[Blog](http://blog.fantasyshao.com/2013-09-coding-life/)中也提到过最近的工作是在做手机上的网站，那篇文章中也提到过一些工作中遇到的问题，不过其实最大的问题是这篇文章中要提到的 -- viewport.  
+之前的一篇[Blog](http://blog.fantasy.codes/2013-09-coding-life/)中也提到过最近的工作是在做手机上的网站，那篇文章中也提到过一些工作中遇到的问题，不过其实最大的问题是这篇文章中要提到的 -- viewport.
 
 事实上一开始在接触这个属性的时候并没有想到会遇到如此多的问题，而无论是Google或者StackOverflow出来的答案都没有能够完全解决我的问题.说实话网上有很多博客都谈到过viewport，但是往往他们的文章……都好不负责任，谈及viewport，介绍一下有那些属性，有那些属性值，然后就over了.
 
