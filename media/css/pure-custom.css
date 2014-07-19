@@ -1,0 +1,126 @@
+.header {
+    border-bottom: 1px solid #eee;
+    padding: 1em;
+    font-family: 'Avenir Next', Avenir, 'Helvetica Neue', sans-serif;
+}
+
+.header, .site-container {
+    max-width: 740px;
+    margin: 0 auto;
+}
+
+.header .site-title {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.site-title > a {
+    text-decoration: none;
+    color: #4b4b4b;
+}
+
+.nav-inner {
+    display: block !important;
+    max-width: 500px;
+    margin: 0 auto !important;
+}
+
+.site-container {
+    padding: 2em 2em 0;
+    font-family: Lora, Georgia, sans-serif;
+}
+
+.site-heading-2 {
+    font-family: 'Avenir Next', Avenir, 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.site-lists, .site-heading-2 {
+    max-width: 600px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.site-lists > li {
+    font-family: Lora, Georgia, sans-serif;
+    padding: 5px 0;
+}
+
+.site-lists > li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #444;
+}
+
+.site-lists > li a:hover {
+    color: #777;
+    text-decoration: underline;
+}
+
+.site-lists > li > time {
+    color: #777;
+    font-family: monospace;
+}
+
+.site-paginator {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1em 0;
+}
+
+.site-paginator li {
+    display: inline-block;
+    list-style: none;
+}
+
+.site-paginator li > a {
+    text-decoration: none;
+    color: #4b4b4b;
+    padding: 5px 10px;
+}
+
+.site-paginator li > a.disable {
+    color: #999;
+}
+
+.site-paginator li > .disable:hover {
+    color: #999;
+    text-decoration: none;
+}
+
+.site-paginator li > a.current-page {
+    color: #000;
+}
+
+.site-paginator li > a:hover {
+    color: #777;
+    text-decoration: underline;
+}
+
+.site-footer {
+    max-width: 700px;
+    margin: 0 auto;
+    border-top: 1px solid #eee;
+}
+
+.site-footer p {
+    font-size: 14px;
+    text-align: center;
+    font-family: Lora, Georgia, sans-serif;
+    color: #999;
+}
+
+.site-footer p > a {
+    color: #999;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.site-footer p > a:hover {
+    color: #777;
+    text-decoration: underline;
+}
