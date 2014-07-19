@@ -66,6 +66,18 @@
     font-family: monospace;
 }
 
+@media screen and (max-width: 600px) {
+    .site-lists > li > time {
+        display: none;
+    }
+}
+
+.site-lists > li > span {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 4px solid #eee;
+}
+
 .site-paginator {
     max-width: 600px;
     margin: 0 auto;
