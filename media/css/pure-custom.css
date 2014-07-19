@@ -124,3 +124,78 @@
     color: #777;
     text-decoration: underline;
 }
+
+.post-content h1 {
+    text-align: center;
+}
+
+.post-content .post-info {
+    text-align: center;
+}
+
+.post-content .post-info a, .article-content a {
+    text-decoration: none;
+    color: #444;
+}
+
+.post-content .post-info a:hover, .article-content a:hover{
+    text-decoration: underline;
+    color: #777;
+}
+
+.article-content h1, .article-content h2, .article-content h3, .article-content h4 {
+    line-height: 1.6;
+}
+
+.article-content h2 {
+    border-bottom: 1px solid #eee;
+}
+
+.article-content pre, pre code, code {
+    background-color: #f7f7f7;
+    font-size: 13px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+.article-content pre code {
+    border: none;
+}
+
+.article-content pre, code {
+    border: 1px solid #d5d5d5;
+}
+
+.article-content pre {
+    overflow: hidden;
+    word-wrap: break-word;
+    padding: 3px 5px;
+}
+
+.article-content code {
+    padding: 0 5px;
+}
+
+.article-content blockquote {
+    border-left: 4px solid #d5d5d5;
+    padding: 0 15px;
+    color: #777;
+}
+
+.article-content img {
+    width: 100%;
+}
+
+.wrapper a {
+    text-decoration: none;
+    color: #444;
+}
+
+.wrapper a:hover {
+    text-decoration: underline;
+    color: #777;
+}
+
+.wrapper .category {
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+}

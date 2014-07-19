@@ -4,14 +4,16 @@ title: Categories
 comments: false
 ---
 <section>
-<ul>
-    {% for cat in site.categories %}
-    <li class="list-items"><a href="/categories.html#{{ cat[0] }}-ref" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} <sup>({{ cat[1].size }})</sup></a></li>
-    {% endfor %}
-</ul>
+    <ul>
+        {% for cat in site.categories %}
+            <li class="list-items">
+                <a href="/categories.html#{{ cat[0] }}-ref" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} <sup>({{ cat[1].size }})</sup></a>
+            </li>
+        {% endfor %}
+    </ul>
 </section>
-{% for cat in site.categories %} 
-  <span class="category" id="{{ cat[0] }}-ref">{{ cat[0] }}</span>
+{% for cat in site.categories %}
+  <h2 class="category" id="{{ cat[0] }}-ref">{{ cat[0] }}</h2>
   <ul>
     {% for post in cat[1] %}
 		<li class="post-items"><a href='{{ post.url }}'>{{post.title}}</a></li>
