@@ -1,19 +1,14 @@
 # coding: utf-8
 root: /
-permalink: /:year-:month-:title/
+permalink: /:categories/:year/:month/:day/:title/
 markdown: rdiscount
-pygments: true
 paginate: 12
 
-title: Blog - FantasyCodes
-author: FantasyShao
+title: Blog | Fantasy
+author: Fantasy Shao
 email: fantasyshao@icloud.com
 subscribe_rss: /atom.xml
 license: true
 category_list: true
 links: true
 url: http://blog.fantasy.codes
-#google_analytics_tracking_id: UA-36896790-1
-
-#Generate css
-#compass compile

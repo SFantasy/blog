@@ -1,49 +1,57 @@
 ---
-layout: default
+layout: template
+title: Blog
+keywords: Blog, fantasyshao, front-end, iOS, Mac
+description: The blog of fantasyshao, front-end development, learning iOS.
 ---
-<section class="wrapper">
-  <div class="recent-post">
-    Recent Posts total
-    <span class="post-number">{{ paginator.total_posts }}</span> posts
-  </div>
-  <ul>
+<div class="site-heading-2">Recent posts</div>
+<ul class="site-lists">
     {% for post in paginator.posts%}
-    <li class="blog-item">
-<!--       <span class="item-category">[<a href="/categories.html#{{ post.categories }}-ref">{{ post.categories }}</a>]</span> -->
-      <span class="item-title"><a href={{ post.url }}>{{ post.title }}</a></span>
-      <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+    <li>
+        <time>{{ post.date | date: "%Y-%m-%d" }}</time> --
+        <span ><a href={{ post.url }}>{{ post.title }}</a></span>
     </li>
     {% endfor %}
-  <ul>
-</section>
-<div class="paginator">
-  {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1 %}
-      <a href="/">Prev</a>
+</ul>
+
+<!-- 分页 BEIGN -->
+<ul class="site-paginator">
+    <li>
+    {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+            <a class="current-page" href="/">&#171;</a>
+        {% else %}
+            <a class="" href="/page{{paginator.previous_page}}">&#171;</a>
+        {% endif %}
     {% else %}
-      <a href="/page{{paginator.previous_page}}">Prev</a>
+        <a class="disable" href="/">&#171;</a>
     {% endif %}
-  {% else %}
-    <span class="disabled">Prev</span>
-  {% endif %}
+    </li>
 
-  {% if paginator.page == 1 %}
-    <span class="currentPage">1</span>
-  {% else %}
-    <a href="/">1</a>
-  {% endif %}
-
-  {% for count in (2..paginator.total_pages) %}
-    {% if count == paginator.page %}
-     <span class="currentPage">{{count}}</span>
+    <li>
+    {% if paginator.page == 1 %}
+        <a href="/" class="current-page">1</a>
     {% else %}
-      <a href="/page{{count}}">{{count}}</a>
+        <a href="/" class="">1</a>
     {% endif %}
-  {% endfor %}
+    </li>
 
-  {% if paginator.next_page %}
-    <a href="/page{{paginator.next_page}}">Next</a>
-  {% else %}
-    <span class="disabled">Next</span>
-  {% endif %}
-</div>
+    {% for count in (2..paginator.total_pages) %}
+        <li>
+            {% if count == paginator.page %}
+                <a class="current-page">{{count}}</span>
+            {% else %}
+                <a class="" href="/page{{count}}">{{count}}</a>
+            {% endif %}
+        </li>
+    {% endfor %}
+
+    <li>
+        {% if paginator.next_page %}
+            <a class="" href="/page{{paginator.next_page}}">&#187;</a>
+        {% else %}
+            <a href="/" class="disable">&#187;</a>
+        {% endif %}
+    </li>
+</ul>
+<!-- 分页 END -->

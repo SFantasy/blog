@@ -1,15 +1,15 @@
 ---
-layout: default
+layout: template
 ---
 
 <section class="wrapper">
-  <h2>{{ page.title }}</h2>
-  <div>
-    {{ content }}
-  </div>
-  {% if page.comments %}
-  <div>
-    {% include comments.md %}
-  </div>
-  {% endif %}
+    <h2>{{ page.title }}</h2>
+    <div>
+        {{ content }}
+    </div>
+    {% if page.comments %}
+        <div>
+            {% include comments.md %}
+        </div>
+    {% endif %}
 </section>

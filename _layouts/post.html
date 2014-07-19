@@ -2,39 +2,40 @@
 layout: template
 ---
 
-<section class="wrapper post-content">
-    <h1>{{ page.title }}</h1>
-    <date title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}" pubdate>
-        <span>{{ page.date | date: '%B' }}</span>
-        <span>{{ page.date | date: '%d' }}</span>
-        <span>{{ page.date | date: '%Y' }}</span>
-    </date>, Category:
-    {% for cat in page.categories %}
-    <a href="/categories.html#{{ cat }}-ref" title="{{ cat }}" rel="category tag">{{ cat }}</a>
-    {% endfor %}
-    <br />
-    <div class="postContent">
-      {{ content }}
+<section class="post-content" itemscope itemtype="http://schema.org/Article">
+    <h1 itemprop="name">{{ page.title }}</h1>
+    <div class="post-info">
+        <date title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}" pubdate>
+            <span>{{ page.date | date: '%B' }}</span>
+            <span>{{ page.date | date: '%d' }}</span>
+            <span>{{ page.date | date: '%Y' }}</span>
+        </date>, Category:
+        {% for cat in page.categories %}
+            <a href="/categories.html#{{ cat }}-ref" title="{{ cat }}" rel="category tag">{{ cat }}</a>
+        {% endfor %}
+    </div>
+    <div class="article-content" itemprop="articleBody">
+        {{ content }}
     </div>
     <div id="related">
-      Related posts:
+        Related posts:
         {% for post in site.related_posts limit:3 %}
         <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ post.url }}">{{ post.title }}</a>
         </li>
         {% endfor %}
     </div>
     <nav>
-      {% if page.previous %}
-      <span>&lt&lt Prev：<a href="{{ page.previous.url }}" rel="prev" title="{{ page.previous.title }}">{{ page.previous.title }}</a></span>
-      {% endif %}
-      {% if page.next %}
-      <span>Next：<a href="{{ page.next.url }}" rel="next" title="{{ page.next.title }}">{{ page.next.title }}</a>&gt&gt</span>
-      {% endif %}
+        {% if page.previous %}
+            <span>&lt;&lt; Previous：<a href="{{ page.previous.url }}" rel="prev" title="{{ page.previous.title }}">{{ page.previous.title }}</a></span>
+        {% endif %}
+        {% if page.next %}
+            <span>Next：<a href="{{ page.next.url }}" rel="next" title="{{ page.next.title }}">{{ page.next.title }}</a>&gt;&gt;</span>
+        {% endif %}
     </nav>
     <div>
-      {% include share.md %}
-      <br />
-      {% include comments.md %}
+        {% include share.md %}
+        <br />
+        {% include comments.md %}
     </div>
 </section>
