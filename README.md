@@ -1,22 +1,13 @@
 Blog
 ===================
 
-My Blog site.
-[http://blog.fantasy.codes](http://blog.fantasy.codes)
+Welcome to visit my blog: [blog.fantasy.codes](http://blog.fantasy.codes)
 
-* Blogs and any other interesting things.
+The blog is powered by Jekyll and GitHub Pages.
 
-* New theme designed 2013-04-23 by myself.
-
-  - A more simple theme designed in 2013-07-04. ( [homepage.scss](https://github.com/SFantasy/blog/blob/gh-pages/media/css/homepage.scss) )
-
-* Theme updated 2013-09-22
-
-  - [blog.sass](https://github.com/SFantasy/blog/blob/gh-pages/media/css/blog.sass)
-
-* Powered by Jekyll and GitHub pages.
+If you like the theme or want to create a blog as mine, just clone it and push the codes to your own remote repository.
 
 ## License
 
-* Repository licensed under the MIT license(see the LICENSE file).
+* Codes licensed under the [MIT license](LICENSE)
 * Blog contents licensed under [CC BY-3.0](http://creativecommons.org/licenses/by/3.0/)
