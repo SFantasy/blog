@@ -3,6 +3,8 @@ layout: post
 title: "CSS布局原理入门"
 date: 2013-3-10 00:07
 comments: true
+keywords: CSS入门, 盒模型, 布局, 前端开发
+description: 简单的介绍CSS的布局原理，适合新手入门
 categories: Front-end-Dev
 ---
 
@@ -25,7 +27,7 @@ categories: Front-end-Dev
          |__ [text]
 
 当浏览器把他们读入内存的时候，会形成"节点(node)"
-    
+
 	 -------------
 	|  _________  |
 	| |some text| |
@@ -50,7 +52,7 @@ categories: Front-end-Dev
 
 基本的个是化上下文有两种：块格式化上下文(block formatting context)和行内格式化上下文(inline formatting context)
 
-block formatting context就是传说中的BFC啦. 你一定听过这个很高端的名词吧. 
+block formatting context就是传说中的BFC啦. 你一定听过这个很高端的名词吧.
 ![BFC](../media/img/bfc.png)
 
 简单来说，BFC和IFC的区别是，BFC里面的元素是沿着竖直方向排列的，而IFC里的元素则是水平方向.
@@ -67,7 +69,7 @@ block formatting context就是传说中的BFC啦. 你一定听过这个很高端
     <span>aaa</span>
     <a>good</a>
     </div>
-    
+
 而若是至少有一个子节点的display是block级别的，那么就一定要生成BFC啦^^.
 
     <div>
@@ -83,7 +85,7 @@ block formatting context就是传说中的BFC啦. 你一定听过这个很高端
 ![anonymous](../media/img/anonymous.png)
 
 你一定注意到了我提到的一个概念：inline级别，事实上差不多每一个盒子都有inline和block两个级别，看看这些display的值吧：
-   
+
 	block inline-block
 	table inline-table
 	flex  inline-flex
@@ -97,7 +99,7 @@ block formatting context就是传说中的BFC啦. 你一定听过这个很高端
 	  </div>
 	  <p>hohohoho
     </div>
-	
+
 比如这里的小透明，因为它的overflow是visible，所以它的子节点p的box是直接放进外部BFC里面的.
 
 因为BFC会影响到float、边距折叠(margin-collapse)等等特性，所以识别出小透明们就十分重要了.
@@ -119,4 +121,3 @@ block formatting context就是传说中的BFC啦. 你一定听过这个很高端
     * normal flow(正常流)
       * inline-level(行内级)
       * block-level(块级)
-		

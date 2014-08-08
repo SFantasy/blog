@@ -3,7 +3,9 @@ layout: post
 title: "Ubuntu Touch Preview 尝鲜"
 date: 2013-2-23 19:55
 comments: true
-categories: 折腾
+keywords: Ubuntu touch, test
+description: 尝试使用Ubuntu touch preview的经验分享
+categories: Fresh
 ---
 
 前段时间Canonical发布了Ubuntu Touch Preview, 正好本人有Nexus 7可以一试(也不怕数据丢失).
@@ -74,4 +76,3 @@ Gmail：
 * 对于手势还是不了解,如果熟悉的话应该操作会更舒服点.
 * 确实有很多bug, 不过还是可以原谅的.
 * 体验还不错, 其实很期待作为一个真正的系统而非预览版的时候能达到什么样的程度.
-
