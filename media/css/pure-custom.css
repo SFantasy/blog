@@ -5,7 +5,7 @@
 }
 
 .header, .site-container {
-    max-width: 740px;
+    max-width: 640px;
     margin: 0 auto;
 }
 
@@ -29,7 +29,7 @@
 
 .site-container {
     padding: 2em 2em 0;
-    font-family: Lora, Georgia, sans-serif;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
 }
 
 .site-heading-2 {
