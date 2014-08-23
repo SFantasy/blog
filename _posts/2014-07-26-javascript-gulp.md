@@ -18,7 +18,7 @@ gulp和Grunt一样都是通过项目根目录下的「配置文件」来进行�
 
 在我使用Grunt的经历看来，Grunt的配置文件比较固定：
 
-```
+{% highlight js %}
 module.exports = function(grunt) {
     grunt.initCofing({
         // config tasks
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', 'some-task');
 }
-```
+{% endhighlight %}
 
 相比而言，gulp的配置文件就像普通的Node文件一样：
 

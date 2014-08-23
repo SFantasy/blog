@@ -164,17 +164,18 @@
 }
 
 .article-content pre, pre code, code {
-    background-color: #f7f7f7;
+    background-color: #f9f9f9;
     font-size: 13px;
     font-family: Consolas, "Liberation Mono", Courier, monospace;
 }
 
 .article-content pre code {
     border: none;
+    padding: 0;
 }
 
 .article-content pre, code {
-    border: 1px solid #d5d5d5;
+    border: 1px solid #ddd;
 }
 
 .article-content pre {
