@@ -2,7 +2,7 @@
 root: /
 permalink: /:categories/:year/:month/:day/:title/
 markdown: rdiscount
-pygments: true
+highlighter: pygments
 paginate: 12
 
 title: Blog | Fantasy

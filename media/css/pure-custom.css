@@ -178,6 +178,10 @@
     border: 1px solid #ddd;
 }
 
+.article-content code {
+    border-radius: 4px;
+}
+
 .article-content pre {
     overflow: hidden;
     word-wrap: break-word;
