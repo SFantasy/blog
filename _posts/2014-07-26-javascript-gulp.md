@@ -2,7 +2,7 @@
 layout: post
 date: 2014-07-27 02:30
 title: 更简单的JavaScript Task runner
-category: node.js
+category: Node.js
 keywords: NPM, NodeJS, GitHub, JavaScript, gulp, Task runner
 description: 使用gulp.js实现前端自动化任务运行
 comments: true

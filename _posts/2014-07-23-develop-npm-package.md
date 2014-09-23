@@ -2,7 +2,7 @@
 layout: post
 date: 2014-07-24 00:39
 title: 第一个NPM package
-category: node.js
+category: Node.js
 keywords: NPM, NodeJS, GitHub, JavaScript, node-weather,天气
 description: 开发一个简单的NPM package，可以在终端中查询天气
 comments: true

@@ -147,12 +147,12 @@
 
 .post-content a, .post-content .post-info a, .article-content a {
     text-decoration: none;
-    color: #444;
+    color: #07a;
 }
 
 .post-content a:hover, .post-content .post-info a:hover, .article-content a:hover{
     text-decoration: underline;
-    color: #777;
+    color: #07f;
 }
 
 .article-content h1, .article-content h2, .article-content h3, .article-content h4 {
