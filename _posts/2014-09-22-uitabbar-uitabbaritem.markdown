@@ -1,9 +1,11 @@
 ---
+layout: post
 title: Customize UITabBar and UITabBarItem
 keywords: UITabBar, UITabBarItem, iOS, Xcode
 description: Customize UITabBar and UITabBarItem via codes in iOS7
 date: 2014-09-22 22:00
 comments: true
+category: iOS
 ---
 
 Days ago, I've started to learn iOS development again. You can reach my former post about developing Musiculator [here](http://blog.fantasy.codes/objective-c/2014/01/19/ios-dev-markdown/) (written in Chinese).

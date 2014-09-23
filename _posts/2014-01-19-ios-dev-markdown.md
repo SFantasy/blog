@@ -2,7 +2,7 @@
 layout: post
 date: 2014-01-19 14:00
 title: 开发Musiculator
-category: Objective-C
+category: iOS
 keywords: Objective-C,Musiculator,Xcode,GitHub
 description: Objective-C应用开发
 comments: true
