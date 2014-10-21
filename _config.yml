@@ -12,4 +12,5 @@ subscribe_rss: /atom.xml
 license: true
 category_list: true
 links: true
+address: http://blog.fantasy.codes
 url: http://blog.fantasy.codes
