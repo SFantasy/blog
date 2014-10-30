@@ -10,6 +10,8 @@ category: Node.js
 
 最近用[Express](http://expressjs.com)开发了一个小的网站，分享一下。
 
+（这个系列的文章会尽量写的比较浅显易懂，照顾刚入门的童鞋）
+
 Express可谓是Node.js领域Web开发最常用的框架了，之前做微信公众账号的时候就用过Express，不过这次是算是结合MongoDB和Jade开发一个完整的Web应用，不同于之前的经历。
 
 最近写Node.js或者前端相关的代码都是用的JetBrains家的[WebStorm](https://www.jetbrains.com/webstorm/)，前段时间JetBrains的产品开始对[edu邮箱的免费](https://www.jetbrains.com/student/)，正好问妹纸借了edu的邮箱注册了JetBrains的账号，于是下载了WebStorm等一系列IDE。
