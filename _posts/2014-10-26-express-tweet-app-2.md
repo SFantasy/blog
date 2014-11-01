@@ -90,8 +90,16 @@ User.newAndSave = function (name, password, callback) {
 
 ## 登录
 
-在实现了注册之后，理所当然的要实现的是登录的功能。
+在实现了注册之后，理所当然的要实现的是登录的功能。与注册一样，在提交登录请求时，例如`/login`，请求由controller获取，然后通过service的方法查找数据库中是否存在该登录用户。
+
+若存在，则通过session存储登录用户的信息：
 
 ```
-
+req.session.user = u;
 ```
+
+随后根据需求进行重定向即可。而登出的功能也很简单，只要把存储的session删除就行了。
+
+---
+
+To be continued.
