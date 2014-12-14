@@ -39,7 +39,7 @@ description: The blog of fantasyshao, front-end development, learning iOS.
     {% for count in (2..paginator.total_pages) %}
         <li>
             {% if count == paginator.page %}
-                <a class="current-page">{{count}}</span>
+                <a class="current-page">{{count}}</a>
             {% else %}
                 <a class="" href="/page{{count}}">{{count}}</a>
             {% endif %}
