@@ -3,7 +3,7 @@ root: /
 permalink: /:categories/:year/:month/:day/:title/
 markdown: rdiscount
 highlighter: pygments
-paginate: 12
+paginate: 15
 
 title: Blog | Fantasy
 author: Fantasy Shao

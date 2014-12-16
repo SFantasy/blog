@@ -1,19 +1,25 @@
 .header {
-    border-bottom: 1px solid #eee;
-    padding: 1em;
     font-family: 'Avenir Next', Avenir, 'Helvetica Neue', sans-serif;
 }
 
-.header, .site-container {
+a {
+    -webkit-transition: color 0.5s linear;
+    -moz-transition: color 0.5s linear;
+    transition: color 0.5s linear;
+}
+
+.site-container {
     max-width: 640px;
     margin: 0 auto;
 }
 
 .header .site-title {
+    margin: 0;
     font-size: 30px;
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
+    padding: 10px 0;
 }
 
 .site-title > a {
@@ -21,10 +27,37 @@
     color: #4b4b4b;
 }
 
+.site-nav {
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.02);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
 .nav-inner {
-    display: block !important;
-    max-width: 550px;
-    margin: 0 auto !important;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+    font-size: 0;
+}
+
+.nav-inner li {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.nav-inner li a {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.nav-inner li a:hover {
+    text-decoration: underline;
 }
 
 .site-container {
@@ -47,17 +80,30 @@
 
 .site-lists > li {
     font-family: Lora, Georgia, sans-serif;
-    padding: 5px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-.site-lists > li a {
-    font-size: 18px;
+.site-lists > li > .list-title {
     text-decoration: none;
-    color: #444;
+    font-size: 20px;
+    color: #333;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.site-lists > li > .list-info {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.3);
+    margin-right: 10px;
+}
+
+.site-lists > li > .list-info a {
+    color: #57AD68;
+    text-decoration: none;
 }
 
 .site-lists > li a:hover {
-    color: #777;
     text-decoration: underline;
 }
 
@@ -76,6 +122,34 @@
     margin-left: 10px;
     padding-left: 10px;
     border-left: 4px solid #eee;
+}
+
+.category {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif !important;
+}
+
+.category h3 {
+    color: #333;
+}
+
+.site-category {
+    padding: 0;
+    list-style: none;
+}
+
+.site-category li {
+    margin: 5px 0;
+    padding-left: 5px;
+    border-left: 4px solid rgba(0, 0, 0, 0.07);
+}
+
+.site-category li a {
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.site-category li a:hover {
+    text-decoration: underline;
 }
 
 .site-paginator {
