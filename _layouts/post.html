@@ -28,10 +28,10 @@ layout: template
     </div>
     <nav>
         {% if page.previous %}
-            <span>&lt;&lt; Previous：<a href="{{ page.previous.url }}" rel="prev" title="{{ page.previous.title }}">{{ page.previous.title }}</a></span>
+            <p>&lt;&lt; Previous：<a href="{{ page.previous.url }}" rel="prev" title="{{ page.previous.title }}">{{ page.previous.title }}</a></p>
         {% endif %}
         {% if page.next %}
-            <span>Next：<a href="{{ page.next.url }}" rel="next" title="{{ page.next.title }}">{{ page.next.title }}</a>&gt;&gt;</span>
+            <p>Next：<a href="{{ page.next.url }}" rel="next" title="{{ page.next.title }}">{{ page.next.title }}</a> &gt;&gt;</p>
         {% endif %}
     </nav>
     <div>
