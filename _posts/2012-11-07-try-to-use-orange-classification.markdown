@@ -2,8 +2,10 @@
 layout: post
 title: "Try to use ORANGE: Classification"
 date: 2012-11-07 11:18
+keywords: Machine Learning, Orange, Python, Classification
+description: Using Orange as a classification tool to learn ML
 comments: true
-categories: Data_Mining
+category: Machine Learning
 ---
 
 ### 环境
@@ -46,7 +48,7 @@ Kubuntu 12.04/Python 2.7.3/Orange 2.0b
 	original democrat classified as  republican
 	original democrat classified as  democrat
 	original democrat classified as  democrat
-	
+
 可以看出，Naive Bayes在第三个实例处出现了错误，但是其他的都是正确的。  
 
 	import orange
@@ -59,13 +61,13 @@ Kubuntu 12.04/Python 2.7.3/Orange 2.0b
 	    b = classifier(i)
 	    if a == b:
 	        corrcetNum += 1
-	    
+
 	print "CA:%.3f" %(float(corrcetNum)/len(data))
 	#计算分类正确率
 	#输出结果
 	Possible classes: <republican, democrat>
 	CA:0.9034
-	
+
 可见，Naive Bayes在数据量比较大的时候分类的正确率还是比较高的。
 #### 参考资料
 ***
