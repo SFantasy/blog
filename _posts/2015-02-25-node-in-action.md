@@ -14,6 +14,8 @@ category: Writing
 
 当然也欢迎通过本书的Github[主页](https://github.com/SFantasy/node-in-action)提出问题、纠正错误。
 
-如果觉得此书对你有帮助，可以通过微信支付打赏作者：
+---
 
-<img style="width: 50%" src="http://7u2gnn.com1.z0.glb.clouddn.com/donate.jpg">
+*2015-04-19 update*
+
+本书的中文版基本上已经成稿，但是英文版由于时间的原因会逐步翻译。由于 Gitbook 上生成的中文PDF效果实在有点寒碜，建议还是在 Web 浏览器上阅读，或者下载 ePub 等格式阅读。

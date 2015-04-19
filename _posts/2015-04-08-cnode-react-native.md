@@ -2,8 +2,8 @@
 layout: post
 date: 2015-04-08 23:00
 title: React Native 开发 CNode iOS 客户端
-keywords:
-description: React, React Native, CNode client
+keywords: React, React Native, CNode client
+description: Develop CNode iOS App using Facebook react-native
 comments: true
 category: React
 ---
@@ -74,8 +74,7 @@ React Native 的样式亦是用 JavaScript 来编写的，在不看文档的情�
 
 ## 截图
 
-<img width="50%" src="https://github.com/SFantasy/CNode-React-Native/raw/master/home.png">
-<img width="50%" src="https://github.com/SFantasy/CNode-React-Native/raw/master/topic.png">
+<img width="50%" src="https://github.com/SFantasy/CNode-React-Native/raw/master/home.png"><img width="50%" src="https://github.com/SFantasy/CNode-React-Native/raw/master/topic.png">
 
 ## 参考文档
 
