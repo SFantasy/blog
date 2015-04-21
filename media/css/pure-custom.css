@@ -237,18 +237,29 @@ a {
     border-bottom: 1px solid #eee;
 }
 
-.article-content pre, pre code, code {
+.article-content code, .article-content pre {
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", Courier, monospace;
+    background-color: #F9F2F4;
+    color: #C7254E;
+    font-size: 90%;
+    border: none;
+    padding: 2px 5px;
+}
+
+.article-content pre {
     background-color: #f9f9f9;
     font-size: 13px;
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
 }
 
 .article-content pre code {
+    background-color: #f9f9f9;
     border: none;
+    color: #333;
     padding: 0;
+    font-size: 100%;
 }
 
-.article-content pre, code {
+.article-content pre {
     border: 1px solid #ddd;
 }
 
@@ -257,10 +268,6 @@ a {
     word-wrap: break-word;
     padding: 3px 5px;
     border-radius: 3px;
-}
-
-.article-content code {
-    padding: 0 5px;
 }
 
 .article-content blockquote {
