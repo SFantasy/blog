@@ -1,3 +1,7 @@
+body {
+  font-size: 16px;
+}
+
 .header {
     font-family: 'Avenir Next', Avenir, 'Helvetica Neue', sans-serif;
 }
@@ -67,7 +71,7 @@ a {
 
 .site-heading-2 {
     font-family: 'Avenir Next', Avenir, 'Helvetica Neue', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -237,6 +241,12 @@ a {
     border-bottom: 1px solid #eee;
 }
 
+.article-content p {
+  font-family: freight-text-pro, Georgia, Cambria, 'Times New Roman', Times, serif;
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.16px;
+}
+
 .article-content code, .article-content pre {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", Courier, monospace;
     background-color: #F9F2F4;
@@ -274,6 +284,8 @@ a {
     border-left: 4px solid #d5d5d5;
     padding: 0 15px;
     color: #777;
+    margin: 1em 0;
+    font-style: italic;
 }
 
 .article-content img {
