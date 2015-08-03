@@ -5,7 +5,7 @@ title: 程序员世界的缩写
 keywords: A.K.A, 缩写, 程序猿
 description: 程序员世界的缩写，不恰当的缩写
 comments: true
-category: Others
+category: Essay
 ---
 
 程序员世界中有很多常见的缩写，许多人对此甚是津津乐道。
