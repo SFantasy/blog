@@ -245,6 +245,7 @@ a {
   font-family: freight-text-pro, Georgia, Cambria, 'Times New Roman', Times, serif;
   color: rgba(0, 0, 0, 0.8);
   letter-spacing: 0.16px;
+  line-height: 1.5;
 }
 
 .article-content code, .article-content pre {
