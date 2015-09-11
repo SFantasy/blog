@@ -74,4 +74,4 @@ category: Essay
 *本段中的缩写:*
 
 - SNS: Social Network Service
-- API: Application Interface
+- API: Application Programming Interface
