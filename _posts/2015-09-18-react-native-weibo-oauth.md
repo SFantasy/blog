@@ -92,4 +92,6 @@ fetch(auth_url, {
 
 获取到 access_token 之后就可以进行 API 的调用了。当然要记得用一个 state 来标记登录的状态，进入 App 判断之后再进行 View 之间的切换。
 
+Github: [WeiboOAuth](https://github.com/Fantasy0/WeiboOAuth)
+
 --EOF--
