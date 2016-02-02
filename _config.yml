@@ -1,8 +1,7 @@
 # coding: utf-8
 root: /
 permalink: /:categories/:year/:month/:day/:title/
-markdown: rdiscount
-highlighter: pygments
+markdown: kramdown
 paginate: 15
 
 title: Blog | Fantasy
@@ -14,5 +13,4 @@ category_list: true
 links: true
 address: http://blog.fantasy.codes
 url: http://blog.fantasy.codes
-gems:
-  - jekyll-feed
+gems: [jekyll-paginate]
