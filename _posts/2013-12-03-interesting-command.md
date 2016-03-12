@@ -10,7 +10,7 @@ description: 几个有趣的命令行工具
 
 最近发现了几个比较有意思的命令行工具，分享一下。
 
-## FIFGlet
+## FIGlet
 
 FIGlet的介绍可以看看他的[man page](http://www.figlet.org/figlet-man.html)。
 
