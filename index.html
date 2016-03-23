@@ -14,7 +14,7 @@ description: The blog of fantasyshao, front-end development, learning iOS.
                 <div class="list-info">
                     in
                     {% for cat in post.categories %}
-                    <a href="/categories.html#{{ cat }}-ref" title="{{ cat }}" rel="category tag">
+                    <a href="/categories#{{ cat }}-ref" title="{{ cat }}" rel="category tag">
                         {{ cat }}
                     </a>
                     {% endfor %}
@@ -32,7 +32,7 @@ description: The blog of fantasyshao, front-end development, learning iOS.
         <ul class="site-category">
             {% for cat in site.categories %}
             <li class="list-items">
-                <a href="/categories.html#{{ cat[0] }}-ref" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} <sup>({{ cat[1].size }})</sup></a>
+                <a href="/categories#{{ cat[0] }}-ref" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} <sup>({{ cat[1].size }})</sup></a>
             </li>
             {% endfor %}
         </ul>
