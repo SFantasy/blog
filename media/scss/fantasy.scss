@@ -1,0 +1,260 @@
+@import '__cube.scss';
+@import '__post.scss';
+@import '__page.scss';
+
+// Global settings
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: #212121;
+}
+
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+  color: #212121;
+  background-color: #eee;
+}
+
+// Mixins
+
+@mixin box-shadow {
+  box-shadow: 0 1px 8px rgba(0,0,0,.3);
+}
+
+// Header
+
+.site-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: .5rem 0;
+  background-color: #fefefe;
+  @include box-shadow;
+
+  .header-inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .header-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .site-title {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    letter-spacing: .25em;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+}
+
+// Nav
+
+.site-nav {
+  .nav-inner {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    li > a {
+      padding: 0 .5rem;
+      font-size: .8rem;
+      color: #999;
+      transition: color .3s ease;
+      &:hover {
+        color: #333;
+      }
+    }
+  }
+}
+
+// Container
+
+
+.site-container {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  max-width: 640px;
+  margin: 0 auto;
+  padding-top: 71px;
+
+  .site-main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.article-lists {
+  margin: 1rem;
+  padding: 0;
+  list-style: none;
+  min-width: 18rem;
+
+  li {
+    border-radius: 2px;
+    @include box-shadow;
+    background-color: #fefefe;
+    padding: .5rem 1rem;
+    &:hover {
+      box-shadow: 0 1px 8px rgba(0,0,0,.5);
+    }
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    .list-title {
+      font-weight: 200;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-size: 1.2rem;
+      padding-bottom: .5rem;
+      border-bottom: 1px solid #eee;
+      transition: all .3s ease;
+      &:hover {
+        color: #777;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, .04);
+      }
+    }
+    .list-info {
+      color: #999;
+      padding-top: .5rem;
+      font-size: .8rem;
+      a {
+        color: #0f9d58;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .site-container {
+    padding-top: 99px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .article-lists {
+    max-width: 18rem;
+  }
+}
+
+// Category
+
+@media screen and (max-width: 700px) {
+  .site-category {
+    display: none;
+  }
+}
+
+.site-category {
+  width: 12rem;
+  border-radius: 2px;
+  @include box-shadow;
+  background-color: #fefefe;
+  padding: .5rem 1rem;
+  margin: 1rem 0;
+  h3 {
+    margin: 0;
+    padding-bottom: .25rem;
+    font-size: 1.2rem;
+    font-weight: 100;
+    border-bottom: 1px solid #ddd;
+  }
+  .category {
+    margin: 0;
+    margin-top: .5rem;
+    padding: 0;
+    list-style: none;
+    li {
+      a {
+        font-size: .8rem;
+        &:hover {
+          color: #777;
+        }
+      }
+
+    }
+  }
+}
+
+// Paginator
+
+.site-paginator {
+  align-self: center;
+  margin: 1rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  li {
+    list-style: none;
+    margin: 0 .5rem;
+
+    a {
+      font-size: .8rem;
+      background-color: #fefefe;
+      padding: .25rem .9rem;
+      border-radius: 2px;
+      color: #666;
+      transition: all .3s ease;
+      &:hover {
+        background-color: #fff;
+        color: #333;
+        @include box-shadow;
+      }
+      &.disable {
+        background-color: #f5f5f5;
+        color: #999;
+      }
+    }
+  }
+}
+
+// Footer
+
+.site-footer {
+  padding: 1rem 0;
+  p, a {
+    font-size: .8rem;
+    color: #aaa;
+  }
+
+  p {
+    text-align: center;
+    margin: 0;
+  }
+
+  a {
+    display: inline-block;
+    margin: 0 .5rem;
+    transition: color .3s ease;
+    &:hover {
+      color: #333;
+    }
+  }
+}

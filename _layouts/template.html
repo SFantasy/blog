@@ -14,9 +14,7 @@
         <link rel="shortcut icon" href="/media/logo.ico">
         <link rel="apple-touch-icon" href="/media/logo.png">
         <link rel="alternate" href="/atom.xml" title="{{site.title}}" type="application/atom+xml">
-        <link rel="canonical" href="">
-        <link rel="stylesheet" href="/media/css/pure-min.css">
-        <link rel="stylesheet" href="/media/css/pure-custom.css">
+        <link rel="stylesheet" href="/media/css/fantasy.css">
         <link rel="stylesheet" href="/media/css/syntax.css">
         <!--[if lte IE 8]>
             <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
@@ -40,8 +38,21 @@
         <script type="text/javascript" src="http://tajs.qq.com/stats?sId=35509043" charset="UTF-8"></script>
     </head>
     <body>
-        <header class="header">
-            <h1 class="site-title"><a href="/" rel="nofollow">Fantasy</a></h1>
+        <header class="site-header">
+          <div class="header-inner">
+            <div class="header-left">
+              <div class="cube">
+                <div class="origin active">
+                  <div class="wall front"></div>
+                  <div class="wall left"></div>
+                  <div class="wall back"></div>
+                  <div class="wall right"></div>
+                  <div class="wall top"></div>
+                  <div class="wall bottom"></div>
+                </div>
+              </div>
+              <h1 class="site-title"><a href="/" rel="nofollow">Fantasy</a></h1>
+            </div>
             <nav class="site-nav">
                 <ul class="nav-inner">
                     <li><a href="/" rel="nofollow">Home</a></li>
@@ -51,12 +62,13 @@
                     <li><a href="//resume.github.io/?SFantasy">Résumé</a></li>
                 </ul>
             </nav>
+          </div>
         </header>
-        <article class="site-container">
+        <div class="site-container">
             {{ content }}
-        </article>
+        </div>
         <footer class="site-footer">
-            <p>{<a href="//github.com/SFantasy">GitHub</a>·<a href="//fantasy.codes">Fantasy Codes</a>·<a href="//jekyllrb.com/">Jekyll</a><a href="https://plus.google.com/114374929085618541866" rel="publisher"></a>}</p>
+            <p>{<a href="//github.com/SFantasy">GitHub</a>·<a href="//fantasy.codes">Fantasy Codes</a>·<a href="//jekyllrb.com/">Jekyll</a>}</p>
         </footer>
     </body>
 </html>

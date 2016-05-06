@@ -1,0 +1,136 @@
+.post-content {
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 2px;
+  box-shadow: 0 1px 8px rgba(0,0,0,.3);
+  background-color: #fefefe;
+
+  h1, h2 {
+    line-height: 1.6;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 200;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 200;
+    border-bottom: 1px solid #eee;
+  }
+
+  a {
+    text-decoration: none;
+    color: #07a;
+    &:hover {
+      text-decoration: underline;
+      color: #07f;
+    }
+  }
+
+  .post-info {
+    text-align: center;
+    font-size: .8rem;
+  }
+
+  .article-license {
+    font-size: .7rem;
+    color: #777;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(150, 150, 150, .3);
+    text-align: center;
+  }
+
+  .article-content {
+    font-size: .9rem;
+    font-family: freight-text-pro, Georgia, Cambria, 'Times New Roman', Times, serif;
+
+    p {
+      color: rgba(0, 0, 0, .8);
+      letter-spacing: 0.16px;
+      line-height: 1.5;
+    }
+
+    code, pre {
+      font-family: Menlo, Monaco, Consolas, "Liberation Mono", Courier, monospace;
+      background-color: #F9F2F4;
+      color: #C7254E;
+      font-size: 90%;
+      border: none;
+      padding: 2px 5px;
+    }
+
+    pre {
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      font-size: 13px;
+      overflow: hidden;
+      word-wrap: break-word;
+      padding: 3px 5px;
+      border-radius: 3px;
+
+      code {
+        background-color: #f9f9f9;
+        border: none;
+        color: #333;
+        padding: 0;
+        font-size: 100%;
+      }
+    }
+
+    blockquote {
+      border-left: 4px solid #d5d5d5;
+      padding: 0 15px;
+      color: #777;
+      margin: 1em 0;
+      font-style: italic;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+}
+
+.related {
+  font-size: .8rem;
+}
+
+.post-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 1rem;
+  a {
+    display: inline-block;
+    margin: 1rem 0;
+    color: #444;
+    border-radisu: 2px;
+    font-size: .8rem;
+    background-color: #fefefe;
+    border-raidus: 2px;
+    box-shadow: 0 1px 8px rgba(0,0,0,.3);
+    padding: .5rem 1rem;
+    transition: all .3s ease;
+    &:hover {
+      color: #333;
+      box-shadow: 0 1px 8px rgba(0,0,0,.5);
+    }
+  }
+}
+
+.post-bottom-area {
+  padding: 1rem;
+  width: 100%;
+  .post-bottom-inner {
+    box-shadow: 0 1px 8px rgba(0,0,0,.3);
+    background-color: #fefefe;
+    border-radius: 2px;
+    padding: 1rem;
+  }
+}

@@ -5,42 +5,35 @@ keywords: Blog, fantasyshao, front-end, iOS, Mac
 description: The blog of fantasyshao, front-end development, learning iOS.
 ---
 
-<div class="pure-g">
-    <div class="pure-u-7-12">
-        <ul class="site-lists">
-            {% for post in paginator.posts%}
-            <li>
-                <a class="list-title" href="{{ post.url }}">{{ post.title }}</a>
-                <div class="list-info">
-                    in
-                    {% for cat in post.categories %}
-                    <a href="/categories#{{ cat }}-ref" title="{{ cat }}" rel="category tag">
-                        {{ cat }}
-                    </a>
-                    {% endfor %}
-                    at
-                    <time>{{ post.date | date: "%Y-%m-%d" }}</time>
-                </div>
-
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-    <div class="pure-u-1-12"></div>
-    <div class="pure-u-1-3 category">
-        <h3>Category</h3>
-        <ul class="site-category">
-            {% for cat in site.categories %}
-            <li class="list-items">
-                <a href="/categories#{{ cat[0] }}-ref" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} <sup>({{ cat[1].size }})</sup></a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
+<div class="site-main">
+  <ul class="article-lists">
+    {% for post in paginator.posts%}
+      <li>
+          <a class="list-title" href="{{ post.url }}">{{ post.title }}</a>
+          <div class="list-info">
+              in
+              {% for cat in post.categories %}
+              <a href="/categories#{{ cat }}-ref" title="{{ cat }}" rel="category tag">
+                  {{ cat }}
+              </a>
+              {% endfor %}
+              at
+              <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+          </div>
+      </li>
+    {% endfor %}
+  </ul>
+  <div class="site-category">
+    <h3>Category</h3>
+    <ul class="category">
+        {% for cat in site.categories %}
+        <li class="list-items">
+            <a href="/categories#{{ cat[0] }}-ref" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} <sup>({{ cat[1].size }})</sup></a>
+        </li>
+        {% endfor %}
+    </ul>
+  </div>
 </div>
-
-
-<!-- 分页 BEIGN -->
 <ul class="site-paginator">
     <li>
     {% if paginator.previous_page %}
@@ -80,4 +73,3 @@ description: The blog of fantasyshao, front-end development, learning iOS.
         {% endif %}
     </li>
 </ul>
-<!-- 分页 END -->

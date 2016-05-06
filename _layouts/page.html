@@ -3,13 +3,13 @@ layout: template
 ---
 
 <section class="wrapper">
-    <h2>{{ page.title }}</h2>
+  
+  <div class="page-content">
+    {{ content }}
+  </div>
+  {% if page.comments %}
     <div>
-        {{ content }}
+      {% include comments.md %}
     </div>
-    {% if page.comments %}
-        <div>
-            {% include comments.md %}
-        </div>
-    {% endif %}
+  {% endif %}
 </section>

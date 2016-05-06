@@ -3,20 +3,25 @@ layout: page
 title: Categories
 comments: false
 ---
-<section>
-    <ul>
-        {% for cat in site.categories %}
-            <li class="list-items">
-                <a href="/categories#{{ cat[0] }}-ref" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} <sup>({{ cat[1].size }})</sup></a>
-            </li>
-        {% endfor %}
-    </ul>
+
+<section class="page-nav">
+  <ul>
+    {% for cat in site.categories %}
+      <li class="list-items">
+        <a href="/categories#{{ cat[0] }}-ref" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} <sup>({{ cat[1].size }})</sup></a>
+      </li>
+    {% endfor %}
+  </ul>
 </section>
+
+<div class="page-main">
+<h2>{{ page.title }}</h2>
 {% for cat in site.categories %}
-  <h2 class="category" id="{{ cat[0] }}-ref">{{ cat[0] }}</h2>
+  <h3 class="category" id="{{ cat[0] }}-ref">{{ cat[0] }}</h2>
   <ul>
     {% for post in cat[1] %}
-		<li class="post-items"><a href='{{ post.url }}'>{{post.title}}</a></li>
-	{% endfor %}
+      <li class="post-items"><a href='{{ post.url }}'>{{post.title}}</a></li>
+    {% endfor %}
   </ul>
 {% endfor %}
+</div>

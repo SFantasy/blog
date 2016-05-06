@@ -1,0 +1,70 @@
+.cube {
+  perspective: 600px;
+  perspective-origin: 50% 50%;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  display: inline-block;
+
+  .front {
+    transform: translateZ(12px);
+    background-color: rgba(255, 0, 0, .7);
+  }
+
+  .back {
+    transform: translateZ(-12px) rotateX(180deg);
+    background-color: rgba(0, 255, 255, .7);
+  }
+
+  .left {
+    transform: rotateY(-90deg) translateZ(12px);
+    background-color: rgba(0, 255, 0, .7);
+  }
+
+  .right {
+    transform: rotateY(90deg) translateZ(12px);
+    background-color: rgba(0, 0, 255, .7);
+  }
+
+  .top {
+    transform: rotateX(90deg) translateZ(12px);
+    background-color: rgba(220, 220, 0, .7);
+  }
+
+  .bottom {
+    transform: rotateX(-90deg) translateZ(12px);
+    background-color: rgba(255, 0, 255, .7);
+  }
+}
+
+.origin {
+  height: 24px;
+  width: 24px;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.active {
+  -webkit-animation: around 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes around {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(-360deg) rotateY(-360deg);
+  }
+}
+
+.wall {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, .5);
+  color: white;
+  text-align: center;
+  line-height: 24px;
+}

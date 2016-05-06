@@ -2,3 +2,4 @@ _site/
 media/css/.sass-cache/*
 .idea
 examples/sass
+node_modules/

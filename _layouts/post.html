@@ -26,17 +26,19 @@ layout: template
         </li>
         {% endfor %}
     </div>
-    <nav>
-        {% if page.previous %}
-            <p>&lt;&lt; Previous：<a href="{{ page.previous.url }}" rel="prev" title="{{ page.previous.title }}">{{ page.previous.title }}</a></p>
-        {% endif %}
-        {% if page.next %}
-            <p>Next：<a href="{{ page.next.url }}" rel="next" title="{{ page.next.title }}">{{ page.next.title }}</a> &gt;&gt;</p>
-        {% endif %}
-    </nav>
-    <div>
-        {% include share.md %}
-        <br />
-        {% include comments.md %}
-    </div>
 </section>
+<nav class="post-pagination">
+  {% if page.previous %}
+    <a href="{{ page.previous.url }}" rel="prev" title="{{ page.previous.title }}">&lt;&lt; Previous：《{{ page.previous.title }}》</a>
+  {% endif %}
+  {% if page.next %}
+    <a href="{{ page.next.url }}" rel="next" title="{{ page.next.title }}">Next：《{{ page.next.title }}》&gt;&gt;</a>
+  {% endif %}
+</nav>
+<div class="post-bottom-area">
+  <div class="post-bottom-inner">
+    {% include share.md %}
+    <br />
+    {% include comments.md %}
+  </div>
+</div>
