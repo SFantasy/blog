@@ -11,7 +11,7 @@ layout: template
             <span>{{ page.date | date: '%Y' }}</span>
         </date>, Category:
         {% for cat in page.categories %}
-            <a href="/categories.html#{{ cat }}-ref" title="{{ cat }}" rel="category tag">{{ cat }}</a>
+            <a href="/categories#{{ cat }}-ref" title="{{ cat }}" rel="category tag">{{ cat }}</a>
         {% endfor %}
     </div>
     <div class="article-content" itemprop="articleBody">
