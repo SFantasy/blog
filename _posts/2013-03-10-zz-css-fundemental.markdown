@@ -5,7 +5,7 @@ date: 2013-3-10 00:07
 comments: true
 keywords: CSS入门, 盒模型, 布局, 前端开发
 description: 简单的介绍CSS的布局原理，适合新手入门
-categories: Front-end-Dev
+categories: CSS
 ---
 
 本文出自@寒冬winter的[微博](http://photo.weibo.com/1196343093/wbphotos/large/photo_id/3554004161919635?refer=weibofeedv5)

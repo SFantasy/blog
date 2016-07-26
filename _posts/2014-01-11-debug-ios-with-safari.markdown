@@ -3,7 +3,7 @@ layout: post
 title: 用Safari和iOS Simulator调试
 date: 2014-01-11 20:00
 comments: true
-categories: Front-end-dev
+categories: Front-end
 keywords: iOS,safari,debug,调试,Mobile,移动开发,前端
 description: 用Safari和iOS Simulator调试网页
 ---

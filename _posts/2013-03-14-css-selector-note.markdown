@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Learn CSS Selectors"
+title: Learn CSS Selectors
 comments: true
-categories: Front-end-Dev
+categories: CSS
 keywords: CSS,选择器,selectors,前端开发
 description: 学习CSS选择器
 ---

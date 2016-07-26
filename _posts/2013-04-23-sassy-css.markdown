@@ -3,7 +3,7 @@ layout: post
 title: "「时髦」的CSS"
 date: 2013-04-23 09:55
 comments: true
-categories: Front-end-Dev
+categories: CSS
 keywords: CSS,SASS,SCSS,前端开发
 description: 了解SASS，学习SASS
 ---

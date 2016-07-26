@@ -1,5 +1,6 @@
 _site/
 media/css/.sass-cache/*
 .idea
+.jekyll-metadata
 examples/sass
 node_modules/

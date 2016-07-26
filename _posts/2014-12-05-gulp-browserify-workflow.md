@@ -5,7 +5,7 @@ title: JavaScript模块化、Browserify与gulpjs
 keywords: 前端模块化, gulp, browserify, workflow, 前端工作流, 依赖管理, CommonJS, AMD
 description: 使用Browserify更好的编写模块化的客户端JavaScript
 comments: true
-category: Node.js
+category: Front-end
 ---
 
 最初是想在文章中对比、探讨、研究一下JavaScript模块化方面的内容（其实连提纲都写好了），但是写着写着发现自己的功力不够：

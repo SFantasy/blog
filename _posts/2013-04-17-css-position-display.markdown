@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "CSS中跌过的坑"
+title: CSS中跌过的坑
 comments: true
 date: 2013-04-17 09:49
-categories: Front-end-Dev
+categories: CSS
 keywords: CSS,前端开发,position,display
 description: 记录前端开发中跌过的坑
 ---

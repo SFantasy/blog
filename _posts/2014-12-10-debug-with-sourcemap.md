@@ -1,11 +1,11 @@
 ---
 layout: post
 date: 2014-12-10 23:00
-title: 使用sourcemap调试Sass与CoffeeScript
+title: 使用 sourcemap 调试 Sass 与 CoffeeScript
 keywords: JavaScript, CoffeeScript, Sass, sourcemap, Chrome
 description: Debugging Sass and CoffeeScript with sourcemaps using Chrome dev tools
 comments: true
-category: Front-end-dev
+category: Front-end
 ---
 
 最近在做一个小东西：[Toolbox](https://github.com/FantasyMedia/Toolbox)，目的是提供一个给开发者使用的「工具箱」。也正是在做这个东西的同时，研究了一下sourcemap相关的内容。
