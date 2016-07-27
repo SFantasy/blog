@@ -1,8 +1,7 @@
 .post-content {
   padding: 1rem;
-  margin: 1rem;
-  border-radius: 2px;
-  background-color: #fefefe;
+  background-color: white;
+  box-shadow: 0px 30px 60px 0px #D3DDE2;
 
   h1, h2 {
     line-height: 1.6;
@@ -10,7 +9,7 @@
 
   h1 {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 200;
   }
 
@@ -32,6 +31,8 @@
   .post-info {
     text-align: center;
     font-size: .8rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px dashed rgba(0, 0, 0, .1);
   }
 
   .article-license {
@@ -104,7 +105,6 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  padding: 0 1rem;
   a {
     display: inline-block;
     margin: 1rem 0;
@@ -113,18 +113,17 @@
     font-size: .8rem;
     background-color: #fefefe;
     border-raidus: 2px;
-    box-shadow: 0 1px 8px rgba(0,0,0,.3);
+    box-shadow: 0 1px 8px rgba(0, 0, 0,.03);
     padding: .5rem 1rem;
     transition: all .3s ease;
     &:hover {
       color: #333;
-      box-shadow: 0 1px 8px rgba(0,0,0,.5);
+      box-shadow: 0 1px 8px rgba(0, 0, 0,.5);
     }
   }
 }
 
 .post-bottom-area {
-  padding: 1rem;
   width: 100%;
   .post-bottom-inner {
     background-color: #fefefe;

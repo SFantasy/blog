@@ -22,7 +22,7 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: 1.4;
   color: #212121;
-  background-color: rgba(255, 255, 255, .4);
+  background-color: #ECF0F1;
 }
 
 // Mixins
@@ -73,13 +73,15 @@ body {
     list-style: none;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+
     li > a {
       padding: 0 .5rem;
-      font-size: .8rem;
-      color: #999;
+      font-size: 1rem;
+      color: #666;
       transition: color .3s ease;
       &:hover {
-        color: #333;
+        color: #000;
       }
     }
   }
@@ -126,7 +128,7 @@ body {
       display: -webkit-box;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       padding-bottom: .5rem;
       border-bottom: 1px solid #eee;
       transition: all .3s ease;
@@ -168,7 +170,6 @@ body {
 .site-category {
   width: 12rem;
   border-radius: 2px;
-  @include box-shadow;
   background-color: #fefefe;
   padding: .5rem 1rem;
   margin: 1rem 0;
