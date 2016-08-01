@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2016-07-25 21:00:00
+date: 2016-07-26 21:00:00
 title: 學習 Canvas 之二三事
 keywords: canvas, javascript
 description:
@@ -51,7 +51,7 @@ var img = new Image();
 img.src = 'http://i.imgur.com/OZup9ew.jpg';
 
 img.onload = e => {
-	ctx.drawImage(img, 0, 0);
+  ctx.drawImage(img, 0, 0);
 }
 ```
 
@@ -93,3 +93,18 @@ if (1 !== ratio) {
 ```
 
 這樣處理之後，就可以保證使用 Canvas 繪製的內容在 Retina 屏幕下可以完美的展示。
+
+## 輸出圖片
+
+Canvas 轉換成圖片，可以直接使用原生的方法：
+
+```
+canvas.toDataURL()
+```
+
+這個方法可以接受兩個參數：
+
+- type: 指定輸出圖片的格式，默認的格式為 `image/png`
+- encoderOptions: 指定輸出的圖片質量，範圍在 0-1 之間，默認的為 0.92
+
+值得注意的一點是，如果 Canvas 中使用了來自其他域的圖片，是無法使用 `toDataURL()` 進行輸出的 ﹣ 這個問題解決的辦法是需要使用的圖片為「允許跨域」的，因此可能需要通過服務器進行一次轉發，再獲取圖片的地址。
