@@ -3,7 +3,7 @@ layout: post
 title: 对viewport在实战中的一些研究
 date: 2013-10-06 16:00
 comments: true
-categories: Front-end-dev
+categories: Front-end
 keywords: viewport,前端,实战,研究
 description: 对viewport在实战中的一些研究
 ---
