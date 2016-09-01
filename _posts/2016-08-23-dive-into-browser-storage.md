@@ -109,15 +109,7 @@ IndexedDB，顾名思义，是一种使用索引进行高性能检索的数据�
 
 相对于前文中提到的 cookies 与本地存储而言，IndexedDB 可以在浏览器端存储更为复杂、大量的结构化数据或者文件 <sup>3</sup>。
 
-先来看看如何使用 IndexedDB 的。
-
-### 使用 IndexedDB
-
-不同于前文提到的存储方式，IndexedDB 需要打开数据库才能进行后续的操作：
-
-```javascript
-indexedDB.open('TestDatabase', 3);
-```
+先来看看如何使用 IndexedDB 的（以下内容在 Chrome 上测试）。
 
 ### 一些核心概念
 
@@ -126,6 +118,37 @@ indexedDB.open('TestDatabase', 3);
 - 大部分 IndexedDB 的接口是异步的
 - IndexedDB 使用了大量的请求
 - IndexedDB 是面向对象的
+- IndexedDB 不使用结构化的 SQL
+- IndexedDB 遵循同源策略
+
+### 使用 IndexedDB
+
+不同于前文提到的存储方式，IndexedDB 需要打开数据库才能进行后续的操作：
+
+```javascript
+var req = indexedDB.open('TestDatabase', 1);
+
+req.onsuccess = function (e) {
+  // 获取 IndexedDB 对象
+  var db = e.target.result
+}
+```
+
+在使用 `open` 方法的时候传入了两个参数，第一个参数是数据库的名称，第二个是版本：
+
+- 如果传入的名称不存在浏览器已存在的 IndexedDB 列表中，就会创建一个空的数据库，否则就打开原有的数据库
+- 如果在打开的时候传入的版本号比之前打开过的版本号要低，则会无法连接并抛出错误（下文中会介绍如何捕获并做一些处理）
+
+请求对象还提供了一个用来监听错误的方法：
+
+```javascript
+req.onerror = function (e) {
+  // 打印错误信息
+  console.log('Error opening IndexedDB: ', e.target.error.message)
+}
+```
+
+> TO BE CONTINUE
 
 ## 参考文章
 
