@@ -108,3 +108,7 @@ canvas.toDataURL()
 - encoderOptions: 指定輸出的圖片質量，範圍在 0-1 之間，默認的為 0.92
 
 值得注意的一點是，如果 Canvas 中使用了來自其他域的圖片，是無法使用 `toDataURL()` 進行輸出的 ﹣ 這個問題解決的辦法是需要使用的圖片為「允許跨域」的，因此可能需要通過服務器進行一次轉發，再獲取圖片的地址。
+
+## 參考
+
+- http://weblogs.asp.net/dwahlin/rendering-text-with-the-html5-canvas
