@@ -72,7 +72,7 @@ function rewritable (target, key, descriptor) {
   return descriptor;
 }
 
-class Foo () {
+class Foo {
   @rewritable
   bar () {
     console.log('baaaaar');
@@ -103,7 +103,7 @@ function writable (value) {
   }
 }
 
-class Foo () {
+class Foo {
   @writable(true)
   bar () {
     console.log('baaaaar');
