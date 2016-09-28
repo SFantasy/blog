@@ -89,13 +89,12 @@ body {
 
 // Container
 
-
 .site-container {
   display: flex;
   flex-direction: column;
   // justify-content: center;
   // align-items: center;
-  max-width: 640px;
+  max-width: 40rem;
   margin: 0 auto;
   padding-top: 71px;
 
@@ -103,6 +102,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: center;
   }
 }
 
@@ -110,7 +110,7 @@ body {
   margin: 1rem;
   padding: 0;
   list-style: none;
-  min-width: 18rem;
+  min-width: 24rem;
 
   li {
     border-radius: 2px;
@@ -161,18 +161,19 @@ body {
 
 // Category
 
-@media screen and (max-width: 700px) {
-  .site-category {
+@media screen and (max-width: 600px) {
+  .site-sidebar {
     display: none;
   }
 }
 
-.site-category {
-  width: 12rem;
+.site-sidebar {
+  width: 18rem;
   border-radius: 2px;
   background-color: #fefefe;
   padding: .5rem 1rem;
   margin: 1rem 0;
+
   h3 {
     margin: 0;
     padding-bottom: .25rem;
