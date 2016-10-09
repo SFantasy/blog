@@ -2,7 +2,7 @@
 layout: post
 date: 2016-10-08 23:00
 title:  Express 自动路由加载的设计与实现
-keywords: Express, router, express-route-loader
+keywords: Express, router, express-load-router
 description: Design and implement automatic router loader with Express
 category: Node.js
 comments: true
@@ -45,7 +45,7 @@ app.get('/home', homeController.renderHomepage);
 
 ## TL;DR
 
-可以翻阅 [express-route-loader](https://github.com/SFantasy/express-route-loader) 的代码，而不需要阅读此文。
+可以翻阅 [express-load-router](https://github.com/SFantasy/express-load-router) 的代码，而不需要阅读此文。
 
 ## 构思
 
@@ -213,7 +213,7 @@ glob.sync('/controllers/**/*.js').forEach(file => {
 
 至此，便已经完成了前文「构思」中提到的三个点。
 
-我在 [express-route-loader](https://github.com/SFantasy/express-route-loader) 中还添加了两个配置项：
+我在 [express-load-router](https://github.com/SFantasy/express-load-router) 中还添加了两个配置项：
 
 - 可以传入一个 `excludeRules` 的数组来配置例外规则，即不纳入自动加载的路径，例如：
 
