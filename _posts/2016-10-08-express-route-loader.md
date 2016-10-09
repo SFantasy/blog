@@ -190,9 +190,9 @@ glob.sync('/controllers/**/*.js').forEach(file => {
   const urlPath = file.replace(/\.[^.]*$/, '').replace('/controllers', '');
   // 获取所有 Controller 中的方法
   const methods = Object.keys(instance);
-  const handler = instance[method];
 
   methods.forEach(method => {
+    const handler = instance[method];
     // 判断 Controller 中输出的类型
     switch (typeof handler) {
         case 'object':
