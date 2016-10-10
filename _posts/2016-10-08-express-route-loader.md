@@ -187,12 +187,12 @@ const app = require('express')();
 glob.sync('/controllers/**/*.js').forEach(file => {
   const instance = require(file);
   // 生成 URL 路径，去掉 .js 去掉 controllers
-  const urlPath = file.replace(/\.[^.]*$/, '').replace('/controllers', '');
+  let urlPath = file.replace(/\.[^.]*$/, '').replace('/controllers', '');
   // 获取所有 Controller 中的方法
   const methods = Object.keys(instance);
 
   methods.forEach(method => {
-    const handler = instance[method];
+    let handler = instance[method];
     // 判断 Controller 中输出的类型
     switch (typeof handler) {
         case 'object':
