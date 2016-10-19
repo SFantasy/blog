@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 exports.renderHomepage = (req, res) => {
   res.render('home');
 };
-``` 
+```
 
 - 定义一个 router
 
@@ -49,7 +49,7 @@ app.get('/home', homeController.renderHomepage);
 
 ## 构思
 
-### Method 
+### Method
 
 对应 HTTP 的各种请求方式，在 Express 中可以使用 `app.get()`, `app.post()`, `app.delete()`, `app.put()` 等方式来定义对应的路由。
 
@@ -228,5 +228,32 @@ new Map([
   ['/home', '/']
 ])
 ```
+
+**Update**
+
+前段时间在一些项目中应用了 express-load-router，发现了这样一个问题：
+
+项目的路由数量如果不是特别的少，通过 `exports.GET` 这样的方式定义路由会让项目的文件数量过多（由于一开始的设计是通过文件来区分路径，而 exports 的方法区分 HTTP Method。
+
+针对这一点我重新设计了一下 express-load-router 中的 controller 定义方式：
+
+```js
+exports.api = {
+  method: 'GET',
+  params: [':id'],
+  handler(req, res) {
+    res.send('API');
+  }
+};
+```
+
+- Method 不再通过方法名定义，而是增加了一个参数
+- 如果通过函数定义那么默认的 Method 为 GET
+- URL 中将 'api' 增加到路径后面，如果只想以文件路径为 URL，则方法 名可以定义为 index
+- 可以传入一个数组的形式，避免只能对同一个 URL 定义一种 Method
+
+由于这些改变不向下兼容，所以直接将版本号升级到 2.0.0。
+
+详情请可以参考[项目主页](https://github.com/SFantasy/express-load-router)，另外单独生成了一个 [gh-pages](https://sfantasy.github.io/express-load-router )。
 
 --EOF--
