@@ -2,79 +2,36 @@
 layout: template
 title: Blog - Fantasy Shao
 keywords: Blog, fantasyshao, front-end, Node.js, React, iOS, Mac
-description: The blog of fantasyshao, front-end development, learning iOS.
+description: The blog of fantasyshao, programming, learning and reading.
 ---
 
-<div class="site-main">
-  <div class="site-sidebar">
-    <div>
-      <a href="https://github.com/SFantasy">
-        <img src="https://avatars0.githubusercontent.com/u/1639327?v=3&s=466" alt="avatar" width="100" height="100" />
-      </a>
-    </div>
-    <h3>Categories</h3>
-    <ul class="category">
-        {% for cat in site.categories %}
-        <li class="list-items">
-            <a href="/categories#{{ cat[0] }}-ref" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} <sup>({{ cat[1].size }})</sup></a>
-        </li>
-        {% endfor %}
-    </ul>
-  </div>
-  <ul class="article-lists">
-    {% for post in paginator.posts%}
-      <li>
-          <a class="list-title" href="{{ post.url }}">{{ post.title }}</a>
-          <div class="list-info">
-              in
-              {% for cat in post.categories %}
-              <a href="/categories#{{ cat }}-ref" title="{{ cat }}" rel="category tag">
-                  {{ cat }}
-              </a>
-              {% endfor %}
-              at
-              <time>{{ post.date | date: "%Y-%m-%d" }}</time>
-          </div>
-      </li>
+<div class="articles">
+    {% for post in paginator.posts %}
+    <article class="article" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+        <h2 itemprop="name" class="title">
+            <a href="{{ post.url }}" itemprop="url">{{ post.title }}</a>
+        </h2>
+        <div class="info">
+            <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
+            {% for cat in post.categories %}
+              <a href="/categories#{{ cat }}-ref" title="{{ cat }}" rel="category">{{ cat }}</a>
+            {% endfor %}
+        </div>
+        <p itemprop="description" class="desc">{{ post.content | strip_html | truncatewords: 30 }}</p>
+    </article>
     {% endfor %}
-  </ul>
-</div>
-<ul class="site-paginator">
-    <li>
-    {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-            <a class="current-page" href="/">&#171;</a>
-        {% else %}
-            <a class="" href="/page{{paginator.previous_page}}">&#171;</a>
-        {% endif %}
-    {% else %}
-        <a class="disable" href="/">&#171;</a>
-    {% endif %}
-    </li>
 
-    <li>
-    {% if paginator.page == 1 %}
-        <a href="/" class="current-page">1</a>
-    {% else %}
-        <a href="/" class="">1</a>
-    {% endif %}
-    </li>
-
-    {% for count in (2..paginator.total_pages) %}
-        <li>
-            {% if count == paginator.page %}
-                <a class="current-page">{{count}}</a>
+    <nav class="pagination" role="navigator">
+        {% if paginator.previous_page %}
+            {% if paginator.page == 2 %}
+                <a class="newer-posts" href="/">&larr; Newer</a>
             {% else %}
-                <a class="" href="/page{{count}}">{{count}}</a>
+                <a class="newer-posts" href="/page{{paginator.previous_page}}">&rarr; Newer</a>
             {% endif %}
-        </li>
-    {% endfor %}
-
-    <li>
-        {% if paginator.next_page %}
-            <a class="" href="/page{{paginator.next_page}}">&#187;</a>
-        {% else %}
-            <a href="/" class="disable">&#187;</a>
         {% endif %}
-    </li>
-</ul>
+        <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+            <a class="older-posts" href="/page{{paginator.next_page}}">Older &rarr;</a>
+        {% endif %}
+    </nav>
+</div>

@@ -1,7 +1,7 @@
 <div>
-	<ul style="list-style:none;margin:0;padding:0;">
+	<ul style="list-style: none; margin: 0; padding: 0;">
 		<li>
-			<h4 style="color:#666;margin:0;font-weight:normal;">多说 Duoshuo</h4>
+			<h4 style="font-size: 16px; color: #666; margin: 0; font-weight: normal;">多说 Duoshuo</h4>
 			<!-- 多说评论框 start -->
 			<div class="ds-thread" data-thread-key="{{ page.title }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
 			<!-- 多说评论框 end -->
@@ -20,7 +20,7 @@
 			<!-- 多说公共JS代码 end -->
 		</li>
 		<li>
-			<h4 style="color:#666;margin:0;font-weight:normal;">Disqus</h4>
+			<h4 style="font-size: 16px; color: #666; margin: 0; font-weight: normal;">Disqus</h4>
 			<div id="disqus_thread"></div>
 			<script type="text/javascript">
 				var disqus_shortname = '027';
@@ -31,7 +31,6 @@
 			  })();
 			</script>
 			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-			<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 		</li>
 	</ul>
 </div>

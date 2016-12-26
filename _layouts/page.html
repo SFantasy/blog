@@ -1,15 +1,24 @@
----
-layout: template
----
-
-<section class="wrapper">
-  
-  <div class="page-content">
-    {{ content }}
+<!DOCTYPE html>
+<html>
+<head>
+    {% include head.html %}
+</head>
+<body>
+<header class="post-nav">
+    <a href="/" class="brand">Fantasy</a>
+    <a href="/about" class="link">About</a>
+    <a href="/archive" class="link">Archive</a>
+    <a href="/categories" class="link">Category</a>
+</header>
+<div class="page-content">
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+</div>
+{% if page.comments %}
+  <div class="page-comment">
+    {% include comments.md %}
   </div>
-  {% if page.comments %}
-    <div>
-      {% include comments.md %}
-    </div>
-  {% endif %}
-</section>
+{% endif %}
+{% include footer.html %}
+</body>
+</html>
