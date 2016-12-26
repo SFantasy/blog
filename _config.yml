@@ -1,10 +1,9 @@
 # coding: utf-8
 root: /
 permalink: /:categories/:year/:month/:day/:title/
-markdown: kramdown
-paginate: 15
-
+paginate: 10
 title: Blog | Fantasy
+description: A blog on programming, learning and reading.
 author: Fantasy Shao
 email: fantasyshao@icloud.com
 subscribe_rss: /atom.xml
