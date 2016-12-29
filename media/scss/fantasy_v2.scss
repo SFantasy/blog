@@ -10,7 +10,7 @@ body {
   margin: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-feature-settings: "liga", "dlig";
 }
 
@@ -187,6 +187,7 @@ $BLUE: #61dafb;
   h2 {
     font-size: 1.6rem;
     border-bottom: 1px solid #eee;
+    padding-bottom: .5rem;
   }
 
   h3 {
@@ -198,8 +199,11 @@ $BLUE: #61dafb;
     color: #07a;
     &:hover {
       text-decoration: underline;
-      color: #07f;
     }
+  }
+
+  hr {
+    border: 1px solid #f2f2f0;
   }
 
   .post-info {
@@ -220,7 +224,6 @@ $BLUE: #61dafb;
 
   .article-content {
     font-size: 1rem;
-    font-family: freight-text-pro, Georgia, Cambria, 'Times New Roman', Times, serif;
 
     p {
       color: rgba(0, 0, 0, .8);
@@ -327,6 +330,7 @@ $BLUE: #61dafb;
     text-transform: uppercase;
     font-size: 24px;
     color: #666;
+    font-weight: 200;
 
     &:hover, &:active {
       color: #333;
