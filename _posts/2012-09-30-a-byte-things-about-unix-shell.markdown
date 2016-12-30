@@ -10,14 +10,18 @@ categories: Shell
 记得之前在看《鸟哥的Linux私房菜》的时候差不多翻到“学习shell与shell script”那一章，所以在阅读完介绍Unix的那一章以及跳过一大刀Unix命令的第二章后，看到了Unix shell的部分。
 
 ## Unix Shell
-#### 用途：
-1.交互式使用；2.定制Unix会话；3.编程。
-#### 种类：
-1.Bourne shell；
 
-2.Korn shell；
+### 用途：
 
-3.C shell。
+1. 交互式使用
+2. 定制Unix会话
+3. 编程
+
+### 种类：
+
+1. Bourne shell
+2. Korn shell
+3. C shell
 
 我们常用的默认shell一般都是bash，也就是被Linus吐槽为“丑陋名称的”“Bourne-again shell”，也有听说是“Born-again shell”的意思。但是不管如何，bash总归是sh的超集（superset）；Korn shell (ksh) 也是 Bourne shell(sh)的增强版，不过与bash不同的是，ksh是贝尔实验室的一个名叫 David Korn 写的，而bash属于鼎鼎大名的GNU项目，所以使得所有的GUN/Linux（当然，还有Mac OS X）的默认shell 是bash。
 
