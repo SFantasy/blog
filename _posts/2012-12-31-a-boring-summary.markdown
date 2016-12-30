@@ -3,7 +3,7 @@ layout: post
 title: A Boring Summary of 2012
 date: 2012-12-31 11:01
 comments: true
-categories: Essay
+categories: Life
 ---
 As 2012 is already in the end, it is really a tremendous fortune for us because 2012 is not the end of the world.
 
