@@ -1,5 +1,6 @@
 :root {
   font-size: 16px;
+  line-height: 1.5;
 }
 
 * {
@@ -339,6 +340,7 @@ $BLUE: #61dafb;
     font-size: 24px;
     color: #666;
     font-weight: 200;
+    text-shadow: 2px 2px rgba(0, 0, 0, .2);
 
     &:hover, &:active {
       color: #333;
@@ -352,6 +354,7 @@ $BLUE: #61dafb;
     margin-left: 1rem;
     float: right;
     line-height: 28px;
+    font-weight: 200;
 
     &:hover, &:active {
       color: #666;
