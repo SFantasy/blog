@@ -17,13 +17,12 @@ comments: yes
 
 ## 联系方式
 
-[iCloud](mailto:fantasyshao@icloud.com) / [GMail](maito:forever.fantasy27@gmail.com)
+[iCloud](mailto:fantasyshao@icloud.com) / [gmail](maito:forever.fantasy27@gmail.com)
 
 ## 其他足迹
 
-- [Github](//github.com/SFantasy) / [npm](//www.npmjs.com/~fantasyshao) / [StackOverflow](//stackoverflow.com/users/1040952/fantasy) 
-- [Twiiter](//twitter.com/ForFantasy) / [Weibo](//weibo.com/shaofantasy) / [Douban](//www.douban.com/fanTasy00)
-
+- [Github](//github.com/SFantasy) / [npm](//www.npmjs.com/~fantasyshao) / [StackOverflow](//stackoverflow.com/users/1040952/fantasy)
+- [Twitter](//twitter.com/ForFantasy) / [Weibo](//weibo.com/shaofantasy) / [Douban](//www.douban.com/fanTasy00)
 
 ## 最近在阅读的书
 
