@@ -22,7 +22,7 @@ $BLUE: #61dafb;
     @content
   }
 }
-  
+
 .header {
   width: 100%;
   max-width: 640px;
@@ -157,9 +157,9 @@ $BLUE: #61dafb;
 
   .footer-bg {
     position: relative;
-    background-size: cover; 
-    background-position: center center; 
-    height: 320px; 
+    background-size: cover;
+    background-position: center center;
+    height: 320px;
     background-image: url('https://drscdn.500px.org/photo/107924581/m%3D2048/14f372d3de264b9bcd796e42590db6f3')
   }
 
@@ -278,6 +278,20 @@ $BLUE: #61dafb;
     img {
       width: 100%;
     }
+
+    table {
+      min-width: 480px;
+      border-collapse: collapse;
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      th, td {
+        padding: 5px 10px;
+        border: 1px solid #e2e2e2;
+      }
+    }
   }
 
 }
@@ -333,7 +347,7 @@ $BLUE: #61dafb;
   @include respond-to(800) {
     padding: 0 1rem;
   }
-  
+
   .brand {
     text-decoration: none;
     text-transform: uppercase;
