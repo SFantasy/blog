@@ -17,7 +17,7 @@ description: The blog of fantasyshao, programming, learning and reading.
               <a href="/categories#{{ cat }}-ref" title="{{ cat }}" rel="category">{{ cat }}</a>
             {% endfor %}
         </div>
-        <p itemprop="description" class="desc">{{ post.content | strip_html | truncatewords: 30 }}</p>
+        <p itemprop="description" class="desc">{{ post.content | strip_html | truncatewords: 10 }}</p>
     </article>
     {% endfor %}
 
