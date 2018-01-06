@@ -1,35 +1,37 @@
 ---
-title: 关于我 - Fantasy
+title: About
 layout: page
 comments: true
 ---
 
-[English version](/about_en/)
+[中文版本](/about/)
 
-欢迎访问我的博客。
+Welcome to visit my blog.
 
-我叫邵淳华，在互联网上的 ID 一般是 Fantasy Shao。
+My name is Shao Chunhua, and usually use my nickname Fantasy on the internet.
 
-家乡是浙江绍兴，2014年毕业于[东南大学](//www.seu.edu.cn)软件学院。
+My homeland is Shaoxing, Zhejiang. 
 
-## 近况
+And I've graduated from the College of Software Engineering of  [Southease University](//www.seu.edu.cn).
 
-- 生活在~~江苏省南京市~~浙江省杭州市
-- 在一家~~[旅游网站](//tuniu.com)~~[电商网站](//youzan.com)任职任职前端工程师
+## Current situation
 
-## 联系方式
+- Living in Hangzhou, Zhejiang
+- Works as a Front-end engineer in [Youzan.com](//youzan.com)
+
+## Contact information
 
 [iCloud](mailto:fantasyshao@icloud.com) / [gmail](maito:forever.fantasy27@gmail.com)
 
-## 其他足迹
+## You can also find me 
 
 - [Github](//github.com/SFantasy) / [npm](//www.npmjs.com/~fantasyshao) / [StackOverflow](//stackoverflow.com/users/1040952/fantasy)
 - [Twitter](//twitter.com/ForFantasy) / [Weibo](//weibo.com/shaofantasy) / [Douban](//www.douban.com/fanTasy00)
 
-## 最近在阅读的书
+## I'm reading
 
 <script type="text/javascript" src="http://www.douban.com/service/badge/fanTasy00/?selection=random&amp;picsize=medium&amp;hideself=on&amp;show=dolist&amp;n=12&amp;hidelogo=on&amp;cat=book&amp;columns=6"></script>
 
-## 部分阅读过的书
+## I've read
 
 <script type="text/javascript" src="http://www.douban.com/service/badge/fanTasy00/?selection=latest&amp;picsize=medium&amp;hideself=on&amp;show=collection&amp;n=18&amp;hidelogo=on&amp;cat=book&amp;columns=6"></script>
