@@ -184,10 +184,6 @@ $BLUE: #61dafb;
     padding: 0 1rem;
   }
 
-  h1, h2, h3, h4 {
-    font-weight: 200;
-  }
-
   h1 {
     text-align: center;
     font-size: 2rem;
@@ -217,7 +213,7 @@ $BLUE: #61dafb;
 
   .post-info {
     text-align: center;
-    font-size: .8rem;
+    font-size: 1rem;
     color: #666;
     padding-bottom: .5rem;
     border-bottom: 1px dashed rgba(0, 0, 0, .1);
@@ -280,7 +276,7 @@ $BLUE: #61dafb;
     }
 
     table {
-      min-width: 480px;
+      width: 100%;
       border-collapse: collapse;
 
       th {
@@ -297,7 +293,7 @@ $BLUE: #61dafb;
 }
 
 .related {
-  font-size: .8rem;
+  font-size: 1rem;
   margin: 0;
   padding: 0;
   list-style: none;

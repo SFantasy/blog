@@ -3,7 +3,7 @@ layout: post
 title: 感知机
 category: AI
 comments: true
-date: 2018-01-06 22:00
+date: 2018-01-06 21:00
 keywords: ai, perceptron, nueron
 description: learn the concepts of perceptron
 ---
