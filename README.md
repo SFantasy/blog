@@ -1,5 +1,4 @@
-Blog
-===================
+# Blog
 
 Welcome to visit my blog: [blog.fantasy.codes](http://blog.fantasy.codes)
 
