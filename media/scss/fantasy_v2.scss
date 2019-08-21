@@ -228,11 +228,12 @@ $BLUE: #61dafb;
   }
 
   .article-content {
-    font-size: 1rem;
+    font-size: 1.1rem;
 
     p {
+      font-family: Georgia, 'Times New Roman', Times, serif;
       color: rgba(0, 0, 0, .8);
-      letter-spacing: 0.16px;
+      letter-spacing: 0.3px;
       line-height: 1.5;
     }
 
@@ -240,7 +241,7 @@ $BLUE: #61dafb;
       font-family: Menlo, Monaco, Consolas, "Liberation Mono", Courier, monospace;
       background-color: #F9F2F4;
       color: #C7254E;
-      font-size: 90%;
+      font-size: 1rem;
       border: none;
       padding: 2px 5px;
     }
@@ -248,7 +249,7 @@ $BLUE: #61dafb;
     pre {
       border: 1px solid #f2f2f0;
       background-color: #f9f9f9;
-      font-size: 13px;
+      font-size: 1rem;
       overflow: hidden;
       word-wrap: break-word;
       padding: 3px 5px;
