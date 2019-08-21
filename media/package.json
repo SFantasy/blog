@@ -1,6 +1,9 @@
 {
   "name": "fantasy-blog",
   "version": "0.1.0",
+  "scripts": {
+    "build": "npx gulp build"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
