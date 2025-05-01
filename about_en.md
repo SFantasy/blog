@@ -17,12 +17,12 @@ And I've graduated from the College of Software Engineering of  [Southease Unive
 ## Recent
 
 - Living in Hangzhou, Zhejiang
-- Works as a Front-end engineer in [Youzan.com](//youzan.com)
+- Works as a Front-end engineer in [Dingtalk.com](//dingtalk.com) ~~[Youzan.com](//youzan.com)~~
 
 Recent hobbies:
 
 - CrossFit
-- Snowboarding
+- Snowboarding / Cycling / Running
 - Reading (history, philosophy, biography)
 
 ## Contact information
