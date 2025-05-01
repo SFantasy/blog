@@ -15,12 +15,13 @@ comments: true
 ## 近况
 
 - 生活在~~江苏省南京市~~浙江省杭州市
-- 在一家~~[旅游网站](//tuniu.com)~~[电商网站](//youzan.com)任职任职前端工程师
+- 在一家 ~~[旅游网站](//tuniu.com)~~ ~~[SaaS](//youzan.com)任职任职前端工程师~~ [toB SaaS 企业](//dingtalk.com) 任职
 
 最近的兴趣与爱好：
 
 - CrossFit
 - 单板滑雪
+- 骑行 / 跑步
 - 阅读（历史、哲学、传记）
 
 ## 联系方式
